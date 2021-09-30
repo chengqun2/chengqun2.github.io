@@ -1,0 +1,1230 @@
+查看服务：ps -ef | grep -i redis （或：ps -aux|grep redis）
+$ grep -i "linux" welcome.txt
+
+
+p:nth-child(2)
+p:nth-child(odd) {
+  background: red;
+}
+p:nth-child(even) {
+  background: blue;
+}
+
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation: example 4s linear infinite;
+}
+
+@keyframes example {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+@keyframes example {
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
+}
+
+</style>
+
+docker(centos /data / ..)
+docker start **CONTAINER ID**
+
+telnet ip port 
+telnet 50.144.0.47 8089
+wget ip:port
+
+centos安装docker:
+yum install docker-ce docker-ce-cli containerd.io
+
+使用docker安装mysql：
+docker images
+docker pull mysql:5.6
+docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.6
+netstat -na|grep 3306
+docker ps
+
+
+systemctl start postgresql-13.service
+
+1.15.90.81
+
+yum install postgresql12 postgresql12-server postgresql12-contrib postgresql12-libs -y
+
+sudo yum install postgresql-server postgresql-contrib
+sudo postgresql-setup initdb
+sudo systemctl start postgresql
+sudo systemctl enable postgresql
+sudo -u postgres psql -c "SELECT version();"
+sudo systemctl restart postgresql
+ss -nlt | grep 5432
+create user admin password 'admin';
+GRANT ALL PRIVILEGES ON DATABASE test_db TO admin;
+ALTER USER admin WITH SUPERUSER;
+
+postgres -V
+CTRL+ALT+T change to superuser
+systemctl stop postgresql-9.5.service
+yum remove postgresql*
+
+docker login : chengqun710   ww8459526
+
+CI: Continuous integration（持续集成）
+持续集成主要是在代码更改时自动分支合并、
+	构建并执行一系列的测试（包括单元测试、集成测试、端到端测试等），
+	确保这些变更不会破坏原来的应用。
+CD: Continuous delivery（持续交付）
+持续交付和部署则是 CI 测试通过之后把构建结果存档、
+	发布到预布环境和生产环境、最后再进行验收测试的过程。
+
+a pod is running at least a container
+	
+http://localhost:9090/test/22
+@RequestMapping("/test/{id}")
+public Map test(@PathVariable("id") Long id) {
+	Map map = new HashMap();
+	map.put("id",id);
+	return map;
+}
+
+幂等性实现方案:
+1、防重表
+2、redis等
+
+
+所谓第三方登录，实质就是 OAuth 授权:
+1. A 网站让用户跳转到 GitHub。
+2. GitHub 要求用户登录，然后询问"A 网站要求获得 xx 权限，你是否同意？"
+3. 用户同意，GitHub 就会重定向回 A 网站，同时发回一个授权码。
+4. A 网站使用授权码，向 GitHub 请求令牌。
+5. GitHub 返回令牌.
+6. A 网站使用令牌，向 GitHub 请求用户数据。
+
+nginx负载均衡的5种策略
+1、轮询（默认）:每个请求按时间顺序逐一分配到不同的后端服务器，如果后端服务器down掉，能自动剔除。
+2、权重（weight）:指定轮询几率，weight和访问比率成正比，用于后端服务器性能不均的情况。
+3、IP绑定 ip_hash:每个请求按访问ip的hash结果分配，这样每个访客固定访问一个后端服务器，可以解决session的问题。
+4、fair（第三方）:按后端服务器的响应时间来分配请求，响应时间短的优先分配。
+5、url_hash（第三方）:按访问url的hash结果来分配请求，使每个url定向到同一个后端服务器，后端服务器为缓存时比较有效。
+
+
+
+写SQL尽量先查询和过滤数据量小的表，再去join大的表
+mysql explain使用：
+extra列：
+Using index：使用覆盖索引，表示查询索引就可查到所需数据，不用扫描表数据文件，往往说明性能不错。
+Using Where：在存储引擎检索行后再进行过滤，使用了where从句来限制哪些行将与下一张表匹配或者是返回给用户。
+Using temporary：在查询结果排序时会使用一个临时表，一般出现于排序、分组和多表 join 的情况，查询效率不高，建议优化。
+Using filesort：对结果使用一个外部索引排序，而不是按索引次序从表里读取行，一般有出现该值，都建议优化去掉，因为这样的查询 CPU 资源消耗大。
+
+单点登录的标准做法:单独部署一个认证中心 (Apereo CAS 是一个企业级单点登录系统)
+
+kafka分区(partition)的原因：
+	水平扩展：磁盘写入速度就是kafka处理速度的极限，处理不过来就要加机器。
+	每台机器持有不同的partition。生产者爱发哪台发哪台，并行处理
+
+JDK：Java Development Kit
+JRE：Java Runtime Environment
+
+oracle分区（partition）查询
+
+wait 可以释放当前线程对 lock 对象锁的持有，而 sleep 则不会
+
+what is springcloud?
+
+
+mysql修改端口，编辑/etc/my.cnf文件,修改端口，重启即可
+
+
+SpaceSniffer 磁盘清理工具
+
+Vue(vue,vuex,vue-rounter) 全家桶
+
+html - CSS如何使<TD>固定高度？ td里面加个div
+<td>
+  <div style="height: 50px; overflow:auto;">
+      ...
+  </div>
+</td>
+
+
+
+scss、less
+axios(api调用)
+element-ui、iview、ant-ui
+webpack
+nginx
+
+
+
+IE8 不支持vw,vh（宽度建议使用百分比）;不支持flex布局
+div中 两个span设置垂直居中，可以先 div span{vertical-align:middle;margin-top:10px;} 
+悬浮显示使用hover：
+父hover后 改变子
+.item-1:hover .item-1-child{
+    background-color:#50ff00;
+}
+相邻同级：
+.item-1:hover +.item-2{
+    background-color:#50ff00;
+}
+不相邻同级：
+.item-1:hover ~.item-3{
+    background-color:#50ff00;
+}
+
+
+1、新建一个react项目：
+npx create-react-app my-app
+cd my-app
+npm start
+
+display: grid;
+grid-template-columns: 100px 100px 100px;
+grid-template-rows: 100px 100px 100px;
+/* grid-template-columns: repeat(3, 33.33%);
+  grid-template-rows: repeat(3, 33.33%); */
+/*grid-template-columns: repeat(2, 100px 20px 80px);*/
+/*2fr是1fr的两倍，fr是比例的意思，fraction*
+grid-template-columns: 1fr 2fr;
+
+
+display: flex;
+/* flex-direction 决定主轴的方向 row(默认)|row-reverse|column|column-reverse*/
+/* flex-direction: row; */
+/* flex-wrap决定当排列不下时是否换行以及换行的方式,nowrap(默认)|wrap|wrap-reverse */
+/* flex-wrap:wrap; */
+flex-grow:1; 指定了flex容器中剩余空间的多少应该分配给项目（flex增长系数），默认0
+order:1; order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。不写这个属性，box放在最前。
+justify-content: flex-start | flex-end | center | space-between | space-around; //水平方向
+align-items: flex-start | flex-end | center | baseline | stretch;  //垂直方向
+align-content: flex-start | flex-end | center | space-between | space-around | stretch;  //水平+垂直
+flex-shrink:如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。
+
+
+
+1、oracle利用 to_number判断是否是数字
+CREATE OR REPLACE FUNCTION isnumeric(str IN VARCHAR2)
+    RETURN NUMBER
+IS
+    v_str FLOAT;
+BEGIN
+    IF str IS NULL
+    THEN
+       RETURN 0;
+    ELSE
+       BEGIN
+          SELECT TO_NUMBER (str)
+            INTO v_str
+            FROM DUAL;
+       EXCEPTION
+          WHEN INVALID_NUMBER
+          THEN
+             RETURN 0;
+       END;
+       RETURN 1;
+    END IF;
+END isnumeric;
+
+
+Oracle的CONCAT函数不像MySql那样支持三个参数的拼接，需要把SQL语句修正为：
+and e.empId like CONCAT(CONCAT('%',#{empId}),'%')
+或者 and e.empId like '%' || #{empId} ||'%';  以上仅对Oracle有效！
+
+cmd查看class文件：
+javap -verbose Hello.class
+
+
+redis-cli -h 127.0.0.1 -p 6379 -a myPassword
+
+前端项目部署：
+1、打包项目：npm run build
+2、将打包后的dist目录下项目进行nginx配置：
+		location / {
+            root   F:\git\vue-manage-system\dist;
+            index  index.html index.htm;
+        }
+3、访问nginx的ip+server配置的端口即可打开页面
+
+G:\downloads\nginx-1.18.0\nginx-1.18.0
+windows系统下nginx：
+启动：start nginx
+停止：nginx.exe -s quit
+重新加载配置文件(nginx.conf)：nginx.exe -s reload
+重新打开日志：nginx.exe -s reopen
+查询版本：nginx -v
+
+js:
+const body = document.body;
+const div = document.querySelector("div")
+console.log(div.textContent)   //display为none也会打印出来
+console.log(div.innerText)  //只打印页面展示的内容，隐藏的不显示
+div.innerHTML("<strong>Hello</strong>") //可以读出属性strong  //加粗
+body.append(div)
+
+attribute是HTML标签上的特性，它的值只能够是字符串； id、name、type等
+property是DOM中的属性，是JavaScript里的对象；
+
+
+
+响应式布局：（通过 link里的media设置，根据不同屏幕宽度，引入不同的css）
+<link rel="stylesheet" type="text/css" href="index.css"/>
+<link rel="stylesheet" type="text/css" href="index01.css" media="screen and (max-width:1024px) and (min-width:720px)"/>
+<link rel="stylesheet" type="text/css" href="index02.css" media="screen and (max-width:720px)"/>
+
+
+npm install --save vuex
+
+
+<link rel="stylesheet" href="//res.layui.com/layui/dist/css/layui.css"  media="all">
+<div class="layui-progress">
+  <div class="layui-progress-bar" lay-percent="40%"></div>
+</div>
+温馨提示：进度条的宽度是 100% 适配于它的父级元素，如上面的进度条是在一个 300px 的父容器中。
+layer.tips(content,elem,{tips:[2,"#fff"],time:0})   支持上右下左四个方向，通过1-4进行方向设定
+
+css:
+box-sizing: content-box;  //content-box  是默认值
+box-sizing: border-box;
+//border: solid #5B6DCD 10px;
+//padding: 5px;
+ie7:*margin-top ,加个 *号，只在ie7下生效
+align-items:center flex布局下 垂直居中
+设置文字背景渐变色：
+span {
+	background: linear-gradient(to right, red, blue);
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+yarn和npm命令对比
+npm install === yarn 
+npm install taco --save === yarn add taco
+npm uninstall taco --save === yarn remove taco
+npm install taco --save-dev === yarn add taco --dev
+npm update --save === yarn upgrade
+
+babel:可以将 es6 转成 es5 文件
+
+eclipse debug启动老是跳转到断点，提示SilentExitException
+解决方法：在eclipse中选择Window->Preference-> Java ->Debug，将“Suspend execution on uncaught exceptions”的勾去掉即可。
+
+LVS是Linux Virtual Server的简称，也就是Linux虚拟服务器。LVS提供的负载均衡技术
+springcloud:
+  Eureka: 服务注册发现
+    #指定服务名称
+	  spring:
+	    application:
+		  name: hello-service-provider
+  Ribbon: 负载均衡
+  Feign: 
+    使用接口方式调用服务，替代 restTemplate.exchage(...)
+	服务提供方:
+	  还是一样。@RequestMapping("/demo/getHost")
+    服务使用方：
+	  接口@FeignClient注解指定服务名来绑定服务
+      @FeignClient(value = "hello-service-provider")
+	  public interface HelloServiceFeign {
+	    // /demo/getHost就是服务提供方的实际uri
+	    @RequestMapping(value = "/demo/getHost", method = RequestMethod.GET)
+		public String getHost(String name);
+	  }
+	  @Autowired直接注入上面定义的HelloServiceFeign service实例
+	  service.getHost(name);
+
+Error running 'All in project-name': Command line is too long. Shorten command line for All in project-name or also for JUnit default configuration.
+.idea/workspace.xml
+<component name="PropertiesComponent">
+添加：
+    <property name="dynamic.classpath" value="true" />
+
+idea右侧 Gradle build->bootJar 即可打jar包	
+	
+
+Nginx动静分离配置 :
+location 匹配uri（域名后面的 如 www.qq.com/a/b 的 /a/b）
+server_name 域名
+访问静态资源（如 文件路径：/data/image/a.png）
+location /image/{
+	root /data/;
+	autoindex on;  (开启autoindex 自动列出文件夹中的所有文件)
+}
+http://xx.com/image/a.png
+location /ydpcs{
+	proxy_pass http://50.144.0.47:8089/ydpcs;
+}
+
+
+github搜项目： in:name spring boot stars:>1000 pushed:>2019-09-01
+
+redis安装：yum install gcc-c++
+redis后台启动 修改redis.conf->daemonize yes
+[root bin]# redis-server config/redis.conf    (redis启动)
+关闭redis:shutdown
+退出redis:exit
+springboot  pom:spring-boot-starter-data-redis  2.x 后使用了 lettuce操作redis(jedis ->lettuce)
+
+oracle 查询同车牌号时间最大的那一条数据
+select *
+  from (select row_number() over(partition by hphm order by time desc) rn, 表.*
+           from  表)  where rn = 1
+
+js:
+The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.
+
+uniapp:
+props 接收其他组件的属性值
+HBuilder easy-git插件
+
+
+chrome css
+-webkit-background-clip:text;
+
+mybatis:
+<if test="type != null and type == '1'.toString()">
+</if>
+
+The steps in Vue lifecycle are 
+beforCreate, created, beforeMount,
+ mounted, beforeUpdate, updated, beforeDestroy, destroyed.
+
+
+Redis 支持三种集群方案
+主从复制模式
+Sentinel（哨兵）模式：自动地监控处理redis 间故障节点转移工作
+Cluster 模式
+
+cmd操作git
+cd D:\xx
+git status 
+git pull
+git add .
+git commit -m "注释"
+git push
+
+
+jdk bin中的jvisualvm.exe 可以根据pid查询java程序所在目录
+
+ApplicationRunner：继承 ApplicationRunner 接口的类的 
+	run方法会(在Spring容器启动完成时)被自动执行（前提是这个类被Spring 管理）
+
+定时任务：
+	@EnableScheduling
+	@Scheduled(fixedRate = 1000 * 60)
+
+1、idea 文件编码问题（切换到gbk，再切回utf8即可）
+2、IDEA运行项目时，出现Error:(4, 10) java: 程序包javax.websocket.server不存在
+点击 + ,找到 D:\apache-tomcat-7.0.96-windows-x64\apache-tomcat-7.0.96\lib\websocket-api.jar
+3、IDEA - 配置Tomcat并运行Web项目。run->edit configuration-> + Tomcat server
+4、idea查看svn地址：subversion -> relocate
+5、idea web添加lib ,Project Structure -> Modules-> Dependencies-> + library
+6、ctrl + r: 当前文件内容替换
+7、ctrl+shift+u idea大小写切换
+8、idea web项目导出war包：Project Structure -> Artifacts -> 
+	type: Web application Archive  。点击build 自动构建war包
+9、配置svn：File->Settings->Version Control ->Subversion->关联已安装的TortoiseSVN\bin\svn.exe
+10、配置java web项目 Project Structure -> artifacts -> output root 下面 增加 WEB-INF
+11、idea -> project structure -> artifacts ->
+    web application exploded：这个是以文件夹形式发布项目，发布项目时就会自动生成文件夹在指定的output directory；
+	web application archive：就是war包形式,将项目打成一个war包在指定位置
+	
+	
+lay-search：可搜索的下拉框，根据 lay-filter的值进行查询
+form.on('select(lay-filter的值)',function(data){
+	console.info(data.value);
+})
+<form class="layui-form">
+	<div class="layui-form-item">
+		<div class="layui-inline col-sm-12">
+			<select id="TemplateOptions" name="effectsType" class="layui-select" lay-verify="required" lay-filter="selectTemplate" lay-search>
+				<option value="">实体要素内容选择</option>
+			</select>
+		</div>
+	</div>
+</form>
+
+
+每个请求按照访问 Ip（即Nginx的前置服务器或客户端IP）的 hash结果分配，
+这样每个访客会固定访问一个后端服务器，可以解决 session 一致问题。
+upstream zhang21 {
+    ip_hash;
+    server 192.168.1.11:7777;
+    server 192.168.1.22:8888;
+    server 192.168.1.33:9999;
+}
+location / {
+    root html;
+    index index.html index.htm;
+    proxy_pass http://zhang21(upstream名称）;
+}
+
+
+
+npm install -g @vue/cli --force
+
+npm init -y
+npm install express  (安裝dependency)
+npm run (scripts中的command)
+
+redis console 
+select 2
+flush db 清空redis库
+
+::-webkit-scrollbar — 滚动条.
+
+Windows中杀死占用某个端口的进程：
+netstat -ano | findstr 80 //列出进程极其占用的端口，且包含 80
+taskkill -PID <进程号> -F //强制关闭某个进程
+
+阿里云 centos服务器
+139.196.145.61
+root 
+
+wget -P /usr/java 网址
+yum install 
+FlashphonerWebCallServer =172.19.238.240
+
+mybatis二级缓存：
+mybatis.xml：
+<settings>
+	<setting name="cacheEnabled" value="true" />
+</settings>
+mapper.xml
+<mapper>
+	<cache
+        eviction="LRU"
+        flushInterval="60000"   //毫秒
+        size="1024"
+        readOnly="true"
+    />
+</mapper>
+
+nodemon : 自动重启Nodejs项目
+
+vim:
+HJKL 左下上右
+tar zxvf linux解压缩
+
+css移动（第一个参数：左右，第二个参数：上下）：
+transform:translate(-25px,-25px);
+
+rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mov
+rtsp://50.144.10.30/1234569.sdp
+
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+淘宝的npm镜像代替国外的资源，用cnpm命令来全部代替npm
+cnpm install 
+cnpm run 
+
+G:\downloads\node-video-master\node-video-master
+nodejs启动项目
+npm install 
+node app.js
+打包：
+C:\Users\HP\.pkg-cache\v2.6
+//pkg -t win app.js
+pkg -t win package.json
+
+234 141
+
+vlc播放器播放 rtsp视频流
+
+css
+tr:nth-child(odd)
+表示HTML表格中的奇数行。
+
+Git 
+Workspace：工作区 
+Index / Stage：暂存区
+Repository：仓库区（或本地仓库）
+Remote：远程仓库
+
+微人事 密码123
+阿里云服务器：
+106.15.51.152
+
+idea当前页替换：ctrl + R 
+
+登录
+mysql -uroot -p 初始化密码
+修改密码
+alter user 'root'@'localhost' identified by 'xxxxx';
+
+java 操作流  后打开的先关闭
+
+在laydate.render中加,trigger: 'click'，就可以避免闪退了
+
+layui skin
+cat /etc/issue 查看centos版本
+
+$( "#myselect option:selected" ).text();
+
+vuejs 框架：https://nuxtjs.org/
+
+Photoshop之Cutterman一键切图插件
+
+<script defer src="./script.js"></script> defer：页面加载完再加载js
+
+oracle：select wm_concat(name) name from test;
+
+() =>  等价于  function()
+
+springboot项目启动失败，Unable to start web server;拉到最下面
+
+在my.ini修改：
+#开启主从复制，主库的配置
+log-bin= mysql3306-bin
+sql:
+grant replication slave on *.* to 'slave01'@'127.0.0.1'identified by '123456';
+flush privileges;
+
+"use strict"; Defines that JavaScript code should be executed in "strict mode".
+
+@Controller 控制器（注入服务）
+@Service 服务（注入dao）
+@Repository dao（实现dao访问）
+@Component （把普通pojo实例化到spring容器中，相当于配置文件中的<bean id="" class=""/>）
+@Component泛指组件，当组件不好归类的时候，我们可以使用这个注解进行标注
+
+vuejs  
+<div :class="temp>16?'warm':'cold'"></div>
+<input @keypress="functionA"  />
+<li v-for="(item,index) in list" v-on:click="test()" 
+  :class="{'left-content':item.type==0,'right-content':item.type==1}">
+	<div> {{item.id}}</div>
+</li>
+
+挖矿原理
+
+Oracle 不同数据库表联合查询(需要dba):
+file->new-> database link
+
+大于号：$('parent > childchild')表示获取parent下的所有下一级childchild
+
+oralce substr("ABCDEFG", -3); //返回：EFG，注意参数-3，为负值时表示从尾部开始算起，字符串排列位置不变。
+
+String header = request.getHeader("");
+
+@Value("")
+@Bean的方法的返回值识别为Spring Bean，并注册到容器中，归入IoC容器管理
+全局异常的处理：@ControllerAdvice + @ExceptionHandler(Exception.class)
+@ControllerAdvice
+public class SpringControllerAdvice {
+  @ExceptionHandler(Exception.class)
+  public ModelAndView exception(Exception e) {
+    e.printStackTrace();
+    return new ModelAndView("error");
+  }
+}
+
+阿里云服务器：
+106.15.51.152
+Ww8459526
+chengqun.xyz
+
+微信小程序:
+<button size="mini" bindtap="save">保存</button>
+catchtap不允许事件冒泡，bindtap允许
+<input bindinput="bindKeyInput" value="{{inputValue}}" auto-focus placeholder="将会获取焦点"/>
+  post请求：
+	method: 'POST',
+	'content-type':'application/x-www-form-urlencoded'
+
+
+幂等性：就是用户对于同一操作发起的一次请求或者多次请求的结果是一致的，
+不会因为多次点击而产生了副作用。
+    为需要保证幂等性的每一次请求创建一个唯一标识token, 先获取token, 
+并将此token存入redis, 请求接口时, 将此token放到header或者作为请求参数请求接口, 
+后端接口判断redis中是否存在此token:如果存在, 正常处理业务逻辑, 并从redis中删除此token, 
+那么, 如果是重复请求, 由于token已被删除, 则不能通过校验, 返回请勿重复操作提示如果不存在, 
+说明参数不合法或者是重复请求, 返回提示即可
+
+
+像素px是相对于显示器屏幕分辨率而言的。(引自CSS2.0手册)
+em是相对长度单位。相对于当前对象内文本的字体尺寸。(引自CSS2.0手册)
+vw：视窗宽度的百分比（1vw 代表视窗的宽度为 1%）
+vh：视窗高度的百分比
+vmin：当前 vw 和 vh 中较小的一个值
+vmax：当前 vw 和 vh 中较大的一个值
+
+js两次!! 强制转成boolean类型
+
+分布式ID都有哪些生成方式？
+1、基于Java的UUID ,不推荐
+2、基于数据库自增ID ,不推荐
+3、基于数据库集群模式(设置起始值和自增步长) ,不推荐
+4、基于数据库的号段模式
+id biz_type max_id step version 
+ 1   101     1000  2000    0
+5、基于Redis模式 (利用redis的 incr命令实现ID的原子性自增)
+   set seq_id 1  // 初始化自增ID为1
+   incr seq_id   // 增加1，并返回递增后的数值(integer) 2
+6、基于雪花算法（Snowflake）模式 . twitter公司开源 .OK
+   缺点：依赖机器时间，如果发生回拨会导致可能生成id重复。 下面重点讨论时间回拨问题
+
+ajax jsonp 解决get请求的跨域
+
+div{width:100%;height:100%;position:fixed;} 占满全屏幕
+$("div").fadeOut();
+document.onreadystatechange =function(){
+	//页面加载完成：document.readyState == complete  
+	console.log(document.readyState);
+}
+
+@NoArgsConstructor: 自动生成无参数构造函数。
+@AllArgsConstructor: 自动生成全参数构造函数
+
+spring data jpa extends JpaRepository
+
+"20121231023350".replace(
+    /^(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})$/,
+    "$1/$2/$3 $4:$5:$6");  // "2012/12/31 02:33:50"
+
+big data solution architect
+小表join大表效率更高
+
+系统CPU突然飙升且GC频繁，如何排查？
+	top命令:显示系统中各个进程的资源占用状况
+	jstack -l pid
+
+
+Nginx负载均衡是通过upstream模块来实现的，内置实现了三种负载策略：
+	轮循（默认）
+		Nginx根据请求次数，将每个请求均匀分配到每台服务器
+	最少连接
+		将请求分配给连接数最少的服务器。Nginx会统计哪些服务器的连接数最少。
+	IP Hash
+		绑定处理请求的服务器。第一次请求时，根据该客户端的IP算出一个HASH值，
+		将请求分配到集群中的某一台服务器上。
+		后面该客户端的所有请求，都将通过HASH算法，找到之前处理这台客户端请求的服务器，然后将请求交给它来处理。
+	upstream tomcats {
+		server 192.168.0.100:8080 weight=2 max_fails=3 fail_timeout=15;
+		server 192.168.0.101:8080 weight=3;
+		server 192.168.0.102:8080 backup;
+	}
+
+"//div[@class='course-item']"
+scrapy crawl 
+java 16(无锡) 37（苏州） 80（南京） 92(杭州) 247  
+
+用户发送一个请求，系统 A 收到请求后，先查本地 ehcache 缓存，如果没查到再查 redis。如果 ehcache 和 redis 都没有，再查数据库，将数据库中的结果，写入 ehcache 和 redis 中。
+
+python:
+pip install beautifulSoup4
+ 
+redis windows下启动，配置自定义参数：
+cd到redis目录,redis-server.exe redis.windows.conf
+
+全局异常处理
+
+除了在持久化对象时会用到对象序列化之外，当使用RMI(远程方法调用)，或在网络中传递对象时，都会用到对象序列化
+
+android studio快捷键：选中代码块，然后 ctrl+alt+t 。
+idea 打断点，右击断点，设置进入断点的条件！
+idea 断点调试：set value
+idea itar/iter快捷键 生成for循环
+idea Ctrl+G 搜索行号
+
+url->connection->getInputStream->	
+
+https://laptop-1tgqk746/svn/cq
+
+java类加载机制:类从被加载到虚拟机(JVM)内存中开始，到卸载出内存为止
+内存模型
+
+nginx启动
+[root@localhost ~]# /usr/local/nginx/sbin/nginx
+停止/重启
+[root@localhost ~]# /usr/local/nginx/sbin/nginx -s stop(quit、reload)
+
+onmouseover + layer.tips
+
+Java web项目xx$1.class是匿名内部类的编译结果
+
+前端：mootools
+MooTools是一个简洁，模块化，面向对象的开源JavaScript web应用框架。
+// create a new Class instance
+var myRequest = new Request({
+    url: 'getMyText.php',
+    method: 'get',
+    onRequest: function(){
+        myElement.set('text', 'loading...');
+    },
+    onSuccess: function(responseText){
+        myElement.set('text', responseText);
+    },
+    onFailure: function(){
+        myElement.set('text', 'Sorry, your request failed :(');
+    }
+});
+// and to send it:
+myRequest.send(data);
+
+Kubernetes(k8s):部署和管理容器的平台
+
+@Resource By name，加载失败，会自动再按类型加载
+@Autowired By type + @Qualifier 变为By name。
+It is suggested to use @Resource for fields and setter injection. 
+Stick with @Qualifier and @Autowired for constructor or a multi-argument method injection.
+
+过滤器Filter ->拦截器Interceptor -> action执行 ->拦截器 ->过滤器
+
+spring security 缺点：角色相关配置代码太多、大数据下几乎不可用、没有直接可操作的界面.
+
+redis 防刷（key value,value存访问次数）。自定义注解+拦截器
+
+elasticsearch 索引(数据库)、类型(表)、文档(行)
+	例：建立一个Poems索引,创建一个Poem类型，
+	    "Poem":{"propertis":{"title":{"type":"keyword"},"author":{"type":"keyword"}}};
+		文档:{"title":"静夜思","author":"李白"}
+
+Dubbo使用了第三方的ZooKeeper作为其底层的注册中心,实现服务的注册和发现.
+
+SpringCloud使用Spring Cloud Netflix Eureka实现注册中心.
+SpringCloud有Zuul路由网关,作为路由服务器,进行消费者的请求分发.
+SpringCloud专注于解决各个微服务之间的协调与配置,服务之间的通信,熔断,负载均衡等.
+Spring Cloud核心组件：Eureka（服务的注册与发现）、Feign（动态代理）、Ribbon（负载均衡）
+  、Hystrix（熔断/降级）、Zuul（网络路由）
+业务场景：订单服务->库存服务/仓储服务/积分服务
+Eureka是微服务架构中的注册中心，专门负责服务的注册与发现
+  Eureka Client：负责将这个服务的信息注册到Eureka Server中
+  Eureka Server：注册中心，里面有一个注册表，保存了各个服务所在的机器和端口号
+Feign Client会在底层根据你的注解，跟你指定的服务建立连接、构造请求、发起请求、获取响应、解析响应  
+*首先Ribbon会从 Eureka Client里获取到对应的服务注册表，
+ 也就知道了所有的服务都部署在了哪些机器上，在监听哪些端口号。
+ 然后Ribbon就可以使用默认的Round Robin算法，从中选择一台机器
+ Feign就会针对这台机器，构造并发起请求
+
+O(1)指的是常数时间运行，比如操作对象为一个链表，对其有一个算法，O(1)时间指的是，无论链表大或者小，所耗费的时间都是一样的
+O(n)指的是某算法的运行时间与输入规模成正比，即，若输入规模为T,花费时间为N,则输入规模2T时花费时间为2N
+
+kafka 消费者groupId,代表一个消费者
+kafka 旧数据删除策略：基于时间/基于大小。删除过期的文件并不会提高kafka的性能！
+
+分布式数据库如何设计？
+
+设置Linux服务器时间：date -s "2007-08-03 14:15:00"
+var json = {'a':'aa','b':'bb'};
+json['a']='AAAA';
+console.log(json);
+
+基于zookeeper临时有序节点可以实现的分布式锁
+
+redis实现分布式锁:Redis是单线程的,
+  1.多台服务器执行 setnx key value (返回1，说明该进程获得锁)成功执行todo，执行完todo,删除key.
+  1).设置key的有效期 "expire key timeout" ,超过这个时间锁会自动释放，避免死锁.
+  2).第二种方式，设置value为当前时间+1秒,其他服务器get value时，判断value值，
+    过大了就直接删除key.重新设置key value
+
+喜马拉雅问了redis的数据存储结构:
+键的类型只能为字符串，值支持五种数据类型：字符串、列表、集合、散列表、有序集合(String、Hash(即Map) 、List 、 Set 、 Ordered Set)
+rehash；
+bilibili问了redis的事务与集群。
+Redis 通过 MULTI 、 DISCARD 、 EXEC 和 WATCH 四个命令来实现事务功能
+MULTI->(将多个命令打包， 然后一次性、按顺序地执行)->EXEC
+事务提供了一种将多个命令打包，然后一次性、有序地执行的机制。
+事务在执行过程中不会被中断，所有事务命令执行完之后，事务才能结束。
+多个命令会被入队到事务队列中，然后按先进先出（FIFO）的顺序执行。
+WATCH:监视一个(或多个) key ，如果在事务执行之前这个(或这些) key 被其他命令所改动，那么事务将被打断。
+只有在客户端的 REDIS_DIRTY_CAS 选项未被打开时，才能执行事务，否则事务直接返回失败。
+DISCARD can be used in order to abort a transaction
+
+Redis Lpush 命令将一个或多个值插入到列表头部。
+Redis Sadd 命令将一个或多个成员元素加入到集合中，已经存在于集合的成员元素将被忽略。
+Redis Zrem 命令用于移除有序集中的一个或多个成员，不存在的成员将被忽略。
+关于JAVA的，阿里的蚂蚁金服问了如下一些问题：
+java.lang.Object有哪些常用的方法,
+改写一个类的toString方法需要注意哪些问题，
+hashCode方法如使用，
+==与equals的区别，
+线程创建的几种方法，各自的使用场景，
+hashmap、hashtable的数据结构实现，
+java线程同步有哪些方法、各自的优缺点，jvm的结构，java代码优化
+
+Groovy是一种基于Java平台的面向对象语言
+new JSONObject(map)
+
+session 需要入库，token不需要入库。服务端通过 算法(如HMAC-SHA256)+密钥 生成token给客户端，
+	客户端保存起来（如cookie中），每次请求将token发给服务端验证，
+	服务端再用同样的算法和密钥 对token进行解码 验证。
+
+git克隆项目，创建分支，提交和同步修改，到合并分支请求的整套流程
+
+SimpleDateFormat线程不安全,可以使用ThreadLocal<SimpleDateFormat>，或者common-lang包：FastDateFormat.getInstance().format(new Date());
+
+消息队列（Kafka、ActiveMQ、RabbitMQ、RocketMQ ）常见的使用场景：解耦、异步、削峰
+解耦：发布端 只管生产数据，消费端 自己订阅或者取消订阅
+消息队列的缺点：系统复杂度上升、一致性问题。
+kafka高可用：replica（复制品） 副本机制。每个 partition 的数据都会同步到其它机器上，
+	形成自己的多个 replica 副本。所有 replica 会选举一个 leader 出来，
+	那么生产和消费都跟这个 leader 打交道，然后其他 replica 就是 follower
+防止重复消费：增加唯一性校验
+如何解决消息丢失的问题：Kafka关闭自动提交 offset，在处理完之后自己手动提交 offset，
+	再自己保证幂等性就好了。
+如何保证消息的顺序性：一个 topic，有三个 partition。
+	生产者在写的时候，其实可以指定一个 key，比如说我们指定了某个订单 id 作为 key，
+	那么这个订单相关的数据，一定会被分发到同一个 partition 中去，
+	而且这个 partition 中的数据一定是有顺序的。
+	一个 topic，一个 partition，一个 consumer，内部单线程消费，单线程吞吐量太低，一般不会用这个。
+	写 N 个内存 queue，具有相同 key 的数据都到同一个内存 queue；然后对于 N 个线程，
+	每个线程分别消费一个内存 queue 即可，这样就能保证顺序性。
+	
+mybatis-plus自动生成代码
+chrome去掉滚动条：
+body::-webkit-scrollbar {
+    display: none;
+}
+
+cd D:\Program Files\Nox\bin
+.\Nox_adb.exe connect 127.0.0.1:62001
+
+
+
+android Emulator模拟器
+秒s /毫秒ms /微秒μs /皮秒picosecond
+https cookies web application secure
+Spring MVC – Catch the exceptions thrown by view page
+redirect：重定向原理
+
+CAP定理，BASE理论   RabbitMQ消息确认机制
+
+spring的TransactionCallback接口来实现事务
+
+freemarker/thymeleaf 从Contoller->页面
+
+一旦分布式了之后，通信、缓存、消息、事务、锁、配置、日志、监控、会话 ？
+
+reddit
+openresty防刷/限流
+
+maven setting.xml可以改为 阿里云镜像，加快下载速度
+spring项目启动时，可以指定生产环境：java -jar -Dspring.profiles.active=prod xx.jar
+id is not present 表示必传的参数id 没有传
+
+Oracle中的事务??
+mysql InnoDB 支持事务，MyISAM 不支持事务
+@RequestParam @RequestBody @PathVariable 等参数绑定注解详解
+
+JSON.parse("text..."):convert text into a JavaScript object
+JSON.stringify(obj):convert obj into a string.
+
+INSERT INTO user(username,real_name,email,password,permission,is_deletable,is_updatable) 
+VALUES("system","系统","system@local.host",sha2("123456",256),3,1,1);
+
+(map.code)!"red"  这种方式，能够处理map或者code为miss value的情况；
+
+<#assign str = "abcdefghijklmn"/>
+${str?substring(0,4)} // 输出abcd
+
+${emp.date?string('yyyy-MM-dd')} //日期格式
+
+WebService，顾名思义就是基于Web的服务。它使用Web(HTTP)方式，接收和响应外部系统的某种请求。从而实现远程调用.
+1:从WebService的工作模式上理解的话，它跟普通的Web程序（比如ASP、JSP等）并没有本质的区别，都是基于HTTP传输协议的程序。 
+2:WebService所使用的数据均是基于XML格式的。目前标准的WebService在数据格式上主要采用SOAP协议。
+  SOAP协议实际上就是一种基于XML编码规范的文本协议。
+
+
+maven pom: compile/test/runntime/provided/system
+默认就是compile
+<scope>provided</scope> 只是编译中使用，但不会打到war中
+system:依赖项不会从maven仓库抓，而是从本地文件系统拿(需要配合systemPath属性使用)
+
+/dev/null is a black hole where any data sent, will be discarded
+>/dev/null 2>&1 is redirect the output of your program to /dev/null. Include both the Standard Error and Standard Out
+
+clean package -pl qbzhpt-yjzh -am
+pl,--projects <arg>  手动选择需要构建的项目,项目间以逗号分隔;A project can be specified by [groupId]:artifactId or by its relative path.
+-am,--also-make      构建指定模块,同时构建指定模块依赖的其他模块;
+
+HandlerInterceptorAdapter 拦截器：preHandle()等，true继续往下走，false返回
+WebMvcConfigurerAdapter详解
+@Primary：自动装配时当出现多个Bean候选者时，被注解为@Primary的Bean将作为首选者，否则将抛出异常
+Netflix Zuul:Zuul基于Eureka的服务发现功能动态 实现路由的功能
+@Qualifier(“office”)中的office是Bean的名称，所以@Autowired和@Qualifier结合使用时，自动注入的策略就从byType转变成byName了。
+@Qualifier 只能和@Autowired 结合使用，是对@Autowired有益的补充。
+
+jenkins、SONAR
+
+SQL Injection Based on 1=1 is Always True
+SELECT * FROM Users WHERE Name ="" or ""="" AND Pass ="" or ""=""
+
+idea打开maven多模块项目，直接引入父模块的pom.xml文件即可
+.tld文件后缀：TLD（taglib description）是JSP的标签库描述文件
+.ftl文件后缀：Freemarker模板的文件后缀名
+
+app接口 一直跳转到登陆页，注意拦截器
+
+缓存框架（Redis、MemoryCache等）
+微服务（dubbo、Spring Cloud等）
+全文检索（Solr、ElasticSearch等）
+分布式发布/订阅消息队列系统（ActiveMQ、Kafka等）
+
+Lombok是一个通过注解以达到减少代码的Java库,如通过注解的方式减少get,set方法,构造方法等。
+MyBatis-Plus（简称 MP）是一个 MyBatis 的增强工具，在 MyBatis 的基础上只做增强不做改变，为简化开发、提高效率而生。	
+项目基于 Spring Boot 2.1.0 、 Jpa、 Spring Security、redis、Vue的前后端分离的后台管理系统，项目采用分模块开发方式， 权限控制采用 RBAC，支持数据字典与数据权限管理，支持一键生成前后端代码，支持动态路由
+https://auauz.net/dashboard
+后台管理系统：菜单显示 架构调整
+You are literally the best coder I know.
+
+@media screen and (min-width: 1201px) and (max-width: 1500px) { 
+	.abc {width: 1200px} 
+} 
+@media screen and (min-width: 901px) and (max-width: 1200px) { 
+	.abc {width: 900px} 
+} 
+
+代码放coding
+
+npm太慢， 淘宝npm镜像使用方法:npm config set registry https://registry.npm.taobao.org
+vscode终端： npm start
+BEM 命名规范
+
+['a','b'].slice(1,2);
+"".slice(start,end);
+The slice() method returns a new array from begin to end (end not included).
+
+Array.splice(start,deleteCount)
+删除数组对象中的某个元素
+Array.splice(itemIndex,1)
+
+jdbc.url=jdbc:mysql://10.39.149.200:33006/epg_app?useUnicode=true&characterEncoding=UTF-8
+jdbc.username=root
+jdbc.password=iwhaleCloud@2018
+
+vscode js文件按f5进入调试模式
+tomcat->webapps->manager 
+进行 Server Status 和 Applications 管理，对服务器和其他应用进行启动、重启、关闭等操作，对 Session、JVM 性能参数等进行监听并管理
+kill -9 `ps -ef | grep $1 | grep java | awk '{print $2}'`
+sshpass -p "YOUR_PASSWORD" ssh -o StrictHostKeyChecking=no YOUR_USERNAME@SOME_SITE.COM:2400
+#rpm -ivh example.rpm 安装 example.rpm 包并在安装过程中显示正在安装的文件信息及安装进度
+File-> Settings
+In Popup menu: Project-> Project Interpreter-> add or create virtualenv environment(search mysql etc.)
+Ctrl+Alt+L idea格式化代码
+disputer 框架
+tomcat/conf文件夹下tomcat-users.xml:<user username="tomcat" password="tomcat" roles="manager-script"/>
+tomcat/webapps的manager接口
+http://localhost:8080/manager/text/start?path=/tt
+
+Velocity、Freemaker 等模板引擎
+linux: jps( Java Virtual Machine Process Status Tool ) 、pkill -f
+sudo apt-get install build-essential
+$(this).addClass('active').siblings().removeClass('active');
+npm chengqun/Ww88459526
+Eclipse需要安装egit插件(github) https 
+hbase kafka solr hive 应用场景
+Math.random() :
+	returns a random number between 0 and 1
+	inclusive of 0, but not 1
+sts
+ctrl+o
+springcloud 
+GC multi-thread Runnable Callable
+单例模式 Singleton pattern
+thread join 应用场景：主线程等待子线程完成（例 耗时操作放到子线程进行）
+join底层是wait方法，所以它是会释放对象锁的，
+而sleep在同步的方法中是不释放对象锁的，只有同步方法执行完毕，其他线程才可以执行。
+
+面向切面写入数据库(Aspectj)
+kotlin
+
+JSX: Javascript xml
+设计模式之单例模式-饿汉式&懒汉式
+
+1、线程 状态？ 运行、阻塞、结束 (New->Runnable->Terminated)
+ New、Runnable、Blocked、Waiting、Timed Waiting、Terminated
+2、JVM optimize
+3、Mysql 联合索引 ABC字段，D如何 可以命中：
+最左原则
+联合索引又叫复合索引。对于复合索引:Mysql从左到右的使用索引中的字段，
+一个查询可以只使用索引中的一部4份，但只能是最左侧部分。
+例如索引是key index (a,b,c). 可以支持a | a,b| a,b,c 3种组合进行查找，但不支持 b,c进行查找。
+ 索引不会包含有NULL值的列
+只要列中包含有NULL值都将不会被包含在索引中，复合索引中只要有一列含有NULL值，那么这一列对于此复合索引就是无效的。
+所以我们在数据库设计时不要让字段的默认值为NULL。
+4、redis性能如何提高(improve redis performance)
+1).使用Batch操作 
+2).使用PipeLine管道 
+5、java设计模式 业务场景
+6、连接池 配置
+<!-- 基本属性 url、user、password -->
+<property name="url" value="${jdbc.url}" />
+<property name="username" value="${jdbc.username}" />
+<property name="password" value="${jdbc.password}" />
+<!-- 配置初始化大小、最小、最大 -->
+<property name="initialSize" value="1" />
+<property name="minIdle" value="1" />
+<property name="maxActive" value="20" />
+<!-- 配置获取连接等待超时的时间 -->
+<property name="maxWait" value="60000" />
+<!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+<property name="timeBetweenEvictionRunsMillis" value="60000" />
+<!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+<property name="minEvictableIdleTimeMillis" value="300000" />
+<!-- 打开PSCache，并且指定每个连接上PSCache的大小 -->
+<property name="poolPreparedStatements" value="true" />
+<property name="maxPoolPreparedStatementPerConnectionSize" value="20" />
+<!-- 配置监控统计拦截的filters，去掉后监控界面sql无法统计 -->
+<property name="filters" value="stat" />
+
+Q:Java garbage collector - When does it collect?
+A common strategy in generational garbage collectors is to run the collector 
+when an allocation of generation-0 memory fails!
+
+Q:GC(garbage collection)优点：
+消除手动 内存分配/释放 的负担
+
+Q:GC缺点：
+When the garbage collector thread is running, other threads are stopped
+, meaning the application is stopped momentarily.
+
+Q:What are stack(栈) and heap(堆)?
+The stack is a part of memory.
+The heap is a large bulk of memory intended for allocation of objects.
+When you create an object with the new keyword, 
+it gets allocated on the heap. However, 
+the reference to this object lives on the stack. 
+
+Q:generational garbage collection?
+garbage根据age分类
+
+Q：how the GC collects an eligible object?
+1).if all its references are null. 
+2).Cyclic dependencies without any live external reference are also eligible for GC
+3).a parent object is set to null,children will eligible for GC
+
+Q: How do you trigger garbage collection from Java code?
+System.gc() and Runtime.gc()等方法并不能保证执行 垃圾收集.
+it will only trigger if JVM thinks it needs a garbage collection based on Java heap size.
+
+Q: String +号 拼接字符串的缺陷：
+When concatenating two String instances, a new object is created, 
+and strings are copied. This could bring a huge garbage collector overhead 
+if we need to create or modify a string in a loop.
+StringBuffer is different from StringBuilder in that it is thread-safe.
+If you need to manipulate a string in a single thread, use StringBuilder instead.
+
+Q:How can we make sure main() is the last thread to finish in Java Program?
+We can use Thread join() method to make sure all the threads created 
+by the program is dead before finishing the main function. 
+
+Q:What is volatile keyword?
+When we use volatile keyword with a variable, 
+all the threads read it’s value directly from the memory and don’t cache it. 
+This makes sure that the value read is the same as in the memory.
+
+Q:What is ThreadLocal?
+Java ThreadLocal用于创建线程局部变量。
+Every thread has it’s own ThreadLocal variable and they
+can use it’s get() and set() methods to get the default value 
+or change it’s value local to Thread.
+
+Q:How can we achieve thread safety in Java?
+1).Synchronization is the easiest and most widely used tool for thread safety in java.
+2).Use of Atomic Wrapper classes from java.util.concurrent.atomic package. 
+	For example AtomicInteger
+3).Use of locks from java.util.concurrent.locks package.
+4).Using thread safe collection classes, check this post for usage of ConcurrentHashMap for thread safety.
+5).Using volatile keyword with variables to make every thread read the data from memory, not read from thread cache.
+
+Q:What are differences between wait and sleep method in Java?
+The only major difference is to wait to release the lock or monitor, 
+while sleep doesn't release any lock or monitor while waiting.
+
+Q:How to take a thread dump(线程转储，然后分析线程阻塞)?
+Linux you can do this by command "kill -3"
+windows use "CTRL+Break." 
+
+Q：Why do we call start() method which in turns calls run() method, 
+	why not we directly call run() method?
+When you call the start() method, it creates a new thread 
+and executes code declared in the run()  while directly calling the run() method. 
+This doesn't create any new threads and executes code on the same calling thread
+
+Q:JVM optimize? 
+1).Use StringBuilder to concatenate Strings 
+2).Use + to concatenate Strings in one statement
+3).Use primitives where possible.(it’s better to use an int instead of an Integer...)
+	That allows your JVM to store the value in the stack instead of the heap
+4).Try to avoid BigInteger and BigDecimal
+5).Check the current log level first
+	// don’t do this
+	log.debug(“User [” + userName + “] called method X with [” + i + “]”);
+	// do this
+	if (log.isDebugEnabled()) {
+		log.debug(“User [” + userName + “] called method X with [” + i + “]”);
+	}
+6).Cache expensive resources, like database connections
+
+Mysql：	
+InnoDB 和 Myisam 都是用 B+Tree 来存储数据的。
+
+Q:线程池 消息队列满了，后续任务怎么处理?
+ThreadPoolExecutor(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit, BlockingQueue<Runnable> workQueue)
+当调用 execute() 方法添加一个任务时，线程池会做如下判断：
+a. 如果正在运行的线程数量小于 corePoolSize，那么马上创建线程运行这个任务；
+b. 如果正在运行的线程数量大于或等于 corePoolSize，那么将这个任务放入队列。
+c. 如果这时候队列满了，而且正在运行的线程数量小于 maximumPoolSize，那么还是要创建线程运行这个任务；
+d. 如果队列满了，而且正在运行的线程数量大于或等于 maximumPoolSize，那么线程池会抛出异常，告诉调用者“我不能再接受任务了”。
+
+Q:内置锁(synchronized)、显示锁(ReentrantLock) 区别?
+内置锁能够解决大部分需要同步的场景，只有在需要额外灵活性是才需要考虑显式锁，
+	比如可定时RenentrantLock.tryLock(long timeout, TimeUnit unit)、
+	可中断RenentrantLock.lockInterruptibly()、多等待队列RenentrantLock.newCondition() 等特性。
+显式锁虽然灵活，但是需要显式的申请和释放，并且释放一定要放到finally块中，否则可能会因为异常导致锁永远无法释放！这是显式锁最明显的缺点。
+综上，当需要同步时请优先考虑更安全的更易用的隐式锁。
+
+========================================================================
+hashmap结构；什么对象能作为key
+hashmap,concurrentHashMap,hashtable比较
+String,StringBuilder,StringBuffer
+对象的深浅复制
+多线程：
+wait,sleep分别是谁的方法，区别
+countLatch的await方法是否安全，怎么改造
+线程池参数，整个流程描述
+背后的底层原理aqs，cas
+ThreadLocal原理，注意事项，参数传递
+Java的锁，内置锁，显示锁，各种容器
+锁优化：锁消除，锁粗化，锁偏向，轻量级锁
+web方面：
+servlet是否线程安全，如何改造
+session与cookie的区别，get和post区别，tcp3次握手，文件上传用post还是get
+session的存储
+如何防止表单重复提交
+jvm:
+jvm内存模型，jvm问题工具,jps,jinfo,jmap...
+数据库：
+最重要的索性及底层实现
+索性失效的场景
+最左原则
+查看执行计划
+carndiation
+锁的类型，行级表级悲观乐观锁
+解释数据库事务及特性
+隔离级别及实现
+redo log .undo logbin log主从复制
+mvcc,Next-Key Lock
+分布式：
+问了CAP，跟base
+zookeeper满足了CAP的哪些特性，paxos
+缓存穿透怎么解决
+redis的io模型
+如果保证redis高可用
+redis是单线程还是多线程
+线上cpu占比过高怎么排查
+一致性hash
+分库分表
+spring:
+ioc,aop原理
+ioc初始化流程
+springmvc的流程
+springboot,spring cloud相关组件
+做过的项目，梳理清理，画图
+mysql: explain和profile
+========================================================================
+

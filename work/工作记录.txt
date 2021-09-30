@@ -1,0 +1,4024 @@
+科达提供的SIP：
+IP：32.128.6.39
+端口：5800
+ID：32090000002000000000
+
+19楼视频网机器ip :  
+IP: 32.128.40.21
+端口：5800
+ID：32090000002000001234
+
+版权：
+ydga  Ydga2021
+
+tplink902s
+
+\e624     +
+\e67e   -
+
+
+\e625  下
+"\e623" 右
+
+h5 rtsp player
+
+时代经纬 执法记录仪
+后台权限代码 isShow
+
+画图软件
+
+核心指标完成情况：
+ID、公诉、侵财、经侦、赌娼、食药环、涉毒、网络、
+吸毒查处、逃犯、特行违规经营查处、消防案件查处、公共场所案件查处、涉赌行政查处、
+涉娼行政查处、危化品查处、出租屋查处、入室盗窃案件变动数、刑事案件总量变动数、
+“八类”案件变动数、视频在线率、接处警排名、创建时间
+
+核心指标完成情况
+增删改查~~字段为：
+ID、公诉、侵财、经侦、赌娼、食药环、涉毒、网、
+吸毒、逃、特行、消防、场所、赌博、
+黄娼、危化、出租、入室、发案、
+八类、监控、处警、创建时间
+
+盐城第一中学南门  120.15429,33.327082
+盐城市第一中学西门 120.152886,33.330285
+
+http://221.231.109.86:9091/kqxxForward/ydpcs/insertUserTemperature.html
+location /ydpcs{
+		proxy_pass http://50.144.0.47:8089/ydpcs   #请求转向 定义的服务器列表
+	}
+
+1、警车巡逻线路 实时监控 30多台GPS定位设备
+
+select  t.bjlx,count(1),t2.name  from jcj_jjxx t  left join ydpcs.t_sys_dic_item t2 on t.bjlx = t2.code where t.jjdw like '32090368%' and t.bjdhsj >'20190101000000'
+ and t2.dicid = 'SEQ2017112200000000001151'
+ and t.bjlx not like '%00' group by t.bjlx,t2.name order by  count(1) desc
+
+警情：
+1、单一警情的近期发案情况预警
+2、某一警情某一时间段某一地点三维度分析
+3、重复警情
+旅馆：
+1、关联警情，旅馆频繁出现警情提醒。
+2、关联重点人员。
+3、入住年龄段、入住时段、现住多少人
+
+select * from t_sys_dic_item t where t.dicid='15717928580090768'
+and t.code like '0202%'
+
+警情概况：  警情
+1、警情类别统计（细类统计）  （日、周、月、年）
+2、警情关键词统计 近30日  
+3、今日警情（同比、环比）、实时警情
+4、多次报警电话分析   近7日、30日
+5、多次报警地点分析   近7日、30日
+6、报警时间段、发生地 统计分析  近7日、30日
+7、小区警情数量排名统计  （日、周、月、年） 前几名
+8、小区案件数量排名统计  （日、周、月、年） 前几名
+9、警情高发地段：（日、周、月、年） 前几名
+
+数据排名统计：  社区警务
+1、小区人口排名统计
+2、旅馆入住 （重点人员）人数排名统计（日、周、月、年）
+3、网吧上网（重点人员）人数排名统计（日、周、月、年）
+4、重点人员 轨迹信息（入住旅馆、网吧）
+5、所内枪支统计（各类型枪支子弹剩余量）
+
+
+39	赌博线索
+37	其他伤害、殴打他人
+33	其他经济纠纷
+32	消费纠纷
+24	劳资纠纷
+23	寻找物品
+19	噪音扰民
+15	网络诈骗
+13	债务纠纷
+12	夫妻家庭暴力
+11	盗窃电动自行车
+10	其他家庭纠纷
+10	租赁纠纷
+9	盗窃车内财物
+8	其他日常生活求助
+7	招领人员
+7	其他盗窃
+6	盗窃电动车电瓶
+5	盗窃民宅
+5	认领物品
+5	路倒
+4	无主物品
+3	卖淫嫖娼线索
+3	盗窃工地
+3	盗窃少量财物
+3	其他家庭暴力
+2	犯罪嫌疑人
+2	其他违法犯罪线索
+2	动物侵扰
+2	合同纠纷
+2	其他动植物警情
+2	盗窃商店
+2	盗窃手机
+1	犬只伤人
+1	其他环保求助
+1	故意伤害
+1	盗窃树木、花种
+1	盗窃自行车
+1	其他举报线索
+1	涉毒线索
+1	盗窃牲畜 
+1	精神病人
+1	其它意外伤亡
+1	走失人员
+1	假币假券
+1	骗取少量财物
+1	信用卡诈骗
+1	割腕自杀
+1	盗窃宠物
+
+
+恒大名都  22
+神州路初中 16
+和泰嘉园 14
+源缘小区
+向阳秀水
+天澜湾
+港龙华侨城
+兴都公寓
+依云香溪
+
+
+http://localhost:8089/dp/home.html
+http://localhost:8089/dp/home2.html
+
+
+
+--2、小区重点人员数量排名统计（日、周、月、年）
+1、警情、社区警务  两块大屏
+2、专项行动（主要针对 重点人员）
+3、清单管理（执法监督、工作交办）
+
+Connection to https://10.39.149.106:433 refused
+海康视频端口关闭
+
+实际更新：上门入户 情况、各小区实有人口、辖区内 实有单位的详细信息（特别是管控信息）
+
+
+if (network == null) {
+			network = new vis.Network(container, data, options);
+	   }
+	 	network.fit({animation:{offset:{x:0,y:0}}});
+	 	network.on("doubleClick", function (params) {
+	        params.event = "[original event]";
+	        if(params.nodes != undefined && params.nodes.length==0
+	        		&& params.edges != undefined && params.edges.length==1) {
+	        	selectEdgeId = params.edges[0];
+	        	showEdgeLabel();
+	        }
+	    });
+		
+Uncaught TypeError: Cannot read property 'substr' of undefined
+    at SVGImageElement.<anonymous> (d3_graph.js:2002)
+    at SVGImageElement.attrFunction (VM75 d3.js:597)
+    at VM75 d3.js:884
+    at d3_selection_each (VM75 d3.js:890)
+    at Array.d3_selectionPrototype.each (VM75 d3.js:883)
+    at Array.d3_selectionPrototype.attr (VM75 d3.js:580)
+    at initGraph (d3_graph.js:2000)
+    at d3_graph.js:1892
+    at Object.<anonymous> (VM75 d3.js:1916)
+    at Object.event (VM75 d3.js:434)		
+
+
+1、同比、环比 精确到 时 成群（ok）
+2、清单管理-日历写活 成群 （ok）
+3、早9点、晚7 (19点) 拉钉钉 成群 （ok）
+4、内务曝光样式修改 徐德
+5、指挥调度 电话反查 徐德 （ok）
+ 
+njws20414 njws20414 20414
+车辆大数据->轨迹信息查询->卡口过车 BUG修复  （时间排序？）
+
+
+where t.longitude &gt; '120.087840557098' and t.longitude &lt; '120.181460380554' and t.latitude &lt; '33.3454584950604'
+		and t.latitude &gt; '33.2268404835597' 
+		
+//		for (int i = list.size(); i >0; i--) {
+//			Map<String, Object> map = list.get(i-1);
+//			Double jd =Double.parseDouble(map.get("LONGITUDE").toString()) ;
+//			Double wd =Double.parseDouble(map.get("LATITUDE").toString()) ;
+//			if(!isInRegion(jd,wd)){
+//				list.remove(i-1);
+//			}else{
+//				String time = map.get("WS_RKSJ").toString();
+//				map.put("WS_RKSJ", sdf2.format(sdf.parse(time)) );
+//			}
+//			String time = map.get("WS_RKSJ").toString();
+//			map.put("WS_RKSJ", sdf2.format(sdf.parse(time)) );
+//		}		
+
+广汇通停车场  120.1393470  33.3826730
+
+120.087840557098  
+120.181460380554
+33.2268404835597 
+33.3454584950604
+
+20415
+
+专项行动模块 -加上 停车场数据
+
+
+1、停车场 实时数据（能看到进入停车场的车牌号）
+50.144.10.13:1521/orcl  ycqb
+select * from t_shxx_tccxx; --停车场
+select * from t_shxx_tcxx t order by t.ws_rksj desc;  --停车场车辆信息
+
+select * from t_shxx_tczp --照片
+select * from t_tcc_bwxx --泊位
+select * from t_tcc_dwxx --点位
+select * from t_tcc_qhxx --区划
+
+1、出租车历史轨迹 hbase数据 
+2、出租车 车内视频（出租车 上下车 照片）
+
+
+[{jcbz=0, ws_rksj=20191121184028, xzsj=20191121183105, 
+zdm=5150318_盐都区大庆西路与新204国道交叉口, sjzt=0, ssfwq=yun, 
+mkh=51503184, wd=33.3353771, yyszs=3, mac=7C:A1:77:E0:00:AC, 
+mkm=TFL01_MAC, zdlx=0, sscsh=41639, mklx=2, jd=120.0096087, 
+sjsj=20191115182423, zdh=5150318}, {jcbz=0, ws_rksj=20191118182117, xzsj=20191118181154, zdm=5150315_盐都区新都路与神州路交叉口, sjzt=0, ssfwq=yun, mkh=51503154, wd=33.3328609, yyszs=3, mac=7C:A1:77:E0:00:AC, mkm=TFL01_MAC, zdlx=0, sscsh=74430, mklx=2, jd=120.0143866, sjsj=20191118181933, zdh=5150315}, {jcbz=0, ws_rksj=20191113081411, xzsj=20191113080448, zdm=5150318_盐都区大庆西路与新204国道交叉口, sjzt=0, ssfwq=yun, mkh=51503184, wd=33.3353771, yyszs=3, mac=7C:A1:77:E0:00:AC, mkm=TFL01_MAC, zdlx=0, sscsh=9220, mklx=2, jd=120.0096087, sjsj=20191113081233, zdh=5150318}, {jcbz=0, ws_rksj=20191112182800, xzsj=20191112181838, zdm=5150318_盐都区大庆西路与新204国道交叉口, sjzt=0, ssfwq=yun, mkh=51503184, wd=33.3353771, yyszs=3, mac=7C:A1:77:E0:00:AC, mkm=TFL01_MAC, zdlx=0, sscsh=34713, mklx=2, jd=120.0096087, sjsj=20191112182620, zdh=5150318}, {jcbz=0, ws_rksj=20191112083700, xzsj=20191112082738, zdm=5150318_盐都区大庆西路与新204国道交叉口, sjzt=0, ssfwq=yun, mkh=51503184, wd=33.3353771, yyszs=3, mac=7C:A1:77:E0:00:AC, mkm=TFL01_MAC, zdlx=0, sscsh=11222, mklx=2, jd=120.0096087, sjsj=20191112083603, zdh=5150318}, {jcbz=0, ws_rksj=20191111082500, xzsj=20191111081537, zdm=5150318_盐都区大庆西路与新204国道交叉口, sjzt=0, ssfwq=yun, mkh=51503184, wd=33.3353771, yyszs=3, mac=7C:A1:77:E0:00:AC, mkm=TFL01_MAC, zdlx=0, sscsh=10212, mklx=2, jd=120.0096087, sjsj=20191111082426, zdh=5150318}, {jcbz=0, ws_rksj=20191111082401, xzsj=20191111081438, zdm=5150318_盐都区大庆西路与新204国道交叉口, sjzt=0, ssfwq=yun, mkh=51503184, wd=33.3353771, yyszs=3, mac=7C:A1:77:E0:00:AC, mkm=TFL01_MAC, zdlx=0, sscsh=10170, mklx=2, jd=120.0096087, sjsj=20191111082355, zdh=5150318}, {jcbz=0, ws_rksj=20191110230254, xzsj=20191110225332, zdm=5150318_盐都区大庆西路与新204国道交叉口, sjzt=0, ssfwq=yun, mkh=51503184, wd=33.3353771, yyszs=3, mac=7C:A1:77:E0:00:AC, mkm=TFL01_MAC, zdlx=0, sscsh=10146, mklx=2, jd=120.0096087, sjsj=20191106082445, zdh=5150318}, {jcbz=0, ws_rksj=20191106225144, xzsj=20191106224222, zdm=5150318_盐都区大庆西路与新204国道交叉口, sjzt=0, ssfwq=yun, mkh=51503184, wd=33.3353771, yyszs=3, mac=7C:A1:77:E0:00:AC, mkm=TFL01_MAC, zdlx=0, sscsh=38606, mklx=2, jd=120.0096087, sjsj=20191105202948, zdh=5150318}, {jcbz=0, ws_rksj=20191104082537, xzsj=20191104081616, zdm=5150318_盐都区大庆西路与新204国道交叉口, sjzt=0, ssfwq=yun, mkh=51503184, wd=33.3353771, yyszs=3, mac=7C:A1:77:E0:00:AC, mkm=TFL01_MAC, zdlx=0, sscsh=9044, mklx=2, jd=120.0096087, sjsj=20191104082344, zdh=5150318}]
+
+孙涛 15189212138
+
+自己 ： 7C:A1:77:E0:00:AC
+
+865925041865538
+
+[{ws_rksj=20190924161734, xzsj=20190924161321, zdm=5151116_大丰川东农场小街大桥东岸, 
+sjzt=0, ssfwq=1, imsi=970027612048470, mkh=51511162, wd=32.973757, yyszs=2, cq=51, 
+mkm=5151116_大丰川东农场小街大桥东岸_移动, zdlx=0, 
+cjsj=2019-09-24 16:15:58, sjxh=Cinterion TC35I, sscsh=224100, imei=354112019044530, 
+mklx=0, jd=120.732724, cjlsh=1187, zdh=5151116},
+ {ws_rksj=20190829091819, xzsj=20190829091303, zdm=5150505_东台市惠阳路与范公南路卡口, 
+ sjzt=0, ssfwq=1, imsi=960025018282288, mkh=51505051, wd=32.868702, yyszs=1, cq=0, 
+ mkm=5150505_东台市惠阳路与范公南路卡口_移动, zdlx=0, cjsj=2019-08-29 09:16:33, 
+sscsh=224200, imei=000000000000000, mklx=0, jd=120.329905, cjlsh=25302, zdh=5150505}, {ws_rksj=20190828142315, xzsj=20190828141800, zdm=5150505_东台市惠阳路与范公南路卡口, sjzt=0, ssfwq=1, imsi=960025018282288, mkh=51505051, wd=32.868702, yyszs=1, cq=0, mkm=5150505_东台市惠阳路与范公南路卡口_移动, zdlx=0, cjsj=2019-08-28 14:20:26, sscsh=224200, imei=000000000000000, mklx=0, jd=120.329905, cjlsh=46851, zdh=5150505}, {ws_rksj=20191102211746, xzsj=20191102210837, zdm=55123_G204国道刘庄十字路口, sjzt=0, ssfwq=1, imsi=970658094600123, mkh=大丰区, wd=33.143201, yyszs=0, cq=0, mkm=55123, zdlx=0, cjsj=20190418001055, sscsh=224100, imei=000000000000000, mklx=55123_大丰刘庄十字路口_移动, jd=120.300019, cjlsh=9926, zdh=55123}, {ws_rksj=20191107140805, xzsj=20191107135856, zdm=5150508_东台市沿海高速-东台, sjzt=0, ssfwq=1, imsi=960012486304280, mkh=东台市, wd=32.861898, yyszs=0, cq=0, mkm=5150508, zdlx=0, cjsj=20190418001055, sscsh=224200, imei=000000000000000, mklx=5150508_东台市沿海高速-东台_移动, jd=120.407895, cjlsh=25966, zdh=5150508}, {ws_rksj=20190828123916, xzsj=20190828123400, zdm=5150511_东台市富安市际卡口, sjzt=0, ssfwq=1, imsi=960025018282288, mkh=51505112, wd=32.637845, yyszs=2, cq=0, mkm=5150511_东台市富安市际卡口_联通, zdlx=0, cjsj=2019-08-28 12:37:01, sscsh=224200, imei=000000000000000, mklx=0, jd=120.491838, cjlsh=10074, zdh=5150511}, {ws_rksj=20191110135330, xzsj=20191110134423, zdm=2243024_沿海高速-兴桥高速出口出口侧, sjzt=0, ssfwq=1, imsi=960012486304280, mkh=射阳县, wd=33.641205, yyszs=14, cq=0, mkm=2243024, zdlx=0, cjsj=20180125113448, sscsh=224300, imei=000000000000000, mklx=TFL01_移动4G模块2, jd=120.173091, cjlsh=25998, zdh=2243024}, {ws_rksj=20191110133303, xzsj=20191110132354, zdm=赣江路与普陀山路交叉口, sjzt=0, ssfwq=1, imsi=960012486304280, mkh=盐都区, wd=33.3381877, yyszs=2, cq=0, mkm=5150211, zdlx=0, cjsj=20191101001348, sscsh=224007, imei=000000000000000, mklx=GL01E_MAC, jd=120.0285229, cjlsh=3899, zdh=5150211}, {ws_rksj=20190828123916, xzsj=20190828123400, zdm=5150511_东台市富安市际卡口, sjzt=0, ssfwq=1, imsi=960025018282288, mkh=51505112, wd=32.637845, yyszs=2, cq=0, mkm=5150511_东台市富安市际卡口_联通, zdlx=0, cjsj=2019-08-28 12:37:00, sscsh=224200, imei=000000000000000, mklx=0, jd=120.491838, cjlsh=10069, zdh=5150511}, {ws_rksj=20190829095619, xzsj=20190829095103, zdm=5150511_东台市富安市际卡口, sjzt=0, ssfwq=1, imsi=960025018282288, mkh=51505112, wd=32.637845, yyszs=2, cq=0, mkm=5150511_东台市富安市际卡口_联通, zdlx=0, cjsj=2019-08-29 09:54:45, sscsh=224200, imei=000000000000000, mklx=0, jd=120.491838, cjlsh=7524, zdh=5150511}]
+
+12.20周报
+1、OA系统 用户信息更新BUG导致部分人员无法登陆修改
+2、2019年1-11月警情及危化品警情相关数据统计
+3、盐渎派出所 来派出所报警警情展示不出来BUG修复
+4、盐渎派出所 指挥调度，专项行动等页面搜索框查询完善
+5、盐渎派出所 首页 旅馆入住、重点人员、网吧上网、机动车 列表页面完善
+6、盐渎派出所 内务考核，考勤数据展示完善
+7、盐渎派出所 停车场数据查询优化
+8、人脸视频接口 日志记录完善
+
+12.13周报
+1、车辆大数据 25亿过车数据Hbase查询完善
+2、盐渎派出所 内务考核，考勤数据查询完善
+3、盐渎派出所 停车场数据查询完善
+4、盐渎派出所 社区警务-业务办理 数据统计完善
+5、盐渎派出所 首页-实时警情 增加到派出所现场报警的警情展示
+6、盐渎派出所 指挥调度页面  增加停车场图层展示区域及点击停车信息列表
+7、OA 市长签名修改及打印阅办单中签名修改
+
+12.6周报
+1、调用全国人口接口导出数据照片
+2、自动化部署平台 增加服务器自动化配置，解决磁盘空间不足导致部署失败的问题
+3、OA项目 修复后台页面新增账号无法增加单位信息的BUG
+4、车辆大数据 实时过车查询完善
+5、盐渎所 指挥调度，专项行动等页面搜索框增加回车键查询功能
+6、盐渎所 首页增加 旅馆入住、重点人员、网吧上网、机动车 列表页面
+7、盐渎所 内务考核，考勤数据展示完善
+
+
+11.29周报
+1、车辆大数据 过车数据总量统计完善
+2、关系分析，修复关系图谱展示不出来的bug
+3、盐渎所 指挥调度 监控卡口数据 重新整理，完善
+4、盐渎所 内务管理app 内外网接口修改及页面修改
+5、盐渎所 新增 场所/常住人口/暂住人口/机动车/非机动车/驾驶人 列表页面
+6、盐渎所 停车场数据查询优化
+7、OA 进入公文页面 公共用户展示公共文件，个人展示文件修改
+
+
+11.22周报
+1、盐渎所 值班人员excel导入功能完善
+2、盐渎所 内务曝光功能完善（安卓手机app拍照，平台展示数据）
+3、盐渎所 专项行动 新增 停车场数据展示页面
+4、盐渎所 指挥调度 出租车历史轨迹查询完善
+5、车辆大数据 过车数据总量，查询完善
+6、盐渎所 专项行动-> 重点人员查询-修复非访重点人员查询的bug  
+7、盐渎所 社区警务-> 暂住人口办理 修复性别查询的bug
+8、盐渎所 社区警务-> 公务用枪 修复操作时间框 不可选的bug
+9、盐渎所 指挥调度 执法仪、350M、警车、视频、停车场、出租车、网吧、旅馆 查询完善、增加回车键查询
+
+11.15周报
+1、盐渎所 内务考核-钉钉打卡数据抽取完善，修复数据重复的bug
+2、盐渎所 警情案件-重大案件数据展示
+3、盐渎所 清单管理-清单列表/民警工作清单/晨会列表 编辑删除功能
+4、盐渎所 清单管理-晨会内容 页面增删改查功能
+5、盐渎所 350M对讲功能、呼叫电话
+6、盐渎所 指挥调度 展示停车场实时数据、出租车历史轨迹查询展示
+7、盐渎所 根据报警电话进行反查
+8、盐渎所 专项行动 重大人员图表展示
+9、人脸识别接口测试完善
+
+
+11.8周报
+1、Hbase查询 沈海高速K916由北向南卡口 苏G开头的车牌 数据入库
+2、车辆大数据->轨迹信息查询->卡口过车 BUG修复
+3、盐渎所实现350M对讲机功能
+4、盐渎所 警情/案件的同比/环比 精确到 小时
+5、盐渎所 清单管理-日历 数据展示
+6、盐渎所 钉钉考勤数据 接口改为 早9点、晚7点 各拉取一次
+7、盐渎所 清单管理 社区警务、执法监督、工作交办、案件交办 数据展示
+8、盐渎所 社区警务-业务办理 ：echarts图表数据展示
+
+
+考勤 钉钉打卡数据重复
+
+320900000000020159  沈海高速K916由北向南
+
+
+1、根据报警电话进行反查
+2、情报研判（报警比较多的时间、地点 进行分析）
+
+
+int total = this.qdglMapper.getQdglCount(map);
+{gzlb=0}
+
+
+oracle建立触发器，通过存储过程发送数据给Java接口，然后发送实时数据到前台页面(websocket):
+
+Create Or Replace Trigger insterMessageNotionAfter
+after  insert on jcj_jjxx
+for each row
+begin
+    socket_jjxx('http://50.144.0.47:8089/testwx/exchange.html',:new.JJBH,:new.gis_x,:new.gis_y,:new.BJNR,:NEW.JJDW,:new.bjlx,:new.bjr,:new.bjdhsj,:new.sfdd,:new.lxdh);
+end insterMessageNotionAfter;
+
+create or replace procedure socket_jjxx(ip varchar2,title varchar2,jd varchar2,wd varchar2,bjnr varchar2,jjdw varchar2,bjlx varchar2,bjr varchar2,bjdhsj varchar2,sfdd varchar2,lxdh varchar2 )
+as language java name
+'JYM.say(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)';
+
+Java sources
+create or replace and compile java source named jym as
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.net.URLConnection;
+import java.net.URLEncoder;
+public class JYM {
+	public static void sendGet(String url, String title, String jd, String wd, String bjnr, String jjdw,
+			String bjlx, String bjr, String bjdhsj, String sfdd, String lxdh) {
+		String result = "";
+		BufferedReader in = null;
+		try {
+			bjnr = URLEncoder.encode(bjnr, "utf-8");
+			bjr = URLEncoder.encode(bjr, "utf-8");
+			sfdd = URLEncoder.encode(sfdd, "utf-8");
+			lxdh = URLEncoder.encode(lxdh, "utf-8");
+			String urlName = url + "?title=" + title + "&jd=" + jd + "&wd=" + wd + "&bjnr=" + bjnr + "&jjdw=" + jjdw
+					+ "&bjlx=" + bjlx + "&bjr=" + bjr + "&bjdhsj=" + bjdhsj + "&sfdd=" + sfdd + "&lxdh=" + lxdh;
+			URL realUrl = new URL(urlName);
+			URLConnection conn = realUrl.openConnection();
+			conn.setRequestProperty("accept", "*/*");
+			conn.setRequestProperty("connection", "Keep-Alive");
+			conn.connect();
+			in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+			String line;
+			while ((line = in.readLine()) != null) {
+				result += "/n" + line;
+			}
+		} catch (Exception e) {
+			System.out.println("发送GET请求出现异常" + e);
+			e.printStackTrace();
+		} finally {
+			try {
+				if (in != null) {
+					in.close();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	public static void say(String ip, String title, String jd, String wd, String bjnr, String jjdw, String bjlx,
+			String bjr, String bjdhsj, String sfdd, String lxdh) throws Exception {
+		JYM.sendGet(ip, title, jd, wd, bjnr, jjdw, bjlx, bjr, bjdhsj, sfdd, lxdh);
+	}
+}
+
+@Controller
+@RequestMapping("/testwx")
+public class JvmController{
+	@RequestMapping("/exchange")
+	public boolean exchange(HttpServletRequest request) {
+		Map<String, Object> map = super.getParamValues(request);
+		ObjectMapper OBJECT_MAPPER = new ObjectMapper();
+		String writeValueAsString = OBJECT_MAPPER.writeValueAsString(map);
+		JjxxWebsocket.sendMessage(writeValueAsString);
+	}
+}
+@ServerEndpoint("/jjxx/websocket")
+public class JjxxWebsocket {
+	private Session session;
+	private volatile boolean sendSuccess = false;
+	@OnOpen
+	public void onOpen(Session session) {
+		synchronized (this) {
+			this.session = session;
+			sockets.add(this);
+		}
+	}
+	public static void sendMessage(String message) {
+		for (final JjxxWebsocket websocket : sockets) {
+			websocket.session.getAsyncRemote().sendText(message, new SendHandler() {
+				@Override
+				public void onResult(SendResult result) {
+					websocket.sendSuccess = result.isOK();
+					System.out.println("onResultSSSSSSSSSSS");
+				}
+			});
+			if (websocket.sendSuccess) {}
+		}
+	}
+}
+
+盐渎新页面 需求：
+公用列表页面，缺少新增(编辑)页面
+清单管理:
+1、晨会内容：加个二级编辑页面
+警情案件模块：
+1、案件统计 （目前给个圆形，不好写活）
+2、提醒：加个二级编辑页面
+
+涉案人员-随身财物-临时保管 管理
+卷宗
+
+1、专项行动-> 重点人员查询-非访重点人员查询bug  (数据库数据应该存储字典项,01/02等，目前库里是汉字)
+2、社区警务-> 暂住人口办理 性别查询bug
+3、社区警务-> 公务用枪 操作时间框 不可选
+
+电话反查 
+
+胥传伟 092081
+
+{ZARS=0, XGRXM=杨红明, JJSS=1000, ZABJ=0, FXSJ=20191031073546, ZSAJ=0, SFKCXC=0, 
+SLDW=320903680000, FZZTLX=1, ZBRXM=包玉峰, DJR=005327, ZBDW=320903680000, 
+WS_RKSJ=20191031122448, AJMJ=1, SLR=005325, FASJSX=20191030230000, 
+JYAQ=2019年10月31日早晨7时，唐登娅发现其停放在天澜湾34号楼下的一辆白色的车牌为苏JQ287K的别克轿车四个车门及引擎盖被人划坏，损失1000余元。, AJSSZRQMC=江苏省盐城市盐都区公安局盐渎派出所, PAZJZ=0, BARLXFS=13813440013, AJMLPH=29, AJSSXQ=320903, XBR=005327, JLBH=A3209036800002019100207, ZBR=005325, AJRYSSS=0, SAZJZ=0, XGSJ=20191031122810, FADY=1, AJBH=J3209036819103100004, SLDWMC=江苏省盐城市盐都区公安局盐渎派出所, AJJJFNS=0, AJJJRZS=0, FLAJBH=AYX32090368002019100068, DJDW=320903680000, AJJLX=320900065035, AJMPHZ=1, RN=1, AJZT=20, ZBRDH=286331, SLFS=12, AJLB=203030, SLDWDH=88416110, XGR=005327, AJSSZRQ=320903680000, ZBDWMC=江苏省盐城市盐都区公安局盐渎派出所, BASJ=2019-10-31 07:35:46, AJJJETS=0, GLBH=J3209036819103100004, AJDZMC=江苏省盐城市盐都区西环路29号, FACS=22, WS_XGSJ=20191031123224, AJSX=0000000000000001, GXFG=04, DJDWMC=江苏省盐城市盐都区公安局盐渎派出所, WHZJZ=0, SLSJ=20191031122812, AJRYSWS=0, AJQTSHRS=0, BARXB=2, BARBMJB=01, DJRXM=杨红明, KFXAJLB=01, 
+AJMC=唐登娅财物被损案, 
+SFYXC=1, AJLY=22, BARXM=唐登娅, XBRXM=杨红明, XGDW=320903680000, XGDWMC=江苏省盐城市盐都区公安局盐渎派出所,
+ FABW=2311, GDZT=0, DYABS=0, SLRXM=包玉峰, FASJXX=20191031070000, DJSJ=20191031122321}
+
+
+to_char(to_date('${cjsj_ks}','yyyy-MM-dd HH24:mi:ss'),'yyyyMMddHH24miss')
+
+&nbsp;&nbsp;当前第：<span class='pageNum'>1</span>/1页，共<span class='totalNum'>1</span>条记录 
+<a href="javascript:pageGo('2');" ><strong>下一页</strong></a>&nbsp;|<a href="javascript:pageGo('13');" >
+<strong>尾页</strong></a>&nbsp;&nbsp;跳转至<input type="text" maxlength="10" id="jumpPageNum" value="1" />页&nbsp;<a href="javascript:pageGo('');"><strong>GO</strong></a>&nbsp;&nbsp;当前第：<span class='pageNum'>1</span>/13页，共<span class='totalNum'>123</span>条记录 
+
+ws_main/main2.html
+
+
+数据源 50.144.10.13:1521/orcl ydpcs ydpcs_2019:
+t_face_detec_all 人脸识别
+t_xq_xbgg 香槟公馆
+
+
+
+retrievalRepository:{"rtn":0,"message":"OK","retrieval_query_id":"173585",
+"results":[
+{"picture_uri":"normal://repository-builder/20190804/1cmvx4TafI5gOTFU2-1GmA==@1",
+"gender":1,"offset":0,"nation":0,"is_writable":false,
+"face_rect":{"h":349,"w":349,"x":3,"y":53},"born_year":1953,
+"face_image_id":"9223372036855185218","similarity":92.6637267126386,
+"name":"姜春明","face_image_uri":"normal://repository-builder/20190804/7aEZOEMbTR4b537oIU7Q7w==@2",
+"repository_id":"24","person_id":"320902195303030530","timestamp":1564887682},
+
+{"picture_uri":"normal://repository-builder/20190805/ewzGjX-ES4AqlWnA8-5UJw==@2",
+"gender":1,"offset":1,"nation":0,"is_writable":false,"face_rect":{"h":360,"w":360,"x":-4,"y":8},
+"born_year":1956,"face_image_id":"9223372036861436681","similarity":90.7180205134821,
+"name":"陆有江","face_image_uri":"normal://repository-builder/20190805/e23zfegu-Dk8Yybd-YAY-Q==@1",
+"repository_id":"24","person_id":"320925195610032856","timestamp":1564973118},
+{"picture_uri":"normal://repository-builder/20190805/nXhMAmK8Oii2qiH2d4yS-w==@1","gender":1,"offset":2,"nation":0,"is_writable":false,"face_rect":{"h":345,"w":345,"x":8,"y":24},"born_year":1956,"face_image_id":"9223372036859326612","similarity":88.32833937809583,"name":"孙杨彩","face_image_uri":"normal://repository-builder/20190805/0WsjsihtJ8N5c6B9Y5mA-g==@2","repository_id":"24","person_id":"320923195608074835","timestamp":1564949281},{"picture_uri":"normal://repository-builder/20190804/nLZpAgzO-w09vv4I0gxh5Q==@1","gender":1,"offset":3,"nation":0,"is_writable":false,"face_rect":{"h":374,"w":374,"x":-11,"y":53},"born_year":1944,"face_image_id":"9223372036856712797","similarity":84.96697201149809,"name":"胥瑞寿","face_image_uri":"normal://repository-builder/20190804/dGl0rRR0pSLDbVRKyw3-WA==@2","repository_id":"24","person_id":"320919194410102993","timestamp":1564908744},{"picture_uri":"normal://repository-builder/20190805/3fFo6xrGDxHgvaCnVdIB1A==@2","gender":1,"offset":4,"nation":0,"is_writable":false,"face_rect":{"h":366,"w":366,"x":-7,"y":42},"born_year":1945,"face_image_id":"9223372036861306772","similarity":84.71793124496017,"name":"徐业成","face_image_uri":"normal://repository-builder/20190805/gbzjrF7HW9Klzk8J6azC9A==@2","repository_id":"24","person_id":"320925194509062511","timestamp":1564971732},{"picture_uri":"normal://repository-builder/20190804/0wzEn8p-nIFVGT5hpXcrvA==@1","gender":1,"offset":5,"nation":0,"is_writable":false,"face_rect":{"h":362,"w":362,"x":-2,"y":82},"born_year":1950,"face_image_id":"9223372036856785583","similarity":83.75734543117112,"name":"王国林","face_image_uri":"normal://repository-builder/20190804/Rl3CKsEXsxk5NiN7rW6M7Q==@2","repository_id":"24","person_id":"320919195001204475","timestamp":1564909491},{"picture_uri":"normal://repository-builder/20190805/V0JhykSrgyOJNe7acDdc-A==@1","gender":1,"offset":6,"nation":0,"is_writable":false,"face_rect":{"h":328,"w":328,"x":9,"y":23},"born_year":1949,"face_image_id":"9223372036859217313","similarity":83.38180776734411,"name":"杨德凤","face_image_uri":"normal://repository-builder/20190805/SuCrlzxMMHT36uP0EdFJ2g==@1","repository_id":"24","person_id":"320923194908181515","timestamp":1564948060},{"picture_uri":"normal://repository-builder/20190804/Hl8c3v-84x8g6YKDshORfw==@1","gender":1,"offset":7,"nation":0,"is_writable":false,"face_rect":{"h":369,"w":369,"x":-7,"y":20},"born_year":1950,"face_image_id":"9223372036855174429","similarity":83.01417615959767,"name":"孙乃龙","face_image_uri":"normal://repository-builder/20190804/404DZIzywC3WRAqnkKUR3w==@1","repository_id":"24","person_id":"320902195006158511","timestamp":1564887445},{"picture_uri":"normal://repository-builder/20190805/kfNAz7jrxOEU4mrRDvnMUA==@2","gender":1,"offset":8,"nation":0,"is_writable":false,"face_rect":{"h":375,"w":375,"x":-7,"y":13},"born_year":1941,"face_image_id":"9223372036859140521","similarity":82.59910821536782,"name":"黄文台","face_image_uri":"normal://repository-builder/20190805/VpB4QvjGp-7hVcgd3jGRLQ==@1","repository_id":"24","person_id":"320923194110232117","timestamp":1564947234},{"picture_uri":"normal://repository-builder/20190805/fPB3AImfe2j3VG-8vdvudA==@1","gender":1,"offset":9,"nation":0,"is_writable":false,"face_rect":{"h":357,"w":357,"x":0,"y":27},"born_year":1947,"face_image_id":"9223372036862135261","similarity":82.03777823364746,"name":"陈广林","face_image_uri":"normal://repository-builder/20190805/JaCjILt9N8-D2T4WfGkJoA==@1","repository_id":"24",
+"person_id":"320926194708141016","timestamp":1564980898}],"total":100}
+
+03
+是否涉毒人员：37 ycsjzl
+select count(*) count from aj_xyrxx t1
+left join ry_jbxx t2 on t1.rybh = t2.rybh
+left join aj_jbxx t3 on t1.ajbh = t3.ajbh
+where t2.gmsfhm = '320902197703253038'
+and t3.ajlb like '0607%';
+
+02
+是否在逃人员：37 ycsjzl
+select count(*) count from t_ry_ztry t where t.sfzh = '320902197703253038'
+
+01
+是否重点人员： 13 ycqb
+select count(*) count from t_bsab_zdry_0917 t where t.gmsfhm = '320927195703010018'
+
+00正常
+2.38 sjzl_ry CZRK_CZRK
+select XM,gmsfhm,t.hjdz_ssxqmc,t.hjdz_qhnxxdz,T.CSRQ from czrk_czrk t where t.gmsfhm = '320911195904156311'
+人员照片
+
+
+url: "/dp/getJjDataByTimeIndexNew.html?flag=day",
+
+10.25周报：
+1、盐渎所新页面 清单管理模块：清单列表、民警工作清单、处警清单 重写
+2、盐渎所 清单管理主页面：本月处警数量统计（照片转成base64，导入数据库）
+3、盐渎所新页面 警情案件模块、社区警务模块 集成静态页面
+4、kettle自定义开发kafka插件，开发流程完善
+5、自动化部署平台 修改日志级别，减少日志文件
+6、提供零壹人脸识别接口 并进行联调
+7、车辆大数据 过车数据总量 查询完善
+
+10.23
+1、自动化部署平台 修改日志级别，减少日志文件
+2、盐渎所 新页面-清单管理 模块 
+
+10.18
+1、提供 关注对象共享车辆轨迹 外网接口
+2、人脸检测接口数据拉取（登录、人脸检测、人脸库检索、获取图片 接口）
+3、新增 根据图片解析出 人员身份证号、姓名、户籍地址、出生日期、相似度、是否在逃/重点/涉毒、照片 接口
+4、小区入口 7万张照片人脸识别 数据入库
+5、盐渎所 固定资产管理需求梳理、功能完善
+6、盐渎所 钉钉考勤数据接口文档整理
+7、盐渎所 执法记录仪经纬度接口文档整理
+8、盐渎所项目 现有服务器资料整理
+
+昨日警情总数：30
+违法犯罪：6
+求助类：6
+纠纷类：16
+其他警情：2
+
+昨天案件总数：1
+案件类别：殴打他人
+
+盐渎所旅馆数据：
+50.144.2.39:1521/ycdsjfwpt  sjzl_hd/ycdsjpt_hd
+select * from hn_hotel t2 where t2.p_code='32092818'
+
+13库的ycqb;    
+--5月1号至今的外地货车(号牌种类：01)数据
+select * from t_waidi_hc;
+
+--关注对象共享车辆轨迹核查
+select * from t_share_car;
+
+=TEXT(H2,"yyyy-mm-dd HH:mm:ss")
+
+处警路上录像：警车实时位置：行车记录仪、执法仪 出租车轨迹视频
+
+dbcp连接池
+
+20 违法犯罪
+21 交通
+26 纠纷
+23 群众求助
+
+情报研判 查询完善
+
+/getPersonRelation
+
+
+
+10.14
+1、关注对象共享车辆轨迹核查 国庆期间数据Excel整理，导入到Oracle。
+2、盐渎所平台演示 页面浏览器兼容调试。
+3、盐渎所 指挥调度 警车行车轨迹、行车记录仪 视频播放，生成gif动态图片
+4、盐渎所 每日警情、案件 按类别统计
+5、盐渎所 首页-场所、网吧上网数据统计结果修正
+6、盐渎所 专项行动-网吧上网、旅馆入住 bug修复
+7、盐渎所 地图（右侧功能）由单选改为复选
+
+10.9周报：
+1、Hbase查询 5月1号至今的外地货车(号牌种类：01)数据
+2、关注对象共享车辆轨迹核查 页面excel导入、查询、地图展示功能
+3、关系分析 解决 网吧同上网查询缓慢的问题
+4、盐渎所 需求文档整理
+5、盐渎所：新增 网吧同上网 菜单页面（调用关系分析接口）
+6、盐渎所：新增 旅馆同住 菜单页面（调用云搜接口）
+7、盐渎所：新增 警情 日、月、总 数据图表、分警情类别、时间段查询
+8、盐渎所：民警工作量（处警数量）统计页面
+
+钉钉 星任务 数据汇总展示 （钉钉第三方应用不提供数据接口！）
+
+盐渎所：
+1、登录页重写
+2、首页面重写
+3、应用商店页面重写
+4、新增清单管理、内务考核、专项行动、接处警、社区警务、执法监督 管理后台页面
+5、指挥调度展示 执法仪点位数据
+6、情报研判-警情分类、分时间段统计图表展示
+
+teamviewer:k955jv
+
+1、盐渎所 网吧上网、旅馆入住 人员（39库sjzl_hd PT3209A913/PT3209D909表没有盐渎所数据）
+2、情报研判 日-月-年
+
+1、盐渎所 智慧小区重点人员 样式调整
+2、警情信息 重点人员 数据去重 
+
+全息布控- 经侦
+1、经侦重点人员布控历史数据假删除
+2、3个都增加导出功能
+3、民警登录只能修改和删除本管辖地区的
+4、用户说新录入的人员，通过管辖地区搜索查看不到
+5、人员详情和新增的字段不一样
+
+9.10
+县局针对派出所的绩效考核 管理（抓获涉毒人员、涉黄人员、涉赌人员、破案率、执法质量 等 任务完成情况）
+任务类别管理
+列表 字段：任务类别（抓获涉毒人员数量）、要求任务完成数（2）、实际完成数（1）、任务交办人（）、备注（）、日期（）
+汇总：根据任务类别汇总
+
+盐渎所经纬度：select * from T_YC_PCSDWXX where PCSDM='320903680000'; ycqb
+
+民航/汽车/铁路/旅馆 在逃人员预警：select * from t_ztry_yjxx; 13库 ycqb
+
+淡雅蓝：http://50.144.2.117:11080/operate/view?solution=4656&accessToken=82c21dc748e74941873284f0954b7fc0
+极夜蓝：http://50.144.2.117:11080/operate/view?solution=4654&accessToken=5c9993af694c44a995da3db405ee741b
+http://50.144.2.117:11080/interface/example
+
+1、指挥调度模块，（视频点位 加视频直播）  徐德
+2、执法仪的点位数据 华德安每5秒 给我们推一次
+3、巡检 系统移植  王震
+
+华德安 点位 对接海康
+
+音频、视频
+
+86中间机：
+执法记录仪（包括内务拍照上传）、钉钉考勤
+
+1、钉钉数据抽取：
+外网服务器：222.188.99.139:8080
+数据库：50.144.10.13:1521/orcl ydpcs ydpcs_2019  t_kqxx_dk表  t_kqxx_qj表
+2、人脸视频 接收数据（进kafka）：
+172.26.44.2:8866
+
+数据比对、关系分析、车辆大数据、管理服务 登录日志改成存NAME（目前存的身份证）
+
+1、钉钉、 视频
+
+python爬虫库beautifulSoup研究
+
+9.9
+1、盐渎所 接处警、案件、车辆预警列表查询完善
+2、盐渎所 内务管理设计、测试完善
+
+9.5
+盐渎所：
+1、在逃人员预警短信发送记录 后台管理
+2、后台内务管理
+3、指挥调度 页面测试完善
+
+9.3
+盐渎所
+1、Android端 http请求 集成类库Okhttp
+2、Web端 指挥调度测试完善
+
+9.2
+1、盐渎所 android端框架搭建，内务管理中的图片上传、二维码扫描 功能
+
+8.29
+盐渎所
+1、指挥调度 警情、视频功能测试
+2、智能巡检 需求沟通，系统对接
+
+8.28
+盐渎所
+1、盐渎所 外网服务器环境搭建，钉钉项目部署测试
+2、智能巡检系统 功能测试
+
+8.27
+盐渎所 
+1、巡检安防系统 对接
+2、公务用枪管理 测试完善
+3、执法记录仪 点位数据 接口联调
+
+8.26
+1、盐渎所 执法仪GPS点位 对接
+2、盐渎所 巡检专家 系统功能梳理
+
+8.22
+1、智慧小区 前科人员预警、小区人口、imsi查询、mac查询 数据接口
+2、盐渎所民警 警号登录后应用跳转 测试完善
+3、盐渎所 指令推送 - 指令推送、每日工作统计 菜单 页面完善
+
+8.21
+1、重点管控（预警信息、预警人员情况、要素采集、重点人员类别、轨迹获取情况、在控在位情况） 数据接口
+2、一键点调（重要事项、统计信息、购票进京、重点人员在京情况/失联失控、民警信息） 数据接口
+
+8.20
+1、盐渎所 考勤明细列表及统计（钉钉数据）
+2、盐渎所 智慧安保、警务云盘、关系分析、车辆大数据、警务云盘、数据比对、管理服务 应用跳转
+
+8.19
+1、小区实存人口(人在户不在)、宾馆当月新入住数、出租屋管理 等数据梳理
+2、执法记录仪 服务器搭建 研究
+3、全息布控-经侦专题模块 增删改查 测试完善
+
+指挥调度、接警处警、社区警务、执法监督、情报研判
+
+hbase查询 imsi和mac 。rowkey:imis号_时间，mac号_时间
+
+localhost:8866/insert?topic=00003
+[{"data":"20190101","time":"20190101010101"}
+,{"data":"20190202","time":"20190101020202"}]
+
+Configuration: core-default.xml, core-site.xml, hbase-default.xml, hbase-site.xml
+
+视频传输方式：视频专网对接？国标GB28181 。走海康通道。互联网转视频专网
+视频播放不了，连接失败。
+重要事项 放到首页替换 预警核录？
+
+智慧小区：http://50.144.0.48:8899/  http://localhost:8089/dp/home3.html
+危化品管理：http://50.144.0.49:8099/xsqyjk/lb/sy.xhtml
+一键点调：http://50.144.10.8/zdgk/toAbdd
+重点人员布控：http://50.144.0.48:8080/yc_wwyjpt/qbpt/qxbk/main.xhtml
+
+小区户籍人口数量：http://50.144.0.47:8089/xqjj/zcglList.html
+
+已完成：
+数据接口部分（暂无页面，只做了数据接口）：
+1、重点管控：
+1)、近期预警信息:http://localhost:8089/zdgk/getYjxx1.html
+2)、预警人员情况:http://localhost:8089/zdgk/yjryCount.html
+3)、要素采集情况:http://localhost:8089/zdgk/zycjqkCount.html
+4)、重点人员类别:http://localhost:8089/zdgk/zdrylbCount.html
+5)、轨迹获取情况:http://localhost:8089/zdgk/gjhqqkCount.html
+6)、在控失控情况统计:http://localhost:8089/zdgk/zkskCount.html
+7)、在控失控情况列表:http://localhost:8089/zdgk/selectGgzt.html
+2、一键点调：
+1)、重要事项:http://localhost:8089/abdd/zysxListJSON.html
+2)、统计信息:http://localhost:8089/abdd/toZdryNewThreeDetail.html
+3)、购票进京:http://localhost:8089/abdd/gpjjtj.html
+4)、在京情况-区域：http://localhost:8089/abdd/getZjqkQytj.html
+5)、在京情况-类别：http://localhost:8089/abdd/getZjqkLbtj.html
+6)、在京情况-在空状态：http://localhost:8089/abdd/getZjqkzkzt.html
+7)、失联失控-区域：http://localhost:8089/abdd/getSkryQyxs.html
+8)、失联失控-类别：http://localhost:8089/abdd/getSlskLbtj.html
+
+页面部分（暂未放到系统中）：
+1、智慧小区： http://50.144.0.47:8089/dp/home3.html  （车辆进出和租户进出时间段 目前是假数据)
+2、民警工作量统计：http://50.144.0.47:8089/gzlkh/gzlkhList.html
+3、日常纪律考核： http://50.144.0.47:8089/daykh/daykhList.html
+4、工资账套：http://50.144.0.47:8089/gzzhlx/daykhList.html
+5、清单管理-列表增删改查： http://50.144.0.47:8089/qdgl/qdglList.html
+6、清单管理-民警一日工作清单和计划:http://50.144.0.47:8089/qdgl/mrgzList.html  
+7、所领导审批完成情况: http://50.144.0.47:8089/gzlkh/gzlkhList.html
+8、Hbase查询imsi：http://50.144.0.47:8089/hbase/imsiQuery.html
+9、Hbase查询mac：http://50.144.0.47:8089/hbase/macQuery.html
+10、在逃人员预警短信发送记录： http://50.144.0.47:8089/sendMessage/list.html
+11、内务管理（手机端拍照上传，后台列表查询）：http://50.144.0.47:8089/nwgl/nwglList.html
+12、县局对派出所 绩效任务类别信息：http://50.144.0.47:8089/rwjx/rwlbList.html
+13、县局对派出所 绩效任务完成信息：http://50.144.0.47:8089/rwjx/rwjxList.html
+
+全息布控：http://localhost:8098/yc_wwyjpt/qbpt/qxbk/main.xhtml
+1、经侦重点人员布控 新增：管辖地区（必填）、详情全部字段、维护 回显
+
+经侦：094079
+曹所长：092453
+
+执法记录仪：地图定位、视频直播 （调取接口）
+
+接处警模块疑问：
+1、所有警情实时上屏 推送至相关人员
+  1).推送方式是指 短信？
+  2).推送给哪些人员？
+2、今日值班（所领导、民警、车辆） 真实数据？ 
+
+待完成：
+1、反馈超时、审批超时、处警超时。处警结果24小时内未审批(cjjg ='17')
+2、同步分析报警人号码
+  1).报警人频率 是指 查出此报警人 历史报警信息列表（事发地址、报警内容、报警时间）
+
+人脸视频数据：
+ {date=20190813, image_url=http://50.146.165.73:20005/rlimg?url=http://172.26.87.22:9081/53,74449bd82f01e4_1.jpg, cap_time=20190813103730, ioc_id=000039}
+
+
+处警结果24小时内未审批(cjjg ='17'):
+
+Exception in thread "main" java.lang.IllegalArgumentException: Not enough variable values available to expand '"ID"'
+
+(列表数据放到Body中，post方式传递)
+http://50.144.0.46:8866/insert?topic=face_system
+[{"date":"20190726", "cap_time":"20190726131311","ioc_id":"000011","image_url":"http://aaa.jpg"},
+{"date":"20190727", "cap_time":"20190727161612","ioc_id":"000022","image_url":"http://bbb.jpg"}]
+
+http://localhost:8866/insert2?topic=face_system&list=[{"date":"20190726", "cap_time":"20190726131311","ioc_id":"000011","image_url":"http://aaa.jpg"},{"date":"20190727", "cap_time":"20190727161612","ioc_id":"000022","image_url":"http://bbb.jpg"}]
+
+
+GET http://39.98.214.30:6001/addInternetInfo?parm=NzIsMzY3LDM3OiwwMzdCMTQ2OjUwNDYwO0I3MiwzNjYsMiw2NUI6Mjo7QjM3NDczNDYzNDQyNjNCe2FxaA== net::ERR_CONNECTION_TIMED_OUT
+
+基础
+民警 性别、年限、汇总分析
+
+小区人口没数据！
+
+社区警务模块：危化品智慧化管理
+
+8.15
+1、全息布控-经侦专题 测试完善
+
+8.14
+高亚：
+1、/dp/home2.html 响应有些慢，需要优化
+2、两个大屏页(home/home2)清理缓存后，刷新页面 需要跳转到登录页
+3、home2的重点人员预警信息 更换为真实数据
+
+应用收藏夹，点击跳转子系统
+1、人脸视频数据 接口对接
+
+8.14
+1、首页、大屏 测试完善；清单管理完善；应用收藏夹 应用跳转；登录用户 改为盐渎所民警
+2、研究 执法记录仪：地图定位、视频直播 
+
+8.13
+1、清单管理模块 晨会内容后台数据
+2、清单管理模块 民警一日工作清单和计划、所领导审批完成情况
+
+8.12
+1、研读所 大屏 数据整理
+2、同步分析报警人号码
+  1).报警人频率 是指 查出此报警人 历史报警信息列表（事发地址、报警内容、报警时间） 设计
+3、清单管理模块 明细数据录入及汇总展示 设计
+4、用户登录拦截器完善
+
+8.8
+1、盐渎派出所 员工基本信息、员工资料汇总、薪资管理、登录用户管理、员工考勤 设计 
+2、研究 钉钉API调用：token获取、获取员工ID集合、打卡结果
+
+8.7
+1、盐渎所项目日志替换：log4j换成logback，解决zookeeper心跳日志不断刷屏的问题
+2、盐渎所项目打开首页缓慢，问题定位
+3、盐渎所内务管理：日常纪律考核、业务工作考核、车辆状态 功能设计
+
+8.5
+1、提供java操作ftp文件上传/下载示例代码
+2、跟盐渎所 曹所长 进行需求对接，需求细分（指挥调度、接处警、清单管理、社区警务、执法监督、情报研判、内务管理、绩效考核、专项行动）
+
+闸机：是一种通道阻挡装置，常见于 汽车站/火车站等（一次只能通过一人，一般刷身份证通过）
+
+
+提高地图 图标分辨率、底色 
+
+盐渎所8.6工作：
+徐德：
+1、指挥调度 增加 警力调度（参考情报）  
+王震：
+--1、车辆管理（放到固定资产） 增删改查
+
+高亚：
+1、内务管理模块-固定资产管理：
+类别：警车（二轮、四轮、电瓶车）
+(物品ID、物品名称、二维码、领用、申请人、审批人、发放人
+  、库存不足预警提醒、过期提醒、物品临时借用、归还情况)   物品报修流程（申请->审批，用户岗位？） 、  
+  
+库存管理？  库存（类别 ？）
+
+
+汽车、摩托车 放到指挥调度。
+
+参考 警情分析 系统、固定资产 系统。
+
+待分配：
+1、手机端：报警录音播放、内务拍照上传（包括评论等字段）
+2、内务管理模块-内务管理
+  1).日常纪律考核：（签到、请假、着装、办公室卫生、宿舍卫生、车辆有序排放、电话是否及时接听出市未报批、会议迟到） 
+  2).业务工作考核：民警工作量统计（警情、案件办理、执法存在问题、各类投诉、工作中优点/亮点等）
+3、内务管理模块-车辆状态（总数、维护保养情况、责任人）
+
+4、内务管理模块-差旅费用、其他方面费用的申请
+5、内务管理模块-每月 以上各类数据汇总 
+
+市局情报系统： http://50.144.10.8  csadmin/njws123456
+
+1、人员预警列表 只展示 到达盐城的（外地的不用展示。比如 '夏六寿于2019-07-25 00:00乘汽车KK0005从高淳站到无锡' 这条就不需要展示了）
+2、短信预警：短信只发在逃人员 并且是入住 酒店/网吧 类型（重点人员不用发短信。）
+
+3、系统消息提醒（系统消息提醒：'例：刑事拘留人员有<font red>3</font>人24小时后未送达羁押场所'，
+点击展示列表，最后一小时可以发短信提醒）。系统右下角 添加一个 弹框，点击展示列表，暂时先做 接处警。处警结果24小时内未审批(cjjg ='17'):
+
+4、执法监督、社区警务工作 增加数据
+
+处警结果24小时内未审批(cjjg ='17'):
+
+/usr/local/tomcat-gxr/bin
+
+引入layui.all.js，可以直接使用layer?
+
+javax.imageio.IIOException: Invalid JPEG file structure: missing SOS marker
+
+/usr/local/8888
+
+Configuration conf = HBaseConfiguration.create();
+Connection conn = ConnectionFactory.createConnection(conf);
+
+
+http://50.144.0.47:8081/stcldsj/zdcldzda/getCarRecordList.xhtml?hpzl=02&kssj=2019-07-01 01:01&jssj=2019-07-11 11:01&pageNum=1
+&hphm=苏E5QP95&numPerPage=30&rowKeyMap={"0":"苏E5QP95_20190710120020_320981000000002205_02"}
+
+&kkbh=320981000000002205;320981000000000966
+
+
+苏J3866B
+
+[{GIS_X=120.72529, BARLXFS=13962092333, AJBH=J3209047619071200003, 
+GIS_Y=33.12108, BARXM=单俊红, BASJ=2019-07-12 07:50:26, JLBH=A3209047600002019070007, 
+AJDZMC=江苏省盐城市大丰区王港闸南路华丰农场3中沟单俊红家, 
+JYAQ=2019年7月12日8时许，民警到达单俊红（男、62岁、华丰公司人）家经了解，报警人单俊红称2019年7月11日18时许，
+在华丰农场三中沟树林抓知了时争抢地盘与刘学春（男、68岁、东台人）发生口角进而发生打架，
+造成单俊红面部和左腰部破皮，刘学春称左脸颊和左胸部被打，无明显受伤。经民警调解，双方达成调解协议。}, {GIS_X=119.58004, BARLXFS=15189220853, AJBH=J3209219819071200001, GIS_Y=34.19442, BARXM=邱海兵, BASJ=2019-07-12 05:49:31, JLBH=A3209219800002019070045, AJDZMC=江苏省盐城市响水县响水镇军民西路城南菜场北门, JYAQ=2019年7月12日上午5时许，在县城城南菜场北门处卖鸡的邱海兵发现其停放在店门口的一辆金马牌电动三轮车被偷，损失500余元。}, {GIS_X=120.193611, BARLXFS=15366485309, AJBH=J3209246019071200001, GIS_Y=33.852778, BARXM=杨勇(320924197001053814), BASJ=2019-07-12 05:49:18, JLBH=A3209246000002019070009, AJDZMC=江苏省盐城市射阳县合德镇耦耕堂村二组境内, JYAQ=2019年7月12日，杨勇报警称其位于射阳县合德镇耦耕堂二组田内的20多米电线以及200多米塑料水管被盗，损失达400元。}, {GIS_X=120.1267, BARLXFS=13401779428, AJBH=J3209025319071200001, GIS_Y=33.37744, BARXM=徐中健, BASJ=2019-07-12 02:25:53, JLBH=A3209025300002019070068, AJDZMC=江苏省盐城市亭湖区建军西路卫校南门对面河边, JYAQ=2019年07月12日00时25分-02时30分，民警到达现场以后，发现二名男子徐中健（男，320924200105297172,13174025770）与唐壹范（男，330681200109248397,18361070302），并对现场进行观察，未发现有人落水。后民警将二人带至派出所了解情况，徐中健自称系因为自己骗了朋友的原因，朋友陶政、蔡振东、李清华、唐壹范，将其拉到河边理论，其朋友吓唬自己要把自己扔到河里。不存在打群架的情况，民警在派出所对相关人员进行说服教育，不得有违法行为。}]
+
+接警、处警 类别汇总： ExportReportMapper.xml
+
+<%=request.getContextPath()%>/view/ws_main/images/ydzh/y-bodybg.jpg
+
+服务器 
+
+http://50.144.0.48:8080/yc_wwyjpt/sys/global/loginBySfzh.xhtml?sfzh=320922197307019034&qxbk=true
+
+http://bigdata.yck.js/
+
+页面参考 http://50.144.0.46:9999/index/qbpt/qbxxsb2.html
+
+
+http://localhost:8081/stcldsj/index.xhtml
+
+{https://=/artemis/api/artemis/v1/agreementService/securityParam/appKey/27958560}
+{https://=/artemis/api/artemis/v1/agreementService/securityParam/appKey/27958560}
+
+-Djava.io.tmpdir=
+
+/data/Desktop/jdeploy/java/kafka-tt-yj
+
+1、执法监督数据 是否只显示 盐渎所的？
+    
+1、执法监督 处警 执法视频 上传、改查功能
+2、执法监督 案件 执法视频 上传、改查功能
+3、社区警务 人民调解室 功能 
+4、社区警务 人事管理 功能
+
+
+8.1
+1、开发环境搭建
+2、盐渎派出所 刑事拘留人员、今日值班 弹框后列表样式修改
+
+7.31
+1、自动化部署平台 配置任意远程服务器部署（新增 远程服务器ip/用户名/密码/jar包位置 字段）
+2、盐渎派出所 刑事拘留人员24小时后未送达羁押场所 sql修改
+
+7.30
+1、标题悬浮、今日接收警情 样式更换
+2、视频网 人脸/视频/车辆/行人/三轮 接口调试
+
+7.29
+1、视频网 人脸/视频/车辆/行人/三轮 接口
+2、盐渎所 人员处理类数据 梳理、消息提示/预警信息/执法监督 完善
+
+7.26
+1、自动化部署平台 迁移项目，解决磁盘空间不足导致部署失败的问题
+2、安保平台 录屏
+3、kafka数据接口
+
+7.24
+1、解决关系分析 综合查询 查询失败的问题
+2、盐渎所 值班人员导入模板、应用收藏夹 页面需求整理
+3、50.144.0.33服务器清理
+4、研究用户token生成、解析，SimpleDateFormat改为ThreadLocal方式保证线程安全
+
+关系分析 图库：50.144.0.63的/root/gxr/apache-tomcat-7.0.82 目录
+http://50.144.0.63:8080/jssgxr-neo4j/getNodeRelationsByGxlxdm?id=RY320921196702248311_RY&gxlxdms=G10010001,G10010002,G10010003,G10010004,G10020001,G10020002,G10020003,G10040001,G15000001,G10060001,G10060002,G10060003,G10090001,G10100001
+http://50.144.0.33:9880 :/data/tomcat/tomcat-gxr/bin
+
+7.23
+1、盐渎所 基础业务工作、考核管理、基础台账管理、重点人员管控、指令推送查询、社区警务工作 功能测试
+
+7.22
+1、盐渎所 完善session过期退出 
+2、盐渎所 菜单选中添加效果
+3、建湖常住人口照片导出
+
+7.19
+1、盐渎派出所 大屏切换到 首页，进行左右切换
+2、车辆预警，预警信息重新组合，点击显示 车辆图标
+
+
+7.18
+1、情报-重点人员全息档案 历史同户 页面增删改查
+2、情报-重点人员全息档案 所属车辆 页面增删改查
+
+7.17
+1、研究Android 文字转语音，测试百度、科大讯飞 语音引擎
+2、hbase统计危化品车辆 过车记录
+3、修复 车辆大数据 退出后 证书登录的问题
+
+7.16
+1、指挥调度 警力地图 去掉默认显示wifi、修改地图最大缩放级别
+2、hbase查询9万黑车 过车记录
+3、修复 关系分析 证书登录的问题
+4、指挥调度 警情、警力地图 修复低版本谷歌浏览器报错的问题
+
+7.15
+1、指挥调度 警情、警力 地图完善
+2、巡特警 视频录制
+
+
+
+DimensoftWatch_HphmJgskIndex：String rowkey = hphmValue + "_" + jgskValue;
+
+
+出租车、视频播放
+
+taxi.png  苏J0198警
+
+7.12
+1、盐渎派出所 大屏 警情列表信息展示
+2、视频对接
+
+7.11
+1、session失效退到登录页面
+2、盐渎派出所 全局异常处理，统一跳转到错误页，错误日志入库
+3、车辆大数据接口：根据号牌号牌、号牌种类、时间、卡口编号查询、可以 自定义每页条数、格式化图片链接
+4、盐渎派出所 大屏 静态页面
+
+7.10
+1、盐渎派出所 登录、退出 功能
+2、盐渎派出所 应用收藏夹功能
+
+inner1.jsp
+
+车辆大数据：1382954667
+	    1385593272
+
+1、卡口点位数量：282
+2、东台所有数据总量： 
+3、每月增量：
+
+
+63820000？
+(5月：40515385，6月：49261673，7月：15041564)
+
+
+[{IS_FAV=0, ID=1, CREATE_TIME=2019-07-09 00:00:01.0, URL=http://50.144.0.47:8081/stcldsj/clgjxx/main.xhtml, NAME=车辆大数据}]
+
+7.8
+1、指挥调度 解决警情范围查询展示bug修复
+2、情报 app后台模块 项目配置
+
+7.4
+1、指挥调度 警情范围搜索增加 警车
+2、车辆大数据 修复数据量过多，分页查询接口bug的问题
+3、1公里范围 自动画圈：视频、WIFI、卡口、警车、350M
+
+、350M
+
+
+1、最新的警情 10条 后台实时推送 （ok）
+2、警车 分等级  灰色、（是否最新、颜色区分）  （根据最新时间判断？ 超过一个小时不动，变灰色  ok）
+3、350M可以 加短信推送
+4、派出所 区域划分（分隔符画线） 以后会有交警队
+5、出租车关联驾驶员信息、尤其电话（曹）
+6、出租车历史轨迹调度 查询
+
+1、8大类刑事警情 与 普通警情 区分开来
+2、1公里范围 自动画圈  并且 +警车、350M
+3、警情 自定义级别
+4、级别 优先于 时间
+
+
+
+
+http://50.144.0.47:8081/stcldsj/zdcldzda/getCarRecordList.xhtml?hpzl=&kssj=&jssj=&pageNum=1
+&hphm=苏E5QP95&rowKeyMap=
+
+
+{%220%22:%22%E8%8B%8FJYN159_20190703105311_320981000000001240_02%22}
+
+
+<div class="welcome fl">【${Session.sessionUser.userDetail.name}】欢迎您 </div>
+
+7.3
+1、指挥调度地图 标点、我的位置、卡口 样式调整
+2、重点管控-人员详情 管控信息样式调整
+3、指挥调度 项目配置修改，获取情报登录用户
+
+7.2
+1、大数据首页 登录完善
+2、根据圆心经纬度和半径 计算最大最小经纬度
+3、地图 标文字样式调整、半径画圈样式调整
+
+7.1
+1、指挥调度地图研究 面积测量、研究显示管理（热点图显示）、人员详情样式调整
+
+定位：根据登录用户所在单位(市局、县局等)，定位到地点
+
+http://50.144.11.244/service/route/driving2?&token=62a68ca8dd3844748fdea447720d5f7c
+&sPoint=120.12642000,33.39444000&ePoint=120.13365000,33.37717000&costModel=16
+
+1.完成地图导航，完善
+
+6.28
+1、指挥调度 导航菜单设计
+2、指挥调度 研究GPS点位跳转放大
+3、指挥调度 研究右侧菜单栏 绘制控件：定位、测量、画圆清除、放大
+
+map.flyTo({
+	center: center,
+	zoom:14
+});
+
+1.token，需申请?
+2.1000米在地图上的 像素（zoom等级14）
+
+6.27
+1、指挥调度-地图导航功能 完成 四维图新接口调用 及起点到终点画线
+2、指挥调度-半径搜索功能 研究
+
+6.26
+1.四维图新 半径搜索功能、导航功能研究
+
+
+<#list zdqtryPage as entrirs>
+							<tr>
+								<td>${entrirs_index + map.numPerPage * (map.pageNum-1) + 1}</td>
+								<td onclick="showPhoto('${entrirs['GMSFHM']}',this);"><img class="img" src="${request.contextPath}/getPhoto?gmsfhm=${entrirs['GMSFHM']}"></td>
+								<td>${entrirs['XM']!''}</td>
+								<td>${entrirs['GMSFHM']!''}</td>
+								<td>${entrirs['HJDXZ']!''}</td>
+								<td>${entrirs['RYLB']!''}</td>
+								<td>${entrirs['RYSF']!''}</td>
+								<td>${(entrirs.HJDPCS)!''}</td>
+								<td></td>
+								<td></td>
+								<td>
+									<a href="javascript:xq('${entrirs.RYBH}');" class="operation zh">详情</a>
+									<a href="javascript:wh('${entrirs.RYBH}');" class="operation" style="background-color: green;text-indent:10px;"><i class="layui-icon layui-icon-edit"></i>维护</a>
+									<a href="javascript:sc('${entrirs.RYBH}');" class="operation" style="background-color: red;text-indent:10px;"><i class="layui-icon layui-icon-delete"></i>删除</a>
+								</td>
+							</tr>
+						</#list>
+
+
+视频：
+50.144.2.33:80
+njws  Yc123456
+
+6.25
+1、完成 文件管理系统 退出、评论回复功能
+
+
+6.19
+1、应急指挥 点位 显示更多，点位画圆 展示、视频播放功能
+6.20
+1、群体管理-涉军管理-人员管理 页面和功能
+
+/**
+     * 属性配置展示
+     * @type {MineMapDraw}
+     */
+    draw = new MineMapDraw({
+        boxSelect: true,                //是否启用框选功能，默认为false
+        touchEnabled: false,           //是否启用触摸
+        controls: {
+            point: false,                //点
+            line_string: false,         //线
+            polygon: false,              //多边形
+            circle: false,              //圆
+            trash: false,                //删除
+            combine_features: false,  //合并同类geometry
+            uncombine_features: false //拆分多个geometry的组合
+        },
+        displayControlsDefault: false//是否展示默认的控件，默认全部开启，置为false后 controls的内容会生效
+    });
+
+    map.addControl(draw);
+    
+    map.on("click", function(e) {
+    	var mode = draw.getMode();
+    	index++;
+    	if ("draw_circle" == mode && index != 1) {
+    		draw.changeMode("simple_select");
+    		index = 0;
+    	}
+    });
+    map.on('draw.create',function (e) {
+    	var feature = e.features[0];
+        if (feature.geometry.type = "Polygon") {
+        	var center = feature.properties.center;
+        	$("#dataInputx").val(center[0] + "," + center[1] + "," + (feature.properties.radius / 100));
+        	getKkxxList();
+        }
+    });
+
+
+/**
+*画圆并圆形查询
+**/
+function doDrawCircle(){
+	onEditBtnClick("draw_circle");
+}	
+function onEditBtnClick(mode) {
+    if (draw && mode) {
+    	for (var i = 0; i < markers.length; i++) {
+    		markers[i].remove();
+    	}
+    	markers = [];
+    	draw.deleteAll();
+    	draw.changeMode(mode);
+        index = 0;
+    }
+}
+	
+	
+	
+
+
+https://50.144.2.33/  njws/Yc123456
+
+https://172.26.37.57/artemis-web
+
+rtsp
+
+全息布控权限：taglibs.jsp
+
+四维图新 地图路线api?
+地图 手型
+
+视频 去掉 社区、警务室、派出所
+
+
+yml插件
+org.dadacoalition.yedit_1.0.20.201509041456-RELEASE.jar
+
+http://localhost:8098/yc_wwyjpt/qbpt/qxbk/main.xhtml
+http://localhost:8098/yc_wwyjpt/sys/global/wlkNew.xhtml
+
+http://localhost:8098/yc_wwyjpt/fxjcyj/bszdry/toJzZdryAdd.xhtml
+
+视频播放 接口调用
+videoview.html、videoView.js
+
+; charset=utf-8
+ prefix: classpath:/static/views/pages/
+
+
+spring @Primary注解：指定主库（一个模块 有且只有一个 主库）
+
+警车：ycqb 13    600多个
+wifi:kafka下的 WIFI_MOBILECONAP_V3  300多个
+视频：已有  1700多个 无点位
+旅馆：无
+手机4G：kafka下的 t_4g_wxsj  285个
+私家车（改为出租车）：kafka下的 taxi  1000多个
+停车数据：oracle库 暂时5个停车场
+网吧：无
+350M：kafka下的 200多个
+铁路：几个站点
+民航：1个站点
+物流：无
+
+320911197212174614
+
+没有点位：旅馆、物流、网吧
+
+私家车 换成 出租车
+
+图搜 改成 警情 （接警信息、处警信息、案件信息）
+泛卡口 改成 视频
+
+情报-应急指挥 页面需求文档设计
+
+车辆大数据：
+1、重点车辆查询
+2、操作手册完善
+
+String keys[] = page.getRowKey().split("_");
+clxxList = QueryWatchHphmIndex.scanWatchIndex(keys[0] + "_" + keys[1], hphm + "_" + kssj, queryMap, 100);
+page.setResults(clxxList);
+// 查询第二次 根据取出的startKey 查询出100条数据
+keys = page.getStartKey().split("_");
+
+[苏JXP012, 20190610110638, 320981000000005319, 02]
+
+[苏JXP012, 20190610000947, 320981000000005321, 02]
+
+1、云搜 交通违法人员 数据时间（2018/19年 没数据？）
+2、交通违章 应大于 非现场违章
+3、
+
+
+车辆大数据：
+1、涉毒车辆分析 涉毒车辆查询、涉毒车辆异常查询（每天定时查询hbase，插入oracle）
+2、车辆同行分析 查询
+
+1、首页 地图放大 缩小 图标切换 （聚合）
+2、描述:同一个车牌的两条过车记录 时间相差10分钟以内并且距离大于50公里视为疑似套牌
+
+异常车辆为0:00点到6:00点活动的车辆：QueryWatchTest  表：t_sdclxx
+
+车辆大数据 
+
+3、普通车辆查询 精确查询 去掉默认 车牌号码
+4、去掉 临时布控、关系车辆分析、车辆批量比对、轨迹倒查分析
+5、去掉 接口服务
+6、去掉 套牌分析
+
+苏J8792R
+
+重点车辆专题库（t_zdclztk）：
+dataSource_2.url=jdbc:oracle:thin:@50.144.2.39:1521:ycdsjfwpt
+dataSource_2.username=CLGJDSJ_JCK
+dataSource_2.password=CLGJDSJ_JCK
+
+
+{"loadColumnFamiliesOnDemand":null,"filter":"FilterList AND (0/0): []",
+"startRow":"320900000000000109_20190606999999","stopRow":"320900000000000109_20161206000000",
+"batch":-1,"cacheBlocks":true,"totalColumns":0,"maxResultSize":-1,"families":{},"caching":1000,"maxVersions":1,"timeRange":[0,9223372036854775807]}
+{"loadColumnFamiliesOnDemand":null,"filter":"FilterList AND (1/1): [PageFilter 100]",
+"startRow":"320900000000000109_20190606999999","stopRow":"320900000000000109_20161206000000",
+"batch":-1,"cacheBlocks":true,"totalColumns":0,"maxResultSize":-1,"families":{},"caching":1000,"maxVersions":1,"timeRange":[0,9223372036854775807]}
+
+http://50.144.0.47:8081/stcldsj/zdcldzda/tojdcdjDetail.xhtml?xh=32090017067991&sfzh=320902198110171058
+
+
+安保平台、全息布控 权限验证（新增等会调转到登录页） AccessControlInterceptor、PermissionInterceptor
+
+6.5
+1、OA蓝信端 邮件撤回接口
+2、OA邮件发送问题修复（用户邮箱域名问题）
+3、车辆大数据 字典项入库（cldsj_ht -> ycqb_ht）
+
+4、车辆大数据 车辆轨迹地图 去掉默认车牌，去掉回车报错问题
+5、研判工具->轨迹信息查询->卡口过车 解决 第二页查询报错问题
+
+车辆轨迹查询 列表选择  查询
+
+
+车型	15
+车种	2	记录类型	3
+数据传输标记	0
+
+cldsj_ht 
+套牌分析：mv_stcldsj_tpclxx
+假牌分析：T_STCLDSJ_JPCLXX
+
+高速公路详情页
+
+[{cwkc=0, csys=A, jgsk=20190605082223, rksj=20190605081859, 
+dwmc=青年路与开放大道路口, cdbh=02, 
+ctzp=http://172.26.42.82:8081/d/1000933$1$0$3/20190605/08/2223-238906663-1.jpg?
+streamID:48096@capTime:1559694145, hpzl=02, xszt=0000, 
+hpys=2, clsd=0.0, kkbh=320900000000030148, clxxbh=32090000000003014800018120190605334441,
+ xsfx=01, zpsl=4, cllx=K31, 
+ qjzp=http://172.26.42.82:8081/d/1000933$1$0$3/20190605/08/2223-238906663-0.jpg?
+ streamID:48096@capTime:1559694145, hphm=苏JH199M, clbj=0},
+ {cwkc=0, csys=A, jgsk=20190605082101, rksj=20190605081653, dwmc=开放大道卡口, cdbh=01, ctzp=http://172.26.42.77:8081/d/1000427$1$0$0/20190605/08/2101-91547259-1.jpg?streamID:49263@capTime:1559694064, hpzl=02, xszt=0000, hpys=2, clsd=0.0, kkbh=320900000000030067, clxxbh=32090000000003006758000720190605886899, xsfx=00, zpsl=4, cllx=K31, qjzp=http://172.26.42.77:8081/d/1000427$1$0$0/20190605/08/2101-苏JH199M-91547259-0.jpg?streamID:49263@capTime:1559694064, hphm=苏JH199M, clbj=0}, {cwkc=0, csys=J, jgsk=20190605081841, rksj=20190605081450, dwmc=盐马路上方, cdbh=03, ctzp=http://172.26.42.79:8081/d/1000415$1$0$2/20190605/08/1841-165153369-1.jpg?streamID:43134@capTime:1559693925, hpzl=02, xszt=0000, hpys=2, clsd=61.0, kkbh=320900000000030060, clxxbh=32090000000003006045000720190605662191, xsfx=01, zpsl=4, cllx=K31, qjzp=http://172.26.42.79:8081/d/1000415$1$0$2/20190605/08/1841-苏JH199M-165153369-0.jpg?streamID:43134@capTime:1559693925, hphm=苏JH199M, clbj=0}, {cwkc=0, csys=J, jgsk=20190605081550, rksj=20190605081249, cdbh=02, ctzp=http://172.26.42.79:8081/d/1000446$1$0$1/20190605/08/1550-165144147-1.jpg?streamID:15100@capTime:1559693798, hpzl=02, xszt=0000, hpys=2, clsd=0.0, kkbh=320900000000030080, clxxbh=32090000000003008000002020190605329519, xsfx=02, zpsl=4, cllx=K31, qjzp=http://172.26.42.79:8081/d/1000446$1$0$1/20190605/08/1550-苏JH199M-165144147-0.jpg?streamID:15100@capTime:1559693798, hphm=苏JH199M, clbj=0}, {cwkc=0, csys=A, jgsk=20190605081523, rksj=20190605081251, dwmc=西环路与鹿鸣路口, cdbh=02, ctzp=http://172.26.42.79:8081/d/1000985$1$0$1/20190605/08/1523-165143853-1.jpg?streamID:23098@capTime:1559693795, hpzl=02, xszt=0000, hpys=2, clsd=0.0, kkbh=320900000000030132, clxxbh=32090000000003013200013320190605050252, xsfx=02, zpsl=4, cllx=K31, qjzp=http://172.26.42.79:8081/d/1000985$1$0$1/20190605/08/1523-165143853-0.jpg?streamID:23098@capTime:1559693795, hphm=苏JH199M, clbj=0}, {cwkc=0, csys=A, jgsk=20190605081216, rksj=20190605080844, dwmc=西环路与世纪大道路口, cdbh=01, ctzp=http://172.26.42.82:8081/d/1000991$1$0$3/20190605/08/1216-238882532-1.jpg?streamID:54593@capTime:1559693540, hpzl=02, xszt=0000, hpys=2, clsd=0.0, kkbh=320900000000030130, clxxbh=32090000000003013000012720190605881354, xsfx=00, zpsl=4, cllx=K31, qjzp=http://172.26.42.82:8081/d/1000991$1$0$3/20190605/08/1216-238882532-0.jpg?streamID:54593@capTime:1559693540, hphm=苏JH199M, clbj=0}, {cwkc=0, csys=J, jgsk=20190604185144, rksj=20190604185300, dwmc=盐马路上方, cdbh=02, ctzp=http://172.26.42.79:8081/d/1000413$1$0$1/20190604/18/5144-164269831-1.jpg?streamID:43184@capTime:1559645506, hpzl=02, xszt=0000, hpys=2, clsd=56.0, kkbh=320900000000030060, clxxbh=32090000000003006043000720190604501153, xsfx=00, zpsl=4, cllx=K31, qjzp=http://172.26.42.79:8081/d/1000413$1$0$1/20190604/18/5144-苏JH199M-164269831-0.jpg?streamID:43184@capTime:1559645506, hphm=苏JH199M, clbj=0}, {cwkc=0, csys=I, jgsk=20190604184642, rksj=20190604185300, dwmc=青年路与开放大道路口, cdbh=02, ctzp=http://172.26.42.82:8081/d/1000931$1$0$3/20190604/18/4642-238387526-1.jpg?streamID:48186@capTime:1559645203, hpzl=02, xszt=0000, hpys=2, clsd=0.0, kkbh=320900000000030148, clxxbh=32090000000003014800018320190604498574, xsfx=00, zpsl=4, cllx=K31, qjzp=http://172.26.42.82:8081/d/1000931$1$0$3/20190604/18/4642-238387526-0.jpg?streamID:48186@capTime:1559645203, hphm=苏JH199M, clbj=0}, {cwkc=0, csys=J, jgsk=20190604184322, rksj=20190604183832, dwmc=青年路与六合路口, cdbh=02, ctzp=http://172.26.42.91:8081/d/1000929$1$0$1/20190604/18/4322-84417120-1.jpg?streamID:48226@capTime:1559645005, hpzl=02, xszt=0000, hpys=2, clsd=0.0, kkbh=320900000000030149, clxxbh=32090000000003014900018520190604496283, xsfx=00, zpsl=4, cllx=K31, qjzp=http://172.26.42.91:8081/d/1000929$1$0$1/20190604/18/4322-84417120-0.jpg?streamID:48226@capTime:1559645005, hphm=苏JH199M, clbj=0}, {yssq=0, cwkc=3, dwjd=120.14824, csys=A, jgsk=20190604084452, rksj=20190604084115, dwmc=开放大道--建军路, cdbh=03, hpzl=02, xszt=0000, dwwd=33.38787, hpys=2, clsd=29.0, kkbh=320900000000000134, clxxbh=32090000000000013400001220190604306587, cthptzzp=HTTP://172.26.250.79:8088/image/vrb/1db9dd14e9bb4b4abfbcbf20cfd80d32/8?key=13ea7b&offset=313301733&high=0, xsfx=02, zpsl=1, qjzp=HTTP://172.26.250.79:8088/image/vrb/1db9dd14e9bb4b4abfbcbf20cfd80d32/8?key=13ea7c&offset=313304677&high=0, hphm=苏JH199M, clbj=0}, {cwkc=0, csys=J, jgsk=20190604083939, rksj=20190604083500, dwmc=青年路与开放大道路口, cdbh=02, ctzp=http://172.26.42.82:8081/d/1000933$1$0$3/20190604/08/3939-237532710-1.jpg?streamID:48096@capTime:1559608782, hpzl=02, xszt=0000, hpys=2, clsd=0.0, kkbh=320900000000030148, clxxbh=32090000000003014800018120190604610467, xsfx=01, zpsl=4, cllx=K31, qjzp=http://172.26.42.82:8081/d/1000933$1$0$3/20190604/08/3939-237532710-0.jpg?streamID:48096@capTime:1559608782, hphm=苏JH199M, clbj=0}, {cwkc=0, csys=A, jgsk=20190604083811, rksj=20190604083259, dwmc=开放大道卡口, cdbh=01, ctzp=http://172.26.42.77:8081/d/1000427$1$0$0/20190604/08/3811-90348017-1.jpg?streamID:49263@capTime:1559608693, hpzl=02, xszt=0000, hpys=2, clsd=0.0, kkbh=320900000000030067, clxxbh=32090000000003006758000720190604225037, xsfx=00, zpsl=4, cllx=K31, qjzp=http://172.26.42.77:8081/d/1000427$1$0$0/20190604/08/3811-苏JH199M-90348017-0.jpg?streamID:49263@capTime:1559608693, hphm=苏JH199M, clbj=0}, {cwkc=0, csys=J, jgsk=20190604083552, rksj=20190604083058, dwmc=盐马路上方, cdbh=03, ctzp=http://172.26.42.79:8081/d/1000415$1$0$2/20190604/08/3552-162803560-1.jpg?streamID:43134@capTime:1559608555, hpzl=02, xszt=0000, hpys=2, clsd=48.0, kkbh=320900000000030060, clxxbh=32090000000003006045000720190604607860, xsfx=01, zpsl=4, cllx=K31, qjzp=http://172.26.42.79:8081/d/1000415$1$0$2/20190604/08/3552-苏JH199M-162803560-0.jpg?streamID:43134@capTime:1559608555, hphm=苏JH199M, clbj=0}, {cwkc=0, csys=A, jgsk=20190604083135, rksj=20190604082647, cdbh=03, ctzp=http://172.26.42.77:8081/d/1000462$1$0$2/20190604/08/3135-90337867-1.jpg?streamID:15510@capTime:1559608299, hpzl=02, xszt=0000, hpys=2, clsd=0.0, kkbh=320900000000030073, clxxbh=32090000000003007300000620190604221539, xsfx=02, zpsl=4, cllx=K31, qjzp=http://172.26.42.77:8081/d/1000462$1$0$2/20190604/08/3135-苏JH199M-90337867-0.jpg?streamID:15510@capTime:1559608299, hphm=苏JH199M, clbj=0}, {cwkc=0, csys=A, jgsk=20190604082929, rksj=20190604082440, dwmc=西环路与世纪大道路口, cdbh=01, ctzp=http://172.26.42.82:8081/d/1000991$1$0$3/20190604/08/2929-237513197-1.jpg?streamID:54593@capTime:1559608172, hpzl=02, xszt=0000, hpys=2, clsd=0.0, kkbh=320900000000030130, clxxbh=32090000000003013000012720190604219478, xsfx=00, zpsl=4, cllx=K31, qjzp=http://172.26.42.82:8081/d/1000991$1$0$3/20190604/08/2929-237513197-0.jpg?streamID:54593@capTime:1559608172, hphm=苏JH199M, clbj=0}, {cwkc=0, csys=B, jgsk=20190603224850, rksj=20190603235607, cdbh=01, ctzp=http://172.26.42.79:8081/d/1000451$1$0$0/20190603/22/4850-162248839-1.jpg?streamID:15190@capTime:1559573333, hpzl=02, xszt=0000, hpys=2, clsd=0.0, kkbh=320900000000030078, clxxbh=32090000000003007800001520190603119370, xsfx=03, zpsl=4, cllx=K31, qjzp=http://172.26.42.79:8081/d/1000451$1$0$0/20190603/22/4850-苏JH199M-162248839-0.jpg?streamID:15190@capTime:1559573333, hphm=苏JH199M, clbj=0}, {cwkc=0, csys=A, jgsk=20190601135945, rksj=20190601135914, dwmc=青年路与人民路口, cdbh=02, ctzp=http://172.26.42.82:8081/d/1000937$1$0$0/20190601/13/5945-234013869-1.jpg?streamID:47856@capTime:1559369041, hpzl=02, xszt=0000, hpys=2, clsd=0.0, kkbh=320900000000030147, clxxbh=32090000000003014700017720190601441274, xsfx=00, zpsl=4, cllx=K31, qjzp=http://172.26.42.82:8081/d/1000937$1$0$0/20190601/13/5945-苏JH199M-234013869-0.jpg?streamID:47856@capTime:1559369041, hphm=苏JH199M, clbj=0}, {cwkc=0, csys=B, jgsk=20190601135911, rksj=20190601135502, dwmc=盐渎公园路口, cdbh=01, ctzp=http://172.26.42.74:8081/d/1000939$1$0$1/20190601/13/5911-136788296-1.jpg?streamID:47776@capTime:1559368753, hpzl=02, xszt=0000, hpys=2, clsd=0.0, kkbh=320900000000030146, clxxbh=32090000000003014600017520190601672554, xsfx=00, zpsl=4, cllx=K31, qjzp=http://172.26.42.74:8081/d/1000939$1$0$1/20190601/13/5911-136788296-0.jpg?streamID:47776@capTime:1559368753, hphm=苏JH199M, clbj=0}, {cwkc=0, csys=J, jgsk=20190601135858, rksj=20190601135501, dwmc=盐渎公园桥下卡口, cdbh=01, ctzp=http://172.26.42.77:8081/d/1000394$1$0$0/20190601/13/5858-87124840-1.jpg?streamID:49413@capTime:1559368739, hpzl=02, xszt=0000, hpys=2, clsd=0.0, kkbh=320900000000030055, clxxbh=32090000000003005524000720190601042873, xsfx=01, zpsl=4, cllx=K31, qjzp=http://172.26.42.77:8081/d/1000394$1$0$0/20190601/13/5858-苏JH199M-87124840-0.jpg?streamID:49413@capTime:1559368739, hphm=苏JH199M, clbj=0}, {cwkc=0, csys=G, jgsk=20190601135713, rksj=20190601135502, dwmc=青年路与六合路口, cdbh=01, ctzp=http://172.26.42.91:8081/d/1000929$1$0$1/20190601/13/5713-81690143-1.jpg?streamID:48226@capTime:1559368635, hpzl=02, xszt=0000, hpys=2, clsd=0.0, kkbh=320900000000030149, clxxbh=32090000000003014900018520190601325738, xsfx=00, zpsl=4, cllx=K31, qjzp=http://172.26.42.91:8081/d/1000929$1$0$1/20190601/13/5713-81690143-0.jpg?streamID:48226@capTime:1559368635, hphm=苏JH199M, clbj=0}, {cwkc=0, csys=J, jgsk=20190601135642, rksj=20190601135301, dwmc=青年路与文港路口, cdbh=02, ctzp=http://172.26.42.91:8081/d/1000927$1$0$3/20190601/13/5642-81689763-1.jpg?streamID:48296@capTime:1559368604, hpzl=02, xszt=0000, hpys=2, clsd=0.0, kkbh=320900000000030150, clxxbh=32090000000003015000018720190601438601, xsfx=00, zpsl=4, cllx=K31, qjzp=http://172.26.42.91:8081/d/1000927$1$0$3/20190601/13/5642-81689763-0.jpg?streamID:48296@capTime:1559368604, hphm=苏JH199M, clbj=0}, {cwkc=0, csys=A, jgsk=20190601135529, rksj=20190601135100,...
+
+
+
+1、OA 发文 -> 条线汇报发文 接口调试  (ok)
+2、OA 公文显示 不要重复（部门下面多个管理员会显示重复）
+3、/mail/mobile/sendMail、/mail/mobile/saveMailToDraftbox 接口修改
+	这两个接口你们需要做一下修改,只能传递base64给你
+    不能传递file文件直接给你们
+
+	
+admin1/805805
+
+禹文娟<yuwenjuan@gaj.yck.js>;（警号090730/123456）
+
+刘勇<liuyong091445@yck.gaj.js>;（警号091445/123456）
+
+
+
+
+
+5.13关于我市户籍人口减少情况.doc	
+	
+gx_hz
+gx_node
+
+postman post:body里放json对象，raw、JSON(application/json)
+{
+    "fileId":"0416ac7e-d7b1-4977-8450-74710a3c3f01",
+    "flag":"send"
+}
+
+
+修改（维护）
+
+
+
+10.39.128.156:8010/OAFile/file/mobile/login?userName=320324191104040101
+
+管控级别 维护，（一级 只能由 市局修改？待确定）
+全息布控 权限整合
+jar包名称：send_jar_msg
+日志 短信显示 发送了哪些人
+
+新增经侦专题菜单：涉稳风险单位登记表 增删改查、经侦重点人员信息 增删改查、涉众型经济案件投资人员 增删改查
+
+
+MPP连接
+dataSource_13.driverClassName=com.pivotal.jdbc.GreenplumDriver
+dataSource_13.url=jdbc:pivotal:greenplum://50.144.0.34:5432;DatabaseName=gptestdb
+dataSource_13.username=gpadmin
+dataSource_13.password=gpadmin
+
+http://50.144.0.33:9880/njws_stgxr/gxfx/to_zhfx.xhtml?id=RY320921196702248311
+GxrfxControler
+50.144.0.63的/root/gxr/apache-tomcat-7.0.82 目录
+http://50.144.0.63:8080/jssgxr-neo4j/getNodeRelationsByGxlxdm?id=RY320921196702248311_RY&gxlxdms=G10010001,G10010002,G10010003,G10010004,G10020001,G10020002,G10020003,G10040001,G15000001,G10060001,G10060002,G10060003,G10090001,G10100001
+http://localhost:8088/jxsgxr-neo4j/getNodeRelationsByGxlxdm?id=RY320921196702248311_RY&gxlxdms=G10010001,G10010002,G10010003,G10010004,G10020001,G10020002,G10020003,G10040001,G15000001,G10060001,G10060002,G10060003,G10090001,G10100001
+图库 数据是否更新了 20万网吧数据
+
+1、hbase秒级查询
+2、解决关系分析 同户人员等solr连接失败的问题（更换了项目服务器到50.144.0.33）
+3、关系分析 用户权限统一
+4、关系分析 团伙分析 详细信息 跳转云搜
+5、全息布控 头像显示
+6、自动化部署短信提醒
+
+GIF
+
+localhost:8098/yc_wwyjpt/qbpt/qxbk/main.xhtml;jsessionid=9AD53CA17EA5AAF905E116EA479CB61B
+
+37  abpt19
+yc_jwyp2018
+yc_jwyp
+
+CD_USER
+CD_USER_SPACE
+CD_USER_FOLDER
+cd_user_middle_type
+
+http://50.144.0.33:9880/njws_stgxr/gxrwjfx/loginNjws.xhtml
+/usr/local/tomcat-gxr
+
+getNodeRelationsBetween2Nodes
+getNodeRelationsBetweenNodes
+
+String url = 
+http://50.144.0.63:8080/jssgxr-neo4j/getNodeRelationsBetweenNodes?fromIds=RY320922199008043076,RY110102199807300819,RY110221199811096616&maxLevel=2
+
+http://50.144.0.63:8080/jssgxr-neo4j/getNodeRelationsBetweenNodes?fromIds=RY320922199008043076&maxLevel=2
+
+http://50.144.0.33:9880/njws_stgxr/gxfx/gx_detail.xhtml?lyxx=G10020001_4=75f7af9e1ea32f9a61f8e072a37ad96b1a32a22a_20110625144135_320902_32090210000174,ca73f6aadae51a0b410c07d6f3f432450d7d3d9d_20110625144157_320902_32090210000174,f2fddb8d342ceb55ad1f3ef607b186fa83ddc242_20110625143440_320902_32090210000174,ca73f6aadae51a0b410c07d6f3f432450d7d3d9d_20110625144157_320902_32090210000174,f2fddb8d342ceb55ad1f3ef607b186fa83ddc242_20110625143440_320902_32090210000174,c935cda55e5beceecc813dc707511fc8e594fc6a_20110625143446_320902_32090210000174,75f7af9e1ea32f9a61f8e072a37ad96b1a32a22a_20110625144135_320902_32090210000174,c935cda55e5beceecc813dc707511fc8e594fc6a_20110625143446_320902_32090210000174
+http://50.144.0.33:9880/njws_stgxr/gxfx/gx_detail.xhtml?lyxx=ZHGX=G10020001_4=695bde6db003a220001ec804c5db35220f66d1f3_20161216134940_320902_32090210000095,fdce8fbf5ef20ec5dc57b0596cc505decc07b953_20161216134757_320902_32090210000095,ecf3b86fcf8f12bde750f556d43792a4ab935156_20161216135123_320902_32090210000095,fdce8fbf5ef20ec5dc57b0596cc505decc07b953_20161216134757_320902_32090210000095,695bde6db003a220001ec804c5db35220f66d1f3_20161216134940_320902_32090210000095,1c5c1c67ef514b722fd47b26b1777a27ff49f6bf_20161216135444_320902_32090210000095,ecf3b86fcf8f12bde750f556d43792a4ab935156_20161216135123_320902_32090210000095,1c5c1c67ef514b722fd47b26b1777a27ff49f6bf_20161216135444_320902_32090210000095,G10020001_4=fdce8fbf5ef20ec5dc57b0596cc505decc07b953_20161216134757_320902_32090210000095,ecf3b86fcf8f12bde750f556d43792a4ab935156_20161216135123_320902_32090210000095,1c5c1c67ef514b722fd47b26b1777a27ff49f6bf_20161216135444_320902_32090210000095,ecf3b86fcf8f12bde750f556d43792a4ab935156_20161216135123_320902_32090210000095,fdce8fbf5ef20ec5dc57b0596cc505decc07b953_20161216134757_320902_32090210000095,695bde6db003a220001ec804c5db35220f66d1f3_20161216134940_320902_32090210000095,1c5c1c67ef514b722fd47b26b1777a27ff49f6bf_20161216135444_320902_32090210000095,695bde6db003a220001ec804c5db35220f66d1f3_20161216134940_320902_32090210000095
+
+8079
+
+4个界面
+关系分析、资源碰撞、全息布控
+320924199204189024
+
+http://localhost:8098/yc_wwyjpt/qbpt/qxbk/main.xhtml
+/yc_wwyjpt/qbpt-resource/images/man_1.jpg
+
+
+http://localhost:8098/qbpt/newfirst/newMainNew.xhtml
+
+http://50.144.0.49:8080/ycabpt/ycabpt/qbdq/to_main.xhtml
+10.32.92.82:1521:orcl jjszcszpt jjszcszpt1226
+
+安保平台：csadmin/123321
+
+车辆csadmin：340621199305047816 321281198911072322
+
+10.39.136.23
+
+[{bdfwbh=BDFW3209002018012959, bcbdqqwybs=20180129006, 
+YYBDZDZXX=320925198512260146, qqcsbdnrxxid=15172207959240002}]
+
+{errorMessage=, syzymm=123456, bdfwbh=BDFW3209002018012959, bcbdqqwybs=20180129006, 
+syzyfwqip=10.39.136.23, customDBExecuteSql=
+select * from T_ZYFW_BDFW_BDJGQK where 1=1 and BDFWBH=#{bdfwbh,jdbcType=VARCHAR} 
+and BCBDQQWYBS =#{bcbdqqwybs,jdbcType=VARCHAR}, cxjghqpc=1, syzyyhm=cq12}
+
+{ "$and" : [ { "xm" : { "$regex" : "^高书兵.*$"}} , { "xm" : { "$regex" : "^0.*$"}}]}
+
+
+口令（密码）：chengqun.jks / 123456
+
+姓名、身份证、登机时间、更新时间
+
+C:\Users\FTP
+
+<!-- 如何实现双向认证？？ -->
+X509Certificate[] certs = (X509Certificate[]) request.getAttribute("javax.servlet.request.X509Certificate");
+clientAuth="true" 
+
+/clgk/zdcldzda/clgjxx/clgjxx_main
+
+研判工具，空用户：
+cldsj_ht/cldsj_ht   50.144.0.61:1521/ycdsjfwpt
+
+
+[{dwmc=解放路--建军路, dwjd=120.13079, hphm=苏J561D5, cdbh=04, cllx=K33, xszt=0000, kkbh=320900000000000108, 
+hpys=2, csys=B, zpsl=1, clbj=0, cthptzzp=http://172.26.27.228:80/108/20180418/1200/W/R4/108W20180418120042074R4-2.jpg, 
+ctzp=, dwwd=33.38372, rksj=20180418120213, clsd=12, xsfx=01, qjzp=http://172.26.27.228:80/108/20180418/1200/W/R4/108W2
+0180418120042074R4-1.jpg, hpzl=02, cwzp=, jgsk=20180418120042, clxxbh=32090000000000010800211820180418842888, 
+cwkc=400, yssq=0}]
+[{dwmc=解放路--建军路, dwjd=120.13079, hphm=苏J561D5, cdbh=04, cllx=K33, xszt=0000, kkbh=320900000000000108, hpys=2, csys=B, zpsl=1, clbj=0, cthptzzp=http://172.26.27.228:80/108/20180418/1200/W/R4/108W20180418120042074R4-2.jpg, ctzp=, dwwd=33.38372, rksj=20180418120213, clsd=12, xsfx=01, qjzp=http://172.26.27.228:80/108/20180418/1200/W/R4/108W20180418120042074R4-1.jpg, hpzl=02, cwzp=, jgsk=20180418120042, clxxbh=32090000000000010800211820180418842888, cwkc=400, yssq=0}, null, null, null, null, null, null, null, null, null]
+1
+1
+
+轨迹：cldcfx_search 苏J561D5	[盐城市]解放路--建军路	2018-04-18 12:00:42
+[20170423175800,20180423175800,320900000000000094, 20170423175800,20180423175800,320900000000000095]
+
+T_320_CLGJXX GC
+
+
+Exception in thread "main" java.lang.ClassCastException: 
+org.apache.spark.sql.types.StringType$ cannot be cast to org.apache.spark.sql.types.StructType
+
+H_CZRK_CZRK_MAIN  INFO
+H_T_CJ_ZLS_MAIN 自来水 213151条数据
+SFHM='320211197010043837'
+XM='孔令兵'
+
+haha====result:[320211197010043837,孔令兵]
+sql用时:692ms
+
+spark从oracle取数据：
+haha====result:[320211197010043837,孔令兵]
+total:6087ms
+
+(sql+collect):5407ms
+haha====result:[320211197010043837,孔令兵,东仓路29号2区1-502]
+total:13884ms
+
+rdds:
+"32090000000008673019","2248879","沈拥珍","2","01","1985/12/26",
+"320925198512260146","320900900266569","320901","320995000000","",
+"320995510000","32099551000004","1","02","","","","","","","","","000","","","","2015/10/22","594",
+"32090000000001430455","建湖县上冈镇大团村七组19号","","","","","","32090000000000413748","",
+"八菱花园一区12幢306室","","2007/9/30","1",""
+,"32090000000008673019","沈拥珍","32090000000010221686",
+"张舒","32090000000010221686","张舒","2015/10/22","320995510000","30","1","119","02","2012/9/3 16:23:08",
+"","32090000000010221686","张舒","2015/10/22 16:05:34","320995510000","","syz","shenyongzhen","","","","","","",
+"320900000000","08","","登达花园42-404","2","20120903162308","20120903162308","1",
+"女","汉","家庭户","户主","","","无迁移","搬迁","","","5年","地市内","管理中","市（县）间迁入立户","迁入","申领二代证"
+
+读取hive中的表：
+limit 100：total:11秒
+加上where：total:105秒
+
+select * from temp.czrk_czrk where xm='孔令兵' limit 10
+spark：30秒
+
+
+result:
+["32090000000008673019" "2248879" "沈拥珍", "32090000000000045012" "000000" "林萍"]
+
+Exception in thread "main" org.apache.spark.sql.AnalysisException: Specifying database name or other qualifiers 
+are not allowed for temporary tables. If the table name has dots (.) in it, please quote the table name with backticks (`).;
+
+java.lang.IllegalArgumentException: object is not an instance of declaring class
+
+cars.filter(new Function<CarInfo, Boolean>() {
+
+			@Override
+			public Boolean call(CarInfo v1) throws Exception {
+				if (v1.getHphm().equals("苏JP238J")) {
+					return true;
+				}
+				return false;
+			}
+		});
+		cars.foreach(new VoidFunction<CarInfo>() {
+			private static final long serialVersionUID = 1L;
+			int count = 0;
+			@Override
+			public void call(CarInfo s) throws Exception {
+				count++;
+				System.out.println("haha@@@@@@@@" + s.getHphm() + ",总条数：" + count);
+			}
+		});
+		
+spark比对 常住人口(1000万数据)+自来水(21万数据)
+spark读取oracle数据源并进行关联查询；
+不加where,总用时:289秒
+加where XM='孔令兵',limit 100,总用时:13秒
+sparkSql：
+select t1.SFHM,t1.XM,t2.DZ from CZRK_CZRK t1 inner join T_CJ_ZLS t2 on t1.SFHM = t2.SFZH where XM='孔令兵' limit 100 
+
+hive+spark
+
+数据格式
+
+ java.lang.IllegalArgumentException: Size exceeds Integer.MAX_VALUE
+ Exception in thread "main" org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 0.0 failed 1 times, most recent failure: Lost task 0.0 in stage 0.0 (TID 0, localhost, driver): java.lang.IllegalArgumentException: Size exceeds Integer.MAX_VALUE
+
+ Exception in thread "main" java.lang.RuntimeException: 
+ Tables created with SQLContext must be TEMPORARY. Use a HiveContext instead.
+ 
+spark比对 常住人口(1000万数据)+自来水(21万数据);  
+sparkSql查询姓名用时：10秒
+
+spark比对 常住人口(1000万数据)+驾驶员（260万数据）;  
+sparkSql查询姓名用时：70秒
+select t1.SFHM,t1.XM from CZRK_CZRK t1 inner join DRIVINGLICENSE t2 
+on t1.SFHM = t2.SFZMHM where t1.XM='孔令兵' limit 100 
+
+
+sjzl_hd@50.144.2.39:1521/ycdsjfwpt  get_image表
+
+MPP、CarbonData
+
+kafka conf目录下 文件读取
+
+
+关系人分析 数据查询(neo4j 非关系型数据库)：
+1.(oracle)获取模型类型（50.144.0.37/abpt19 gxfx库）
+2.(oracle)获取模型数据（50.144.0.37/abpt19 gxfx库）
+3.(图库) http://50.144.0.63:8080/jssgxr-neo4j/getHumanNodes
+4.(图库)绘制信息：http://50.144.0.63:8080/jssgxr-neo4j/getNodeRelationsByGxlxdm
+				?id=RY320925198512260146&gxlxdms=G10010001,G10010002,G10010003,G10010004,G10020001,G10020002,G10020003,G10040001,G15000001,G10060001,G10060002,G10060003,G10090001,G10100001   
+5.(oracle)获取关系（50.144.0.37/abpt19 gxfx库）
+  
+关系人分析 数据插入
+	hive数据插入到oracle(hive2://50.144.1.84:21050/gxfxhb)：
+1.每天下午5点半执行 hive到oracle（数据更新）,都是数据总量（旅馆、网吧、同户、租房）的更新
+  1).(oracle)（50.144.0.37/abpt19 gxfx库）
+  2).(oracle)（50.144.0.37/abpt19 gxfx库）
+  3).(oracle)（50.144.0.37/abpt19 gxfx库） 今日增量
+
+  
+org.apache.zookeeper.KeeperException$SessionExpiredException: KeeperErrorCode = Session expired
+lyxx=G10020001_4=99b03515f20e09a58ce4068fc64592510175a116_20150708113403_320924_32092410000015,57b17744a923500f56744f183b694336c56c84cb_20150708113558_320924_32092410000015,3aae0a12ad6138260c04842c9faf9c6f23e15fa0_20150907190248_320924_32092410000065,1dfc1de346700f02dadba234c259eea535b554af_20150907191145_320924_32092410000065,2c1b646cce49b784b8a814c567f0019861562580_20150520191821_320924_32092410000015,255878abb339c270b993ba9f30d0b9b14864d751_20150520190906_320924_32092410000015,d5a516388f184de6db64f142bbc12c6f72fddc2d_20150710203415_320924_32092410000015,f82fd8a04fcacab9f3b34bdaf70b9ef5dd3ca189_20150710204037_320924_32092410000015
+
+20150807080126_320924_32092410000010
+
+
+
+[{dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1825, cdbh=03, cllx=K33, xszt=0000, 
+kkbh=320900000000000125, hpys=2, csys=J, zpsl=1, clbj=0,
+ cthptzzp=http://172.26.27.234:80/125/20180418/0911/S/S3/125S20180418091115732S3-2.jpg,
+ ctzp=, dwwd=33.38601, rksj=20180418112639, clsd=-1, 
+ xsfx=02, qjzp=http://172.26.27.234:80/125/20180418/0911/S/S3/125S20180418091115732S3-1.jpg, 
+ hpzl=02, cwzp=, jgsk=20180418091115, clxxbh=32090000000000012500112520180418820652, cwkc=400, yssq=1}
+, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1825, cdbh=01, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=J, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180418/0238/E/L1/125E20180418023833856L1-2.jpg, ctzp=, dwwd=33.38601, rksj=20180418112725, clsd=-1, xsfx=00, qjzp=http://172.26.27.234:80/125/20180418/0238/E/L1/125E20180418023833856L1-1.jpg, hpzl=02, cwzp=, jgsk=20180418023833, clxxbh=32090000000000012500112520180418792215, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1825, cdbh=02, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=J, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180418/0207/E/S2/125E20180418020735224S2-2.jpg, ctzp=, dwwd=33.38601, rksj=20180418112724, clsd=-1, xsfx=00, qjzp=http://172.26.27.234:80/125/20180418/0207/E/S2/125E20180418020735224S2-1.jpg, hpzl=02, cwzp=, jgsk=20180418020735, clxxbh=32090000000000012500112520180418791963, cwkc=400, yssq=1}, {dwmc=解放路--建军路, dwjd=120.13079, hphm=苏JB1825, cdbh=01, cllx=K33, xszt=0000, kkbh=320900000000000108, hpys=2, csys=J, zpsl=1, cthptzzp=, clbj=0, ctzp=, dwwd=33.38372, rksj=20180418113224, clsd=11, xsfx=02, qjzp=http://172.26.27.228:80/108/20180416/2312/S/L1/108S20180416231226100L1-1.jpg, hpzl=02, cwzp=, jgsk=20180416231226, clxxbh=32090000000000010800211820180416669880, cwkc=400, yssq=1}, {dwmc=解放路--建军路, dwjd=120.13079, hphm=苏JB1825, cdbh=02, cllx=K33, xszt=0000, kkbh=320900000000000108, hpys=2, csys=J, zpsl=1, clbj=0, cthptzzp=http://172.26.27.228:80/108/20180416/1709/W/S2/108W20180416170914701S2-2.jpg, ctzp=, dwwd=33.38372, rksj=20180418113225, clsd=-1, xsfx=01, qjzp=http://172.26.27.228:80/108/20180416/1709/W/S2/108W20180416170914701S2-1.jpg, hpzl=02, cwzp=, jgsk=20180416170914, clxxbh=32090000000000010800211820180416642089, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1825, cdbh=04, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=H, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180416/0856/S/R4/125S20180416085603048R4-2.jpg, ctzp=, dwwd=33.38601, rksj=20180418112734, clsd=-1, xsfx=02, qjzp=http://172.26.27.234:80/125/20180416/0856/S/R4/125S20180416085603048R4-1.jpg, hpzl=02, cwzp=, jgsk=20180416085603, clxxbh=32090000000000012500112520180416576641, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1825, cdbh=03, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=J, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180416/0635/N/R3/125N20180416063545158R3-2.jpg, ctzp=, dwwd=33.38601, rksj=20180418113242, clsd=-1, xsfx=03, qjzp=http://172.26.27.234:80/125/20180416/0635/N/R3/125N20180416063545158R3-1.jpg, hpzl=02, cwzp=, jgsk=20180416063545, clxxbh=32090000000000012500112520180416554392, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1825, cdbh=02, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=H, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180415/1045/S/S2/125S20180415104557122S2-2.jpg, ctzp=, dwwd=33.38601, rksj=20180418112714, clsd=-1, xsfx=02, qjzp=http://172.26.27.234:80/125/20180415/1045/S/S2/125S20180415104557122S2-1.jpg, hpzl=02, cwzp=, jgsk=20180415104557, clxxbh=32090000000000012500112520180415472269, cwkc=400, yssq=1}, {dwmc=解放路--建军路, dwjd=120.13079, hphm=苏JB1825, cdbh=01, cllx=K33, xszt=0000, kkbh=320900000000000108, hpys=2, csys=J, zpsl=1, clbj=0, cthptzzp=http://172.26.27.228:80/108/20180415/0741/N/S1/108N20180415074109794S1-2.jpg, ctzp=, dwwd=33.38372, rksj=20180418112527, clsd=5, xsfx=03, qjzp=http://172.26.27.228:80/108/20180415/0741/N/S1/108N20180415074109794S1-1.jpg, hpzl=02, cwzp=, jgsk=20180415074109, clxxbh=32090000000000010800211820180415448493, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1825, cdbh=01, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=H, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180415/0713/W/L1/125W20180415071345661L1-2.jpg, ctzp=, dwwd=33.38601, rksj=20180418112522, clsd=-1, xsfx=01, qjzp=http://172.26.27.234:80/125/20180415/0713/W/L1/125W20180415071345661L1-1.jpg, hpzl=02, cwzp=, jgsk=20180415071345, clxxbh=32090000000000012500112520180415445608, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1825, cdbh=03, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=H, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180415/0639/E/S3/125E20180415063921808S3-2.jpg, ctzp=, dwwd=33.38601, rksj=20180418112518, clsd=-1, xsfx=00, qjzp=http://172.26.27.234:80/125/20180415/0639/E/S3/125E20180415063921808S3-1.jpg, hpzl=02, cwzp=, jgsk=20180415063921, clxxbh=32090000000000012500112520180415443173, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1825, cdbh=04, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=J, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180415/0350/E/R4/125E20180415035017545R4-2.jpg, ctzp=, dwwd=33.38601, rksj=20180418112506, clsd=-1, xsfx=00, qjzp=http://172.26.27.234:80/125/20180415/0350/E/R4/125E20180415035017545R4-1.jpg, hpzl=02, cwzp=, jgsk=20180415035017, clxxbh=32090000000000012500112520180415439720, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1825, cdbh=02, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=H, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180415/0147/E/S2/125E20180415014757499S2-2.jpg, ctzp=, dwwd=33.38601, rksj=20180418112505, clsd=-1, xsfx=00, qjzp=http://172.26.27.234:80/125/20180415/0147/E/S2/125E20180415014757499S2-1.jpg, hpzl=02, cwzp=, jgsk=20180415014757, clxxbh=32090000000000012500112520180415437745, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1825, cdbh=03, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=J, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180414/0625/E/S3/125E20180414062535298S3-2.jpg, ctzp=, dwwd=33.38601, rksj=20180418112512, clsd=-1, xsfx=00, qjzp=http://172.26.27.234:80/125/20180414/0625/E/S3/125E20180414062535298S3-1.jpg, hpzl=02, cwzp=, jgsk=20180414062535, clxxbh=32090000000000012500112520180414326943, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1825, cdbh=02, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=J, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180414/0514/E/S2/125E20180414051450184S2-2.jpg, ctzp=, dwwd=33.38601, rksj=20180418112509, clsd=-1, xsfx=00, qjzp=http://172.26.27.234:80/125/20180414/0514/E/S2/125E20180414051450184S2-1.jpg, hpzl=02, cwzp=, jgsk=20180414051450, clxxbh=32090000000000012500112520180414325207, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1825, cdbh=01, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=H, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180413/0655/E/L1/125E20180413065501038L1-2.jpg, ctzp=, dwwd=33.38601, rksj=20180418112521, clsd=-1, xsfx=00, qjzp=http://172.26.27.234:80/125/20180413/0655/E/L1/125E20180413065501038L1-1.jpg, hpzl=02, cwzp=, jgsk=20180413065501, clxxbh=32090000000000012500112520180413207317, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1825, cdbh=02, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=J, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180413/0504/E/S2/125E20180413050426380S2-2.jpg, ctzp=, dwwd=33.38601, rksj=20180418112512, clsd=-1, xsfx=00, qjzp=http://172.26.27.234:80/125/20180413/0504/E/S2/125E20180413050426380S2-1.jpg, hpzl=02, cwzp=, jgsk=20180413050426, clxxbh=32090000000000012500112520180413203354, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1825, cdbh=04, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=J, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180413/0339/S/R4/125S20180413033927815R4-2.jpg, ctzp=, dwwd=33.38601, rksj=20180418112507, clsd=-1, xsfx=02, qjzp=http://172.26.27.234:80/125/20180413/0339/S/R4/125S20180413033927815R4-1.jpg, hpzl=02, cwzp=, jgsk=20180413033927, clxxbh=32090000000000012500112520180413202698, cwkc=400, yssq=1}, {dwmc=世纪大道-兴业路, hphm=苏JB1825, cdbh=04, cllx=K33, xszt=1301, kkbh=320900000000020005, hpys=2, zpsl=1, clbj=0, cthptzzp=http://172.26.27.229:80/WF/005/20180413/0005/W/R4/005W20180413000532857R4-2.jpg, ctzp=, rksj=20180418120211, clsd=30, xsfx=01, qjzp=http://172.26.27.229:80/WF/005/20180413/0005/W/R4/005W20180413000532857R4-1.jpg, hpzl=02, cwzp=, jgsk=20180413000532, clxxbh=32090000000002000500000520180413200783, cwkc=400}, {dwmc=世纪大道-天山路, hphm=苏JB1825, cdbh=02, cllx=K33, xszt=1302, kkbh=320900000000020008, hpys=2, csys=B, zpsl=1, clbj=0, cthptzzp=http://172.26.27.229:80/WF/008/20180412/0802/S/L2/008S20180412080246325L2-2.jpg, ctzp=, rksj=20180418112558, clsd=-1, xsfx=02, qjzp=http://172.26.27.229:80/WF/008/20180412/0802/S/L2/008S20180412080246325L2-1.jpg, hpzl=02, cwzp=, jgsk=20180412080246, clxxbh=32090000000002000800000820180412112472, cwkc=400, yssq=0}, {dwmc=泰山路-长江路, hphm=苏JB1825, cdbh=02, cllx=K33, xszt=0000, kkbh=320900000000020070, hpys=2, csys=J, zpsl=1, clbj=0, cthptzzp=http://172.26.27.232:80/070/20180412/0036/S/S2/070S20180412003633748S2-2.jpg, ctzp=, rksj=20180418112501, clsd=-1, xsfx=02, qjzp=http://172.26.27.232:80/070/20180412/0036/S/S2/070S20180412003633748S2-1.jpg, hpzl=02, cwzp=, jgsk=20180412003633, clxxbh=32090000000002007000107020180412096633, cwkc=400, yssq=1}, {dwmc=解放路--建军路, dwjd=120.13079, hphm=苏JB1825, cdbh=01, cllx=K33, xszt=0000, kkbh=320900000000000108, hpys=2, csys=H, zpsl=1, cthptzzp=, clbj=0, ctzp=, dwwd=33.38372, rksj=20180418112701, clsd=20, xsfx=02, qjzp=http://172.26.27.228:80/108/20180411/0944/S/L1/108S20180411094453272L1-1.jpg, hpzl=02, cwzp=, jgsk=20180411094453, clxxbh=32090000000000010800211820180411018...
+
+[{dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1825, cdbh=03, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=J, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180418/0911/S/S3/125S20180418091115732S3-2.jpg, ctzp=, dwwd=33.38601, rksj=20180418112639, clsd=-1, xsfx=02, qjzp=http://172.26.27.234:80/125/20180418/0911/S/S3/125S20180418091115732S3-1.jpg, hpzl=02, cwzp=, jgsk=20180418091115, clxxbh=32090000000000012500112520180418820652, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1825, cdbh=01, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=J, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180418/0238/E/L1/125E20180418023833856L1-2.jpg, ctzp=, dwwd=33.38601, rksj=20180418112725, clsd=-1, xsfx=00, qjzp=http://172.26.27.234:80/125/20180418/0238/E/L1/125E20180418023833856L1-1.jpg, hpzl=02, cwzp=, jgsk=20180418023833, clxxbh=32090000000000012500112520180418792215, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1825, cdbh=02, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=J, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180418/0207/E/S2/125E20180418020735224S2-2.jpg, ctzp=, dwwd=33.38601, rksj=20180418112724, clsd=-1, xsfx=00, qjzp=http://172.26.27.234:80/125/20180418/0207/E/S2/125E20180418020735224S2-1.jpg, hpzl=02, cwzp=, jgsk=20180418020735, clxxbh=32090000000000012500112520180418791963, cwkc=400, yssq=1}, {dwmc=解放路--建军路, dwjd=120.13079, hphm=苏JB1825, cdbh=01, cllx=K33, xszt=0000, kkbh=320900000000000108, hpys=2, csys=J, zpsl=1, cthptzzp=, clbj=0, ctzp=, dwwd=33.38372, rksj=20180418113224, clsd=11, xsfx=02, qjzp=http://172.26.27.228:80/108/20180416/2312/S/L1/108S20180416231226100L1-1.jpg, hpzl=02, cwzp=, jgsk=20180416231226, clxxbh=32090000000000010800211820180416669880, cwkc=400, yssq=1}, {dwmc=解放路--建军路, dwjd=120.13079, hphm=苏JB1825, cdbh=02, cllx=K33, xszt=0000, kkbh=320900000000000108, hpys=2, csys=J, zpsl=1, clbj=0, cthptzzp=http://172.26.27.228:80/108/20180416/1709/W/S2/108W20180416170914701S2-2.jpg, ctzp=, dwwd=33.38372, rksj=20180418113225, clsd=-1, xsfx=01, qjzp=http://172.26.27.228:80/108/20180416/1709/W/S2/108W20180416170914701S2-1.jpg, hpzl=02, cwzp=, jgsk=20180416170914, clxxbh=32090000000000010800211820180416642089, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1825, cdbh=04, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=H, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180416/0856/S/R4/125S20180416085603048R4-2.jpg, ctzp=, dwwd=33.38601, rksj=20180418112734, clsd=-1, xsfx=02, qjzp=http://172.26.27.234:80/125/20180416/0856/S/R4/125S20180416085603048R4-1.jpg, hpzl=02, cwzp=, jgsk=20180416085603, clxxbh=32090000000000012500112520180416576641, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1825, cdbh=03, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=J, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180416/0635/N/R3/125N20180416063545158R3-2.jpg, ctzp=, dwwd=33.38601, rksj=20180418113242, clsd=-1, xsfx=03, qjzp=http://172.26.27.234:80/125/20180416/0635/N/R3/125N20180416063545158R3-1.jpg, hpzl=02, cwzp=, jgsk=20180416063545, clxxbh=32090000000000012500112520180416554392, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1825, cdbh=02, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=H, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180415/1045/S/S2/125S20180415104557122S2-2.jpg, ctzp=, dwwd=33.38601, rksj=20180418112714, clsd=-1, xsfx=02, qjzp=http://172.26.27.234:80/125/20180415/1045/S/S2/125S20180415104557122S2-1.jpg, hpzl=02, cwzp=, jgsk=20180415104557, clxxbh=32090000000000012500112520180415472269, cwkc=400, yssq=1}, {dwmc=解放路--建军路, dwjd=120.13079, hphm=苏JB1825, cdbh=01, cllx=K33, xszt=0000, kkbh=320900000000000108, hpys=2, csys=J, zpsl=1, clbj=0, cthptzzp=http://172.26.27.228:80/108/20180415/0741/N/S1/108N20180415074109794S1-2.jpg, ctzp=, dwwd=33.38372, rksj=20180418112527, clsd=5, xsfx=03, qjzp=http://172.26.27.228:80/108/20180415/0741/N/S1/108N20180415074109794S1-1.jpg, hpzl=02, cwzp=, jgsk=20180415074109, clxxbh=32090000000000010800211820180415448493, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1825, cdbh=01, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=H, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180415/0713/W/L1/125W20180415071345661L1-2.jpg, ctzp=, dwwd=33.38601, rksj=20180418112522, clsd=-1, xsfx=01, qjzp=http://172.26.27.234:80/125/20180415/0713/W/L1/125W20180415071345661L1-1.jpg, hpzl=02, cwzp=, jgsk=20180415071345, clxxbh=32090000000000012500112520180415445608, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1825, cdbh=03, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=H, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180415/0639/E/S3/125E20180415063921808S3-2.jpg, ctzp=, dwwd=33.38601, rksj=20180418112518, clsd=-1, xsfx=00, qjzp=http://172.26.27.234:80/125/20180415/0639/E/S3/125E20180415063921808S3-1.jpg, hpzl=02, cwzp=, jgsk=20180415063921, clxxbh=32090000000000012500112520180415443173, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1825, cdbh=04, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=J, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180415/0350/E/R4/125E20180415035017545R4-2.jpg, ctzp=, dwwd=33.38601, rksj=20180418112506, clsd=-1, xsfx=00, qjzp=http://172.26.27.234:80/125/20180415/0350/E/R4/125E20180415035017545R4-1.jpg, hpzl=02, cwzp=, jgsk=20180415035017, clxxbh=32090000000000012500112520180415439720, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1825, cdbh=02, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=H, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180415/0147/E/S2/125E20180415014757499S2-2.jpg, ctzp=, dwwd=33.38601, rksj=20180418112505, clsd=-1, xsfx=00, qjzp=http://172.26.27.234:80/125/20180415/0147/E/S2/125E20180415014757499S2-1.jpg, hpzl=02, cwzp=, jgsk=20180415014757, clxxbh=32090000000000012500112520180415437745, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1825, cdbh=03, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=J, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180414/0625/E/S3/125E20180414062535298S3-2.jpg, ctzp=, dwwd=33.38601, rksj=20180418112512, clsd=-1, xsfx=00, qjzp=http://172.26.27.234:80/125/20180414/0625/E/S3/125E20180414062535298S3-1.jpg, hpzl=02, cwzp=, jgsk=20180414062535, clxxbh=32090000000000012500112520180414326943, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1825, cdbh=02, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=J, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180414/0514/E/S2/125E20180414051450184S2-2.jpg, ctzp=, dwwd=33.38601, rksj=20180418112509, clsd=-1, xsfx=00, qjzp=http://172.26.27.234:80/125/20180414/0514/E/S2/125E20180414051450184S2-1.jpg, hpzl=02, cwzp=, jgsk=20180414051450, clxxbh=32090000000000012500112520180414325207, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1825, cdbh=01, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=H, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180413/0655/E/L1/125E20180413065501038L1-2.jpg, ctzp=, dwwd=33.38601, rksj=20180418112521, clsd=-1, xsfx=00, qjzp=http://172.26.27.234:80/125/20180413/0655/E/L1/125E20180413065501038L1-1.jpg, hpzl=02, cwzp=, jgsk=20180413065501, clxxbh=32090000000000012500112520180413207317, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1825, cdbh=02, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=J, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180413/0504/E/S2/125E20180413050426380S2-2.jpg, ctzp=, dwwd=33.38601, rksj=20180418112512, clsd=-1, xsfx=00, qjzp=http://172.26.27.234:80/125/20180413/0504/E/S2/125E20180413050426380S2-1.jpg, hpzl=02, cwzp=, jgsk=20180413050426, clxxbh=32090000000000012500112520180413203354, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1825, cdbh=04, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=J, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180413/0339/S/R4/125S20180413033927815R4-2.jpg, ctzp=, dwwd=33.38601, rksj=20180418112507, clsd=-1, xsfx=02, qjzp=http://172.26.27.234:80/125/20180413/0339/S/R4/125S20180413033927815R4-1.jpg, hpzl=02, cwzp=, jgsk=20180413033927, clxxbh=32090000000000012500112520180413202698, cwkc=400, yssq=1}, {dwmc=世纪大道-兴业路, hphm=苏JB1825, cdbh=04, cllx=K33, xszt=1301, kkbh=320900000000020005, hpys=2, zpsl=1, clbj=0, cthptzzp=http://172.26.27.229:80/WF/005/20180413/0005/W/R4/005W20180413000532857R4-2.jpg, ctzp=, rksj=20180418120211, clsd=30, xsfx=01, qjzp=http://172.26.27.229:80/WF/005/20180413/0005/W/R4/005W20180413000532857R4-1.jpg, hpzl=02, cwzp=, jgsk=20180413000532, clxxbh=32090000000002000500000520180413200783, cwkc=400}, {dwmc=世纪大道-天山路, hphm=苏JB1825, cdbh=02, cllx=K33, xszt=1302, kkbh=320900000000020008, hpys=2, csys=B, zpsl=1, clbj=0, cthptzzp=http://172.26.27.229:80/WF/008/20180412/0802/S/L2/008S20180412080246325L2-2.jpg, ctzp=, rksj=20180418112558, clsd=-1, xsfx=02, qjzp=http://172.26.27.229:80/WF/008/20180412/0802/S/L2/008S20180412080246325L2-1.jpg, hpzl=02, cwzp=, jgsk=20180412080246, clxxbh=32090000000002000800000820180412112472, cwkc=400, yssq=0}, {dwmc=泰山路-长江路, hphm=苏JB1825, cdbh=02, cllx=K33, xszt=0000, kkbh=320900000000020070, hpys=2, csys=J, zpsl=1, clbj=0, cthptzzp=http://172.26.27.232:80/070/20180412/0036/S/S2/070S20180412003633748S2-2.jpg, ctzp=, rksj=20180418112501, clsd=-1, xsfx=02, qjzp=http://172.26.27.232:80/070/20180412/0036/S/S2/070S20180412003633748S2-1.jpg, hpzl=02, cwzp=, jgsk=20180412003633, clxxbh=32090000000002007000107020180412096633, cwkc=400, yssq=1}, {dwmc=解放路--建军路, dwjd=120.13079, hphm=苏JB1825, cdbh=01, cllx=K33, xszt=0000, kkbh=320900000000000108, hpys=2, csys=H, zpsl=1, cthptzzp=, clbj=0, ctzp=, dwwd=33.38372, rksj=20180418112701, clsd=20, xsfx=02, qjzp=http://172.26.27.228:80/108/20180411/0944/S/L1/108S20180411094453272L1-1.jpg, hpzl=02, cwzp=, jgsk=20180411094453, clxxbh=32090000000000010800211820180411018...
+
+jd,wd,kkxxs[i].dwmc,kkxxs[i].kkbh,kkxxs[i].xsfx
+
+WS_USER_JJ2  Aa123456@
+
+var linetext = d3.selectAll(".linetext")[0];
+linetext[0].innerHTML
+
+关系分析jsp页面：zhfx_graph.jsp   
+
+ <script type="text/javascript"
+	src="<%=request.getContextPath()%>/resource/plugins/jtopo/jtopo-0.4.8-min.js"></script>
+js加载人员关系：firstLoadAndExpand  d3_graph.js：firstLoadAndExpand
+
+http://localhost:8080/njws_stgxr/gxfx/to_zhfx.xhtml?id=RY320911196512167737
+http://localhost:8080/njws_stgxr/gxfx/to_zhfx.xhtml?id=RY320924199204189024
+http://50.144.2.68:9880/njws_stgxr/gxfx/to_zhfx.xhtml?id=RY320924199204189024
+
+http://localhost:8080/njws_stgxr/gxfx/getPersonRelation.xhtml?idNumber=320911196512167737
+http://50.144.2.68:9880/njws_stgxr/gxfx/getPersonRelation.xhtml?idNumber=320911196512167737&lx=G10020001
+
+胡东平
+吴森 320923199110081534
+
+http://50.144.2.68:9880/njws_stgxr/gxfx/gx_detail.xhtml?lyxx=G10090001_1=
+32090000000008673019_20120903162308_320995_32099551000004,
+32090000000010247612_20120903165013_320995_32099551000004
+少：320925198512260146
+多：320924199204189024
+两种关系（数据量少）：320911196512167737 
+
+网吧同上网 G10020001,G10020002,G10020003  
+http://50.144.2.68:9880/njws_stgxr/gxfx/getPersonRelation.xhtml?idNumber=320924199204189024&lx=G10020001
+  
+同行      G10040001,G15000001
+
+
+同案人员  G10060001,G10060002,G10060003
+http://50.144.2.68:9880/njws_stgxr/gxfx/getPersonRelation.xhtml?idNumber=320924199204189024&lx=G10060001
+
+同租房   G10100001
+		 
+
+
+id: "RY320925198512260146"
+
+fromID: "RY320925198512260146"
+toID: "RY320925201006297434"
+
+zhfx_graph.jsp
+d3_graph.js  firstLoadAndExpand 加载关系人后台数据
+
+[{"id":"RY320924199204189024","icon":"RY","index":0,"rysx":"qkdl","ys":"RY","name":"金帅","sfzdry":"Y"},{"id":"RY320924198207220272","icon":"RY","index":1,"name":"顾伟华","lx":"RY"},{"id":"RY320924198411102994","icon":"RY","index":2,"name":"于海峰","lx":"RY"},{"id":"RY320924198510100011","icon":"RY","index":3,"name":"高源","lx":"RY"},{"id":"RY320924199809284614","icon":"RY","index":4,"name":"李宏伟","lx":"RY"},{"id":"RY360681198912023918","icon":"RY","index":5,"name":"李和平","lx":"RY"},{"id":"RY320924198910264111","icon":"RY","index":6,"name":"侍昌雷","lx":"RY"},{"id":"RY370502197902253257","icon":"RY","index":7,"name":"王洪君","lx":"RY"},{"id":"RY320924198912254814","icon":"RY","index":8,"name":"王兆东","lx":"RY"},{"id":"RY320924198506260274","icon":"RY","index":9,"name":"李伟雅","lx":"RY"},{"id":"RY320722198811166010","icon":"RY","index":10,"name":"郭亮亮","lx":"RY"},{"id":"RY320924199304140017","icon":"RY","index":11,"name":"孙培培","lx":"RY"},{"id":"RY412728199305055226","icon":"RY","index":12,"name":"张宁丽","lx":"RY"},{"id":"RY320924199406280117","icon":"RY","index":13,"name":"王珏","lx":"RY"},{"id":"RY320924199005269056","icon":"RY","index":14,"name":"夏奇","lx":"RY"},{"id":"RY320924199202122934","icon":"RY","index":15,"name":"张其杰","lx":"RY"},{"id":"RY320924199507289014","icon":"RY","index":16,"name":"陈凡","lx":"RY"},{"id":"RY320924198301126143","icon":"RY","index":17,"name":"姚桂香","lx":"RY"},{"id":"RY320924199309093416","icon":"RY","index":18,"name":"蔡家兴","lx":"RY"},{"id":"RY320924199211055294","icon":"RY","index":19,"name":"陈志军","lx":"RY"},{"id":"RY320924198503260033","icon":"RY","index":20,"name":"王伟春","lx":"RY"},{"id":"RY510181198812252810","icon":"RY","index":21,"name":"姬彬龙","lx":"RY"},{"id":"RY320923199306231258","icon":"RY","index":22,"name":"马中健","lx":"RY"},{"id":"RY320922198801215756","icon":"RY","index":23,"name":"李龙","lx":"RY"},{"id":"RY320924198801104119","icon":"RY","index":24,"name":"张伟伟","lx":"RY"},{"id":"RY320924199606155716","icon":"RY","index":25,"name":"曾俊峰","lx":"RY"},{"id":"RY320924198801204136","icon":"RY","index":26,"name":"沈海龙","lx":"RY"},{"id":"RY320924196806274847","icon":"RY","index":27,"name":"李正芳","lx":"RY"},{"id":"RY32092619740303327X","icon":"RY","index":28,"name":"董兵","lx":"RY"},{"id":"RY320924198302163413","icon":"RY","index":29,"name":"唐训华","lx":"RY"},{"id":"RY320922199306123314","icon":"RY","index":30,"name":"王浒","lx":"RY"},{"id":"RY320924199706244118","icon":"RY","index":31,"name":"朱成旭","lx":"RY"},{"id":"RY320924199608098778","icon":"RY","index":32,"name":"李沛文","lx":"RY"},{"id":"RY320924198812100033","icon":"RY","index":33,"name":"程周","lx":"RY"},{"id":"RY320924199103069015","icon":"RY","index":34,"name":"王建富","lx":"RY"},{"id":"RY320924199010200870","icon":"RY","index":35,"name":"徐星珠","lx":"RY"},{"id":"RY320924199704020014","icon":"RY","index":36,"name":"王杰","lx":"RY"},{"id":"RY320924197602045262","icon":"RY","index":37,"name":"周萍","lx":"RY"},{"id":"RY320924198707070039","icon":"RY","index":38,"name":"朱杰","lx":"RY"},{"id":"RY320924198003270278","icon":"RY","index":39,"name":"戴德","lx":"RY"},{"id":"RY331023198408194610","icon":"RY","index":40,"name":"范云伟","lx":"RY"},{"id":"RY320924199012101737","icon":"RY","index":41,"name":"吴必江","lx":"RY"},{"id":"RY320924198812203411","icon":"RY","index":42,"name":"吴其龙","lx":"RY"},{"id":"RY320924198811271711","icon":"RY","index":43,"name":"魏明园","lx":"RY"},{"id":"RY320924198910059910","icon":"RY","index":44,"name":"昌国","lx":"RY"},{"id":"RY320924199103310278","icon":"RY","index":45,"name":"李磊","lx":"RY"},{"id":"RY320902199202168010","icon":"RY","index":46,"name":"陈健","lx":"RY"},{"id":"RY320924199307064398","icon":"RY","index":47,"name":"刘其军","lx":"RY"},{"id":"RY320924199808011411","icon":"RY","index":48,"name":"张思远","lx":"RY"},{"id":"RY320924195512229026","icon":"RY","index":49,"name":"杨彩兰","lx":"RY"},{"id":"RY320922198705138113","icon":"RY","index":50,"name":"王煦","lx":"RY"},{"id":"RY320922199102183358","icon":"RY","index":51,"name":"王亮亮","lx":"RY"},{"id":"RY320924198806034113","icon":"RY","index":52,"name":"钱海石","lx":"RY"},{"id":"RY320325197603119212","icon":"RY","index":53,"name":"陈安堂","lx":"RY"},{"id":"RY320924199712174398","icon":"RY","index":54,"name":"吴迪","lx":"RY"},{"id":"RY320924199510024818","icon":"RY","index":55,"name":"陆斌斌","lx":"RY"},{"id":"RY320924199602120057","icon":"RY","index":56,"name":"刘明威","lx":"RY"},{"id":"RY320911195403074334","icon":"RY","index":57,"name":"徐金国","lx":"RY"},{"id":"RY320924199510234137","icon":"RY","index":58,"name":"路澎","lx":"RY"},{"id":"RY320924199403036936","icon":"RY","index":59,"name":"倪亚奇","lx":"RY"},{"id":"RY320924199303158311","icon":"RY","index":60,"name":"尹春荣","lx":"RY"},{"id":"RY320924199003230270","icon":"RY","index":61,"name":"江鹏飞","lx":"RY"},{"id":"RY320924198803090275","icon":"RY","index":62,"name":"吴浩","lx":"RY"},{"id":"RY320924198708030290","icon":"RY","index":63,"name":"陈昌生","lx":"RY"},{"id":"RY320925198709046119","icon":"RY","index":64,"name":"孙军","lx":"RY"},{"id":"RY320924199005202951","icon":"RY","index":65,"name":"王德洲","lx":"RY"},{"id":"RY320924199812097924","icon":"RY","index":66,"name":"徐霞霞","lx":"RY"},{"id":"RY320924199410252119","icon":"RY","index":67,"name":"李东震","lx":"RY"}]
+[{"id":"RY320924199204189024","icon":"RY","index":0,"rysx":"qkdl","ys":"RY","name":"金帅","sfzdry":"Y"},{"id":"RY320924198207220272","icon":"RY","index":1,"name":"顾伟华","lx":"RY"},{"id":"RY320924198411102994","icon":"RY","index":2,"name":"于海峰","lx":"RY"},{"id":"RY320924198510100011","icon":"RY","index":3,"name":"高源","lx":"RY"},{"id":"RY320924199809284614","icon":"RY","index":4,"name":"李宏伟","lx":"RY"},{"id":"RY360681198912023918","icon":"RY","index":5,"name":"李和平","lx":"RY"},{"id":"RY320924198910264111","icon":"RY","index":6,"name":"侍昌雷","lx":"RY"},{"id":"RY370502197902253257","icon":"RY","index":7,"name":"王洪君","lx":"RY"},{"id":"RY320924198912254814","icon":"RY","index":8,"name":"王兆东","lx":"RY"},{"id":"RY320924198506260274","icon":"RY","index":9,"name":"李伟雅","lx":"RY"},{"id":"RY320722198811166010","icon":"RY","index":10,"name":"郭亮亮","lx":"RY"},{"id":"RY320924199304140017","icon":"RY","index":11,"name":"孙培培","lx":"RY"},{"id":"RY412728199305055226","icon":"RY","index":12,"name":"张宁丽","lx":"RY"},{"id":"RY320924199406280117","icon":"RY","index":13,"name":"王珏","lx":"RY"},{"id":"RY320924199005269056","icon":"RY","index":14,"name":"夏奇","lx":"RY"},{"id":"RY320924199202122934","icon":"RY","index":15,"name":"张其杰","lx":"RY"},{"id":"RY320924199507289014","icon":"RY","index":16,"name":"陈凡","lx":"RY"},{"id":"RY320924198301126143","icon":"RY","index":17,"name":"姚桂香","lx":"RY"},{"id":"RY320924199309093416","icon":"RY","index":18,"name":"蔡家兴","lx":"RY"},{"id":"RY320924199211055294","icon":"RY","index":19,"name":"陈志军","lx":"RY"},{"id":"RY320924198503260033","icon":"RY","index":20,"name":"王伟春","lx":"RY"},{"id":"RY510181198812252810","icon":"RY","index":21,"name":"姬彬龙","lx":"RY"},{"id":"RY320923199306231258","icon":"RY","index":22,"name":"马中健","lx":"RY"},{"id":"RY320922198801215756","icon":"RY","index":23,"name":"李龙","lx":"RY"},{"id":"RY320924198801104119","icon":"RY","index":24,"name":"张伟伟","lx":"RY"},{"id":"RY320924199606155716","icon":"RY","index":25,"name":"曾俊峰","lx":"RY"},{"id":"RY320924198801204136","icon":"RY","index":26,"name":"沈海龙","lx":"RY"},{"id":"RY320924196806274847","icon":"RY","index":27,"name":"李正芳","lx":"RY"},{"id":"RY32092619740303327X","icon":"RY","index":28,"name":"董兵","lx":"RY"},{"id":"RY320924198302163413","icon":"RY","index":29,"name":"唐训华","lx":"RY"},{"id":"RY320922199306123314","icon":"RY","index":30,"name":"王浒","lx":"RY"},{"id":"RY320924199706244118","icon":"RY","index":31,"name":"朱成旭","lx":"RY"},{"id":"RY320924199608098778","icon":"RY","index":32,"name":"李沛文","lx":"RY"},{"id":"RY320924198812100033","icon":"RY","index":33,"name":"程周","lx":"RY"},{"id":"RY320924199103069015","icon":"RY","index":34,"name":"王建富","lx":"RY"},{"id":"RY320924199010200870","icon":"RY","index":35,"name":"徐星珠","lx":"RY"},{"id":"RY320924199704020014","icon":"RY","index":36,"name":"王杰","lx":"RY"},{"id":"RY320924197602045262","icon":"RY","index":37,"name":"周萍","lx":"RY"},{"id":"RY320924198707070039","icon":"RY","index":38,"name":"朱杰","lx":"RY"},{"id":"RY320924198003270278","icon":"RY","index":39,"name":"戴德","lx":"RY"},{"id":"RY331023198408194610","icon":"RY","index":40,"name":"范云伟","lx":"RY"},{"id":"RY320924199012101737","icon":"RY","index":41,"name":"吴必江","lx":"RY"},{"id":"RY320924198812203411","icon":"RY","index":42,"name":"吴其龙","lx":"RY"},{"id":"RY320924198811271711","icon":"RY","index":43,"name":"魏明园","lx":"RY"},{"id":"RY320924198910059910","icon":"RY","index":44,"name":"昌国","lx":"RY"},{"id":"RY320924199103310278","icon":"RY","index":45,"name":"李磊","lx":"RY"},{"id":"RY320902199202168010","icon":"RY","index":46,"name":"陈健","lx":"RY"},{"id":"RY320924199307064398","icon":"RY","index":47,"name":"刘其军","lx":"RY"},{"id":"RY320924199808011411","icon":"RY","index":48,"name":"张思远","lx":"RY"},{"id":"RY320924195512229026","icon":"RY","index":49,"name":"杨彩兰","lx":"RY"},{"id":"RY320922198705138113","icon":"RY","index":50,"name":"王煦","lx":"RY"},{"id":"RY320922199102183358","icon":"RY","index":51,"name":"王亮亮","lx":"RY"},{"id":"RY320924198806034113","icon":"RY","index":52,"name":"钱海石","lx":"RY"},{"id":"RY320325197603119212","icon":"RY","index":53,"name":"陈安堂","lx":"RY"},{"id":"RY320924199712174398","icon":"RY","index":54,"name":"吴迪","lx":"RY"},{"id":"RY320924199510024818","icon":"RY","index":55,"name":"陆斌斌","lx":"RY"},{"id":"RY320924199602120057","icon":"RY","index":56,"name":"刘明威","lx":"RY"},{"id":"RY320911195403074334","icon":"RY","index":57,"name":"徐金国","lx":"RY"},{"id":"RY320924199510234137","icon":"RY","index":58,"name":"路澎","lx":"RY"},{"id":"RY320924199403036936","icon":"RY","index":59,"name":"倪亚奇","lx":"RY"},{"id":"RY320924199303158311","icon":"RY","index":60,"name":"尹春荣","lx":"RY"},{"id":"RY320924199003230270","icon":"RY","index":61,"name":"江鹏飞","lx":"RY"},{"id":"RY320924198803090275","icon":"RY","index":62,"name":"吴浩","lx":"RY"},{"id":"RY320924198708030290","icon":"RY","index":63,"name":"陈昌生","lx":"RY"},{"id":"RY320925198709046119","icon":"RY","index":64,"name":"孙军","lx":"RY"},{"id":"RY320924199005202951","icon":"RY","index":65,"name":"王德洲","lx":"RY"},{"id":"RY320924199812097924","icon":"RY","index":66,"name":"徐霞霞","lx":"RY"},{"id":"RY320924199410252119","icon":"RY","index":67,"name":"李东震","lx":"RY"}]
+
+jdbc:hive2://50.144.0.22:24002,50.144.0.21:24002,50.144.0.20:24002/;serviceDiscoveryMode=zooKeeper;
+zooKeeperNamespace=hiveserver2;sasl.qop=auth-conf;auth=KERBEROS;principal=hive/hadoop.hadoop.com@HADOOP.COM;
+
+
+fzs_jwypt
+
+Exception in thread "main" java.lang.NoClassDefFoundError:
+ org/apache/hadoop/hbase/protobuf/generated/MasterProtos$MasterService$BlockingInterface
+
+hbase-client-1.2.0-cdh5.11.1.jar
+
+113995815,用时：845146ms
+
+ZYFWZX
+http://localhost:8080/psb_fzjwypt/sys/global/login.xhtml
+
+50.144.0.49
+
+32092219930629501x
+
+资源碰撞分析工具：
+http://50.144.0.46:8081/ComparisonV3/invisibleLogin?idnumber=340621199305047816
+资源碰撞 用户表：
+jdbc1.url=jdbc:oracle:thin:@50.144.0.60:1521:ycdsjpt
+jdbc1.username=jbjht
+jdbc1.password=jbjht_yc
+select t1.account,t1.PASSWORD, t1.ENABLED, t1.STATUS from t_sys_user t1
+left join t_sys_user_detail t2 on t1.id = t2.id 
+WHERE t2.idnumber = '320924199412289011'
+
+
+http://localhost:8080/ComparisonV41/invisibleLogin?idnumber=32092219930629501x
+
+http://50.144.0.47:8084/stcldsj/loginWithIdNumber.xhtml?code=cldsjmh&password=&loginType=01&account=340621199305047816
+http://50.144.0.47:8083/stcldsj/loginWithIdNumber.xhtml?code=cldsjmh&password=&loginType=01&account=340621199305047816
+车辆大数据：
+http://50.144.0.47:8081/stcldsj/loginWithIdNumber.xhtml?code=cldsjmh&password=&loginType=01&account=340621199305047816
+
+340621199305047816
+--ycqb_ht/njwsycqb_ht(37 abpt19)大数据首页面：
+select * from t_sys_user t;
+select * from t_sys_user_detail t;
+
+-- ycsjzl(37 abpt19)资源碰撞对比
+select * from t_sys_user ;
+select * from t_sys_user_detail;
+
+--cldsj_ht(39 ycdjsfwpt) 车辆大数据
+select * from t_sys_user;
+select * from t_sys_user_detail;
+
+http://50.144.0.37:1521/kettle/status?xml=Y
+
+
+0.37 abpt19 etl2 r_job表、r_transformation表
+
+
+D:\workspace_cq\.metadata\.plugins\org.eclipse.wst.server.core\tmp5\wtpwebapps\ComparisonV3\/upload/temp/ff3fc9ad-644b-4bc2-aeb4-c0330296a626.xls
+
+select t2.name,t2.code from t_sys_dic t1
+left join t_sys_dic_item t2 
+on t1.id = t2.dicid where t2.dicid = '15199076708980248' 
+
+1.重点 2.预警
+
+JLBH  ajbh
+
+http://50.144.0.47:8081/stcldsj/zdcldzda/toselclxxDefDetail.xhtml?hphm=%E8%8B%8FJ16209&hpzl=02&jgsk=20180715125131&kkbh=320900000000000125
+http://50.144.0.47:8081/stcldsj/zdcldzda/toselclxxDefDetail.xhtml?hphm=%E8%8B%8FJ16209&hpzl=02&jgsk=20180816164428&kkbh=320900000000020066
+
+{hphm=苏JK230U, cdbh=02, clpp1=null, clpp2=null, cllx=K33, xszt=0000, kkbh=320900000000020070, hpys=2, ylzp1=null, csys=A, zpsl=1, clbj=0, cthptzzp=http://172.26.27.232:80/070/20180816/1700/N/S2/070N20180816170019731S2-2.jpg, ctzp=null, rksj=20180816170022, clsd=-1.0, xsfx=03, qjzp=http://172.26.27.232:80/070/20180816/1700/N/S2/070N20180816170019731S2-1.jpg, hpzl=02, jgsk=20180816170019, cwzp=null, clxxbh=32090000000002007000107020180816169239, cwkc=400, yssq=0}
+
+车辆大数据登录：nbyh/123456
+
+车辆大数据 综合轨迹查询方式（不加 车牌号的查询）：
+先查经过时刻索引表：DimensoftWatch_TimeIndex  
+再查主表：T_320_CLGJXX
+
+加车牌号查询方式：
+先查号牌经过时刻索引表：DimensoftWatch_HphmJgskIndex 
+再查主表：T_320_CLGJXX
+
+2018-08-20 08:30:25
+
+http://50.144.0.47:8084/stcldsj/loginWithIdNumber.xhtml?code=cldsjmh&password=&loginType=01&account=340621199305047816
+http://50.144.0.47:8084/stcldsj/loginWithIdNumber.xhtml?code=cldsjmh&password=&loginType=01&account=320902198409210015
+
+dwjd,dwwd,dwmc,kkbh,xsfx
+苏JB1811
+
+[{hphm=苏J3510M, cdbh=02, xszt=0, kkbh=320922000000000127, hpys=2, csys=Z, zpsl=1, clbj=0,
+ cthptzzp=http://10.39.225.4:8088/image/vrb2/i2/1cd144f5e99644289b28d20a9360d3ac/00057?key=6785&
+ offset=685091508&high=3340, rksj=20180821190458, clsd=-1.0, xsfx=03, 
+ qjzp=http://10.39.225.4:8088/image/vrb2/i2/1cd144f5e99644289b28d20a9360d3ac/00057?key=6786&offset=685094928
+ &high=204564, hpzl=02, jgsk=20180814184028, clxxbh=32092200000000012700000120180814364171, 
+ cwkc=400, yssq=0}, {hphm=苏J3510M, cdbh=02, cllx=K33, xszt=0000, kkbh=320900000000020081, hpys=2, csys=H, zpsl=1, clbj=0, cthptzzp=http://172.26.27.228:80/081/20180814/1715/S/S2/081S20180814171537708S2-2.jpg, rksj=20180821190416, clsd=-1.0, xsfx=02, qjzp=http://172.26.27.228:80/081/20180814/1715/S/S2/081S20180814171537708S2-1.jpg, hpzl=02, jgsk=20180814171537, clxxbh=32090000000002008100008120180814918996, cwkc=400, yssq=1}, {hphm=苏J3510M, cdbh=01, xszt=0000, kkbh=320900000000000197, hpys=2, csys=C, zpsl=1, clbj=0, cthptzzp=HTTP://172.26.250.74:8088/image/vrb/3c73ce998eda42a5b36af9840c293226/9?key=312617c&offset=1128718336&high=0, rksj=20180821190402, clsd=45.0, xsfx=02, qjzp=HTTP://172.26.250.74:8088/image/vrb/3c73ce998eda42a5b36af9840c293226/9?key=312617e&offset=1128967772&high=0, hpzl=02, jgsk=20180814171452, clxxbh=32090000000000019700000120180814909941, cwkc=0, yssq=1}, {hphm=苏J3510M, cdbh=03, xszt=0000, kkbh=320900000000000131, hpys=2, csys=A, zpsl=1, clbj=0, cthptzzp=HTTP://172.26.250.75:8088/image/vrb/004df63522af4ca29be5157b50f8d11d/55?key=1a120ae&offset=-1453571917&high=0, rksj=20180821190438, clsd=-1.0, xsfx=02, qjzp=HTTP://172.26.250.75:8088/image/vrb/004df63522af4ca29be5157b50f8d11d/55?key=1a120af&offset=-1453569917&high=0, hpzl=02, jgsk=20180814171119, clxxbh=32090000000000013100002220180814281272, cwkc=0, yssq=0}, {hphm=苏J3510M, cdbh=02, xszt=0000, kkbh=320900000000000199, hpys=2, csys=C, zpsl=1, clbj=0, cthptzzp=HTTP://172.26.250.74:8088/image/vrb/3c73ce998eda42a5b36af9840c293226/9?key=31251cd&offset=365930368&high=0, rksj=20180821190337, clsd=36.0, xsfx=02, qjzp=HTTP://172.26.250.74:8088/image/vrb/3c73ce998eda42a5b36af9840c293226/9?key=31251cf&offset=365940380&high=0, hpzl=02, jgsk=20180814171014, clxxbh=32090000000000019900000220180814318830, cwkc=0, yssq=1}, {hphm=苏J3510M, cdbh=03, xszt=0000, kkbh=320900000000000164, hpys=2, csys=C, zpsl=1, clbj=0, cthptzzp=HTTP://172.26.250.74:8088/image/vrb/3c73ce998eda42a5b36af9840c293226/8?key=3123aca&offset=-1839619547&high=0, rksj=20180821190430, clsd=28.0, xsfx=02, qjzp=HTTP://172.26.250.74:8088/image/vrb/3c73ce998eda42a5b36af9840c293226/8?key=3123acc&offset=-1839289011&high=0, hpzl=02, jgsk=20180814170254, clxxbh=32090000000000016400000320180814126655, cwkc=0, yssq=1}, {hphm=苏J3510M, cdbh=01, xszt=0000, kkbh=320900000000000175, hpys=2, csys=C, zpsl=1, clbj=0, cthptzzp=HTTP://172.26.250.74:8088/image/vrb/3c73ce998eda42a5b36af9840c293226/8?key=3122d6f&offset=1816743982&high=0, rksj=20180821190345, clsd=18.0, xsfx=01, qjzp=HTTP://172.26.250.74:8088/image/vrb/3c73ce998eda42a5b36af9840c293226/8?key=3122d70&offset=1816748150&high=0, hpzl=02, jgsk=20180814165814, clxxbh=32090000000000017500000520180814215286, cwkc=0, yssq=1}, {hphm=苏J3510M, cdbh=03, xszt=0000, kkbh=320900000000000124, hpys=2, csys=A, zpsl=1, clbj=0, cthptzzp=HTTP://172.26.250.79:8088/image/vrb/7bfba7ec8176480a9eb7765aa7d33830/4?key=18dfcd8&offset=418274155&high=0, rksj=20180821190332, clsd=13.0, xsfx=01, qjzp=HTTP://172.26.250.79:8088/image/vrb/7bfba7ec8176480a9eb7765aa7d33830/4?key=18dfcd9&offset=418277059&high=0, hpzl=02, jgsk=20180814165724, clxxbh=32090000000000012400000820180814395779, cwkc=3, yssq=0}, {hphm=苏J3510M, cdbh=02, xszt=0000, kkbh=320900000000000133, hpys=2, csys=A, zpsl=1, clbj=0, cthptzzp=HTTP://172.26.250.79:8088/image/vrb/7bfba7ec8176480a9eb7765aa7d33830/4?key=18e07e3&offset=989660564&high=0, rksj=20180821190344, clsd=16.0, xsfx=01, qjzp=HTTP://172.26.250.79:8088/image/vrb/7bfba7ec8176480a9eb7765aa7d33830/4?key=18e07e4&offset=989662612&high=0, hpzl=02, jgsk=20180814164924, clxxbh=32090000000000013300000720180814513260, cwkc=4, yssq=0}, {hphm=苏J3510M, cdbh=04, cllx=K33, xszt=0000, kkbh=320900000000000108, hpys=2, csys=A, zpsl=1, clbj=0, rksj=20180821190355, clsd=10.0, xsfx=00, qjzp=http://172.26.27.228:80/108/20180814/1615/E/R4/108E20180814161517356R4-1.jpg, hpzl=02, jgsk=20180814161517, clxxbh=32090000000000010800211820180814909343, cwkc=400, yssq=0}, {hphm=苏J3510M, cdbh=02, xszt=0000, kkbh=320900000000000173, hpys=2, csys=A, zpsl=1, clbj=0, cthptzzp=HTTP://172.26.250.74:8088/image/vrb/3c73ce998eda42a5b36af9840c293226/6?key=311a070&offset=1530998193&high=0, rksj=20180821190322, clsd=-1.0, xsfx=00, qjzp=HTTP://172.26.250.74:8088/image/vrb/3c73ce998eda42a5b36af9840c293226/6?key=311a072&offset=1531008517&high=0, hpzl=02, jgsk=20180814161155, clxxbh=32090000000000017300000220180814600207, cwkc=0, yssq=0}, {hphm=苏J3510M, cdbh=05, xszt=0000, kkbh=320900000000000134, hpys=2, csys=A, zpsl=1, clbj=0, cthptzzp=HTTP://172.26.250.79:8088/image/vrb/7bfba7ec8176480a9eb7765aa7d33830/2?key=18d821e&offset=505221325&high=0, rksj=20180821190315, clsd=17.0, xsfx=03, qjzp=HTTP://172.26.250.79:8088/image/vrb/7bfba7ec8176480a9eb7765aa7d33830/2?key=18d821f&offset=505223973&high=0, hpzl=02, jgsk=20180814161010, clxxbh=32090000000000013400002020180814799685, cwkc=3, yssq=0}]
+
+ [{SEXIT_ID=0000000000000000000016500020010520160620080953, CARDID=0, RECORDTYPE=3, 
+ENTRYTIME=2016-06-20 07:55:53.0, DM2=1650002, RECORDNO=7504, MC2=兴仁, 
+VEHICLECLASS=11, RN=1, PROGRAMSTARTTIME=2016-06-15 01:03:54.0, ENTRYLANE=3, 
+EXITTIME=2016-06-20 08:09:53.0, ENTRYSTATION=1120002, GSMC2=通启, EXITSTATION=1650002, TRANSFERMARK=0, AUTOLICENSE=苏A2831G, DMLX2=北网, VEHICLEKIND=2, EXITLANE=105}, {SEXIT_ID=0000000000000000000003000020011320160608173932, CARDID=0, RECORDTYPE=3, ENTRYTIME=2016-06-08 17:15:57.0, DM2=300002, RECORDNO=3009, MC2=李市, VEHICLECLASS=11, RN=2, PROGRAMSTARTTIME=2016-06-05 20:16:32.0, ENTRYLANE=3, EXITTIME=2016-06-08 17:39:32.0, ENTRYSTATION=850003, GSMC2=常昆, EXITSTATION=300002, TRANSFERMARK=0, AUTOLICENSE=苏A2831G, DMLX2=南网, VEHICLEKIND=2, EXITLANE=113}, {SEXIT_ID=0000000000000000000008500030010420160608171509, CARDID=0, RECORDTYPE=3, ENTRYTIME=2016-06-08 16:34:01.0, DM2=850003, RECORDNO=8301, MC2=渭塘, VEHICLECLASS=11, RN=3, PROGRAMSTARTTIME=2016-05-31 16:11:44.0, ENTRYLANE=4, EXITTIME=2016-06-08 17:15:09.0, ENTRYSTATION=2050004, GSMC2=苏州西北绕城, EXITSTATION=850003, TRANSFERMARK=0, AUTOLICENSE=苏A2831G, DMLX2=南网, VEHICLEKIND=2, EXITLANE=104}, {SEXIT_ID=0000000000000000000016500020010520160604151254, CARDID=0, RECORDTYPE=3, ENTRYTIME=2016-06-04 14:58:25.0, DM2=1650002, RECORDNO=6352, MC2=兴仁, VEHICLECLASS=11, RN=4, PROGRAMSTARTTIME=2016-05-31 07:17:23.0, ENTRYLANE=2, EXITTIME=2016-06-04 15:12:54.0, ENTRYSTATION=1120002, GSMC2=通启, EXITSTATION=1650002, TRANSFERMARK=0, AUTOLICENSE=苏A2831G, DMLX2=北网, VEHICLEKIND=2, EXITLANE=105}, {SEXIT_ID=0000000000000000000016500030010420160518095631, CARDID=0, RECORDTYPE=3, ENTRYTIME=2016-05-18 09:08:23.0, DM2=1650003, RECORDNO=17078, MC2=南通北, VEHICLECLASS=11, RN=5, PROGRAMSTARTTIME=2016-05-03 11:06:39.0, ENTRYLANE=3, EXITTIME=2016-05-18 09:56:31.0, ENTRYSTATION=1120003, GSMC2=通启, EXITSTATION=1650003, TRANSFERMARK=0, AUTOLICENSE=苏A2831G, DMLX2=北网, VEHICLEKIND=2, EXITLANE=104}, {SEXIT_ID=0000000000000000000016500030010420160515174212, CARDID=0, RECORDTYPE=3, ENTRYTIME=2016-05-15 17:26:19.0, DM2=1650003, RECORDNO=14432, MC2=南通北, VEHICLECLASS=12, RN=6, PROGRAMSTARTTIME=2016-05-03 11:06:39.0, ENTRYLANE=2, EXITTIME=2016-05-15 17:42:12.0, ENTRYSTATION=1120002, GSMC2=通启, EXITSTATION=1650003, TRANSFERMARK=0, AUTOLICENSE=苏A2831G, DMLX2=北网, VEHICLEKIND=2, EXITLANE=104}, {SEXIT_ID=0000000000000000000016500030010420160513110145, CARDID=0, RECORDTYPE=3, ENTRYTIME=2016-05-13 10:17:02.0, DM2=1650003, RECORDNO=11533, MC2=南通北, VEHICLECLASS=11, RN=7, PROGRAMSTARTTIME=2016-05-03 11:06:39.0, ENTRYLANE=3, EXITTIME=2016-05-13 11:01:45.0, ENTRYSTATION=1120002, GSMC2=通启, EXITSTATION=1650003, TRANSFERMARK=0, AUTOLICENSE=苏A2831G, DMLX2=北网, VEHICLEKIND=2, EXITLANE=104}, {SEXIT_ID=0000000000000000000016500030010420160513082739, CARDID=0, RECORDTYPE=3, ENTRYTIME=2016-05-13 08:08:52.0, DM2=1650003, RECORDNO=11314, MC2=南通北, VEHICLECLASS=11, RN=8, PROGRAMSTARTTIME=2016-05-03 11:06:39.0, ENTRYLANE=3, EXITTIME=2016-05-13 08:27:39.0, ENTRYSTATION=1120002, GSMC2=通启, EXITSTATION=1650003, TRANSFERMARK=0, AUTOLICENSE=苏A2831G, DMLX2=北网, VEHICLEKIND=2, EXITLANE=104}, {SEXIT_ID=0000000000000000000016500100010420160512133857, CARDID=0, RECORDTYPE=3, ENTRYTIME=2016-05-12 13:05:46.0, DM2=1650010, RECORDNO=6849, MC2=先锋, VEHICLECLASS=11, RN=9, PROGRAMSTARTTIME=2016-05-03 01:13:34.0, ENTRYLANE=3, EXITTIME=2016-05-12 13:38:57.0, ENTRYSTATION=1120002, GSMC2=通启, EXITSTATION=1650010, TRANSFERMARK=0, AUTOLICENSE=苏A2831G, DMLX2=北网, VEHICLEKIND=2, EXITLANE=104}, {SEXIT_ID=0000000000000000000016500030010420160509182525, CARDID=0, RECORDTYPE=3, ENTRYTIME=2016-05-09 18:09:53.0, DM2=1650003, RECORDNO=7744, MC2=南通北, VEHICLECLASS=11, RN=10, PROGRAMSTARTTIME=2016-05-03 11:06:39.0, ENTRYLANE=3, EXITTIME=2016-05-09 18:25:25.0, ENTRYSTATION=1120002, GSMC2=通启, EXITSTATION=1650003, TRANSFERMARK=0, AUTOLICENSE=苏A2831G, DMLX2=北网, VEHICLEKIND=2, EXITLANE=104}]
+EXITTIME
+苏JK753B0220180820134558320991000000000041
+hphmValue+hpzlValue+jgskValue+kkbhValue;
+
+[320982000000000076_20180822174146_苏A6A6A7_02, 320982000000000080_20180822174143_苏JB2A86_02, 320900000000000139_20180822174143_苏J0965Z_02, 320982000000000076_20180822174134_苏JWQ965_02, 320982000000000080_20180822174133_苏J08A01_02, 320982000000000076_20180822174131_苏JUL111_02, 320982000000000076_20180822174129_苏JY050挂_01, 320982000000000076_20180822174127_沪C5HK72_02, 320900000000000166_20180822174124_苏JED610_02, 320991000000000047_20180822174115_苏J37158_02, 320982000000000040_20180815143055_海L53508_02, 320982000000000023_20180815143055_苏J94952_01, 320982000000000007_20180815143055_苏J215C9_02, 320981000000004806_20180815143055_苏J56P08_02, 320981000000004806_20180815143055_苏E13C0H_02, 320981000000002713_20180815143055_苏JXJ261_02, 320981000000002405_20180815143055_苏JY2827_02, 320981000000002390_20180815143055_苏JX5419_01, 320981000000002330_20180815143055_苏M05K00_02, 320981000000002330_20180815143055_苏JZN109_02, 320900000000000108_20180810144725_苏JL250F_02, 320900000000000108_20180810144725_苏JH7111_02, 320900000000000034_20180810144725_苏JB0009_02, 320991000000000041_20180810144724_0_99, 320991000000000032_20180810144724_0_99, 320991000000000017_20180810144724_苏J26928_02, 320991000000000004_20180810144724_苏J7027E_02, 320982000000000099_20180810144724_苏JWR675_02, 320982000000000095_20180810144724_苏E1JF56_02, 320982000000000041_20180810144724_浙N783P9_02, 320981000000001193_20180810085047_苏JB3X58_02, 320981000000001142_20180810085047_苏A8B1U1_02, 320981000000000973_20180810085047_皖EEJ965_02, 320981000000000959_20180810085047_苏F811E7_02, 320925000000000190_20180810085047_苏JL708V_02, 320925000000000176_20180810085047_苏J13M06_02, 320925000000000154_20180810085047_苏J2590H_02, 320925000000000153_20180810085047_苏JB682U_02, 320925000000000081_20180810085047_苏JF123M_02, 320925000000000079_20180810085047_苏A01SS8_02, 320981000000004806_20180809192054_苏JY0919_02, 320981000000004806_20180809192054_苏JVT598_02, 320981000000004806_20180809192054_苏J0311Y_02, 320981000000002813_20180809192054_苏J99Z01_02, 320981000000002405_20180809192054_苏J3595X_02, 320981000000002390_20180809192054_苏E3FR77_02, 320981000000002209_20180809192054_苏J873Y3_02, 320981000000002203_20180809192054_苏JB590Q_02, 320981000000002201_20180809192054_苏E6KK80_02, 320981000000002140_20180809192054_苏JAY887_01, 320981000000004806_20180809104812_苏JZT578_02, 320981000000004806_20180809104812_苏JZK373_02, 320981000000002688_20180809104812_苏M01A00_02, 320981000000002589_20180809104812_苏J80M56_02, 320981000000002426_20180809104812_苏JH136B_02, 320981000000002405_20180809104812_苏J29Q8U_02, 320981000000002405_20180809104812_浙JZY980_02, 320981000000002404_20180809104812_苏M4K5KW_01, 320981000000002389_20180809104812_苏JYV200_02, 320981000000002388_20180809104812_苏JY2399_02]
+苏A6A6A70220180822174146320982000000000076
+
+[苏JK753B_20180820134558_320991000000000041_02, 苏JK753B_20180820131640_320991000000000030_02, 苏JK753B_20180820132402_320991000000000027_02, 苏JK753B_20180820135907_320991000000000010_02]
+[苏JK753B_20180820134558_320991000000000041_02, 苏JK753B_20180820131640_320991000000000030_02, 苏JK753B_20180820132402_320991000000000027_02, 苏JK753B_20180820135907_320991000000000010_02, null, null, null, null, null, null]
+java.lang.ClassCastException: java.sql.Timestamp cannot be cast to java.lang.String
+
+5月1号至今
+!='苏J' 01
+
+	T_320_CLGJXX： String rowkey = hphmValue+hpzlValue+jgskValue+kkbhValue;
+	DimensoftWatch_KkbhIndex ： String rowkey = kkbhValue + "_" + jgskValue + "_" + hphmValue ;
+	DimensoftWatch_TimeIndex：String rowkey = jgskValue + "_" + kkbhValue + "_" + hphmValue;
+	DimensoftWatch_HphmJgskIndex：String rowkey = hphmValue + "_" + jgskValue;
+
+	[苏JH199M, 20180822084647, 320900000000000162, 02]
+苏JH199M_20180822084647
+	
+===========================================================================
+ok.机动车（VEHICLE:xm 2018-03-28 18:00），ws_xgsj > 上次生产的最大ws_xgsj
+ok.交通违章(VIO_VIOLATION:WFBH)
+交通违法案件(VIO_SURVEIL: XH) 在运行
+ok.驾驶员(DRIVINGLICENSE:XH)，kafka中数据量：2654879 时间：4090秒  650条/秒
+ok.学员登记信息(PERSON)  2860161条/1633秒 = 1750条/秒
+网吧上网人员(Pt3209a913Producer:ID) 在运行
+
+住宿
+
+
+车辆登记信息、布控信息、交通违法车辆信息、重点车辆信息
+dataSource_2.url=jdbc:oracle:thin:@50.16.134.27:1521:ORCLETL
+dataSource_2.username=CLGJDSJ_JCK
+dataSource_2.password=CLGJDSJ_JCK
+
+
+江苏各地市卡口信息表：
+dataSource_3.url=jdbc:oracle:thin:@50.16.134.27:1521:ORCLETL
+dataSource_3.username=CLGJDSJ_320
+dataSource_3.password=CLGJDSJ_320
+
+（连不上）重点人员 临时布控
+dataSourceName=dataSource_4
+dataSource_4.driverClassName=oracle.jdbc.driver.OracleDriver
+dataSource_4.url=jdbc:oracle:thin:@10.32.1.174:1521:qbbusjjh
+dataSource_4.username=qbldyy
+dataSource_4.password=qbldyy2013
+
+
+dataSource_5.url=jdbc:oracle:thin:@50.144.0.61:1521:ycdsjfwpt
+dataSource_5.username=sjzl_jj
+dataSource_5.password=sjzl_jj
+jsgasjgl.T_JTWF_AJXX
+
+
+根据身份证号查询图片 
+dataSource_6.driverClassName=oracle.jdbc.driver.OracleDriver
+dataSource_6.url=jdbc:oracle:thin:@10.32.1.60:1521:JSZH1
+dataSource_6.username=jsstid
+dataSource_6.password=dragon
+
+高速公路入口
+dataSource_16.url=jdbc:oracle:thin:@50.144.2.38:1521:ycdsjpt
+dataSource_16.username=sjzl_stzyfw
+dataSource_16.password=sjzl_stzyfw
+
+（空库，查询的其他用户）电子档案 获取出口列表
+dataSource_8.driverClassName=oracle.jdbc.driver.OracleDriver
+dataSource_8.url=jdbc:oracle:thin:@10.32.1.81:1521:jsga
+dataSource_8.username=yxglkh
+dataSource_8.password=yxglkhyh
+
+（空库，查询的其他用户）区间测速、出租车驾驶人信息、机动车驾驶人信息、交通违法车辆、车辆登记信息、套牌车辆信息、营运车辆人员
+dataSource_15.driverClassName=oracle.jdbc.driver.OracleDriver
+dataSource_15.url=jdbc:oracle:thin:@10.32.1.122:1521:JSJWPT
+dataSource_15.username=JSQBCX
+dataSource_15.password=JSQBCX2012
+===========================================================================	
+
+车辆大数据 高速入口execl导出、高速出口execl导出、违章execl导出	
+卡口过车信息 查询、详情、预览完善
+
+OA：
+1.
+拟稿：sendDraft_form.jsp
+待办：sendVerify_form.jsp
+已办：sendDetail_form.jsp
+1).act_re_procdef 流程定义
+2).启动流程，绑定实体(file_send，通过process_instance_id关联)
+3).act_ru_task(查询正在执行的任务,即待办事项) 
+4).办理完成后 进入 act_hi_taskinst(任务历史记录)、file_operate_record(办理记录)
+5).群组配置：
+	sys_user (org_code) -> sys_org(org_id) -> sys_user_org(user_id)
+	-> file_group_setting (MEMBER_ID + group_key) -> sys_user(人员详情)
+file_secondorg_post表 借调、主副职、兼职
+file_group_setting 常用群组配置
+上级为市公安局时，只查 自身及下级
+
+服务器ip:10.39.128.156 administrator/bgpt@156  deploy文件夹
+正式服务器访问:oa.yck.js (http://oa.yck.js  admin/qdj123)
+测试服务器访问:10.39.128.156:9888/OA
+
+
+{result=交由一级部门核稿, fileId=8fb21aed-a97c-4212-a90a-67fc85e061e3, fileType=4, 
+fileTitle=撤回19, subject=, urgencyLevel=3, secretLevel=2, releaseType=OA系统, printingNum=0, 
+drafter=超级管理员, instructions=, association=, draftTime=2018-09-05, undertakeUnitNo=320900000000, 
+undertakeUnit=江苏省盐城市公安局, coOrganizerNo=null, coOrganizer=null, secretItem=,
+ secretResponsible=, mainSend=, copySend=, attachmentList=[], removeAttachmentList=[],
+ assigneeList=[356175], processDefinitionKey=bureau-sendFile, msgWarn=2, path=deptLeader, 
+ feedbackList=[{USER_ID=356175, REAL_NAME=郝龙琪, FULL_NAME=江苏省盐城市公安局网络安全保卫支队, 
+ POLICE_NO=090155, ORG_ID=60405, FEEDBACK_TASK=null, FEEDBACK_TIME=null}], 
+ fileNo=〔2018〕, draftOrg=江苏省盐城市公安局, userId=74890ad6-a264-11e6-ba37-001eec0d73c3, 
+user=超级管理员, time=2018-09-05 09:16:08, taskName=发文拟稿}
+
+江苏省盐城市公安局办公室机要科
+张少坡 090831
+包锐 090132
+
+
+何建：091626
+
+贾开成 000912
+
+王巧全
+310105196907180036
+
+090155
+/file/send/draft
+
+局领导：090008
+
+[{"DRAFTER":"超级管理员","TASK_TIME":"2018-09-03 15:19:34","PROCESS_DEFINITION_KEY":"bureau-sendFile","TASK_NAME":"一级部门核稿","PROCESS_DEFINITION_ID":"bureau-sendFile:276:2127525","FILE_ID":"b8360056-cf74-428f-a2be-06dd81d8ca49","FILE_TITLE":"c2_特提","TASK_DEFINITION_KEY":"deptLeaderHandler","URGENCY_LEVEL":"5","SOURCE":"超级管理员","PROCESS_INSTANCE_ID":"2132501","TYPE":"send","TASK_ID":"2132520"}
+
+还有公文这边你那边编号保存你好像还没有给我接口呢
+
+快速交办 根据单位编码 判断权限（待确认）
+
+{FILE_ID=8b146d9f-f0e0-4533-a074-abec66ec879e, FILE_NO=null, 
+FILE_TITLE=测试长度123456789测试长度123456789测试长度123456789测试长度123456789测试长度123456789, 
+PROCESS_DEFINITION_KEY=bureau-sendFile, UNDERTAKE_UNIT=null, 
+PROC_DEF_ID_=bureau-sendFile:276:2127525, 
+PROC_INST_ID_=2132610, START_TIME_=2018-09-03 16:50:28.217, END_TIME_=2018-09-04 09:36:43.039, 
+START_USER_ID_=74890ad6-a264-11e6-ba37-001eec0d73c3, TRANSACTOR=null}
+
+//任务撤回
+taskService.claim(task.getId(), null);
+并删除办理记录
+
+//任务转交（需先置空处理人）
+taskService.claim(task.getId(), null);
+taskService.claim(task.getId(), START_USER_ID_);
+
+安保管理后台：http://50.144.0.48:8080/yc_wwyjpt/sys/core/login.xhtml  csadmin/123456
+
+卡口4G 地图的图标 优化
+
+OA地址：
+https://50.18.109.187/svn/ZDSJYJ/YC/YC_OA
+
+http://10.39.128.155:8082/OAMail/pdf/view?fileUrl=/file_server/mail/2018-07/16723a98-3bee-4036-8eb0-63808bc0178d.png
+
+/file/del/manage
+
+正式库 添加  1).3个 IS_DELETE字段  2).新增 TRANSFER_MATCH表及数据 
+3).FILE_TRANSFER表 ISREAD 添加默认值0、OPERATE_TIME字段，默认sysdate
+
+
+1、自动匹配 ，默认选中值
+2、拟办意见 悬浮框
+
+
+Task[id=2332520, name=一级部门核稿]
+
+3、内部收文、外部收文 撤回
+
+转阅给单位，单位一级管理员（处、支队），二级单位管理员（科、大队） 后，
+单位一、二级管理员 可以收到，一个管理员已阅，其他人的状态也变成已阅，可以在已阅查询
+
+转阅给某人 -> 待办 多一条待办（显示 签收按钮），签收完 在已阅知文 展示
+
+发文 文号唯一
+收文 来文编号唯一
+统计报表 根据标题 查询 
+
+撤回功能
+
+if("1" == content["IS_RECALL"]){
+    					statusText = "已撤回";
+        				bgColor = "#FF0000";
+    				}
+					
+
+
+收文反馈bug修复
+
+1、相关单位收文 ,发给相关单位即可
+
+getNextExecutor  orgNameList
+
+
+2、预览 支持 doc/docx
+3、正文 自适应 高度 及 回到顶部、底部
+
+http://10.39.128.155:8082/convert_server/43a31bae-f5c9-4619-be25-acf3ec6742a6.pdf
+
+txt/xls/xlsx
+
+于晋 单位管理员 查他部门的
+
+
+局级发文流程 - 秘书科核稿
+
+1、流程图展示 最小宽度 + 滚动条 + 打印（全部显示）
+
+1、手机端 看不了 pdf文件预览
+2、xp系统等 旧电脑 适配（安装不了google浏览器）
+
+
+http://10.39.128.156:9999/file_server/file/2018-10/5adbc13a-cfc6-400f-a132-309bc492a27d.PDf
+
+http://10.39.128.155:8082/convert_server/1.pdf
+
+
+
+
+http://localhost:8098/yc_wwyjpt/qbpt/qxbk/main2.xhtml
+
+http://localhost:8098/qbpt/qxbk/main2.xhtml
+
+<%=request.getContextPath()%>/resource/main2/
+
+t_4g_zdxx_dict
+
+CLXSFX
+
+admin_cs/123456
+
+张少坡 李晓雁 仇东杰
+
+091560
+
+6小时、12小时、2天
+
+
+nodes_ry_img[id]="data:image/jpeg;base64,"+result;
+					$("#"+id).attr("href","data:image/jpeg;base64,"+result);
+
+					
+
+
+1、办公室 核稿 -> 所有部门 
+
+320900170100
+320900310000				
+
+内部收文 标题456 拟办意见 改为不能修改
+
+流程定义表：act_re_procdef
+select * from act_re_procdef t where t.id_ like 'common-sendFile%'
+order by t.version_ desc
+
+activiti修改流程图：(流程定义表：act_re_procdef,version_字段)		
+    1).bpmn修改流程：sequenceFlow :
+		<conditionExpression xsi:type="tFormalExpression"><![CDATA[${path=="handleEnd"}]]></conditionExpression>
+	2).FormController:  action.put("handleEnd", "办结");
+	3).SendFileService: path = String.valueOf(param.get("path"));
+	variables.put("path", path);
+	if("handleEnd".equals(path)){
+		taskService.complete(taskId, variables);
+	}
+	4).diagram.jsp、sendFile_draft.jsp
+ 
+1、发文给相关单位，下一步办理人 长度不够（增加行数）  （已ok）
+2、协办单位 -> 发文单位（已ok）
+3、首页展示 拟稿单位 -> 承办单位 ；来文单位 展示 发文单位数据（已ok）
+4、部门发文流程 和 条线汇报发文 发文单位 选择 市局 不能提交（未发现问题）
+5、通用发文里面最后一个环节，拟稿人办理选项中添加一个“办结”（目前只有“发文给相关单位”）  （已ok）
+6、承办单位 增加 自定义单位组 
+7、已办收文中查询不到阅办单位签收办理、反馈的情况，请调整，增设按钮（已ok）
+
+1、签收 去掉 上传附件按钮
+2、定密人、办公室、局领导 二级管理员 配置
+3、发文编号（盐公发 等）二级管理员 配置
+
+更新为二级管理员
+update sys_user_org_manage set role_id='897cce92-9362-4b57-8a8a-574123445555';
+SYS_USER_ROLE
+盐都分局管理员 ：胡文俊	092496、仇玲 092090
+盐城610办公室 陆海荣 092031
+
+响水：周善东、093337
+大丰：范鸣 098106
+
+090831
+090170
+
+办公室 张少坡  到 秘书科 王海勇 走不下去了
+send->completeTask:{fileId=c30f8f54-2010-4bc4-bd01-b9cbed7d2954, processDefinitionKey=bureau-sendFile, taskId=3377557, taskName=办公室核稿, taskDefinitionKey=officeHandler, fileTitle=t2, fileType=3, draftTime=2019-05-30, subject=, printingNum=0, secretItem=, secretResponsible=, urgencyLevel=1, releaseType=市局首页, mainSend=, copySend=, attachmentList=[], removeAttachmentList=[], feedbackList=[{USER_ID=1097452, REAL_NAME=王海勇, FULL_NAME=江苏省盐城市公安局办公室秘书科, POLICE_NO=090170, USER_JOB_DESC=民警, PAGING_ROW_NUMBER=1, FEEDBACK_TASK=null, FEEDBACK_TIME=null}], msgWarn=2, fromUserid=1637229, fileNo=null, coOrganizerText=, coOrganizerNo=null, undertakeOrgIds=[], undertakeOrgNames={}, orgsFeedback=[], result=交由秘书科核稿, comment=, path=secretary, assignee=1097452, assigneeList=[1097452]}
+仇东杰 091560/6060
+张少坡 090831/dlzzoa521、130133198710052453	
+郭清亚 091456  
+邓昊轩 091601
+何建 091626、32092219840309571X
+秘书科 王海勇 090170、320911198004256310
+陆地：090578
+竺超：091118
+苗青：090182
+袁圆：090459
+董磊：090142
+000912
+高云琪 091666
+李冬晨 091743
+陆莹 090608
+张志松：090583
+李季 320902198810012517/123456	、091232/123456
+
+易良军  090103、32090219661105001X 主管 更换以后 看不到以前的文件 1	320900390001	江苏省盐城市公安局机关纪委
+
+王舒(291101)
+320902199403113040	
+王舒	291101	15950202111	派驻纪检组 	320900320000	派驻纪检组
+
+1、只有市局指挥中心、局办和各地指挥中心、局办的人才能用快速交办
+   张少坡怎么没有权限用快速交办？他是局办的啊。(ok)
+2、发文里面有好几个单位没有，如特警支队，县局一个都没有  (ok)
+3、发文拟稿:主送（阅办） 选好后，相关单位阅办 自动选择上
+4、相关单位阅办 选择单位后，增加 收文反馈复选框 （类似 选人）
+5、单位管理 查询bug
+6、后台用户管理、常用群组管理 列表所属单位从sys_user_org查询 
+7、后台用户管理 可以修改所属单位（更新sys_user_org表）
+
+	$("#nextExecutorGrid").html("");
+            			nextExecutorManage.init();
+张少坡 
+局领导 审批
+1、发文 组合单位 单位发不了		
+2、组合单位 选择，会自动替换之前的，并且 找不到 '消防大队'（王鑫）
+
+在通用发文流程中。指挥中心发了一个关于总结上报开展整治滋扰110专项行动情况的通知。
+刚才登何主任账号已经发到了秘书科核稿,并提示办理成功，但是实际还是在何主任账号 （徐德）
+
+ <userTask id="deptLeaderHandler" name="一级部门核稿">
+      <multiInstanceLoopCharacteristics isSequential="false" activiti:collection="${assigneeList}" 
+	  activiti:elementVariable="assigneeItem"></multiInstanceLoopCharacteristics>
+    </userTask>
+	
+<userTask id="secretaryHandler" name="秘书科核稿" activiti:assignee="${assignee}">
+</userTask>
+
+收文反馈 显示所属单位，（借调/兼职 也展示出来）
+
+收文登记表：51条
+
+50.144.0.61:1521:ycdsjfwpt
+sjzl_hd/sjzl_hd
+passenger_in_dz_new_huizu
+
+zookeeper地址、HIVE数据源、目标表（hive表）
+
+preparePager
+renderPageList
+
+
+-agentpath:D:\backup\swing-inspector-windows-1.2.3\x64\swing-inspector-agent.dll
+
+0.46 gongan@123
+D:\pdi-ce-6.1.0.1-196\data-integration\plugins
+插件文件夹命名？
+zkQuorum = "50.144.0.22:24002,50.144.0.21:24002,50.144.0.20:24002";
+RestMeta
+
+安保平台：yc_wwyjpt.war
+
+本地连接 车辆大数据等 配置C:\Windows\System32\drivers\etc hosts文件
+habse分页 第三页 results.get(i)：i为20-29
+
+comperter:
+50.144.0.25:21007,50.144.0.24:21007,50.144.0.23:21007
+
+
+1、办公OA -> 文件预览 doc格式 样式调整
+
+
+1、超级管理员 修改公文，不提交流程。
+2、旧OA 文件导入 到新OA
+
+//methodFieldName:zookeeper集群地址
+    retval.append( "    " ).append( XMLHandler.addTagValue( "methodFieldName", methodFieldName ) );
+ //bodyField hive表名称：zl.qcxx等{'':''}
+    retval.append( "    " ).append( XMLHandler.addTagValue( "bodyField", bodyField ) );
+
+Hive callRest
+	
+kettle kafka消费 插件	
+kettle 从hive取数据的 插件
+
+getFields
+
+putRow(data.rowMeta, data.thisrow); // fill the rowset(s). (wait for
+												// empty)
+			data.thisrow = data.nextrow;
+zkQuorum = "50.144.0.22:24002,50.144.0.21:24002,50.144.0.20:24002";
+
+security.protocol = SASL_PLAINTEXT
+bootstrap.servers = 50.144.0.25:21007,50.144.0.24:21007,50.144.0.23:21007
+#bootstrap.servers = 50.144.0.25:21005,50.144.0.24:21005,50.144.0.23:21005
+sasl.kerberos.service.name = kafka
+[a,b,c] ['a','11','222']
+
+putRow(key,value)
+写、输入
+cq2 本批数据：928 
+
+
+export runnable jar (include lauch configuration and destination)
+
+
+1、获取 kafka消费 的字段（获取字段，是否有办法 只取字段，不消费数据）！
+
+50.144.0.37:1521/abpt19
+ycqb njwsycqb
+t_bsab_zdry 68831条数据
+
+fjrootca 11111111
+
+http://50.144.2.68:9880/njws_stgxr/gxrwjfx/login.xhtml?lycode=foreign&bs=1&url=gxrfx/gxrwjfx.xhtml&YWNjb3VudD0=MzIwOTAyMTk4NDA5MjEwMDE1
+http://localhost:8080/njws_stgxr/gxrwjfx/login.xhtml?lycode=foreign&bs=1&url=gxrfx/gxrwjfx.xhtml&account=320902198409210015&password=123456
+
+http://50.144.2.68:9880/njws_stgxr/gxrwjfx/loginNjws.xhtml
+320924199412289011   fj_1574281
+
+
+code = "gxrwjfx";
+logintype = "01";
+
+大数据首页（王鑫）、标签画像（王鑫）、云搜（王鑫）
+安保平台（徐仲成）、警务云盘(徐仲成)、全息布控（徐仲成）
+数据比对（成群）、关系分析（成群）、
+车辆大数据（徐德）、管理服务（徐德）
+
+jdbc:oracle:thin:@50.144.2.72:1521/ycbgpt
+etl_manager
+manager_201901
+OPERATE_LOG
+
+
+https://50.144.0.46:8446/biaoqian/bqSolrQueryForloginByca.do
+过车信息：共有15条记录
+
+
+/yc_wwyjpt/qbpt/Zdyjfb/xjwzQuerysj.xhtml
+http://localhost:8098/yc_wwyjpt/qbpt/Zdyjfb/xjwzQuerysj.xhtml 
+
+
+19大安保： http://50.144.0.49:8080/ycabpt/ycabpt/qbdq/to_main.xhtml
+代码(svn地址:https://10.32.223.32:444/svn/yc/yc_wwyjpt_bf/ycabpt)：QbxsglController、main_ycabpt.jsp、QbdpMapper.xml
+1).今日勤务报备：假数据
+2).值班人员：
+	50.144.0.37:1521:abpt19  ycqb/njwsycqb、t_ab_pbldxx 表
+3)今日警情通报(110警情、本日警情)：
+	50.144.0.37:1521:abpt19  ycqb/njwsycqb、jcj_jjxx 表
+4)重点人员图表：	
+	50.144.0.37:1521:abpt19  ycqb/njwsycqb、T_ZDRY_YJXX 表
+
+	<!--今日接报信息  -->
+	t_Qb_Qbztnr
+	
+	<!--网络舆情分析-->
+	t_Qb_Qbztnr
+	
+	<!--各地预警指令-->
+	t_qb_sjyjcgyjzlxx
+	
+	<!--铁路预警-->
+	T_ZDRY_YJXX
+	
+	
+	<!--客车预警-->
+	T_ZDRY_YJXX
+	
+	<!--民航预警-->
+	T_ZDRY_YJXX
+
+	
+	<!--案件通报-->
+	t_Qb_Tztbqsdwxx
+	
+  	 <!--警情地区  -->
+	jcj_jjxx
+         
+	  
+	 <!--警情时间分布-->
+	jcj_jjxx
+
+	 <!--近七日警情-->
+	 jcj_jjxx
+	
+	 <!--警情类别-->
+	select * from T_QJ_ZS  where item1='纠纷'
+	select * from T_QJ_ZS  where item1='火灾事故
+	select * from T_QJ_ZS  where item1='群众求助'
+	select * from T_QJ_ZS  where item1='交通警情'
+	select * from T_QJ_ZS  where item1='其他警情'
+
+	<!--重点人员预警-->  
+	t_zhzx_dptj_ctp
+
+	<!--重点人员分布-->
+	t_zhzx_dptj_ctp
+
+	<!--去年本月警情  -->
+	t_zhzx_dptj_ctp
+
+短信 '省厅没有下发，请核查' 去掉 孙腾飞、李洲	15961985174
+
+t_dxtx_fsjlxx
+
+
+
+java连接 neo4j
+
+数据表管理 -> 数据表新增 -> 数据源图片 不展示
+
+http://50.144.0.47:8088/sjbgl//qbpt-resource/img/button/left.gif
+http://50.144.0.47:8088/qbpt-resource/img/button/left.gif
+
+admin1 805805  增加删除按钮
+admin转发了一个给admin1   也没有记录
+
+
+大数据首页 用户权限：
+dataSource_1.url=jdbc:oracle:thin:@50.144.0.37:1521:abpt19
+dataSource_1.username=ycqb_ht
+dataSource_1.password=njwsycqb_ht
+
+资源服务：
+dataSource_1.url=jdbc:oracle:thin:@50.144.0.37:1521:abpt19
+dataSource_1.username=ycsjzl_ht
+dataSource_1.password=ycsjzl_ht
+select count(*)
+  	  from t_sys_user t1 left join t_sys_user_detail t2 on t1.id = t2.id      
+      where t1.STATUS  &lt;&gt; '03'
+       <if test="orgId!=null and orgId!=''">
+   	 	and t1.id in 
+   	 	(select t3.userid  from t_sys_user_org t3
+         	where t3.orgid = #{orgId}
+         )
+
+		 
+		 
+普通：首页、资源服务中心  320826199112021213
+管理员：首页、资源服务中心、 资源管理中心  SJZYGL
+超级管理员 全部 除了互动交流		 
+去除互动交流		 
+		 
+//xsfx（行驶方向）：00 由东向西(<-)、01 由西向东(->)、02 由南向北(上北)、03 由北向南（下南）		 
+		 
+权限整合注意点：
+1、数据库 更换
+2、t_sys_module where (type='01' or type= '02')
+3、资源服务：loginSuccessIndex_new	
+4、 //recurseMenu("14828973146910074",0);
+	    recurseMenu("14828973146910074000000",0);	
+		
+${myfn:getPopedom(popedom,'PTZHGL')}  === ''		
+		
+
+大数据后台权限管理：
+http://50.144.0.48:8080/yc_wwyjpt/sys/core/index.xhtml#ZDGL
+localhost:8098/yc_wwyjpt/sys/core/index.xhtml#ZDGL
+
+for(int i=0;i<list.size();i++){
+			Menu menu = (Menu)list.get(i);			
+			//if(map.get(menu.getCode())!=null&&!map.get(menu.getCode()).equals("")){ 
+
+			
+BLOB字段 图片
+
+File file = new File("D:"+File.separator+"2.jpg");
+fileBytes = FileUtils.readFileToByteArray(file);
+String imgString = new sun.misc.BASE64Encoder().encode(fileBytes);
+
+ select max(create_date) max_date from T_WX_USER_REPORT
+ 
+ 
+ /driving
+ 
+随手拍的数据：目前总共19万条。已经拉取了3万多，下班前可以取完。
+每天夜里12点 定时拉取增量数据。 
+
+
+$('ul.list-ul li').click(function(){
+	$(this).addClass('li-bg').siblings().removeClass('li-bg');
+})
+
+<script type="text/javascript">
+	$('ul.b-tab li').click(function(){
+		$(this).addClass('on').siblings().removeClass('on');
+		$('.B0-in').find('.in-box').eq($(this).index()).show().siblings().hide();
+	})
+</script>
+
+fileInfo.fileName.substring(1,fileInfo.fileName.length)
+
+全息布控打包修改：
+1.taxi.group.id=taxiWay_server_qbpt01
+2.service 出租车打开
+
+to_rybk_list ->vehicle_list
+http://localhost:8877/vehicle/qbpt/qxbk/main.xhtml
+http://localhost:8877/vehicle
+
+全息布控
+http://localhost:8098/yc_wwyjpt/qbpt/qxbk/main.xhtml;jsessionid=EB0D9261AF73E51571C91B2F056732DE
+
+http://10.32.92.24:8190/tuning/services/console/gongan/control/sendControlData?
+cityId=320900000000&cityControlId=1837514
+&targetCityId=320100000000,320200000000,320300000000,320400000000,320500000000,320600000000,320700000000,320800000000,321000000000,321100000000,321200000000,321300000000
+&applicantId=091601&controlUnitId=320900000000&controlTypeId=2&startTime=2019-03-02%2009:35:11&endTime=2019-03-31%2023:59:59&controlReason=%E9%9D%9E%E8%AE%BF%E9%87%8D%E7%82%B9%E4%BA%BA%E5%91%98&items=%5B%7B%22number%22:%22320919196303296736%22,%22isMainControl%22:0,%22targetId%22:%221%22,%22name%22:%22%E8%83%A1%E6%A1%82%E7%94%9F%22,%22methodId%22:%221%22%7D%5D&measure=1
+
+select *
+  from t_styjxxfk
+ where controlid in (select max(controlid) controlid
+                       from t_styjxxfk t
+                      group by t.bkmbhm, t.eventinfo)
+
+
+姜清章
+case a.dxbs when '1' then '绑定短信预警'
+else '未绑定短信预警' end dxbs
+bszdryQuery
+window.opener.location.reload();
+zdrydl_old=52 zdryxl_old
+t_sys_dic_tree
+
+{csrq=1989-09-30, jsbxszt=, cflx=, hjdpcs=盐都分局盐龙派出所第四警务区, hycd=, HJDQHMC=江苏省盐城市盐都区, gmsfhm=320911198909304639, nzzmm=, ngzdw=南京易才人力资源有限公司盐城分公司, ntyazqkaz=, nzysq=, jsblx=, ffjl_dd=, jsbqk=, qkljbz=, qjjtfsxx=, GXDQ=--请选择--, zawxfzmdjfqk=, ffjs=, jdxwjn=, cfxlmc=, sjhm=, xzdpcsjgdm=320903660104, jsbtime=, qklj=, mz=, ffnfffyy=, gzfs=, JGMC=, nssqt=, sfxg=xz, zdrydl_old=52, GZSY=, sfxz2=新增, cfxl=, nxzy=, zdryxl_old=520000006, jdxwqx=, page=0, sxzhqk=, jg=320928, xl2=, zawxfzsfmd=, ffqx=, imsi=, jdxwsj=, ntysj=, mac=, nhyzk=, hjdxz=江苏省盐城市盐都区西区蟒南村一组20号, vehicle=苏JH199M, ffyy=, zawxfzlx=, jdxwsd=, hjdqh=320903, hjdpcsjgdm=320903660104, xzdpcs=盐都分局盐龙派出所第四警务区, ffxss=, zawxfzdy=, jsbsj=, wlsyy=, wwxm=, mobuleCode=, gj=156, sdwqk=, tbgksdxx=, nfysj=, ntyazqkzmzy=, ffjl_time=, fxdj=, rgtjsj=, xb=1, rows=0, ffdd=, xzdxz=江苏省盐城市盐都区西区蟒南村一组20号, cftime=, ryzt=, jsbtz=, xm=成群, GXDQQH=, rybh=, nfybd=}
+decode(t2.name,'','无',t2.name) HJDQHMC
+    	from
+		T_BSAB_ZDRY t1
+    	left join ycqb_ht.t_sys_dic_tree t2 on t1.hjdqh = t2.code
+		
+	省厅布控预警：T_STYJXXFK
+	
+http://localhost:8080/stcldsj/zdcldzda/getAllCarRecordList.xhtml?hpzl=&kssj=20190221173400&jssj=20190226173400&pageNum=1&hphm=%E8%8B%8FJA9F15&pageSize=20
+
+20190222173400
+http://50.144.0.47:8081/stcldsj/zdcldzda/getAllCarRecordList.xhtml?hpzl=02&kssj=20190221173400&jssj=20190226173400&pageNum=1&hphm=%E8%8B%8FJA9F15&pageSize=20
+加个开始时间、结束时间
+	
+	select substr(EVENTINFO,20,instr(EVENTINFO,',','1',1)-20) from T_STYJXXFK;
+
+	admin -> 090267（贺金祥 userID:1078083） -> 090831（张少坡userID :1637229）->局领导
+	
+
+	包瑞：090132
+	
+	
+	sendEditForm
+	--    left join (select * from t_bsab_zdry t2 where t2.pc = (select max(pc) from t_bsab_zdry) ) c
+王荣：091539	
+17712072196  320902198408242015
+王辅杰
+邓昊轩
+
+[{DWWD=32.43578, LXR=-, DWMC=时堰卫东西桥卡口, DWJD=120.17583, GXDWDM=320900000000, LXDH=-, JKXTBH=320981000000000000, LDZX=00, DWWZ=卫东西桥东路北侧, DWBH=320981000000001997, CRSJ=2015-06-09 03:36:05.0, GXDWMC=东台市公安局, DWLX=12}, {DWWD=32, LXR=-, DWMC=G228与大丰县际卡口, DWJD=120, GXDWDM=320900000000, LXDH=-, JKXTBH=320981000000000000, LDZX=01, DWWZ=大丰至海安1公里处, DWBH=320981000000001998, CRSJ=2015-06-09 03:36:05.0, GXDWMC=东台市公安局, DWLX=05}, {DWWD=32.45551, LXR=-, DWMC=弶港S352与海堤公路交叉路卡口, DWJD=120.49411, GXDWDM=320900000000, LXDH=-, JKXTBH=320981000000000000, LDZX=04, DWWZ=S352与海堤公路交叉路口, DWBH=320981000000001999, CRSJ=2015-06-09 03:36:05.0, GXDWMC=东台市公安局, DWLX=06}, {DWWD=32.358, LXR=-, DWMC=唐洋郭沙村卡口, DWJD=120.43506, GXDWDM=320900000000, LXDH=-, JKXTBH=320981000000000000, LDZX=01, DWWZ=双跃四台区A2电线杆上, DWBH=320981000000002000, CRSJ=2015-06-09 03:36:05.0, GXDWMC=东台市公安局, DWLX=13}, {DWWD=32.417, LXR=-, DWMC=时堰弶溱路丰收桥公交站台处卡口, DWJD=120.10198, GXDWDM=320900000000, LXDH=-, JKXTBH=320981000000000000, LDZX=00, DWWZ=桥西22米路北侧, DWBH=320981000000002001, CRSJ=2015-06-09 03:36:05.0, GXDWMC=东台市公安局, DWLX=12}, {DWWD=32.42924, LXR=-, DWMC=时堰三洪路与弶溱路交叉口南卡口, DWJD=120.11054, GXDWDM=320900000000, LXDH=-, JKXTBH=320981000000000000, LDZX=01, DWWZ=三洪桥南十字路口西南侧, DWBH=320981000000002002, CRSJ=2015-06-09 03:36:05.0, GXDWMC=东台市公安局, DWLX=11}, {DWWD=32.43513, LXR=-, DWMC=时堰弶溱路与后港交叉路口南卡口, DWJD=120.15005, GXDWDM=320900000000, LXDH=-, JKXTBH=320981000000000000, LDZX=01, DWWZ=后港桥南5米路东, DWBH=320981000000002003, CRSJ=2015-06-09 03:36:05.0, GXDWMC=东台市公安局, DWLX=13}, {DWWD=32.45733, LXR=-, DWMC=许河联民路至S352交界处卡口, DWJD=120.38952, GXDWDM=320900000000, LXDH=-, JKXTBH=320981000000000000, LDZX=01, DWWZ=联民路至S352交界处, DWBH=320981000000002004, CRSJ=2015-06-09 03:36:05.0, GXDWMC=东台市公安局, DWLX=13}, {DWWD=32.3828, LXR=-, DWMC=富安梁一村与友邻桥卡口, DWJD=120.26323, GXDWDM=320900000000, LXDH=-, JKXTBH=320981000000000000, LDZX=00, DWWZ=桥东路南30米, DWBH=320981000000002005, CRSJ=2015-06-09 03:36:05.0, GXDWMC=东台市公安局, DWLX=13}, {DWWD=32.35363, LXR=-, DWMC=唐洋许腰村二组卡口, DWJD=120.39925, GXDWDM=320900000000, LXDH=-, JKXTBH=320981000000000000, LDZX=01, DWWZ=友谊桥西北路东侧, DWBH=320981000000002006, CRSJ=2015-06-09 03:36:05.0, GXDWMC=东台市公安局, DWLX=13}, {DWWD=32.42367, LXR=-, DWMC=安丰同明11组卡口, DWJD=120.20695, GXDWDM=320900000000, LXDH=-, JKXTBH=320981000000000000, LDZX=01, DWWZ=同明11组与海安交界华全六组桥北侧, DWBH=320981000000002007, CRSJ=2015-06-09 03:36:05.0, GXDWMC=东台市公安局, DWLX=13}, {DWWD=32.41436, LXR=-, DWMC=安丰跃进村卡口, DWJD=120.23298, GXDWDM=320900000000, LXDH=-, JKXTBH=320981000000000000, LDZX=01, DWWZ=跃进村与海安交界兴建桥北侧, DWBH=320981000000002008, CRSJ=2015-06-09 03:36:05.0, GXDWMC=东台市公安局, DWLX=13}, {DWWD=32.43605, LXR=-, DWMC=富安许安线卡口, DWJD=120.33603, GXDWDM=320900000000, LXDH=-, JKXTBH=320981000000000000, LDZX=00, DWWZ=许安线至富东小路东侧, DWBH=320981000000002009, CRSJ=2015-06-09 03:36:05.0, GXDWMC=东台市公安局, DWLX=12}, {DWWD=32.42676, LXR=-, DWMC=安丰仇海线卡口, DWJD=120.2278, GXDWDM=320900000000, LXDH=-, JKXTBH=320981000000000000, LDZX=01, DWWZ=仇海线与海安交界流星港桥北侧, DWBH=320981000000002010, CRSJ=2015-06-09 03:36:05.0, GXDWMC=东台市公安局, DWLX=12}, {DWWD=32.7655, LXR=-, DWMC=三仓安弶路卡口, DWJD=120.6934, GXDWDM=320900000000, LXDH=-, JKXTBH=320981000000000000, LDZX=00, DWWZ=东钢丝绳厂挤西路南, DWBH=320981000000002011, CRSJ=2015-06-09 03:36:05.0, GXDWMC=东台市公安局, DWLX=12}, {DWWD=32.43592, LXR=-, DWMC=富安许安线十二沟桥卡口, DWJD=120.28565, GXDWDM=320900000000, LXDH=-, JKXTBH=320981000000000000, LDZX=00, DWWZ=桥西路边, DWBH=320981000000002013, CRSJ=2015-06-09 03:36:05.0, GXDWMC=东台市公安局, DWLX=12}, {DWWD=32.40494, LXR=-, DWMC=富安富许路卡口, DWJD=120.32515, GXDWDM=320900000000, LXDH=-, JKXTBH=320981000000000000, LDZX=00, DWWZ=富许路与头富路, DWBH=320981000000002014, CRSJ=2015-06-09 03:36:05.0, GXDWMC=东台市公安局, DWLX=12}, {DWWD=32.38189, LXR=-, DWMC=富安坝桥路卡口, DWJD=120.32254, GXDWDM=320900000000, LXDH=-, JKXTBH=320981000000000000, LDZX=01, DWWZ=坝桥路南侧丁字路口桥南路东, DWBH=320981000000002015, CRSJ=2015-06-09 03:36:05.0, GXDWMC=东台市公安局, DWLX=13}, {DWWD=32.33479, LXR=-, DWMC=富安富宝村卡口, DWJD=120.38325, GXDWDM=320900000000, LXDH=-, JKXTBH=320981000000000000, LDZX=01, DWWZ=富宝村与海安交界, DWBH=320981000000002016, CRSJ=2015-06-09 03:36:05.0, GXDWMC=东台市公安局, DWLX=13}, {DWWD=32.38492, LXR=-, DWMC=富安富海路桥北侧卡口, DWJD=120.30989, GXDWDM=320900000000, LXDH=-, JKXTBH=320981000000000000, LDZX=01, DWWZ=富海路与一浅沟南路交叉, DWBH=320981000000002017, CRSJ=2015-06-09 03:36:05.0, GXDWMC=东台市公安局, DWLX=13}, {DWWD=32.43616, LXR=-, DWMC=许河富许路卡口, DWJD=120.37896, GXDWDM=320900000000, LXDH=-, JKXTBH=320981000000000000, LDZX=00, DWWZ=富许路与迎宾大道交界, DWBH=320981000000002018, CRSJ=2015-06-09 03:36:05.0, GXDWMC=东台市公安局, DWLX=12}, {DWWD=33.39916, LXR=0, DWMC=东环路--亭湖大道, DWJD=120.20617, GXDWDM=320900000000, LXDH=0, JKXTBH=320900000000000094, LDZX=04, DWWZ=东环路--亭湖大道, DWBH=320900000000000094, CRSJ=2015-06-09 03:36:05.0, GXDWMC=盐城公安局, DWLX=00}, {DWWD=33.39562, LXR=0, DWMC=机场路--亭湖大道, DWJD=120.20013, GXDWDM=320900000000, LXDH=0, JKXTBH=320900000000000095, LDZX=04, DWWZ=机场路--亭湖大道, DWBH=320900000000000095, CRSJ=2015-06-09 03:36:05.0, GXDWMC=盐城公安局, DWLX=00}, {DWWD=33.39417, LXR=0, DWMC=经三路--亭湖大道, DWJD=120.19757, GXDWDM=320900000000, LXDH=0, JKXTBH=320900000000000096, LDZX=04, DWWZ=经三路--亭湖大道, DWBH=320900000000000096, CRSJ=2015-06-09 03:36:05.0, GXDWMC=盐城公安局, DWLX=00}, {DWWD=33.39234, LXR=0, DWMC=小海路--黄海路, DWJD=120.11703, GXDWDM=320900000000, LXDH=0, JKXTBH=320900000000000097, LDZX=04, DWWZ=小海路--黄海路, DWBH=320900000000000097, CRSJ=2015-06-09 03:36:05.0, GXDWMC=盐城公安局, DWLX=00}, {DWWD=32.42346, LXR=-, DWMC=时堰庙六南站卡口, DWJD=120.18259, GXDWDM=320900000000, LXDH=-, JKXTBH=320981000000000000, LDZX=01, DWWZ=桥西路南供电杆旁, DWBH=320981000000002032, CRSJ=2015-06-09 03:36:05.0, GXDWMC=东台市公安局, DWLX=13}, {DWWD=32.5255, LXR=-, DWMC=时堰廖陈南路往海安方向卡口, DWJD=120.18969, GXDWDM=320900000000, LXDH=-, JKXTBH=320981000000000000, LDZX=00, DWWZ=十字路东南侧, DWBH=320981000000002033, CRSJ=2015-06-09 03:36:05.0, GXDWMC=东台市公安局, DWLX=12}, {DWWD=32.4406, LXR=-, DWMC=弶港前进南路卡口, DWJD=120.50762, GXDWDM=320900000000, LXDH=-, JKXTBH=320981000000000000, LDZX=01, DWWZ=前进南路最南侧十字路口, DWBH=320981000000002034, CRSJ=2015-06-09 03:36:05.0, GXDWMC=东台市公安局, DWLX=13}, {DWWD=33.4019, LXR=0, DWMC=西环路--老电厂路, DWJD=120.1009, GXDWDM=320900000000, LXDH=0, JKXTBH=320900000000000103, LDZX=00, DWWZ=西环路--老电厂路, DWBH=320900000000000103, CRSJ=2015-06-09 03:36:05.0, GXDWMC=盐城公安局, DWLX=00}, {DWWD=33.38212, LXR=0, DWMC=西环路--黄海路, DWJD=120.10446, GXDWDM=320900000000, LXDH=0, JKXTBH=320900000000000104, LDZX=04, DWWZ=西环路--黄海路, DWBH=320900000000000104, CRSJ=2015-06-09 03:36:05.0, GXDWMC=盐城公安局, DWLX=00}, {DWWD=33.34875, LXR=0, DWMC=太平路--鹿鸣路, DWJD=120.14053, GXDWDM=320900000000, LXDH=0, JKXTBH=320900000000000105, LDZX=04, DWWZ=太平路--鹿鸣路, DWBH=320900000000000105, CRSJ=2015-06-09 03:36:05.0, GXDWMC=盐城公安局, DWLX=00}, {DWWD=33.36933, LXR=0, DWMC=太平路--大庆路, DWJD=120.12506, GXDWDM=320900000000, LXDH=0, JKXTBH=320900000000000106, LDZX=04, DWWZ=太平路--大庆路, DWBH=320900000000000106, CRSJ=2015-06-09 03:36:05.0, GXDWMC=盐城公安局, DWLX=00}, {DWWD=33.39444, LXR=0, DWMC=解放路--黄海路, DWJD=120.12642, GXDWDM=320900000000, LXDH=0, JKXTBH=320900000000000107, LDZX=04, DWWZ=解放路--黄海路, DWBH=320900000000000107, CRSJ=2015-06-09 03:36:05.0, GXDWMC=盐城公安局, DWLX=00}, {DWWD=32.41998, LXR=-, DWMC=溱东开戴路往戴南方向, DWJD=120.08076, GXDWDM=320900000000, LXDH=-, JKXTBH=320981000000000000, LDZX=00, DWWZ=开庄与戴南交界处, DWBH=320981000000002035, CRSJ=2015-06-09 03:36:05.0, GXDWMC=东台市公安局, DWLX=13}, {DWWD=33.37717, LXR=0, DWMC=解放路--双元路, DWJD=120.13365, GXDWDM=320900000000, LXDH=0, JKXTBH=320900000000000109, LDZX=00, DWWZ=解放路--双元路, DWBH=320900000000000109, CRSJ=2015-06-09 03:36:05.0, GXDWMC=盐城公安局, DWLX=00}, {DWWD=33.36364, LXR=0, DWMC=解放路--青年路, DWJD=120.13938, GXDWDM=320900000000, LXDH=0, JKXTBH=320900000000000110, LDZX=04, DWWZ=解放路--青年路, DWBH=320900000000000110, CRSJ=2015-06-09 03:36:05.0, GXDWMC=盐城公安局, DWLX=00}, {DWWD=33.35631, LXR=0, DWMC=解放路--东进路, DWJD=120.14407, GXDWDM=320900000000, LXDH=0, JKXTBH=320900000000000111, LDZX=04, DWWZ=解放路--东进路, DWBH=320900000000000111, CRSJ=2015-06-09 03:36:05.0, GXDWMC=盐城公安局, DWLX=00}, {DWWD=33.34869, LXR=0, DWMC=解放路--世纪大道, DWJD=120.15205, GXDWDM=320900000000, LXDH=0, JKXTBH=320900000000000112, LDZX=04, DWWZ=解放路--世纪大道, DWBH=320900000000000112, CRSJ=2015-06-09 03:36:05.0, GXDWMC=盐城公安局, DWLX=00}, {DWWD=33.34252, LXR=0, DWMC=解放路--新都路, DWJD=120.15742, GXDWDM=320900000000, LXDH=0, JKXTBH=320900000000000113, LDZX=04, DWWZ=解放路--新都路, DWBH=320900000000000113, CRSJ=2015-06-09 03:36:05.0, GXDWMC=盐城公安局, DWLX=00}, {DWWD=33.32675, LXR=0, DWMC=解放路--纬九路, DWJD=120.17105, GXDWDM=320900000000, LXDH=0, JKXTBH=320900000000000114, LDZX=04, DWWZ=解放路--纬九路, DWBH=320900000000000114, CRSJ=2015-06-09 03:36:05.0, GXDWMC=盐城公安局, DWLX=00}, {DWWD=33.32191, LXR=0, DWMC=解放路--南纬路, DWJD=120.17517, GXDWDM=320900000000, LXDH=0, JKXTBH=320900000000000115, LDZX=04, DWWZ=解放路--南纬路, DWBH=320900000000000115, CRSJ=2015-06-09 03:36:05.0, GXDWMC=盐城公安局, DWLX=00}, {DWWD=33.31729, LXR=0, DWMC=解放路--园林大道, DWJD=120.17849, GXDWDM=320900000000, LXDH=0, JKXTBH=320900000000000116, LDZX=00, DWWZ=解放路--园林大道, DWBH=320900000000000116, CRSJ=2015-06-09 03:36:05.0, GXDWMC=盐城公安局, DWLX=00}, {DWWD=33.30892, LXR=0, DWMC=解放路--南环路, DWJD=120.18582, GXDWDM=320900000000, LXDH=0, JKXTBH=320900000000000117, LDZX=00, DWWZ=解放路--南环路, DWBH=320900000000000117, CRSJ=2015-06-09 03:36:05.0, GXDWMC=盐城公安局, DWLX=00}, {DWWD=33.38869, LXR=0, DWMC=迎宾路--毓龙路, DWJD=120.13479, GXDWDM=320900000000, LXDH=0, JKXTBH=320900000000000118, LDZX=00, DWWZ=迎宾路--毓龙路, DWBH=320900000000000118, CRSJ=2015-06-09 03:36:05.0, GXDWMC=盐城公安局, DWLX=00}, {DWWD=33.38156, LXR=0, DWMC=迎宾路--环城南路, DWJD=120.13619, GXDWDM=320900000000, LXDH=0, JKXTBH=320900000000000119, LDZX=00, DWWZ=迎宾路--环城南路, DWBH=320900000000000119, CRSJ=2015-06-09 03:36:05.0, GXDWMC=盐城公安局, DWLX=00}, {DWWD=33.35598, LXR=0, DWMC=迎宾路--鹿鸣路, DWJD=120.15253, GXDWDM=320900000000, LXDH=0, JKXTBH=320900000000000120, LDZX=04, DWWZ=迎宾路--鹿鸣路, DWBH=320900000000000120, CRSJ=2015-06-09 03:36:05.0, GXDWMC=盐城公安局, DWLX=00}, {DWWD=33.40871, LXR=0, DWMC=人民路--北环路, DWJD=120.11025, GXDWDM=320900000000, LXDH=0, JKXTBH=320900000000000123, LDZX=04, DWWZ=人民路--北环路, DWBH=320900000000000123, 
+CRSJ=2015-06-09 03:36:05.0, G...
+
+1、速度加快
+2、标题栏 去掉
+3、背景图 虚化
+
+http://localhost:9880/njws_stgxr/gxrwjfx/login.xhtml?lycode=foreign&bs=1&url=gxrfx/gxrwjfx.xhtml&YWNjb3VudD0=340621199305047816
+
+http://50.144.2.68:9880/njws_stgxr/gxrwjfx/loginNjws.xhtml
+http://50.144.2.68:9880/njws_stgxr/gxrwjfx/loginNjws.xhtml?code=gxrwjfx&account=csadmin&password=123456&loginType=01
+
+
+
+Module module = this.moduleManager.getModuleByCode(code
+					.toUpperCase());
+//			super.flushResponse(response, ConfigUtil.getString("appRoot")
+//					+ module.getPath());
+			return "redirect:" + "http://50.144.2.68:9880/njws_stgxr/gxrfx/gxrwjfx.xhtml";
+			
+
+file:///D:/workspace_cq/qingbao-demo/WebContent/%E6%83%85%E6%8A%A5%E6%BC%94%E7%A4%BA%E9%A1%B5%E9%9D%A2/20190104%E5%8D%97%E4%BA%AC%E9%93%81%E8%B7%AF%E5%85%AC%E5%AE%89%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AE%9E%E6%88%98%E5%B9%B3%E5%8F%B0-LYD-H/iframes.html
+http://localhost:8098/yc_wwyjpt/qbpt/qxbk/main.xhtml;jsessionid=EB0D9261AF73E51571C91B2F056732DE#			
+		
+fkk
+		
+var el = document.createElement('img'); 
+$(el).click(function(){});//增加点击事件
+		
+情报线索、查控指令
+toselclxxDefDetail
+关系分析跳转登录：
+window.open("http://50.144.2.68:9880/njws_stgxr/gxrwjfx/login.xhtml?lycode=foreign&bs=1&url=gxrfx/gxrwjfx.xhtml&YWNjb3VudD0=MzQwNjIxMTk5MzA1MDQ3ODE2");
+<link rel="stylesheet" type="text/css" href="http://50.145.117.132:8080/dfqbpt/qbpt-resource/indexNew/css/XY-all.css">
+
+http://50.145.117.132:8080/dfqbpt/qbpt-resource/css/common-gbzyk.css		
+
+
+ T_TELEPHONE_INFO   --手机信息表  
+ T_USER    --个人基础信息表
+ TP_HOUSE_USER   --住户信息表
+ TP_UPB_BUILDING  楼栋信息表 
+ TP_UPB_ROOM 房屋信息表
+ T_CAR_FLOW  车辆进出
+ T_DOOR_FLOW  人员进出
+ t_base_unit 小区信息
+
+
+智慧小区 重点人员 点击 查看列表页面 
+
+进出总数 增加异常进出总数（一周未进出） 并加上页面跳转，去掉.
+
+图片、手机、身份证 解码
+
+人：进出总数、异常总数
+车：进出总数、异常总数
+
+
+身份证：320925198512260146
+
+java监控服务器jar 是否运行
+
+http://50.144.2.73:8080/jdeploy-1.6.0
+https://10.32.223.32:444/svn/yc/zhxq --username chengqun --password chengqun
+
+C:\ProgramData\Oracle\Java\javapath;D:\app\FTP\virtual\virtual\product\12.2.0\dbhome_2\bin;D:\app\FTP\virtual\product\12.2.0\dbhome_1\bin;C:\Program Files (x86)\Common Files\NetSarang;C:\Windows\system32;%JAVA_HOME%\bin;%MAVEN_HOME%\bin;%ANT_HOME%\bin
+
+jenkins地址:http://localhost:8080/ admin/123456
+
+svn checkout https://10.32.223.32:444/svn/yc/tt --username chengqun --password chengqun
+
+https://10.32.223.32:444/svn/yc/kafka-consumer --username chengqun --password chengqun
+
+插入表数据
+全国人口接口
+ <Row>
+	<Data>ZY</Data>
+	<Data>CSRQ</Data>
+	<Data>CSDGJ</Data>
+	<Data>JGGJ</Data>
+	<Data>CYM</Data>
+	<Data>MZ</Data>
+	<Data>ZZXZ</Data>
+	<Data>HKSZD</Data>
+	<Data>HYZK</Data>
+	<Data>SG</Data>
+	<Data>XB</Data>
+	<Data>XP</Data>
+	<Data>CSD</Data>
+	<Data>BYQK</Data>
+	<Data>WHCD</Data>
+	<Data>CSDXZ</Data>
+	<Data>XM</Data>
+	<Data>SFZH</Data>
+	<Data>JGSSX</Data>
+</Row>
+<Row>
+	<Data/>
+	<Data>19710116</Data>
+	<Data>156</Data>
+	<Data>156</Data>
+	<Data/>
+	<Data>01</Data>
+	<Data>巴彦镇黎明委六组</Data>
+	<Data>230126</Data>
+	<Data>20</Data>
+	<Data>165</Data>
+	<Data>2</Data>
+	<Data>/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQUFBAYFBQUHBgYHCQ8KCQgICRMNDgsPFhMXFxYTFRUYGyMeGBohGhUVHikfISQlJygnGB0rLismLiMmJyb/2wBDAQYHBwkICRIKChImGRUZJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJib/wAARCAC5AJYDASIAAhEBAxEB/8QAHAAAAQQDAQAAAAAAAAAAAAAAAAIDBAUBBgcI/8QAORAAAQMCBQEGAwcDBAMAAAAAAQACAwQRBRIhMUEGBxMiUWGBMnGRFCMzQqGx0RXB4QhScvBisvH/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAQIFAwQG/8QAIREBAQACAgIDAQEBAAAAAAAAAAECEQMhBBITIkFRMWH/2gAMAwEAAhEDEQA/APVKEIQCEIQCEKDjeLUGCYZPiWJTtgpoW3c48+gHJKCcomI4nhuGxiTEK+mo2HZ08rWA/K5Xmbrnti6hxmeenwmQ4ZhxOVrI/wAVw83O4+Q/VcymrKud7nySyPc7VznG91S5LzD+vaUnWfSkbC93UWH2HlO0/sk0HWnSle4tpsfonEcPlDP/AGsvFbX1A2cU9HJVNOZubZR7Vb0e4aTF8KrJzBSYlS1EoF8kUzXm3sVOXhujxDEIJWyxyujezZ4NiFumCdq/WOF1cckuJGshboYKhoc0j9x7FJmi4PWCFqvQfW+E9X0AlpJO6rGNvNSvPiZ6jzHqtqXRzCEIQCEIQCEIQCEIQCEIQYe9sbHPe4Na0XJJsAF5T7Zuu39T406io5ycKo3ERAaCR3Lv4/yuu9vnVEmCdLtwukkyVeKZoyRu2IfF9bgfVeWnNdJJkYLlc8q64Y/rMZfIQxmgWwYR0/W1tu7YA0/ncpvTGAiR7HzAu5suo4RhrIYg1rAPkF4ObyPXrFpcPje3eTQGdE1Hd3MzS7yAU+g6QETC+pOYDgLpEVLp8KWaQct0XjvNnf17p4/HPxyvGul2dznpWlpH5brTKqkkY8h4cwhd7qqNpaQWiy0fqXBWPEjmR2dvoF14uey6rlzeNLN4tBwHF67BMThrqKodDNC7M17P4Xrns+6mi6r6ap8SbZs4+7qGD8rxv7Hf3XkCupnQP8TS03t8iuk9gnU78J6lGEzPP2TESI7eUn5T/b3Wphkx+TDT00hCF2ecIQhAIQhAIQhAIQgoPLv+oPEnVnXUtMJc8dFEyIDhpIzEfqtN6Xw8VE2YtvbUlP8AaFNJU9YYzLK4uc6tl38g4gf2V90PREURle34jpdeLny1jWh4+G8o2XCaQRWygey2/D4g4AKmpRDCG5yB7rYaGWBzWlsrAP8AkFk3G27bUskWLKcWvosSR2B0UuANLbZgR6LLwGtuTe3BV/Rz9+1VUxtLQBoQqDEKcOvorPFcZw2kuZpnM1tbISqWTHKOe/cPEij48qt8knTTOpsFDonysZfS5C0SkkmosRjqIXFj4ZA5hGliDcLs0rqesjIY5rtNQOFzLqvC3YfiPeNH3UpuPQr2ePnq+teHyeOX7R636exKPF8DocTiIy1MLZNOCRqPY3CsFpnY+/P2e4Ub3s14t5We7/77rc1qS7jGvV0EIQpQEIQgEIQgEFCEHlftQwP7L2i1lPkIjnmErTbcOAd+5KvqCmMNKyKEBthobbKZ2r4pQ4p1ZRfZoCyWmkdDJIT8djppxypmHQZogFleTe2z4uN13/rNDhdO9l6t7pC7cl1kuXC8Njd4GexddRMRkrNY6VgJvbMTp/lUlRRYuMTYYKmZ0LmtJeXABh5u22vOy82O7+vdl9fx0DCiadgYyQ5DsLqzmkPdG50stfoHGKnZnLrhxAJFrjzVhV1gNO0Ac6qltW9e+ldiDKR4++a1w9dUxTy4UwZI4oQfPLso2PUZq4HASyRh8ZDXs4d66qnw3ApWUs3eNjE0rgWPp7gRgDgnXVXmtb2i731F9PTQOl72NjWv82i11qvW1H3mGSOIu6NwcFteGU80Fm1Ds4tYG1iq/q+PPhlQ1mri3SyYX7RTlx3jXUey+idQdB4RA9uV7oTIdLfE4uH6ELalzvsXGIOwKeasJEZLWRNN7eEG5/UfRdEW5jdx87nNZWBCEKygQhCAQhCAQhCDjvaf0xHSYmMVgYTHUy5zb8j9z9d/qouHu+7Db8LqvVmH/wBRwKqgABkDc7NPzDX/AB7rkFIXMeGk7LN8nDVbXg5+81fxfwUjXi5aHJz7FG99jHoE5hr7tF76qfcAX2WfrTSqmxNrInMbtw1qJW5qf91CxOqa7EJXyh7hHo1jBcn5BSDigNNkbTPzZdGFvi+SaO4l4ZHHUU7oz8O49CpDKNsZtlBHoFTYNV3qmlrHxiUHPG8atK2W+iI7VtdGxpAb5bqgr4TUERAEl5AA8zdbBWEZib6KN07EKnqejYWZmMkznyFtR+tl248d5SOfPl68drpmCUEWGYXTUULQ1sTADYbnk/W6moQtydPmbd90IQhEBCEIBCEIBCEIAgEWIuCuR9b0dDhWOCOlqC6WUGZ8JH4YJ0151BXVa6tpKCmfU1tTHTQMF3SSuDQPqvMvVHU4rOu6zEWyd5TSymJh2HdjRp+gBXHmx9sHp8bO4ckrpOGzAsBHKlzTkNIB04Wu4PVh0QIOisZnuLQ5uoWJlO30W9kVEDZZO8cwXHPKXnZlylw23VPiEmIyENaRHHbgXKjMpKm4vUusdzYK0xdccdtip42sOaOx9QrKGfN4DutWpaOojmu2pkLedRqryka9t3PdcgWuq2ac8ujeJvLQbFO9CYrQ0/UQoapwbNWMtC4jTM0g29/7KsxaoDWuLjYD1XOnYw53UUVbA7Slkb3Z/wCJvf6r1+Njblt4vNznx+v9erwhM0c7KqkhqYzdk0bXt+RF08tZgBCEIBCEIBCEEgC5NgEAta6p6pjwmRuHUNO7EMYmb9zSx8X2LjwP++qqOpu1HprBmvjhndiFSAcrIPhv6uOn0uqHpPtA6KjZU4jVVU4xSbxzyzweJ58m2JAA2Avsov8AxaT+q7q3prFJ8KqeoOtcZcXRsJgoad1mtdwL7DW231XEpznJ1XT+1/r7DuoqWjo8HllMUb3OmD2ZSTbTnbdclfNv5jyVZF/ZufSGP9y5tBVuyuGkbydHDy+a6Vh1UyeIgOGi8/CcSua29nNNxY6+y2XBeqa2gcGzPErNgSbH3814ufxt/bFoeP5Wp65uxtj7wkaBK/pjSbkrWcE6vw+dgL52xP8A9rzZbRFjuHysBbKx3ycvD8eU/wBac5MbOqcbSCJt73smausipoDmcFU4x1bhdFG98tQwf+DNyVzPHuqq3FnuEAdDTu031I/sr8fBlnXLm58cJ2s+reoRVF1FRvuCfvJAePILXaRwa4WVfnA8I4TsLzmsDstbj45hNRicvLeTLdesuzWs+29E4XIXhzmRmN1je2VxAB9gFs68ydm/W03TeKsbK5z6CezZ4/LX4h6helaOqpq2ljqqSZk8ErczJGG4IXVwp5CEIgIQhAKr6qlEHTOKymbuMtJL95/tOU2KMc6gwbA4u8xTEIaYHZrnXcfk0alcZ7VO1KgxbCzg2AukdHMbVE0jMoc0bBvP7KEuQ4jJ3pIc46+SqO+lpgBmzRu8lLkk7xrwdxxfdQ3uEjXMdymjZwPLmue030uFhjiQ2aPxEaOA5TVCS1743mx4vykwv7mrfE/Rrjp8lbSu0iWKOS0jHZHHUX2KQY5AASNj5p43iJDwHwv3NtvmsSxNYLxu8JtoVNiZWaeRrmlpJa8aWB3TrZzG+4Iv9Cq+QOaS/UWOhHB8k4JBNDcjxN3VdLTKxLkqGvDRJZ9+DwUh0uVoDeFC8Iu4u2Nxp6J69mgnc7BJC5Wno3kuAvcnVPhxjYB+d6ZYG07MxHid5pDpHm8mjW8OPPyUq7Se+LQSD8PK2zpntE6kwalbSUVeYqWNxc2Msa4XO+4WmtjywlpNruuVDMpLso0CixMr1L2edqdHjj48OxjJS1zjlZKNI5T5eh/RdPXhmmqnRWLdxyul4B2wdSYXSw0sj6eshiaGtE8eoaOMwIP1Q09NoXGcJ7dcOkaRieDzRuA+OnkDg4/J1rfUoQ04FWYlUVD3SSyuked3ONyVEY9sm8ni5CyIwG6m5UaWEGRt9Dvop0jdSJbXuDY7FNxFge5p2B0Ki97PGPvWZxw4b2T9LVRSG7SMzuHCytEJb42EZhu3YhQ5wypaBFK0zsJ8LTc7LFXUEsMcQAOxIUWijMQEjbtc06ubvZKLOjnzs7uYWdbUEfVOEFtmg+G9xymWMFg5p8RNwVkOLT5a7KQCQRg52Hu3HU20CbEJY7vYXNcDwefROxytbo82B81h0TdXQnLfcbg+yjQjS2AdZhabDQ/NSIwI2B8msnAPH8KPI0gk5baHY3T8BeQCWC9r3cbpIFgl/jkPuf4TrbmVj5mFkZB7u43tymczQbvdrwp2BVVHS4i2SsgEsGUgxutqeNzbfVLsiPNE90DJDcRyi7XeaihjGG25+qiyd82MyQPe0vJdlOo1KmUMv2iLM4AEGxAUSDLQ6+rT7hKMg2IA4Nkssbrle4fMqKGnNck3uVOg+XkaNsG8ABCbL5m7C48iAhVNpD9TdMu/EJJ4snCbu9E09XQVYPF7aDZQWU7TMbC1grFo0CZhbaR5Nhsp0G+6Av5lKpG2Lm2unnjY8pNO2xdfzTQU2PIQWaDlqM7SfDffUeqbke+J+ty1KD2ucHAcchEMh+ZuWzdPMrLY2ixByH0Oib0MV+RssMabZmkj0B3TQVML6Egm1lIB8NrKJe8up0uN0hznTSlrXENGmiQPtkD3OA1YzS/mU2QHXJOgTjgGR5WiwCjSyZKd2urjZNB2M95EXWsDo0eiaiY+KSTuiLHgjZPxjLCxvICy0WvpqSmkmC2dx1my/Jv8rBjlsbzP010sFJAF9tUmX4HADWyaERsea/3rzrvmKE9R2LSRfVCqJDjZjneybYc2p2uiV2YBqULNblVv1BwHnySIz4iPNG4sks/FKsHnNukxbuKVI7K3RYbZkYvuhsTWsCmngtDiQLBp1SpTePUJMukZB4aAhshjvCAR6FLYfC5uosUg6HLwdkRuuWu5tYoGXk3ve2rk9SMsM3mmd3M9Qf3Ulh0KgYlNzZRJRnqWQ8NNynnvy5nbngeqVSQ5LyPN5HbqUbPn4lhmpdrdYN9Upo00Q2L67JElyHW0NtEolYJHzUG0WKa0DHNsHjwuHqhO9xFmLsup3QufrU7hIN7OPJToN1G/Kz3/AHUhqvIiljWyQPxj80tqbH4xVkHXG5DfVEvHzWPzhD+UGJM99LEH1TcrnFjr3tcDVOnhJm/D9whBILxjzCaILSXD4Xb+hT5+BNt+D3Rammi7mO4AP7p55s06plu4/wC8p2X4AgzGB4SRrrqnW21800z4WpbfiKKhx1KyDYJLviQdggNEXWAgbFAlx1QsO3Qg/9k=</Data>
+	<Data>232126</Data>
+	<Data>0</Data>
+	<Data>71</Data>
+	<Data/>
+	<Data>韩月芹</Data>
+	<Data>232126197101160384</Data>
+	<Data>232126</Data>
+</Row>
+
+
+<scp todir="${wls.username}:${wls.password}@${remote.host}:${deploy.location}"
+    		file="${uibs.location}/${server.name}.war"
+    		trust="true"/>
+    	<sshexec host="${remote.host}"  
+    	        username="${remote.username}"  
+    	        password="${remote.password}"  
+    	        command="ls"
+    	        trust="true"/>  
+1、打包到远程服务器的tomcat目录下
+2、通过tomcat/webapps/manger接口远程启动，停止
+
+<sshexec host="50.144.2.73" port="2081"
+					    	        username="root"  
+					    	        password="bgpt@73"  
+					    	        command="cd /usr/lib/apache-tomcat-7.0.94/webapps;rm -rf ${warName}.war;rm -rf ${warName}"
+					    	        trust="true"/>
+			<scp todir="root@50.144.2.73:/usr/lib/apache-tomcat-7.0.94/webapps" port="2081" password="bgpt@73"
+	    	    		file="${warName}.war" trust="true"/>				
+				
+ant：<property name="output.dir" value="${ant.project.default-target}" />
+					
+					
+50.144.0.63 ping不通 50.144.1.66（改业务Ip）
+
+1、去掉底栏、停止按钮改为红色					
+2、svn打*
+		
+主表：T_JSON_ZD		
+GG_WLWS_ZFPT--第一张表
+create table GG_WLWS_ZFPT
+(
+  WJDZ     VARCHAR2(100),
+  WSBT     VARCHAR2(100),
+  PTTYAJBH VARCHAR2(100),
+  WSLB     VARCHAR2(100)
+)
+
+
+FY_DSR_ZFPT--第二张表
+FY_DSR_ZKZM_ZFPT--第三张表
+FY_DSR_DZLX_ZFPT--第四张表
+FY_AJ_ZFPT--第五张表
+
+update t_json_zd t set t.yxx = '0';
+truncate table GG_WLWS_ZFPT;
+truncate table FY_DSR_ZFPT;
+truncate table FY_DSR_ZKZM_ZFPT;
+truncate table FY_DSR_DZLX_ZFPT;
+truncate table FY_AJ_ZFPT;
+truncate table FY_AJ_JBXX;
+
+sshpass -p "njws@33" ssh -o StrictHostKeyChecking=no root@50.144.0.33 "nohup java -jar 
+/root/Desktop/jdeploy/data-transfer/data-transfer.jar > /root/Desktop/jdeploy/data-transfer/nohup.out 2>&1 &"
+
+sshpass -p "njws@33" ssh -o StrictHostKeyChecking=no root@50.144.0.33 "tail -f -n 500 /root/Desktop/jdeploy/java/data-transfer/nohup.out"
+
+nohup java -jar /data/fts/car-record-upload/CarRecordUpload.jar > /data/fts/car-record-upload/nohup.out 2>&1 &
+
+/root/Desktop/jdeploy/java/data-transfer
+
+
+/root/Desktop/jdeploy/data-transfer
+
+		
+		 private static final String sql = "INSERT INTO T_WX_USER_REPORT(ID,NAME,PHONE_NO,PHOTO_ID1,DESCRIPTION,"
+            + " ADDRESS,TYPE,PHOTO_ID2,PHOTO_ID3,CREATE_DATE,NODE_ID,OPEN_ID,SFZHM,REMARK,STATUS,LASTUPDATETIME,WF_VEHICLE_NO,"
+            + " WF_BONUS,WF_BONUS_STATUS,WF_BONUS_SEND_TIME,PARTNER_TRADE_NO,PAYMENT_NO,WXNICKNAME,PICZIP,PHOTOID1TIME,PHOTOID2TIME,"
+            + "PHOTOID3TIME,SENDTYPE,PACKETSTATUS,REFUNDTIME,RCVTIME,VIDEOURL,VIDEO_FRAME_URL,"
+            + "VIDEOSTARTTIME,VIDEODURINGTIME,DAOLU,LUKOU,WFDM,WFDMDESC) VALUES ("
+            + ":id,:name,:phone_no,:photo_id1,:description,"
+            + " :address,:type,:photo_id2,:photo_id3,:create_date,:node_id,:open_id,:sfzhm,:remark,"
+            + ":status,:lastUpdateTime,:wf_vehicle_no,"
+            + " :wf_bonus,:wf_bonus_status,:wf_bonus_send_time,:partner_trade_no,:payment_no,:wxNickName"
+            + ",:picZip,:photoId1Time,:photoId2Time,"
+            + ":photoId3Time,:sendtype,:packetStatus,:refundTime,:rcvTime,:videoUrl,:video_frame_url,"
+            + ":videoStartTime,:videoDuringTime,:daolu,:lukou,:wfdm,:wfdmDesc)";
+		
+4.25
+1、完成 自动化部署平台(项目管理、自动从svn拉取代码，一键部署、一键停止 及日志查看)
+
+4.23
+1、测试自动化部署平台
+
+4.22
+1、编写自动化部署 脚本
+
+4.18
+1、研究自动化部署平台
+2、全国人口接口导出照片
+
+4.17
+1、智慧E侦项目录屏
+2、研究JDeploy自动化部署平台
+
+4.16
+1、研究 软件部署工具jenkins等
+
+4.15
+1、编写 巡特警指挥一体化管理系统拓扑图 
+
+4.4
+1、智慧小区-> 小区进出页面跳转
+
+4.3
+1、完成kettle转码插件开发
+
+4.2
+1、智慧小区-> 进出总数、异常总数
+2、kettle 转码插件开发
+
+4.1
+1、修复 OA邮件 查询详情bug，及文件下载问题
+2、修改 车辆大数据、关系分析 数据源
+ 
+3.29
+1、智慧小区->一周内未有出入记录 点击查看更多，展示 列表页面，分页查询
+2、智慧小区->未确定人员信息 点击查看更多，展示 列表页面，分页查询
+ 
+3.28
+1、智慧小区 建立新项目、重点人员类别数量、重点人员一周内未有出入记录列表、既不是常驻人口,又不是暂住人口列表、年龄分布、租户进出时间段 从数据库读取 
+ 
+3.27
+1、OA邮件系统 postfix+dovecot 研究
+2、OA单点登录 cas server 研究
+
+3.26
+1、完善全息布控->地图视频功能
+
+3.25
+1、全息布控 地图视频播放 完善
+
+3.21
+1、情报指令 菜单
+2、情报指挥调度 地图视频播放
+
+3.20
+1、地图视频播放功能
+2、移动警务 全系布控文档
+3、情报指挥调度 地图视频播放
+			
+3.19
+1、全息布控 地图视频播放
+
+3.16
+1、办公OA 撤回流程完善
+2、大数据情报指挥平台-话单分析工具 文档添加截图
+
+3.15
+1、办公OA 文件预览功能测试完善
+
+3.14
+1、全息布控 省厅布控预警 列表查询完善
+2、办公OA 流程测试 完善
+
+3.13
+1、完成办公OA 撤回功能
+
+3.12
+1、办公OA 撤回功能修改
+
+3.11
+1、全息布控 重点人员布控，临时布控 增加省厅布控及取消布控
+2、全息布控 省厅布控预警 信息展示完善
+	
+3.8
+1、办公OA 撤回功能梳理
+	
+3.6
+1、完善 全息布控 省厅布控预警	
+2、标签画像 功能演示 录屏
+3、完善 车辆大数据 查询接口
+	
+3.1
+1、全息布控 重点人员布控、临时布控、在逃人员布控 页面字典翻译
+2、调用省厅布控接口
+		
+2.28
+1、全息布控 重点人员布控、临时布控 是否短信预警列表字段展示
+2、重点人员大类* 涉众群体 ，工作单位（通过社保关联出来）、籍贯等（去掉 必填）、列表拉取全部数据
+3、车辆大数据 详情页完善
+
+2.27
+1、全息布控 重点人员布控、临时布控 增加短信预警/取消短信预警
+2、办公室OA doc文件预览问题
+
+2.26
+1、完善 办公OA Excel文件/Word附件预览 功能
+
+2.25
+1、编写标签画像 静态页面
+2、办公OA Excel文件/Word附件预览
+
+2.22
+1、编写标签画像 静态页面
+
+2.21
+1、完善 资源服务 权限整合
+
+2.20
+1、随手拍 mysql数据导入oracle
+
+2.19
+1、随手拍 数据拉取
+
+2.18
+1、随手拍 数据拉取
+
+2.15
+1、随手拍 数据定时拉取
+2、春节期间过车数据统计
+	
+2.14
+1、资源服务 权限整合	
+2、mysql数据导入oracle
+3、统计2019年2月4日至2019年2月14日，外市车辆与本市车辆分别多少过车数据
+	
+2.13
+1、办公OA 新增流程状态查询
+2、资源服务 权限整合
+
+1.30
+1、解决 管理服务 下拉框图标不展示的bug
+
+1.29
+1、研究图库neo4j（节点、关系、属性） 及 cypher查询语言
+
+1.28
+1、研究图库neo4j（节点、关系、属性） 及 cypher查询语言
+
+1.25
+（https://10.32.223.32:444/svn/yc/qgquery）
+1、请求全国人口接口，查询照片项目
+2、研究neo4j图库 查询语言cypher
+
+1.23
+1、关系分析 综合查询 完善
+
+1.21
+1、研究关系分析 neo4j图数据库
+
+1.18
+1、全息布控 重点人员预警 查询优化
+2、车辆大数据 综合轨迹信息 查询优化
+	
+1.17
+1、智慧安保平台 本市 预警信息 展示 
+2、办公OA 流程测试
+		
+1.16
+1、19大安保 数据源资料整理
+2、车辆大数据 综合轨迹信息 查询速度优化
+	
+1.15
+1、车辆大数据 综合轨迹信息 过车信息记录数 bug修复
+2、统计社会数据，导入Excel
+
+1.14
+1、完成 车辆大数据 活动规律分析 模块功能 (cldsj车辆大数据账户密码：nbyh/123456)
+
+1.11
+1、19大安保：
+http://50.144.0.49:8080/ycabpt/ycabpt/qbdq/to_main.xhtml
+
+1.10
+1、安保平台 预警信息柱状图、交办预警 问题修复
+2、大数据项目 用户操作日志入库 
+
+1.9
+1、大数据项目 用户操作日志入库 
+
+1.8
+1、车辆大数据 活动规律分析 功能
+2、数据比对 用户操作日志入库 
+
+1.7
+1、关系分析 用户操作日志入库
+
+1.4
+1、资源碰撞比对、关系分析 警辅证书登录
+
+1.3
+1、大数据平台、安保平台、资源碰撞比对 警辅证书登录
+
+1.2
+1、应用系统与警辅证书对接 
+
+12.29
+1、应用系统与警辅证书对接 
+
+12.28
+1、办公OA -> 优化统计报表 发文统计表/发文登记表/收文统计表/收文登记表 查询
+
+12.27
+1、易肇事肇祸精神障碍患者、参加会议人员 照片导出
+2、全国人口接口 调用，拉取数据
+
+12.26
+1、警务大数据 项目本地运行、熟悉业务模块
+2、办公OA -> 完善首页 收发文 签收 功能
+
+12.25
+1、办公OA -> 待签/待办 收发文、已签/已办 收/发文 功能完善
+
+12.24
+1、办公OA -> 完善 来文签收模块 待签发文/待签收文/已签发文/已签收文 查询及详情 功能
+
+12.21
+1、办公OA -> 完成 来文签收模块 待签发文、待签收文、已签发文、已签收文 查询页面 及 详情页、签收功能
+
+12.20
+1、办公OA -> 增加 待签收文（合并内外部收文）、已签收文（合并内外部收文） 页面
+2、办公OA -> 内外部收文管理 待办收文 已办收文 去除待阅办、待签收
+
+12.19
+1、办公OA -> 增加 来文签收模块，完成待签发文，已签发文 查询页面
+2、办公OA -> 发文管理 待办发文 已办发文 只显示 流程中的记录 （不显示 待阅办，待签收）
+
+12.18
+1、kettle hive插件 集成测试
+
+12.17
+1、完善kettle hive插件（输入、输出）
+
+12.14
+1、kettle hive插件开发
+
+12.11
+1、研究kettle kafka消费插件
+
+12.10
+1、kettle kafka消费插件
+
+12.7
+1、kettle kafka消费插件
+
+12.6
+1、kettle kafka消费插件
+			
+12.5
+1、办公OA需求梳理
+2、kettle kafka消费(kafka消费作为数据源) 插件	
+
+12.3
+1、kettle kafka消费 插件	
+	
+11.30
+1、完成kettle插件开发
+	
+11.29
+1、kettle插件开发
+	
+11.28
+1、kettle插件开发
+	
+11.27
+1、办公OA -> 多管理员 公用账户查询完善
+2、kettle插件开发
+	
+11.26
+1、人员关系分析 完善
+2、安保平台 县下级派出所 echarts数据展示
+3、kettle插件开发
+
+11.23
+1、办公OA -> 完善 首页待办事项展示 
+2、办公OA -> 完善 内/外部收文反馈
+3、办公OA -> 常用群组配置管理
+
+11.22
+1、大数据平台 视频录制
+2、办公OA -> 县局管理员后台设置 及县局流程 完善
+
+11.21
+1、办公OA -> 自定义单位组完善，增加删除按钮
+2、车辆大数据 Hbase查询卡口数据
+
+11.20
+1、解决 局办收文流程->相关单位阅办 报错的Bug
+2、kettle hive插件开发
+
+11.19
+1、办公OA -> 文件预览 doc格式 样式调整
+
+11.16
+1、办公OA -> 局领导、办公室审批，展示下一步办理人
+2、办公OA -> 县局快速交办流程完善
+
+11.15
+1、办公OA -> 县局管理员配置，流程运转
+2、办公OA -> 县局管理员 收/发文 公用账户查询
+
+11.14
+1、办公OA -> 后台管理 人员借调/兼职设置
+2、办公OA -> 快速交办流程 权限设置
+3、办公OA -> 县局流程 局领导设置
+
+11.13
+1、办公OA -> 县局流程 常用群组配置
+2、办公OA -> 分页插件
+
+11.12
+1、办公OA -> 首页待办事项展示，加快展示
+2、办公OA -> 县局发文流程测试
+3、hive研究
+
+11.9
+1、常用群组配置，县局管理员群组显示bug修复
+2、常用群组 人员显示借调单位
+3、办公室核稿、局领导审批 下一步办理人 展示县局人员
+
+11.8
+1、统计报表 发文登记、收文登记 修改 
+2、单位管理员 后台权限设置
+3、常用群组配置 县局管理员配置 局领导/办公室 等
+
+11.7
+1、下一步办理人去除辅警账号（代码过滤）
+2、补录流程显示流程图
+3、局领导审批，展示下一步办理人下拉框
+4、常用群组配置：所属单位显示全名称，成员设置修改
+5、发文，下一步办理人 根据单位 选择 区分 市局 及各县局
+6、撤回 删除 收文反馈记录
+
+
+11.5
+1、修复 张少坡的账号分给局领导审批这个步骤不能正常进行 的bug
+2、内外部 收文反馈 发文给相关单位 下一步办理人 下拉列表切换
+
+11.2
+1、办公室核稿 下一步办理人 修改
+2、范文拟稿 快速交办流程 权限设置（只有 市局指挥中心/局办和各地指挥中心/局办 可以使用）
+3、公文配置管理 常用群组配置 二级管理员 人员设置、查询
+
+11.1
+1、公文配置管理 常用群组配置 二级管理员 配置
+
+10.31
+1、内/外部 已办收文中查询不到阅办单位签收办理、反馈的情况，请调整，增设按钮
+2、内/外部 详情页增加 收文反馈记录
+
+10.30
+1、用户管理 查询bug修复
+2、发文拟稿 -> 通用发文流程修改：通用发文最后一个环节，拟稿人办理选项中添加一个“办结”（目前只有“发文给相关单位”）
+
+
+10.29
+1、办公OA -> 单位管理 搜索功能进一步完善，搜索关键字也能出待选项，而不用输全称。比如：搜索治安队，显示所有名称中含有治安队的条目，治安队这三个字不一定是连续的，搜索治安队，可以搜出治安警察大队，治安警察中队。治安警察队等
+2、办公OA -> 消防 使用警号登录
+
+10.25
+1、发文、内/外部收文 增加转阅记录（并新增发送人字段）
+2、发文 承办单位 改为必填，首页待办事项显示承办单位
+3、发文时，主题词改为备注
+4、收文反馈增加签收人
+		
+10.24		
+1、办公OA -> 解决发文流程->收文反馈报错的bug
+2、办公OA -> 首页待办事项->拟稿改为承办单位，而不是承办人所在单位
+3、办公OA -> 部门发文流程 完善
+4、办公OA -> 首页待办事项区分 主管/单位管理员的 个人账户/公用账户
+		
+10.23
+1、办公OA -> 部门管理员 及部门主管 可以查看该部门（及所有子部门）所有公文 		
+		
+10.22
+1、预警人员地图 展示、查询
+2、全息布控 页面样式更换
+3、关系分析 查看详情完善				
+					
+10.19
+1、自定义地图 保存
+2、重点人员 地图监控，实时更新人员所在点位
+
+10.18
+1、安保平台 pgis地图 卡口/4G/Wifi 信息展示，并保存自定义地图 
+
+10.17
+1、安保平台 卡口信息、4G信息、WIFI信息 地图展示
+
+10.16
+1、办公OA -> 辅警账户登录权限修改
+2、安保平台 地图搜索卡口、4G
+
+10.15
+1、解决 局级发文流程 ->已阅 报错的Bug
+2、文件下载、预览 完善
+3、发文新增转阅记录（查看 转阅人是否已阅）
+
+10.12
+1、办公OA -> 内外部收文 收文反馈功能
+2、办公OA -> 相关单位 阅办记录（所有发出的单位，都展示出来）
+
+10.11
+1、办公OA -> 发文、内外部收文 办理页面 样式调整
+2、办公OA -> 发文、内外部收文 流程梳理
+
+10.10
+1、办公OA -> 发文、内外部收文 查看详情 增加文件预览
+2、办公OA -> 发文、内外部收文 流程测试
+
+10.9
+1、办公OA -> 发文、内外部收文 提交人修改
+2、办公OA -> 公文文种，增加工作信息
+3、办公OA -> 预览 支持 doc/docx/xls/xlsx/txt
+
+10.8
+1、发文给相关单位 显示借调、兼职  
+2、预览 支持 doc/docx
+
+9.30
+1、办公OA-> 单位管理员设置
+2、办公OA-> 收发文 流程测试
+
+9.26
+1、办公OA -> 完成 发文/内部收文/外部收文 撤回功能
+2、办公OA -> 公用账户 功能
+
+9.25
+1、办公OA -> 转阅给管理员 测试完善
+2、办公OA -> 待办发文/收文 任务创建时间、启动时间 格式修改
+3、办公OA -> 撤回功能修改 
+
+9.21
+1、办公OA -> 完成转阅功能（转阅给个人及单位管理员）
+
+9.20
+1、转阅给某人 -> 待办 多一条待办（显示 签收按钮），签收完 在已阅知文 展示
+2、转阅给单位，单位一级管理员（处、支队），二级单位管理员（科、大队） 后，
+	单位一、二级管理员 可以收到，一个管理员已阅，其他人的状态也变成已阅，可以在已阅查询
+
+9.19
+1、办公OA -> 内部收文、外部收文 撤回
+2、办公OA -> 拟办意见 自动匹配 转阅
+
+9.18
+1、办公OA -> 公文办理 样式自定义设置
+2、办公OA -> 待办发文 过滤查询
+
+9.17
+1、办公OA -> 流程运转 删除/还原 操作
+2、办公OA -> 待办发文、内部待办收文、外部待办收文 查询未删除的公文
+3、办公OA -> 公文转阅 后台根据 拟办意见 自动选择转阅领导
+4、办公OA -> 首页样式修改
+
+9.14
+1、办公OA -> 公文回收站功能 （发文、内部收文、外部收文 合到一个菜单页）
+
+9.13
+1、办公OA -> 管理员可以看到 全部的 已办发文、已阅之文、内部已办发文、内部已阅之文、外部已办发文、外部已阅之文
+2、办公OA -> 公文回收站功能
+
+9.12
+1、标签画像 -> 标签评估图表展示：标签关联对象占比、标签被检索次数占比、标签检索次数的波动变化情况、标签关联对象的增量变化情况、一星到五星的评价次数
+
+9.11
+1、办公OA -> 公文删除及还原
+
+9.10
+1、办公OA -> 局办收文流程 - 局领导审批 功能调整
+2、办公OA -> 通用收文流程 - 部门领导核稿 功能调整
+
+9.7
+1、java代码实现.doc文件、.docx文件、.txt文件、.xls文件、.xlsx文件 转pdf
+
+9.6
+1、办公OA -> 公文 正文直接在当前页面显示（可继续修改、保存）
+2、办公OA -> 公文 附件可在线预览
+
+9.5
+1、办公OA -> 完成 公文撤回、修改后重新提交 功能
+
+9.4
+1、办公OA -> 公文新增 撤回、修改后重新提交 功能
+
+9.3
+1、办公OA -> 公文首页，待办文件列表视图，文件信息显示：序号、文件标题、来文时间、办理。其余信息不显示。每条待办显示一行。
+2、办公OA -> 根据紧急程度把标题按照颜色依次置顶：特提（红字）、特急（红字）、加急（黄字）、平急（黄字）。
+3、办公OA -> 已办发文 页面样式完善
+
+8.31
+1、办公OA -> 解决 人员登录后报错的bug
+2、办公OA -> 发文拟稿->快速交办流程 完善
+
+8.30
+1、办公OA ->收文编号重复，输入完就提示，不用等到保存时再提示
+2、办公OA ->收文审批，审批领导列表展示
+
+8.29
+1、办公OA -> 流程跟踪:处在某任务节点，此节点颜色为蓝色，并且已过的节点都为蓝色，节点不通过变为红色
+2、办公OA -> 用户可在不同单位担任兼职,兼职和原单位作用都要发挥，兼职和借调只能有一个。
+
+8.28
+1、熟悉OA管理系统 业务流程及代码
+
+8.27
+1、Hbase源码研究
+2、车辆大数据->车辆轨迹查询完善
+
+8.24
+1、车辆大数据->研判工具->综合轨迹信息 查询完善
+
+8.23
+1、车辆大数据->车辆轨迹 地图展示
+
+8.22	
+1、车辆大数据 过车记录、高速入口、高速出口 查询完善
+	
+8.21
+1、安保平台，地图查询完善
+2、车辆大数据 过车记录 查询完善
+
+8.20
+1、车辆大数据 Hbase过车记录 查询完善
+
+8.17
+1、Kafka源码研究
+
+8.16
+1、Hbase源码研究
+2、车辆大数据 过车记录列表，查看详情bug修复
+
+8.15
+1、kafka源码研究
+
+8.14
+1、Spring ioc、aop源码研究
+
+8.13
+1、智慧安保平台 重点人员地图展示
+2、Hbase源码研究
+
+8.10
+1、关系人分析 跳转云搜，记录登录账号
+2、智慧安保平台，重点人员查询完善
+
+8.9
+1、关系人分析 查看详情跳转页面
+2、安保平台 地图人员展示完善
+
+8.8
+1、关系人分析 接口完善
+2、关系人分析 同案人员样式完善
+
+8.7
+1、车辆卡口记录列表 字典翻译
+2、关系分析 跳转云搜 查看详情
+
+8.6
+1、关系人 网吧同上网、同行、同案人员、同租房  接口调试修改
+
+8.3
+1、关系人分析 接口完善
+2、智慧安保平台 地图人员显示完善
+
+8.2
+1、车辆大数据接口 完善
+2、安保平台 地图展示完善
+
+8.1
+1、智慧安保平台 地图、图表切换显示
+2、车辆大数据接口调整
+3、关系分析 接口调整
+
+7.31
+1、智慧安保平台 首页修改 新增 省/市切换、预警信息柱状图
+
+7.30
+1、关系挖掘调用关系分析系统的各种关系规则 接口
+2、车辆大数据 过车列表接口、详情接口
+
+7.27
+1、资源碰撞分析 上传数据和比对 bug修复
+2、kettle_web 表输入
+
+7.26
+1、关系人分析 关系过滤查询完善
+2、车辆大数据 过车信息查询完善
+
+7.25
+1、关系人分析 关系过滤查询
+
+7.24
+1、关系人分析 关系过滤
+
+7.23
+1、关系人分析 新增关系过滤
+
+7.20
+1、关系人分析 查询条件筛选
+
+7.19
+1、车辆大数据 登录完善、过车信息总量查询完善
+2、kettle web研究
+
+7.18
+1.kettle web 连接资源库
+
+7.17
+1.kettle web 任务->转换管理功能
+
+7.16
+1、kettle web 数据转换
+
+7.13
+1、kettle web 表输入到表输出
+
+7.12
+1、kettle web 源码调试，本地运行
+
+7.11
+1、kettle web 源码调试
+
+7.10
+1、本地调试kettle web管理系统
+
+7.9
+1、研究kettle-web，本地运行调试
+
+7.6
+1、警务大数据 HBASE,HIVE 查询完善
+
+7.5
+1、dubbo 配置研究
+2、大数据首页面 跳转到 资源碰撞对比和车辆大数据 用户数据源整理
+----------------详细说明---------------------
+1、dubbo配置文件：registry标签及各属性(register,check,subscribe,timeout,address)
+	、service标签(interface,ref)
+2、数据源
+  --ycqb_ht(37 abpt19)大数据首页面：
+select * from t_sys_user t;
+select * from t_sys_user_detail t;
+
+-- 资源碰撞对比
+jdbc1.url=jdbc:oracle:thin:@50.144.2.38:1521:ycdsjpt
+jdbc1.username=jbjht
+jdbc1.password=jbjht_yc
+select * from t_sys_user ;
+select * from t_sys_user_detail;
+
+
+--cldsj_ht(39 ycdjsfwpt) 车辆大数据
+select * from t_sys_user;
+select * from t_sys_user_detail;
+
+7.4
+1.研究 dubbo、zookeeper
+http://50.144.0.49:7001  root/root
+
+-------------------------
+详细说明：
+1.dubbo的provider：服务提供方(提供查询，下载等服务) 
+2.dubbo服务注册在zookeeper上，也就是说多个dubbo项目使用同一个zookeeper地址，
+  可以在同一个dubbo-admin管理页面上管理到。
+3.dubbo-admin是一个web管理系统，可以和dubbo项目分开部署
+
+
+7.3
+1.研究dubbo服务管理
+
+7.2
+1.大数据资源管理平台，登录功能
+
+6.29
+1.警务大数据管理平台 hbase/hive 写定时器，hbase数据查询测试
+
+6.28
+1.警务大数据管理平台 hbase表数量 及每日数据增量 统计
+
+6.27
+1.警务大数据管理平台 hbase定时数据量统计 
+
+6.26
+1.警务大数据管理平台 hbase数据量:总量/月平均量/上月增量/本月增量/上周增量/本周增量/昨日增量 统计
+
+6.25
+1.警务大数据管理平台 hbase数据量,每日增量统计
+
+6.22
+1.警务大数据管理平台 hive,hbase 数据源/数据表 管理 bug修复
+
+6.21
+1.警务大数据管理平台 增加HBase的数据源/数据表 管理 
+
+6.20
+1.警务大数据管理平台 数据源/数据表 管理 新增HBase
+
+6.19
+1.关系人分析，前端js代码精简，去除冗余代码
+
+6.15
+1.研究d3.js源码，布局切换
+
+6.14
+1.研究d3.js源码，切换 树形布局、圆形布局
+
+6.13
+1.研究d3.js源码，切换页面布局
+
+6.12
+1.研究d3.js源码
+
+6.11
+1.d3.js研究
+2.Hbase hive 测试报告
+
+6.8
+1.关系人分析 综合查询 前端人员头像展示
+
+6.7
+1.关系人分析 综合查询 前端页面展示调试
+
+6.6
+1.关系人分析 综合查询 调试修改
+
+6.5
+1.关系人分析 前端页面展示调试
+
+6.4
+1.关系人分析 前端展示调试
+
+5.31
+1.右击人员，可以进行二次过滤（重新根据选中的条件进行查询）
+
+5.30
+1.关系人分析 前端展示调试
+
+5.29
+1.关系人分析 返回最新的人员照片：PicUtils getRyPic(String sfzh)  order by t.cjsj desc 
+2.关系人分析 前端替换为jtopo
+  
+5.28
+1.关系人综合分析 数据测试
+    
+5.25
+1.关系人综合分析 前端展示测试
+
+5.24
+1.资源碰撞比对 mongodb+presto 查询测试
+
+5.23
+1.资源碰撞比对 完成后发送短信提醒
+2.人社局照片导出（身份证_姓名.jpg 命名）
+
+5.22
+1.资源碰撞比对 测试
+
+5.21
+1.MPP研究
+2.Apache CarbonData研究（一种高性能数据存储格式）
+
+5.18
+1.研究 kettle运行Java程序，将数据导入kafka
+
+5.17
+1.研究 kettle运行Java程序，将数据导入kafka
+
+5.16
+1.研究 kettle将oracle数据导入到kafka
+
+5.15
+1.kafka生产者 代码兼容etl工具
+
+5.14
+1.kafka生产者 代码兼容etl工具
+
+5.11
+1.MPP研究
+
+5.10
+1.MPP研究
+
+5.9
+1.MPP研究
+2.人员照片 提取到本地文件夹（按身份证号.jpg命名）
+
+5.8
+1.sparkSql查询比对测试
+
+5.7
+1.人社局照片提取_第三批（完成100%）
+2.sparkSql查询比对测试
+
+5.4
+1.人社局照片提取_第三批（完成60%）
+2.sparkSql查询比对测试（数据源分别为：Oracle、Hbase、hive库）		
+		
+5.3
+1.人社局照片提取_第三批（完成30%）
+2.sparkSql查询比对测试
+		
+5.2
+1.查询全国人口接口 获取人员照片、插入到数据库中（完成100%）
+2.sparkSql查询比对（常住人口表 与 自来水表 进行比对测试）
+		
+4.28
+1.查询全国人口接口 获取人员照片、插入到数据库中（完成95%）
+2.sparkSql查询
+
+4.27
+1.查询全国人口接口 获取人员照片、插入到数据库中（完成75%）
+2.spark查询hbase数据
+
+4.26
+1.查询全国人口接口 获取人员照片、插入到数据库中（完成50%）
+2.spark学习
+
+4.25
+1.查询全国人口接口 获取人员照片、插入到数据库中
+2.车辆大数据 假套牌分析测试
+
+
+假牌分析：疑似假牌
+查询 省内车牌时，没有机动车登记信息 新增一条疑似假牌（cldsj_ht的T_STCLDSJ_JPCLXX表）
+
+
+select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from T_STCLDSJ_JPCLXX
+
+4.24
+1.卡口点位查询优化
+2.车辆轨迹hbase查询
+3.图片base64位转码
+
+4.23
+1.轨迹分析倒查hbase 列表查询
+2.车辆轨迹信息 车牌号码 列表查询（不选卡口查询）
+3.地图 画圆形查询卡口bug修复
+
+地图选择卡口：单位名称搜索：
+第三方接口：http://10.32.203.126/pcsdwfw/thirdParty/search?mc=公安局
+
+
+4.20
+1.车辆轨迹 hbase优化
+2.解决部分车辆查询 轨迹地图不出现的bug
+
+4.19
+1.关注车辆，关注成功加入 layui样式
+2.关系车辆分析、轨迹倒查 查询页面bug修复
+3.车辆批量比对 关注
+
+2.关系车辆分析 并轨分析 时间查询bug
+1.车辆批量比对 关注
+2.轨迹倒查 时间查询bug
+
+活动轨迹 bug
+
+
+日期同步华为云 ip：50.144.1.66
+
+申云海
+http://50.144.0.47:8084/stcldsj/loginWithIdNumber.xhtml?code=cldsjmh&password=&loginType=01&account=320924198802086493
+
+<div class="page-box"><input type="hidden" name="rowKeyMap" 
+value='{"0":"苏JB1131_20180418120021_320900000000000108_02"}'><strong>1</strong>&nbsp;
+<span class="next click" onclick="javascript:pageGo('2');" >2</span>&nbsp;<span class="next click" 
+onclick="javascript:pageGo('2');" >下一页</span>&nbsp;</div>
+
+[苏JB1131, 20180418120021, 320900000000000108, 02]
+[苏JB1131, 20180418120021, 320900000000000108, 02]
+[苏J561D5_120042_3616444618175164728_02]
+
+4.18
+1.车辆同行分析优化
+2.Hbase索引表完善
+3.Hbase查询过车记录数
+4.解决我关注的车辆，窗口打开的bug
+-----------------------------------------
+总结：
+1.车辆同行分析优化（测试号牌：苏JB1825、同行卡口数：2次）：
+	1).先查询 号牌A的每天轨迹信息(hbase),查出卡口、经过次数（ClxxGj对象）(查询hbase:DimensoftWatch_HphmJgskIndex索引表)
+	2).根据卡口编号、时间范围  查询经过的车牌号(查询hbase:DimensoftWatch_KkbhIndex索引表)
+	3).遍历list，取出号牌对应的次数
+2.Hbase索引表完善:主表的索引作为索引表的rowkey,主表的rowkey作为索引表的列
+	T_320_CLGJXX： String rowkey = hphmValue+hpzlValue+jgskValue+kkbhValue;
+	DimensoftWatch_KkbhIndex ： String rowkey = kkbhValue + "_" + jgskValue + "_" + hphmValue ;
+	DimensoftWatch_TimeIndex：String rowkey = jgskValue + "_" + kkbhValue + "_" + hphmValue;
+	DimensoftWatch_HphmJgskIndex：String rowkey = hphmValue + "_" + jgskValue;
+	Hbase表查询 rowkey按首字母/数字 查询(按字典排序)。rowkey ：start/end hphmValue1 ->hphmValue2 ...	
+3.Hbase查询过车记录数：new AggregationClient(conf).rowCount(TableName.valueOf(""), 
+	new LongColumnInterpreter(), new Scan());
+4.解决我关注的车辆，窗口打开的bug（jquery版本冲突导致，使用jquery-1.10.2.js、jquery-ui.min-1.11.4.js）
+
+
+4.17
+1.车辆大数据hbase查询 加入号牌过滤、经过时刻查询
+
+rowkey设计：
+T_320_CLGJXX： String rowkey = hphmValue+hpzlValue+jgskValue+kkbhValue;
+DimensoftWatch_KkbhIndex ： String rowkey = kkbhValue + "_" + jgskValue + "_" + hphmValue ;
+DimensoftWatch_TimeIndex：String rowkey = jgskValue + "_" + kkbhValue + "_" + hphmValue;
+DimensoftWatch_HphmJgskIndex：String rowkey = hphmValue + "_" + jgskValue;
+
+
+4.16
+车辆大数据：
+1.综合轨迹查询页面时间范围选择 Bug修复
+2.车辆轨迹地图选择 根据单位名称查询
+3.卡口过车信息：卡口名称、车牌号码 hbase分页查询
+
+rowkey:
+车牌号+号牌种类+过车时刻+卡口编号
+[苏J561D5 w]
+ 苏J0D597 02 20180302010925 320900000000000196
+[苏J0D597 02 20180302010925 320900000000000196, 苏JG626G0220180302010755320900000000000113, 鲁MAJ781120180302010754320900000000020063, 鲁QF9379120180302010752320900000000020062, 苏JB03920220180302010750320900000000000113, 苏J7687W220180302010749320900000000020116, 鲁Q2698N120180302010749320900000000020063, 苏JB1455220180302010747320900000000020116, 苏GA6651120180302010744320900000000020063, 鲁QS3792120180302010743320900000000020053]
+[{hphm=苏J0D597, cdbh=01, xszt=0000, kkbh=320900000000000196, hpys=2, csys=H, zpsl=1, clbj=0, 
+cthptzzp=nullnullHTTP://172.26.250.75:8088/image/vrb/b0109a5e41894301803aaab4e99190bf/36?key=3a15a&offset=1367217869&
+high=0, ctzp=, rksj=20180307150101, clsd=-1, xsfx=00, 
+qjzp=nullnullHTTP://172.26.250.75:8088/image/vrb/b0109a5e41894301803aaab4e99190bf/36?key=3a15b&offset=1367223353&high=0, hpzl=02, cwzp=, jgsk=20180302010925, 
+clxxbh=32090000000000019600001120180302117944, cwkc=0, yssq=1}, {hphm=苏JG626G, cdbh=02, xszt=0000, kkbh=320900000000000113, hpys=2, csys=A, zpsl=1, clbj=0, cthptzzp=nullnullHTTP://172.26.250.79:8088/image/vrb/012557ed6ab64b40b8dca17e1701dfad/26?key=30062d&offset=1832492208&high=0, ctzp=, rksj=20180307150101, clsd=-1, xsfx=02, qjzp=nullnullHTTP://172.26.250.79:8088/image/vrb/012557ed6ab64b40b8dca17e1701dfad/26?key=30062e&offset=1832494668&high=0, hpzl=02, cwzp=, jgsk=20180302010755, clxxbh=32090000000000011300000920180302384268, cwkc=0, yssq=0}, {hphm=鲁MAJ781, cdbh=02, xszt=0000, kkbh=320900000000020063, hpys=1, csys=J, zpsl=1, cthptzzp=, clbj=0, ctzp=, clsd=0, rksj=20180307150101, xsfx=03, hpzl=1, qjzp=http://172.26.27.233:8081/F/1000051$1$0$0/20180302/01/0754-鲁MAJ781-9047422-0.jpg, cwzp=, jgsk=20180302010754, clxxbh=32090000000002006300000520180302094633, yssq=1}, {hphm=鲁QF9379, cdbh=01, xszt=0000, kkbh=320900000000020062, hpys=1, csys=J, zpsl=1, cthptzzp=, clbj=0, ctzp=, clsd=56, rksj=20180307150101, xsfx=02, hpzl=1, qjzp=http://172.26.27.233:8081/F/1000041$1$0$0/20180302/01/0752-鲁QF9379-9047419-0.jpg, cwzp=, jgsk=20180302010752, clxxbh=32090000000002006200000120180302094632, yssq=1}, {hphm=苏JB0392, cdbh=04, xszt=0000, kkbh=320900000000000113, hpys=2, csys=A, zpsl=1, clbj=0, cthptzzp=nullnullHTTP://172.26.250.79:8088/image/vrb/012557ed6ab64b40b8dca17e1701dfad/26?key=300629&offset=1832123480&high=0, ctzp=, rksj=20180307150101, clsd=49, xsfx=02, qjzp=nullnullHTTP://172.26.250.79:8088/image/vrb/012557ed6ab64b40b8dca17e1701dfad/26?key=30062a&offset=1832125388&high=0, hpzl=02, cwzp=, jgsk=20180302010750, clxxbh=32090000000000011300001120180302384267, cwkc=3, yssq=0}, {hphm=鲁Q2698N, cdbh=01, xszt=0000, kkbh=320900000000020063, hpys=1, csys=J, zpsl=1, cthptzzp=, clbj=0, ctzp=, clsd=0, rksj=20180307150101, xsfx=03, hpzl=1, qjzp=http://172.26.27.233:8081/F/1000050$1$0$0/20180302/01/0749-鲁Q2698N-9047417-0.jpg, cwzp=, jgsk=20180302010749, clxxbh=32090000000002006300000420180302094631, yssq=1}, {hphm=苏J7687W, cdbh=01, cllx=K33, xszt=0000, kkbh=320900000000020116, hpys=2, zpsl=1, cthptzzp=, clbj=0, ctzp=, clsd=32, rksj=20180307150101, xsfx=03, hpzl=2, qjzp=http://172.26.250.81:8081/d/1000001$1$0$0/20180302/01/0749-4773700-0.jpg?streamID:14@capTime:1519928130, cwzp=, jgsk=20180302010749, clxxbh=32090000000002011600000120180302202152}, {hphm=苏JB1455, cdbh=01, cllx=K33, xszt=0000, kkbh=320900000000020116, hpys=2, zpsl=1, cthptzzp=, clbj=0, ctzp=, clsd=27, rksj=20180307150101, xsfx=03, hpzl=2, qjzp=http://172.26.250.81:8081/d/1000001$1$0$0/20180302/01/0747-4773698-0.jpg?streamID:14@capTime:1519928128, cwzp=, jgsk=20180302010747, clxxbh=32090000000002011600000120180302202153}, {hphm=苏GA6651, cdbh=02, xszt=0000, kkbh=320900000000020063, hpys=1, csys=J, zpsl=1, cthptzzp=, clbj=0, ctzp=, clsd=0, rksj=20180307150101, xsfx=03, hpzl=1, qjzp=http://172.26.27.233:8081/F/1000051$1$0$0/20180302/01/0744-苏GA6651-9047407-0.jpg, cwzp=, 
+jgsk=20180302010744, clxxbh=32090000000002006300000520180302094628, yssq=1},
+
+[{dwmc=解放路--建军路, dwjd=120.13079, hphm=苏JB1455, cdbh=01, cllx=K33, xszt=0000, kkbh=320900000000000108, 
+hpys=2, csys=H, zpsl=1, cthptzzp=, clbj=0, ctzp=, dwwd=33.38372, rksj=20180416170104, clsd=14, xsfx=02, qjzp=http://172.26.27.228:80/108/20180416/1629/S/L1/108S20180416162906466L1-1.jpg, hpzl=02, cwzp=, jgsk=20180416162906, clxxbh=32090000000000010800211820180416636000, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1455, cdbh=03, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=J, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180414/0335/N/R3/125N20180414033514522R3-2.jpg, ctzp=, dwwd=33.38601, rksj=20180416170055, clsd=-1, xsfx=03, qjzp=http://172.26.27.234:80/125/20180414/0335/N/R3/125N20180414033514522R3-1.jpg, hpzl=02, cwzp=, jgsk=20180414033514, clxxbh=32090000000000012500112520180414324182, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1455, cdbh=02, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=J, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180412/0156/S/S2/125S20180412015616815S2-2.jpg, ctzp=, dwwd=33.38601, rksj=20180416170043, clsd=-1, xsfx=02, qjzp=http://172.26.27.234:80/125/20180412/0156/S/S2/125S20180412015616815S2-1.jpg, hpzl=02, cwzp=, jgsk=20180412015616, clxxbh=32090000000000012500112520180412097307, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1455, cdbh=04, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=H, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180409/0130/S/R4/125S20180409013059265R4-2.jpg, ctzp=, dwwd=33.38601, rksj=20180416170037, clsd=-1, xsfx=02, qjzp=http://172.26.27.234:80/125/20180409/0130/S/R4/125S20180409013059265R4-1.jpg, hpzl=02, cwzp=, jgsk=20180409013059, clxxbh=32090000000000012500112520180409783152, cwkc=400, yssq=1}, {dwmc=盐马路-希望路, hphm=苏JB1455, cdbh=02, cllx=K33, xszt=1302, kkbh=320900000000020010, hpys=2, csys=J, zpsl=1, clbj=0, cthptzzp=http://172.26.27.229:80/WF/010/20180407/0344/N/S2/010N20180407034441983S2-2.jpg, ctzp=, rksj=20180416170040, clsd=30, xsfx=03, qjzp=http://172.26.27.229:80/WF/010/20180407/0344/N/S2/010N20180407034441983S2-1.jpg, hpzl=02, cwzp=, jgsk=20180407034441, clxxbh=32090000000002001000001020180407551169, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1455, cdbh=03, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=J, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180407/0058/E/S3/125E20180407005845621S3-2.jpg, ctzp=, dwwd=33.38601, rksj=20180416170035, clsd=-1, xsfx=00, qjzp=http://172.26.27.234:80/125/20180407/0058/E/S3/125E20180407005845621S3-1.jpg, hpzl=02, cwzp=, jgsk=20180407005845, clxxbh=32090000000000012500112520180407550014, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1455, cdbh=03, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=J, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180406/0134/S/S3/125S20180406013407827S3-2.jpg, ctzp=, dwwd=33.38601, rksj=20180416170035, clsd=-1, xsfx=02, qjzp=http://172.26.27.234:80/125/20180406/0134/S/S3/125S20180406013407827S3-1.jpg, hpzl=02, cwzp=, jgsk=20180406013407, clxxbh=32090000000000012500112520180406431555, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1455, cdbh=03, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=J, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180406/0133/S/S3/125S20180406013347105S3-2.jpg, ctzp=, dwwd=33.38601, rksj=20180416170035, clsd=-1, xsfx=02, qjzp=http://172.26.27.234:80/125/20180406/0133/S/S3/125S20180406013347105S3-1.jpg, hpzl=02, cwzp=, jgsk=20180406013347, clxxbh=32090000000000012500112520180406431550, cwkc=400, yssq=1}, {dwmc=人民路--建军路, dwjd=120.13897, hphm=苏JB1455, cdbh=03, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=J, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180405/0210/E/S3/125E20180405021045643S3-2.jpg, ctzp=, dwwd=33.38601, rksj=20180416170043, clsd=-1, xsfx=00, qjzp=http://172.26.27.234:80/125/20180405/0210/E/S3/125E20180405021045643S3-1.jpg, hpzl=02, cwzp=, jgsk=20180405021045, clxxbh=32090000000000012500112520180405330596, cwkc=400, yssq=1}, {dwmc=盐马路-希望路, hphm=苏JB1455, cdbh=02, cllx=K33, xszt=1302, kkbh=320900000000020010, hpys=2, csys=J, zpsl=1, clbj=0, cthptzzp=http://172.26.27.229:80/WF/010/20180405/0047/N/S2/010N20180405004746522S2-2.jpg, ctzp=, rksj=20180416170036, clsd=30, xsfx=03, qjzp=http://172.26.27.229:80/WF/010/20180405/0047/N/S2/010N20180405004746522S2-1.jpg, hpzl=02, cwzp=, jgsk=20180405004746, clxxbh=32090000000002001000001020180405329675, cwkc=400, yssq=1}, {hphm=苏JB1455, cdbh=03, cllx=K33, xszt=0000, kkbh=320900000000000125, hpys=2, csys=H, zpsl=1, clbj=0, cthptzzp=http://172.26.27.234:80/125/20180403/0756/N/R3/125N20180403075618820R3-2.jpg, ctzp=, rksj=20180416163314, clsd=-1, xsfx=03, qjzp=http://172.26.27.234:80/125/20180403/0756/N/R3/125N20180403075618820R3-1.jpg, hpzl=02, cwzp=, jgsk=20180403075618, clxxbh=32090000000000012500112520180403095036, cwkc=400, yssq=1}, {hphm=苏JB1455, cdbh=01, xszt=0000, kkbh=320900000000000118, hpys=2, csys=A, zpsl=1, clbj=0, cthptzzp=nullnullHTTP://172.26.250.79:8088/image/vrb/1e7fe1f357514641b2b30867a9f817f5/7?key=7b7f0&offset=-1201665766&high=0, ctzp=, rksj=20180307150039, clsd=16, xsfx=00, qjzp=nullnullHTTP://172.26.250.79:8088/image/vrb/1e7fe1f357514641b2b30867a9f817f5/7?key=7b7f1&offset=-1201663618&high=0, hpzl=02, cwzp=, jgsk=20180227002335, clxxbh=32090000000000011800000120180227269616, cwkc=5, yssq=0}, {hphm=苏JB1455, cdbh=03, xszt=0000, kkbh=320900000000000146, hpys=2, csys=A, zpsl=1, clbj=0, cthptzzp=nullnullHTTP://172.26.250.79:8088/image/vrb/ace1d823a3274e9ebd46a56ba76e5cf9/30?key=6a7c55&offset=1316494366&high=0, ctzp=, rksj=20180307150056, clsd=-1, xsfx=02, qjzp=nullnullHTTP://172.26.250.79:8088/image/vrb/ace1d823a3274e9ebd46a56ba76e5cf9/30?key=6a7c56&offset=1316496658&high=0, hpzl=02, cwzp=, jgsk=20180226030026, clxxbh=32090000000000014600001420180226428367, cwkc=0, yssq=0}, {hphm=苏JB1455, cdbh=03, xszt=0000, kkbh=320900000000000112, hpys=2, csys=A, zpsl=1, clbj=0, cthptzzp=nullnullHTTP://172.26.250.79:8088/image/vrb/ace1d823a3274e9ebd46a56ba76e5cf9/30?key=6a5ff3&offset=649465289&high=0, ctzp=, rksj=20180307150046, clsd=50, xsfx=02, qjzp=nullnullHTTP://172.26.250.79:8088/image/vrb/ace1d823a3274e9ebd46a56ba76e5cf9/30?key=6a5ff4&offset=649467345&high=0, hpzl=02, cwzp=, jgsk=20180226014136, clxxbh=32090000000000011200001220180226506834, cwkc=4, yssq=0}, {hphm=苏JB1455, cdbh=02, xszt=0000, kkbh=320900000000000172, hpys=2, csys=A, zpsl=1, clbj=0, cthptzzp=nullnullHTTP://172.26.250.75:8088/image/vrb/0ad2bc3180c24ea09945385ee50f7a37/41?key=1f08d8&offset=547188072&high=0, ctzp=, rksj=20180307150043, clsd=-1, xsfx=01, qjzp=nullnullHTTP://172.26.250.75:8088/image/vrb/0ad2bc3180c24ea09945385ee50f7a37/41?key=1f08d9&offset=547193604&high=0, hpzl=02, cwzp=, jgsk=20180225033725, clxxbh=32090000000000017200001220180225385732, cwkc=0, yssq=0}, {hphm=苏JB1455, cdbh=02, xszt=0000, kkbh=320900000000000112, hpys=2, csys=A, zpsl=1, clbj=0, cthptzzp=nullnullHTTP://172.26.250.79:8088/image/vrb/b85cb75d98f8446e86022db469d6b863/35?key=5e0828&offset=1445796527&high=0, ctzp=, rksj=20180307150042, clsd=36, xsfx=02, qjzp=nullnullHTTP://172.26.250.79:8088/image/vrb/b85cb75d98f8446e86022db469d6b863/35?key=5e0829&offset=1445798843&high=0, hpzl=02, cwzp=, jgsk=20180225031618, clxxbh=32090000000000011200001120180225474406, cwkc=4, yssq=0}, {hphm=苏JB1455, cdbh=03, xszt=0000, kkbh=320900000000000118, hpys=2, csys=A, zpsl=1, clbj=0, cthptzzp=nullnullHTTP://172.26.250.79:8088/image/vrb/b85cb75d98f8446e86022db469d6b863/35?key=5e04c6&offset=1351223003&high=0, ctzp=, rksj=20180307150036, clsd=9, xsfx=03, qjzp=nullnullHTTP://172.26.250.79:8088/image/vrb/b85cb75d98f8446e86022db469d6b863/35?key=5e04c7&offset=1351224651&high=0, hpzl=02, cwzp=, jgsk=20180225025913, clxxbh=32090000000000011800001420180225224934, cwkc=6, yssq=0}, {hphm=苏JB1455, cdbh=05, xszt=0000, kkbh=320900000000000133, hpys=2, csys=A, zpsl=1, clbj=0, cthptzzp=nullnullHTTP://172.26.250.79:8088/image/vrb/b85cb75d98f8446e86022db469d6b863/35?key=5e03e1&offset=1326061972&high=0, ctzp=, rksj=20180307150036, clsd=28, xsfx=03, qjzp=nullnullHTTP://172.26.250.79:8088/image/vrb/b85cb75d98f8446e86022db469d6b863/35?key=5e03e2&offset=1326063544&high=0, hpzl=02, cwzp=, jgsk=20180225025429, clxxbh=32090000000000013300002120180225103100, cwkc=3, yssq=0}, {hphm=苏JB1455, cdbh=02, xszt=0000, kkbh=320900000000000140, hpys=2, csys=A, zpsl=1, clbj=0, cthptzzp=nullnullHTTP://172.26.250.75:8088/image/vrb/0ad2bc3180c24ea09945385ee50f7a37/41?key=1f02e8&offset=401008753&high=0, ctzp=, rksj=20180307150024, clsd=-1, xsfx=01, qjzp=nullnullHTTP://172.26.250.75:8088/image/vrb/0ad2bc3180c24ea09945385ee50f7a37/41?key=1f02e9&offset=401011693&high=0, hpzl=02, cwzp=, jgsk=20180225015645, clxxbh=32090000000000014000001220180225219969, cwkc=0, yssq=0}, {hphm=苏JB1455, cdbh=04, xszt=0000, kkbh=320900000000000129, hpys=2, csys=A, zpsl=1, clbj=0, cthptzzp=nullnullHTTP://172.26.250.79:8088/image/vrb/b85cb75d98f8446e86022db469d6b863/35?key=5de528&offset=466745824&high=0, ctzp=, rksj=20180307150017, clsd=27, xsfx=03, qjzp=nullnullHTTP://172.26.250.79:8088/image/vrb/b85cb75d98f8446e86022db469d6b863/35?key=5de529&offset=466748948&high=0, hpzl=02, cwzp=, jgsk=20180225011436, clxxbh=32090000000000012900001620180225467297, cwkc=4, yssq=0}, {hphm=苏JB1455, cdbh=02, xszt=0000, kkbh=320900000000000139, hpys=2, csys=A, zpsl=1, clbj=0, cthptzzp=nullnullHTTP://172.26.250.75:8088/image/vrb/0ad2bc3180c24ea09945385ee50f7a37/41?key=1efbf1&offset=219570697&high=0, ctzp=, rksj=20180307150012, clsd=20, xsfx=02, qjzp=nullnullHTTP://172.26.250.75:8088/image/vrb/0ad2bc3180c24ea09945385ee50f7a37/41?key=1efbf2&offset=219572641&high=0, hpzl=02, cwzp=, jgsk=20180225003959, clxxbh=32090000000000013900002220180225185980, cwkc=4, yssq=0}, {hphm=苏JB1455, cdbh=02, xszt=0000, kkbh=320900000000000106, hpys=2, csys=A, zpsl=1, clbj=0, cthptzzp=nullnullHTTP://172.26.250.79:8088/image/vrb/96c4618542084f41a9fed8816b1b6cb2/5...
+
+设置项目标题图标：
+<mime-mapping>
+	<extension>ico</extension>
+	<mine-type>image/x-icon</mine-type>
+</mime-mapping>
+
+套牌数据来源：
+高速公路 入口：50.144.2.38:1521/ycdsjpt sjzl_stzyfw/sjzl_stzyfw
+
+地图划线
+
+1.机动车登记信息：VEHICLE
+
+
+1.套牌分析，数据切换到盐城，清空数据
+2.车辆轨迹 数据查询效率 (苏JB0392)
+3.卡口过车信息查询 地图选择，卡口模糊查询，不选车牌也可以查询
+4.普通车辆查询->精确查询 去掉默认车牌、列表号牌号码展示、机动车详情页修改（调用云搜接口）
+
+
+4.13
+1.过车卡口信息在地图显示 添加按车牌号码、号牌种类、开始时间、结束时间 查询（号牌种类缺省小型汽车号牌、时间范围缺省近6个月） 
+
+4.12
+1.四川凉山自治州的人员表比对全国常住人口表，获取人员户籍区号、民族、婚姻状况、详细住址、职业
+2.过车卡口信息在地图显示 并连线
+
+4.11
+车辆大数据：
+1.研判工具->普通车辆查询：机动车登记信息列表 改为盐城的
+2.研判工具->综合轨迹查询：卡口过车信息->预览全景照片 bug修复
+3.车辆详情页->详细信息->去掉机动车所有人 
+4.车辆详情页->轨迹信息->交通违法车辆记录数bug修复
+5.车辆详情页->轨迹信息->过车信息记录数bug修复（hbase查询修改）
+6.研判工具：普通车辆查询（综合查询、精确查询）、活动规律分析、关系车辆分析 的默认车牌号改为苏J
+7.研判工具->活动规律分析->根据号码种类查询 bug修复
+
+
+        http://10.39.149.105:8092/image/vrb/012557ed6ab64b40b8dca17e1701dfad/26?key=30062e&offset=1832494668&high=0
+nullnullhttp://172.26.250.79:8088/image/vrb/012557ed6ab64b40b8dca17e1701dfad/26?key=30062e&offset=1832494668&high=0
+
+4.10
+1.车辆大数据：点击号牌号码 查看详细信息
+2.高速公路入口查询 改为盐城库
+3.区间测速 总记录数 bug修复
+
+
+研判工具-综合轨迹查询 
+1)过车信息 查询的hbase 
+2)高速公路入口、出口、区间测试、交通违法查询的oracle
+
+1.车辆大数据：套牌分析->人工比对->地图比对 Bug修复
+
+
+4.9
+1.车辆大数据：研判工具-综合轨迹查询 过车信息 bug修复
+2.姓名比对（请求全国人口接口），导出exexl
+
+4.8
+车辆大数据修改：
+1.去掉 互动交流、在线授权
+2.江苏省公安厅 换成 盐城市公安局
+3.系统管理 留下 权限管理
+4.研判工具-轨迹信息 过车信息、高速公路入口、出口 总记录数修改
+
+系统管理 日志审计、点位信息 
+
+过车信息：共有70959721536条记录  4302159826 702159826
+select * from t_clxx_tj t where cs = '盐城' and t.tjid like 
+
+
+
+
+
+4.4
+1.车辆大数据 机动车登记信息 详情
+
+4.3
+1.姓名比对（请求全国人口接口），导出exexl
+
+4.2
+1.驾驶员、学员登记信息 导入kafka
+
+3.30
+1.kafka生产数据，更新时间入库
+2.交通违章信息、交通违法案件 导入kafka
+
+
+3.28
+1.机动车基本信息 导入kafka
+2.车辆大数据 车辆轨迹信息 车辆号牌查询
+
+3.27
+1.车辆大数据 研判工具-车辆轨迹信息-地图选择 切换为盐城地区，并设置初始显示比例
+2.hive运行测试
+3.kafka 生产者、消费者 测试
+
+3.23
+1.车辆大数据 研判工具-综合查询：查询机动车所有人、身份证号码、号牌号码、号牌种类、车辆类型、中文品牌、车辆型号、发动机号、车身颜色 分页及查看详情
+
+
+3.22
+1.车辆大数据 研判工具-综合查询：支持模糊查询,?匹配单个字符,*匹配零个或多个字符
+2.kafka学习
+
+3.21
+1.车辆大数据 研判工具-综合查询：机动车登记信息列表、机动车所有人信息列表、被盗抢机动车列表
+2.车辆大数据 研判工具-精确查询：按照 身份证号、车牌号码、车辆型号、车辆品牌、发动机号、车身颜色、车辆大类、车辆细类 查询
+
+3.20
+1.警务大数据 跳转到车辆大数据 接口
+2.车辆大数据 普通车辆查询
+
+3.19
+1.车辆轨迹 地图修改
+2.SSM框架整理
+
+
+1.车辆大数据研判分析应用系统 综合轨迹查询 ->过车信息：
+http://50.144.0.47:8081/stcldsj/zdcldzda/selClxxBysjH.xhtml?hphm=苏J62W26&hpzl=&kssj=2018-01-01 17:41:32&jssj=2018-03-13 17:41:42
+
+ConstantsNotCheckUri需要添加
+http://50.144.0.47:8081/stcldsj/loginWithIdNumber.xhtml?code=cldsjmh&password=&loginType=01&account=320902198409210015
+http://50.144.0.47:8081/stcldsj/loginWithIdNumber.xhtml?code=cldsjmh&account=340621199305047816&password=&loginType=01
+http://50.144.0.47:8081/stcldsj/loginWithIdNumber.xhtml?code=cldsjmh&account=320902198409210015&password=&loginType=01
+http://50.144.0.47:8081/stcldsj/loginWithIdNumber.xhtml?code=cldsjmh&account=admin&password=&loginType=01
+
+
+
+综合轨迹：
+1)高速公路入口：
+dataSource_8.driverClassName=oracle.jdbc.driver.OracleDriver
+dataSource_8.url=jdbc:oracle:thin:@10.32.1.81:1521:jsga
+dataSource_8.username=yxglkh
+dataSource_8.password=yxglkhyh
+select t.*,g.* from GSGL.SENTRY t left join GSGL.GS_DM g  on t.entrystation=g.dm 
+2)高速公路出口（dataSource_8）：
+select t.*,g.*,g2.mc as mc2,g2.dm as dm2,g2.dmlx as dmlx2,g2.gsmc as gsmc2 from GSGL.SEXIT t
+    left join GSGL.GS_DM g on t.ENTRYSTATION=g.dm  and g.dmlx='收费站'
+        left join GSGL.GS_DM g2 on t.exitstation = g2.dm 
+
+3) 区间测速:
+dataSource_5.driverClassName=oracle.jdbc.driver.OracleDriver
+dataSource_5.url=jdbc:oracle:thin:@10.32.203.101:1521:ORCLETL
+dataSource_5.username=JSGASJGL
+dataSource_5.password=JSGASJGL
+select t.* from Jsgasjgl.veh_ptpsrec t
+4)过车信息：
+（dataSource_2）：
+select * from t_clxx_tj t where t.tjid like '32__20180316'
+5)交通违法信息（dataSource_5）：
+select t1.wfsj, max(t1.wfbh) as wfbh, t1.hphm, t1.hpzl, t1.jdcsyr, t1.wfdd
+  from jsgasjgl.T_JTWF_AJXX t1
+  group by t1.wfsj,t1.hphm,t1.hpzl,t1.jdcsyr,t1.wfdd;
+
+车辆轨迹：
+dataSourceName=dataSource_2
+dataSource_2.driverClassName=oracle.jdbc.driver.OracleDriver
+dataSource_2.url=jdbc:oracle:thin:@10.32.212.38:1521:ORCLETL
+dataSource_2.username=CLGJDSJ_JCK
+dataSource_2.password=CLGJDSJ_JCK
+select * from t_clxx_tj t where t.tjid like '32__20180316'
+
+3.16
+1.车辆大数据研判分析应用系统 研判工具 数据源、表 梳理
+2.车辆轨迹地图
+
+3.15
+1.资源服务平台-提供查询接口
+
+3.14
+1.车辆大数据研判分析应用系统 综合轨迹、车辆轨迹查询
+
+3.13
+1.车辆大数据研判分析应用系统 综合轨迹、车辆轨迹查询
+
+3.12
+1.全国人口接口，根据身份证获取姓名、入库、导出execl
+39服务器：sjzl_hd 的idnumber_to_name表
+
+3.9
+1.车辆大数据研判分析应用系统 综合轨迹信息查询
+
+3.8
+1.车辆大数据研判分析应用系统 综合轨迹信息查询
+
+3.7
+1.车辆轨迹 数据过滤查询
+
+经过时刻 小于等于 当前时间
+QueryWatch.java
+scanWatchTimeIndex
+
+车辆轨迹：http://50.144.0.47:8081/stcldsj/index.xhtml
+账号密码：admin/dm123456
+
+3.6
+1.车辆卡口大数据 数据导入及测试
+
+3.5
+1.车辆卡口大数据 平台测试，代码跟踪
+
+3.2
+1.车辆大数据研判分析应用系统,车辆轨迹查询
+
+3.1
+1.全国人口接口，根据身份证获取姓名，并入库
+2.车辆卡口大数据 平台搭建，测试
+
+2.28
+1.车辆卡口大数据分析
+
+2.27
+阅读Hbase官方文档 性能调优部分，整理如下：
+1.操作系统 将交换区设为0。
+2.列族和列名转为字节数组代价昂贵。最好使用字节数组常量，如下：
+	public static final byte[] CF = "cf".getBytes(); 
+3.表创建: 预创建区域(Region)
+4.表创建: 延迟log刷写。HTableDescriptor设置hbase.regionserver.optionallogflushinterval值，缺省1000ms
+5.当你进行大量的Put的时候，要确认你的HTable的setAutoFlush是关闭着的。
+6.Scan 缓存。Scan.setCacheing的值设置为大于0的数，
+	使用默认值就意味着map-task每一行都会去请求一下region-server（例：500）
+	
+4.表创建: 延迟log刷写
+Puts的缺省行为使用 Write Ahead Log (WAL)，会导致 HLog 编辑立即写盘。如果采用延迟刷写，WAL编辑会保留在内存中，直到刷写周期来临。好处是集中和异步写HLog，潜在问题是如果RegionServer退出，没有刷写的日志将丢失。但这也比Puts时不使用WAL安全多了。
+延迟log刷写可以通过 HTableDescriptor 在表上设置，hbase.regionserver.optionallogflushinterval缺省值是1000ms.	
+5.当你进行大量的Put的时候，要确认你的HTable的setAutoFlush是关闭着的。否则的话，每执行一个Put就要想区域服务器发一个请求。通过 htable.add(Put) 和 htable.add( <List> Put)来将Put添加到写缓冲中。如果 autoFlush = false，要等到写缓冲都填满的时候才会发起请求。要想显式的发起请求，可以调用flushCommits。在HTable实例上进行的close操作也会发起flushCommits
+	
+1.Oracle的普通索引采用B+树:读性能很高、但是写性能较低（为保持有序写入，产生了大量的随机IO）
+2.HBase LSM树（Log-Structured Merge-Trees）：
+  1).先在内存中构建有序小树（logfile） memstore->磁盘（抛弃相应logfile）storefile ->merge成大树
+  
+
+
+
+2.26
+1.HBase数据读取流程解析 client->RegionScaner->StoreScanner->(StoreFileScanner+MemStoreScanner)
+	->seek rowkey -> StoreFileScanner合并构建最小堆(heap)
+	
+（更新、删除 较为简单；更新没有更新原有数据，而是使用时间戳属性实现了多版本，删除是插入 打上"deleted"标签的数据）
+1).LSM树，查询需要涉及多个分片。hbase根据zookeeper
+
+Hbase缓存结构： 
+1.MemStore：写缓存， Hbase执行写操作， 数据->MemStore->HLog->磁盘
+2.BlockStore:读缓存
+
+2.24
+1.安保平台 分页功能完善
+  pager-taglib.jar
+  <%@ taglib uri="http://jsptags.com/tags/navigation/pager" prefix="pg"%>
+2.Hbase源码 缓存部分：MemStore:写缓存，->MemStore->HLog->磁盘、BlockStore读缓存
+
+2.23
+1.hbase数据 插入、查询 调试
+
+2.22
+1.解决安保平台-对比预警的头像不显示 问题
+http://50.144.0.49:8080/ycabpt/ycabpt/qbdq/to_main.xhtml
+ 因48服务器安保平台项目被关闭 导致（大屏的头像 访问的安保平台数据）
+ 获取用户头像: http://50.144.0.48:8080/yc_wwyjpt/fxjcyj/dzda/getCzrkImage.xhtml?gmsfhm=320911191103207010
+ ${kcyjList.SFZH}
+
+2.9
+1.警务大数据管理平台、智慧安保平台、资源碰撞比对、警务云搜索 测试、视频录制
+
+2.7
+1.安保平台：资源专题库 ->改为 预警信息、报省厅信息 ->放到重大预警发布、及解决分页bug
+
+2.6
+1.智慧安保平台 查询完善
+2.警务大数据管理平台 数字证书登录
+
+2.5
+1.智慧安保平台 民族数据入库、分页查询
+2.Java数据证书管理工具keytool（用于公安数字证书登录）研究、测试
+
+2.2
+1.智慧安保平台 根据 民族、姓名、身份证、航班号、登记日期区间、更新时间查询、导出execl
+2.全国人口接口解析xml，将民族入库
+
+2.1
+1.schedule定时任务测试
+2.新疆维族信息 数据查询、execl导出
+
+1.31
+1.定时 从民航进出港订票表 读取新疆维族数据 并 调用接口 获取民族 存入表中
+ 
+1.30
+1. 警务大数据管理平台->资源比对服务->调试solr比对
+ 
+1.29
+1.警务大数据管理平台->资源下载服务->mongodb配表，并测试通过
+2.警务大数据管理平台->资源比对服务->正确写入比对内容信息
+ 
+1.26
+1.警务大数据管理平台 资源服务中心 查询代码调试、修改
+ 
+1.25
+1.警务大数据管理平台 资源管理中心 资源服务注册->申请->审批 流程测试
+2.警务大数据管理平台 资源服务中心 查询、下载 代码调试
+ 
+ 
+1.24
+1.熟悉presto文档->sql语法声明->查询  
+2.mongodb索引建立，查询测试
+3.警务大数据管理平台 项目本地运行、熟悉资源服务模块代码
+ 
+1.23
+1.资源碰撞分析工具 presto-jdbc源码修改，测试查询效率
+ 
+1.22
+1.资源碰撞分析工具 熟悉代码，研究查询机制
+
+1.19
+1.hase数据导入,rowkey 可配置且唯一
+2.hbase数据导入，前端初步展示（layui）
+
+1.18
+1.hbase数据导入、查询、可配置优化
+
+1.17
+1.码云下载开源项目（hbase插入数据），运行
+2.hbase数据导入 jdbc,表名，列簇名等可配置
+
+1.16
+1.警务大数据 首页图表展示问题修复
+2.hbase插入数据 性能调试
+
+1.15
+1.hbase查询过程梳理，常住人口表导入hbase
+
+1.12
+1.资源碰撞分析工具 使用身份证号登录：
+http://50.144.0.46:8081/ComparisonV3/invisibleLogin?idnumber=360330121121212121
+http://50.144.74.6:8081/ComparisonV3/invisibleLogin?idnumber=340621199305047816
+2.常住人口表 梳理
+3.警务大数据首页，数据仓库重要数据 改成 柱状图
+
+原csadmin 360100199011010502 改为340621199305047816
+
+1.11
+1.虚拟机centos6安装jdk8
+2.hbase源码包整理成project导入eclipse(hbase-client,hbase-server,hbase-common,
+hbase-hadoop2-compat,hbase-hadoop-compat,hbase-prefix-tree,hbase-protocol,hbase-thrift,test-hbase)
+
+1.10
+1.盐城公安警务大数据-意见反馈页面跳转
+2.hbase-example配置hadoop路径等
+3.本地安装linux(centos6.8)虚拟机
+
+1.9
+1.熟悉kettle
+2.查询并删除重复数据、获取所有用户表的表数据量
+3.警务大数据 登录完善，问题修复
+
+zookp
+1.hase导数据
+
+1.8
+1.整理hbase开发程序 样例代码文档
+2.获取hbase数据最大值
+
+1.5
+1.Mybatis代码自动生成配置
+2.警务大数据 跳转到智慧安保平台
+3.熟悉hbase开发
+4.警务大数据 登录、退出完善
+
+1.4
+1.警务大数据 数据总量、数据仓库数据表图、数据仓库数据量图、数据仓库重要数据图 数据渲染
+2.项目清理，上传到svn
+
+1.3
+1.spring配置多数据源
+2.用户密码登录、PK单点登录
+
+1.2
+1.开发环境搭建，登录页面
+
+智慧安保平台：http://50.144.0.48:8080/yc_wwyjpt/sys/global/loginBySfzh.xhtml?sfzh=
+饼图调整
+数据总量 先减500，再3秒加 5-20
+ 
+盐城智慧预警平台（zhyjpt）：https://10.32.92.176/svn/yc/yc_wwyjpt/yc_wwyjpt
+警务大数据管理平台(fzs_jwypt)：https://10.32.92.176/svn/yc/fzs_jwypt
+
+

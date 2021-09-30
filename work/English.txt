@@ -1,0 +1,47 @@
+
+she has suspended. //她被终止了（权限等。。）
+I do actually have to go back.
+
+
+what was the scale of the impact of the achievement you mentioned?
+你提到的成就的影响有多大
+
+
+honk your horn 鸣喇叭
+from henceforth on  从今以后 
+Well,have fun being happy at your dad.
+So,why not let them spoil us?  宠溺
+How are the rest of the kids? 其他的孩子还好吗？
+
+
+Hello everyone,My name is James,I'm from China
+I graduated from University in 2011 
+with a major in computer science and technology. 
+I have 10 years of software development experience. 
+I am mainly engaged in Java development and also familiar 
+with front-end development and the use of databases.
+
+The project I am working on is the comprehensive command platform of Yandu Police station, 
+Including 7 modules:
+police situation monitoring, 
+public security community linkage, 
+community policing, 
+law enforcement supervision, 
+work list management, 
+service quality, 
+public security command and dispatch
+
+we use gitlab to manage our codes, issues and tasks
+
+
+
+
+
+
+
+
+
+
+
+
+

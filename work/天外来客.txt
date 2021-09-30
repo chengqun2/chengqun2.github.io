@@ -1,0 +1,175 @@
+
+
+
+
+http://localhost:5000/app/account/profile
+
+http://localhost:5000/app/zh/login
+
+//20 seconds
+http://localhost:5000/app/en/wp/home/consultants
+
+
+$supportedLanguagesKeys = LaravelLocalization::getSupportedLanguagesKeys();
+$locale = (in_array(app()->getLocale(),$supportedLanguagesKeys) && app()->getLocale() == 'en') ? '' : str_replace('_', '-', app()->getLocale()).'/';
+
+cd F:\gitlab\happy_consults\wp-plugin-happyconsults
+docker run -d --env-file=./wp.env --name hc_dev -p 5000:5000 -v F:\gitlab\happy_consults\platform:/platform -v F:\gitlab\happy_consults\wp-plugin-happyconsults\wp-config.php:/app/wp-config.php -v F:\gitlab\happy_consults\wp-plugin-happyconsults\nginx_dev.conf:/opt/docker/etc/nginx/vhost.conf hc_dev:latest
+
+cd F:\gitlab\happy_consults\platform
+npm run watch
+
+1. set environment of computer path ;download phpstorm and setting PHP cli interpreter;
+2. install composer
+3. uncomment extension=fileinfo in php.ini 
+4. composer install   ( composer install --ignore-platform-reqs )
+5. cp .env.example .env php artisan key:generate
+6. php artisan serve --port=8000
+
+
+php artisan cache:clear
+composer dump-autoload
+php artisan key:generate 
+
+php artisan serve
+
+
+Composer：php包管理器，安装依赖包到vendor文件夹下
+
+happy_consults
+1.create a database and import the sql inside happy_consults.sql.zip ---- this is the PLATFORM database
+2.create a database and import the sql inside happy_consults_wordpress.zip  --- this is the WORDPRESS database
+3.unzip the dev.zip inside the wp-plugin-happyconsults folder — these are two config files you will need to support docker
+4.cd into wp-plugin-happyconsults and execute docker build -t hc_dev .
+5.create a .env  file inside wp-plugin-happyconsults folder
+WP_DB_DATABASE=[YOUR_WP_DB_NAME]
+WP_DB_USER=[YOUR_DB_USER]
+WP_DB_PASSWORD=[YOUR_DB_USER]
+WP_DB_HOST=[YOUR_DB_IP]
+WP_SITEURL=http://localhost:5000
+DB_HOST=[YOUR_DB_IP]
+DB_PORT=3306
+DB_DATABASE=[YOUR_PLATFORM_DB_NAME]
+DB_USERNAME=[YOUR_DB_USER]
+DB_PASSWORD=[YOUR_DB_PASSWORD]
+APP_URL=http://localhost:5000/app
+WP_URL=http://localhost:5000
+RESOURCE_ROOT=/app
+6.run this docker command to get it running (inside the wp-plugin-happyconsults folder
+docker run --env-file=./wp.env --name hc_dev -p 5000:5000 -v F:\gitlab\happy_consults\platform:/platform -v F:\gitlab\happy_consults\wp-plugin-happyconsults/dev/nginx_dev.conf:/opt/docker/etc/nginx/vhost.conf -v F:\gitlab\happy_consults\wp-plugin-happyconsults/dev/wp-config.php:/app/wp-config.php hc_dev:latest
+7.in platform folder, run npm run watch
+8.HAPPY DEVELOPING! - the app should be available on http://localhost:5000  
+
+
+
+docker run --env-file=./wp.env --name hc_dev -p 5000:5000 -v F:\gitlab\happy_consults\platform:/platform -v F:\gitlab\happy_consults\wp-plugin-happyconsults/dev/nginx_dev.conf:/opt/docker/etc/nginx/vhost.conf -v F:\gitlab\happy_consults\wp-plugin-happyconsults/dev/wp-config.php:/app/wp-config.php hc_dev:latest
+
+docker run --env-file=./wp.env --name hc_dev -p 5000:5000 -v F:\gitlab\happy_consults\platform:/platform -v F:\gitlab\happy_consults\wp-plugin-happyconsults\dev\nginx_dev.conf:/opt/docker/etc/nginx/vhost.conf -v F:\gitlab\happy_consults\wp-plugin-happyconsults\dev\wp-config.php:/app/wp-config.php hc_dev:latest
+
+docker container ls
+docker stop d2f4c43b0e44
+
+
+wordpress
+
+
+docker buildx create --driver-opt env.BUILDKIT_STEP_LOG_MAX_SIZE=50000000
+docker buildx build -t test-docker .
+
+
+open vscode terminal:
+cd F:\gitlab\isf_backend\isf_backend 
+docker build -t getting-started .
+docker run -dp 3000:3000 isf-k8s-test  
+
+docker create -v /var/lib/postgresql/data --name PostgresData alpine
+docker run -p 5432:5432 --name postgres -e POSTGRES_PASSWORD=admin -d --volumes-from PostgresData postgres
+docker container stop [container name1] [container name2] [...]
+docker container start [container name1] [container name2] [...]
+docker container rm [container name1] [container name2] [...]
+
+docker exec -it 5f5048789aa441c109fb95827371b8f4de5b59f83d214910f9674c735571f545 bash
+
+
+CI: Continuous integration（持续集成）
+CD: Continuous delivery（持续交付）
+ 
+Gatling 性能测试（并发，atOnceUsers ）
+
+Docker可以看作是k8s的一个组件，k8s也支持Rocket（Rocket是另一种容器技术）
+ 
+ Ctrl+Alt+O . , and choose Remove unused import.
+
+ We need to specify the columns the customer wants for each export
+ 
+pgsql的数据类型很丰富
+
+springboot启动
+swagger ui
+excel导出，以流方式传给前端
+Java8 stream
+
+表达式() -> new HashMap<>();
+可以替换成 HashMap::new
+
+//        Page<UserVM> users = userService.getAllVM(Pageable.unpaged(),params);
+//        List<UserCSV> list = users.getContent().stream().map(userVM -> new UserCSV(userVM))
+//                .collect(Collectors.toList());
+List<OrderVM> list = orders.getContent().parallelStream().collect(Collectors.toList());
+
+//Before Java 8
+List<String> result = new ArrayList<>();
+for (Staff x : staff) {
+	result.add(x.getName());
+}
+System.out.println(result); //[mkyong, jack, lawrence]
+
+//Java 8
+List<String> collect = staff.stream().map(x -> x.getName()).collect(Collectors.toList());
+System.out.println(collect); //[mkyong, jack, lawrence]
+
+Time2->3: PT10M3.3792761S
+Time3->4: PT13.6174664S
+
+Use psql to import sql files into postgresql:
+1. open the cmd
+2. SET PGCLIENTENCODING=utf-8 (to fix encoding issue)
+3. chcp 65001 (to fix encoding issue)
+4. connect to postgresql:  psql -h localhost -U postgres
+5. show database list： \l
+6. enter database axione_isf： \c axione_isf
+7. import sql files into database:   \i F:/aliengen/isf_v2.sql
+
+1.15.90.81
+
+pg_dump -C -h localhost -U postgres axione_isf | psql -h 1.15.90.81 -U admin axione_isf
+
+COPY public.t_users (user_id, uid, name) FROM stdin;
+
+Page<AttachementVM> attachements = attachementWorkflowTokenViewRepository.findAll(where, Pageable.unpaged())
+                .map(attachementWorkflowTokenView -> attachementService.getAttachementVM(attachementWorkflowTokenView));
+			
+				
+7.9
+CSV export
+				
+				
+post(getToken):
+http://localhost:9090/api/login
+{"username":"admin","password":"adminadmin"}
+
+header:
+key:    Authorization
+value:  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyNjU5MDk2N30.C3FKecki3xanWw1WbKLLW6LC7hyTBoZ8CW_1w0yqktltsvXOAtUYVVUC1N1iwZQbChv3h0_pKkEYligWEf-KSA
+
+
+7.7
+There are 3 tasks you will have to handle:
+Make swagger works
+Remove the default Spring MVC pages
+There is a maven goal to generate the doc, and you will have to improve the documentation generation
+
+
+chengqun@aliengen.com  Ww88459526
+postgres/admin 
+
