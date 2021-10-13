@@ -1,3 +1,9 @@
+-webkit-mask
+
+
+磁盘清理：
+G:\downloads\spacesniffer_1_3_0_2
+
 查看服务：ps -ef | grep -i redis （或：ps -aux|grep redis）
 $ grep -i "linux" welcome.txt
 
