@@ -1,4 +1,6 @@
 # chengqun2.github.io
 chengqun2.github.io
 
-xxx
+git add .
+git commit -m 'comments...'
+git push
