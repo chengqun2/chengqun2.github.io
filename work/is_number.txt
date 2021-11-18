@@ -1,4 +1,4 @@
---1¡¢ÀûÓÃ to_number
+--1ã€åˆ©ç”¨ to_number
 CREATE OR REPLACE FUNCTION isnumeric(str IN VARCHAR2)
     RETURN NUMBER
 IS
@@ -22,7 +22,7 @@ BEGIN
 END isnumeric;
 /
 
---2¡¢ÀûÓÃ regexp_like
+--2ã€åˆ©ç”¨ regexp_like
 CREATE OR REPLACE FUNCTION isnumeric (str IN VARCHAR2)
     RETURN NUMBER
 IS
@@ -41,7 +41,7 @@ BEGIN
 END isnumeric;
 /
 
---3¡¢ÀûÓÃ translate
+--3ã€åˆ©ç”¨ translate
 CREATE OR REPLACE FUNCTION isnumeric (str IN VARCHAR2)
     RETURN NUMBER
 IS
