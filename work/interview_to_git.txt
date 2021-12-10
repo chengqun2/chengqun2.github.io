@@ -1,3 +1,59 @@
+$.ajax{
+	async: false   //Other code waiting for this to finish
+}
+var phpData = (function get_php_data() {
+  var php_data;
+  $.ajax({
+    url: "http://somesite/v1/api/get_php_data",
+    async: false, 
+    //very important: else php_data will be returned even before we get Json from the url
+    dataType: 'json',
+    success: function (json) {
+      php_data = json;
+    }
+  });
+  return php_data;
+})();
+
+
+
+//生成自签名证书
+keytool -genkeypair -alias baeldung -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore baeldung.p12 -vali
+
+// 配置 URL 访问权限
+@Override
+protected  void configure(HttpSecurity http) throws Exception {
+	http.authorizeRequests() // 开启 HttpSecurity 配置
+		.antMatchers("/admin/**").hasRole("ADMIN") // admin/** 模式URL必须具备ADMIN角色
+		.antMatchers("/user/**").access("hasAnyRole('ADMIN','USER')") // 该模式需要ADMIN或USER角色
+		.antMatchers("/db/**").access("hasRole('ADMIN') and hasRole('DBA')") // 需ADMIN和DBA角色
+		.anyRequest().authenticated() // 用户访问其它URL都必须认证后访问（登录后访问）
+		.and().formLogin().loginProcessingUrl("/login").permitAll() // 开启表单登录并配置登录接口
+		.and().csrf().disable(); // 关闭csrf
+}
+
+WebSecurity web
+web.ignoring().antMatchers("/css/**");  //anyRequest();
+ingore是完全绕过了spring security的所有filter，相当于不走spring security
+
+
+查看当前所属分支
+git branch -vv
+
+cd /xx/xx
+git clone git@github.com:chengqun2/chess.git
+git checkout -b newBranch
+git add .
+git commit -m '注释'
+git remote
+git push origin newBranch
+
+403 Forbidden
+Spring Security CSRF 保护默认是开启的，那么在 POST 方式提交表单的时候就必须验证 Token，如果没有，
+那么自然也就是 403 没权限了
+
+spring-security 跨域,除了@CrossOrigin外，还需要配置WebSecurityConfig
+
 yum install java-1.8.0-openjdk
 
 Error: PostCSS received undefined instead of CSS string

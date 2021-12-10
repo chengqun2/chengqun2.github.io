@@ -1468,6 +1468,7 @@ select *
 	docker pull mysql:5.6
 	docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.6
 	netstat -na|grep 3306
+	sudo iptables -A INPUT -p tcp --dport 3306 -j ACCEPT
 	docker ps
 290.docker°²×°postgresql
 	docker pull postgres
