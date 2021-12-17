@@ -1466,7 +1466,7 @@ select *
 289.使用docker安装mysql：
 	docker images
 	docker pull mysql:5.6
-	docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.6
+	docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.6 --lower_case_table_names=1
 	netstat -na|grep 3306
 	sudo iptables -A INPUT -p tcp --dport 3306 -j ACCEPT
 	docker ps
@@ -1485,3 +1485,28 @@ select *
 292.评级组件（打星）：
 	var rate =3;
 	"★★★★★☆☆☆☆☆".slice(5 - rate, 10 - rate);	
+293.yum install db5 error(-30973) :
+	mkdir /var/lib/rpm/backup
+	cp -a /var/lib/rpm/__db* /var/lib/rpm/backup/
+	rm -f /var/lib/rpm/__db.[0-9][0-9]*
+	rpm --quiet -qa
+	rpm --rebuilddb
+	yum clean all
+294.install mysql on centos:
+	sudo yum localinstall https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+	sudo yum install mysql-community-server
+	sudo systemctl enable mysqld
+	sudo systemctl start mysqld
+	sudo systemctl status mysqld
+	sudo grep 'temporary password' /var/log/mysqld.log
+	sudo mysql_secure_installation
+	Aa123456!
+	mysql -u root -p
+	CREATE USER 'cq'@'%' IDENTIFIED BY 'Cq@Passw0rd';
+	GRANT ALL PRIVILEGES ON *.* TO 'cq'@'%' WITH GRANT OPTION;
+	mysql -u cq -h 1.15.90.81 -p
+295.set lower_case_table_names = 1 (to make table_name case insensitive)
+	vim /etc/my.cnf
+	[mysqld]
+	lower_case_table_names = 1
+	systemctl restart mysqld	

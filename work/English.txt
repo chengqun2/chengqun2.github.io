@@ -1,7 +1,68 @@
+The main difference between the .equals() method and == operator 
+is that one is a method and the other is the operator.
+We can use == operators for reference comparison (address comparison) 
+and .equals() method for content comparison. 
+In simple words, == checks if both objects point to the same memory location 
+whereas .equals() evaluates to the comparison of values in the objects.
+If a class does not override the equals method, 
+then by default it uses the equals(Object o) method of 
+the closest parent class that has overridden this method. 
+.equals() 方法和 == 运算符的主要区别
+一个是方法，另一个是操作符。
+我们可以使用 == 运算符进行引用比较（地址比较）
+和 .equals() 方法进行内容比较。
+简单来说，== 检查两个对象是否指向相同的内存位置
+而 .equals() 评估对象中值的比较。
+如果一个类没有覆盖 equals 方法，
+然后默认情况下它使用 equals(Object o) 方法
+覆盖此方法的最接近的父类。
+
+
+This(ThreadLocal) gives us the ability to store data individually for the current thread – 
+and simply wrap it within a special type of object.
+这使我们能够为当前线程单独存储数据 - 并简单地将其包装在特殊类型的对象中。
+
+we have a dedicated thread for each particular userId
+我们为每个特定的 userId 设置了一个专用线程
+
+
+The difference is that execute simply starts the task without any further ado, 
+whereas submit returns a Future object to manage the task
+不同之处在于 execute 只是简单地启动任务，没有任何进一步的操作，
+而 submit 返回一个 Future 对象来管理任务
+
+
+A closure is the combination of a function bundled together (enclosed) 
+with references to its surrounding state (the lexical environment). 
+In other words, a closure gives you access to an outer function’s scope 
+from an inner function. In JavaScript, closures are created every time 
+a function is created, at function creation time.
+闭包是捆绑在一起（封闭）的函数与其周围状态（词法环境）的引用的组合。 
+换句话说，闭包使您可以从内部函数访问外部函数的作用域。 
+在 JavaScript 中，每次创建函数时都会在创建函数时创建闭包。
+
+Closures are useful because they let you associate data 
+(the lexical environment) with a function 
+that operates on that data. 
+This has obvious parallels to object-oriented programming,
+where objects allow you to associate data (the object's properties) 
+with one or more methods.
+闭包很有用，因为它们使您可以将数据（词法环境）
+与对该数据进行操作的函数相关联。 
+这与面向对象编程有明显的相似之处，
+其中对象允许您将数据（对象的属性）与一个或多个方法相关联。
+
+Private methods aren't just useful for restricting access to code. 
+They also provide a powerful way of managing your global namespace.
+私有方法不仅仅用于限制对代码的访问。它们还提供了一种管理全局命名空间的强大方法。
+
+
+
+
+
 It isn’t right that 55 of our largest corporations paid zero 
 in federal income taxes on $40 billion of profits in 2020.
 It needs to change.
-
 
 she has suspended. //她被终止了（权限等。。）
 I do actually have to go back.
