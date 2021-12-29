@@ -1,3 +1,24 @@
+Features, advantages
+
+
+ZooKeeper is a centralized service for maintaining configuration information, 
+naming, providing distributed synchronization, and providing group services.
+All of these kinds of services are used in some form or another 
+by distributed applications. Each time they are implemented there is a lot of work 
+that goes into fixing the bugs and race conditions that are inevitable. 
+Because of the difficulty of implementing these kinds of services, 
+applications initially usually skimp on them, 
+which make them brittle in the presence of change and difficult to manage. 
+Even when done correctly, different implementations of these services 
+lead to management complexity when the applications are deployed.
+ZooKeeper 是一个集中式服务，用于维护配置信息、命名、提供分布式同步和提供组服务。 
+分布式应用程序以某种形式使用所有这些类型的服务。 
+每次实现它们时，都需要进行大量工作来修复不可避免的错误和竞争条件。 
+由于实现这些服务的难度，应用程序最初通常会吝啬它们，
+这使得它们在发生变化时变得脆弱且难以管理。 即使正确完成，
+这些服务的不同实现也会导致部署应用程序时的管理复杂性。
+
+
 The main difference between the .equals() method and == operator 
 is that one is a method and the other is the operator.
 We can use == operators for reference comparison (address comparison) 

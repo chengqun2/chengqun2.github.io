@@ -1,3 +1,33 @@
+How to empty a redis database?
+FLUSHDB - clears currently active database
+FLUSHALL - clears all the existing databases
+
+feign  header中传token (自定义拦截器)
+
+feign调用多个服务 传参、异常处理（fallbackFactory）
+索引类型
+ExecutorService 异常处理（如何处理数据丢失）
+
+What is Overloading and Overriding?
+When two or more methods in the same class have the same name 
+but different parameters, it’s called Overloading.
+When the method signature (name and parameters) are the same in the superclass 
+and the child class, it’s called Overriding.
+
+ArrayList  VS  LinkedList
+1) ArrayList internally uses a dynamic array to store the elements.	
+LinkedList internally uses a doubly linked list to store the elements.
+2) Manipulation with ArrayList is slow because it internally uses an array. 
+If any element is removed from the array, all the bits are shifted(位移) in memory.	
+Manipulation with LinkedList is faster than ArrayList 
+because it uses a doubly linked list, so no bit shifting is required in memory.
+3) An ArrayList class can act as a list only because it implements List only.	
+LinkedList class can act as a list and queue both 
+because it implements List and Deque interfaces.
+4) ArrayList is better for storing and accessing data.	
+LinkedList is better for manipulating data.
+
+
 Spring有如下优点：
 1.低侵入式设计，代码污染极低
 2.独立于各种应用服务器，基于Spring框架的应用，可以真正实现Write Once,Run Anywhere的
@@ -8,6 +38,7 @@ Spring有如下优点：
 5.Spring的ORM和DAO提供了与第三方持久层框架的良好整合，并简化了底层的数据库访问
 6.Spring并不强制应用完全依赖于Spring，开发者可自由选用Spring框架的部分或全部    
 
+
 请求统一通过 API 网关（Zuul）来访问内部服务。
 网关接收到请求后，从注册中心（Eureka）获取可用服务。
 由 Ribbon 进行均衡负载后，分发到后端具体实例。
@@ -16,8 +47,16 @@ Hystrix 负责处理服务超时熔断。
 Turbine 监控服务间的调用和熔断相关指标。
 
 
-ExecutorService executor = Executors.newFixedThreadPool(2);
-
+ExecutorService executorService = Executors.newFixedThreadPool(1);
+Future future = executorService.submit(new Callable(){
+	public Object call() throws Exception {
+		Map map = new HashMap();
+		map.put("code","000");
+		System.out.println("Asynchronous Callable ..");
+		return map;
+	}
+});
+Map result = (Map)future.get();
 
 云服务器mysql:
 username: cq
