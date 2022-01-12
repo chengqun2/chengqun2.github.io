@@ -1,3 +1,50 @@
+$('#exportForm').submit(function(e){
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    $.ajax({
+        type: "POST",
+        url: $(this).attr( 'action' ),
+        data: $(this).serialize(),
+        success: function( response ) {
+            console.log( response );
+        }
+    });
+    return false;
+});
+
+排行版的实现，一般使用redis的zset数据类型。
+
+索引失效的场景：
+1. 查询条件包含or，可能导致索引失效
+2. 如何字段类型是字符串，where时一定用引号括起来，否则索引失效
+3. like通配符可能导致索引失效。
+4. 联合索引，查询时的条件列不是联合索引中的第一个列，索引失效。
+5. 在索引列上使用mysql的内置函数，索引失效。
+6. 对索引列运算（如，+、-、*、/），索引失效。
+7. 索引字段上使用（！= 或者 < >，not in）时，可能会导致索引失效。
+8. 索引字段上使用is null， is not null，可能导致索引失效。
+9. 左连接查询或者右连接查询查询关联的字段编码格式不一样，可能导致索引失效。
+10. mysql估计使用全表扫描要比使用索引快,则不使用索引。
+
+现代操作系统使用虚拟内存，即虚拟地址取代物理地址，使用虚拟内存可以有2个好处：
+虚拟内存空间可以远远大于物理内存空间
+多个虚拟内存可以指向同一个物理地址
+零拷贝实现思想，就利用了虚拟内存这个点：
+多个虚拟内存可以指向同一个物理地址，
+可以把内核空间和用户空间的虚拟地址映射到同一个物理地址，
+这样的话，就可以减少IO的数据拷贝次数啦
+
+$(document).on('mousemove',".className",function(){
+	...
+})
+The mousemove event is sent to an element when the mouse pointer 
+moves inside the element. 
+Any HTML element can receive this event.
+当鼠标指针在元素内移动时，mousemove 事件被发送到元素。
+任何 HTML 元素都可以接收此事件。
+
+
+
 How to empty a redis database?
 FLUSHDB - clears currently active database
 FLUSHALL - clears all the existing databases
@@ -63,7 +110,6 @@ username: cq
 password: Cq@Passw0rd
 云服务器redis:
 password: cq123456
-
 
 # 安装yarn
 npm install -g yarn
