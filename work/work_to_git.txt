@@ -1047,8 +1047,8 @@ select *
 	2).修改tomcat/bin/catalina.sh  	改为CATALINA_OUT="$CATALINA_BASE"/logs/catalina.out
 205.css中!important的优先级最高，高于内置的style，慎用!important。	
 206.windows cmd 端口号查询，kill：
-	netstat -ano | findstr "8081"
-	taskkill /pid 14396  -t  -f 
+	netstat -aon|findstr "8081"
+	taskkill /T /F /PID 9088 	
 207.freemarker ${(map.code)!""}  这种方式，能够处理map或者code为miss value的情况	
 208.navicat查看mysql版本: select version() from dual;
 209.linux停止某个tomcat.
@@ -1509,4 +1509,20 @@ select *
 	vim /etc/my.cnf
 	[mysqld]
 	lower_case_table_names = 1
-	systemctl restart mysqld	
+	systemctl restart mysqld
+296.linux查看服务器 8000 端口的占用情况：
+	lsof -i:8000	
+297.windows安装telnet,在cmd中输入：
+	dism /Online /Enable-feature /FeatureName:TelnetClient
+298.退出telnet. 退出telnet的命令:ctrl+]，然后再输入q就可以退出了
+299.linux查看端口被哪个进程占用的方法
+	lsof -i:端口号	
+	kill -9 pid
+300.oracle：select replace(replace(value,chr(9),''),chr(10),'') from dual;
+	Chr(9)	HT	Horizontal Tab（tab键的两个空格）
+	Chr(10)	LF	Line Feed(换行符)	
+	Chr(13) Carriage Return(回车)
+	Chr(32) Space(空白) ...
+301.mysql 多行拼接成一行：
+	SELECT person_id,GROUP_CONCAT(hobbies SEPARATOR ', ') FROM peoples_hobbies
+	GROUP BY person_id;

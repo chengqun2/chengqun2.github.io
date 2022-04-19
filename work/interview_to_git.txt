@@ -1,3 +1,24 @@
+npm install --cache /tmp/empty-cache
+
+npm install --legacy-peer-deps
+
+JpaRepository extends PagingAndSortingRepository 
+which in turn extends CrudRepository.
+JpaRepository 扩展了 PagingAndSortingRepository，后者又扩展了 CrudRepository。
+Their main functions are:
+CrudRepository mainly provides CRUD functions.
+PagingAndSortingRepository provides methods to do pagination and sorting records.
+JpaRepository provides some JPA-related methods such as flushing the persistence context and deleting records in a batch.
+
+
+IntelliJ IDEA: StackOverflowError on Build Project
+Adding -Xss4m to the build process VM options should help
+：setting -> Build,Execution -> compiler -> shared..
+
+JSP中使用ES6模板字符串
+必须在jsp中将模板字符串的${}进行转义，前面加个斜杠写成\${}，
+跟EL表达式区分开来就可以了。
+
 $('#exportForm').submit(function(e){
     e.preventDefault();
     e.stopImmediatePropagation();
@@ -249,6 +270,7 @@ docker start **CONTAINER ID**
 
 telnet ip port 
 telnet 50.144.0.47 8089
+退出telnet. 退出telnet的命令:ctrl+]，然后再输入q就可以退出了
 wget ip:port
 
 centos安装docker:
