@@ -209,6 +209,9 @@ git commit -m '注释'
 git remote
 git push origin newBranch
 
+git取消commit; HEAD^的意思是上一个版本
+git reset --soft HEAD^
+
 403 Forbidden
 Spring Security CSRF 保护默认是开启的，那么在 POST 方式提交表单的时候就必须验证 Token，如果没有，
 那么自然也就是 403 没权限了

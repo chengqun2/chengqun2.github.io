@@ -1526,3 +1526,5 @@ select *
 301.mysql 多行拼接成一行：
 	SELECT person_id,GROUP_CONCAT(hobbies SEPARATOR ', ') FROM peoples_hobbies
 	GROUP BY person_id;
+302.git取消commit; HEAD^的意思是上一个版本
+	git reset --soft HEAD^	
