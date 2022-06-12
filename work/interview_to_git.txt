@@ -1,3 +1,25 @@
+typescript:
+  interface Person{
+	firstName:string;
+	lastName:string;
+	gender?:string;  //?号表示 可选，即这个参数可以不传。
+  }
+const 花括号简写方式
+如果需要声明多个const变量的时候，很多时候我们都是变量一个个声明的，
+这样的话，我们的代码显的非常难看。下面这种方式可以进行简写
+简写前：
+const name = app.name;
+const version = app.version;
+const type = app.type;
+简写后：
+const { name, version, type } = app;
+
+let input = [1, 2];
+let [first, second] = input;
+console.log(first); // outputs 1
+console.log(second); // outputs 2
+
+
 npm install --cache /tmp/empty-cache
 
 npm install --legacy-peer-deps

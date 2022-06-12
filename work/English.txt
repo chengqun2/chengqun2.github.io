@@ -1516,31 +1516,53 @@ So,why not let them spoil us?  宠溺
 How are the rest of the kids? 其他的孩子还好吗？
 
 
-Hello everyone,My name is James,I'm from China
+Hi everyone,My Name is ChengQun,I'm from Jiangsu provice.
 I graduated from University in 2011 
-with a major in computer science and technology. 
+with major in computer science and technology. 
 I have 10 years of software development experience. 
 I am mainly engaged in Java development and also familiar 
 with front-end development and the use of databases.
 
-The project I am working on is the comprehensive command platform of Yandu Police station, 
-Including 7 modules:
-police situation monitoring, 
-public security community linkage, 
-community policing, 
-law enforcement supervision, 
-work list management, 
-service quality, 
-public security command and dispatch
 
-we use gitlab to manage our codes, issues and tasks
+Hi everyone,My Name is ChengQun,I'm from Jiangsu provice.
+I graduated from University in 2011 with major in computer science and technology. 
+After ten years of software development experience, 
+I hope to bring my Java skills to the new job.
+The majority of my career has been spent maintaining web applications 
+and ensuring the smooth operations of the back end. 
+I am proficient at understanding the requirements of the business 
+and putting the customer experience first while keeping an eye on deadline.  
+My highest-profile project came when I designed, 
+developed, and implemented the architecture of 
+a big data platform that allowed customers 
+to query every single car running record onto our platform. 
+From initial requirement gathering to design, coding, 
+testing, and roll-out, I manage every aspect. 
+The application increased query efficiency by 10 times. 
+Before my HBase experience, I spent a decade in the software industry, 
+I am proficient in the Linux platform, as well as fluent 
+in Java programming language. 
+My computer science degree from China formed the foundation of my career, 
+but I have taken every opportunity since to take over 50 online courses. 
 
+You could say that I am somewhat addicted to improving my software skills.
+I look forward to hearing about your development plans 
+and hope that an interview might allow me to expand on how my skills could contribute.
+Thanks.
 
-
-
-
-
-
+The project I am working on is a web platform 
+for Supply Chain Management.
+It's mainly to provide cross-border cargo logistics services 
+for domestic and foreign customers, 
+but also to better manage cargo orders, financial, third-party 
+and other data , and to standardize business.
+Customers have their own cargo suppliers in China, 
+they will wholesale cargo from domestic suppliers, 
+and then export the cargo to foreign countries 
+for retail through the channels of the platform.
+The project include several modules, such as Booking, pickups, shipments, inventory, 
+supplier, prep, labeling, products, financial,company settings,user settings etc.
+we use gitlab and teambition to manage our codes, issues and tasks.
 
 
 

@@ -1047,8 +1047,8 @@ select *
 	2).修改tomcat/bin/catalina.sh  	改为CATALINA_OUT="$CATALINA_BASE"/logs/catalina.out
 205.css中!important的优先级最高，高于内置的style，慎用!important。	
 206.windows cmd 端口号查询，kill：
-	netstat -aon|findstr "8081"
-	taskkill /T /F /PID 9088 	
+	netstat -aon|findstr "10000"
+	taskkill /T /F /PID 9088
 207.freemarker ${(map.code)!""}  这种方式，能够处理map或者code为miss value的情况	
 208.navicat查看mysql版本: select version() from dual;
 209.linux停止某个tomcat.
@@ -1528,3 +1528,13 @@ select *
 	GROUP BY person_id;
 302.git取消commit; HEAD^的意思是上一个版本
 	git reset --soft HEAD^	
+303.windows删除mysql服务：
+    sc delete mysql	
+304.window10开启录屏 快捷键：  win+alt+r
+305.js保留2位小数并四舍五入：Math.round(number * 100) / 100	
+306.新建一个react项目：
+	npx create-react-app my-app
+	cd my-app
+	npm start
+	新建一个react项目并使用typescript：
+	npx create-react-app my-app --template typescript
