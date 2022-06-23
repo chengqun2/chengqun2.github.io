@@ -1,3 +1,71 @@
+怎么查看MySQL语句有没有用到索引？
+EXPLAIN SELECT * FROM table;
+type：type 字段比较重要, 它提供了判断查询是否高效的重要依据依据. 
+通过 type 字段, 我们判断此次查询是 全表扫描 还是 索引扫描 等。
+如const(主键索引或者唯一二级索引进行等值匹配的情况下),
+ref(普通的⼆级索引列与常量进⾏等值匹配),index(扫描全表索引的覆盖索引) 。
+通常来说, 不同的 type 类型的性能关系如下:
+ALL < index < range ~ index_merge < ref < eq_ref < const < system
+ALL 类型因为是全表扫描, 因此在相同的查询条件下, 它是速度最慢的.
+
+创建索引时需要注意什么？
+非空字段（用0等代替）、索引字段越小越好
+
+什么情况下不走索引（索引失效）？
+1、使用!= 或者 <> 导致索引失效
+2、类型不一致导致的索引失效
+3、函数导致的索引失效
+4、运算符导致的索引失效
+5、OR引起的索引失效
+6、模糊搜索导致的索引失效
+7、NOT IN、NOT EXISTS导致索引失效
+
+
+docker: 
+  volumes : 容器可以通过volumes访问主机的数据
+
+
+cls ：clear the terminal screen 
+
+Metrics：是一个给Java提供度量工具的包，在JAVA代码中嵌入Metrics代码，可以方便的对业务代码的各个指标进行监控。
+Influxdb： 是Go语言写的一个时序型数据库。这里我们可以用来存储上报的监控数据。
+Grafana： 是一个非常好看的监控界面。它可以去数据源（influxdb）中load数据进行实时的展示。
+
+
+docker 提供了数据持久化的机制为 volumes，即为 挂载。
+volumes：提供了将容器的特定文件系统路径连接回主机的能力
+
+事务的实现：本地有日志记录表，undo insert ->do delete
+
+
+nacos、ribbon
+
+springcloud:
+  Eureka: 服务注册发现(改为：nacos)
+    #指定服务名称
+	  spring:
+	    application:
+		  name: hello-service-provider
+  Ribbon: 负载均衡(可以配置多个ip:端口，接口调用就通过服务名称访问)
+  Feign: 
+    使用接口方式调用服务，替代 restTemplate.exchage(...)
+	服务提供方:
+	  还是一样。@RequestMapping("/demo/getHost")
+    服务使用方：
+	  接口@FeignClient注解指定服务名来绑定服务（底层通过ribbon来将应用服务名称解析成ip:port调用请求）
+      @FeignClient(value = "hello-service-provider")
+	  public interface HelloServiceFeign {
+	    // /demo/getHost就是服务提供方的实际uri
+	    @RequestMapping(value = "/demo/getHost", method = RequestMethod.GET)
+		public String getHost(String name);
+	  }
+	  @Autowired直接注入上面定义的HelloServiceFeign service实例
+	  service.getHost(name);
+	  
+	sentinel：熔断、降级
+	seata:分布式事务(性能不太高，常用于支付场景)
+	
+
 typescript:
   interface Person{
 	firstName:string;
@@ -574,27 +642,7 @@ eclipse debug启动老是跳转到断点，提示SilentExitException
 解决方法：在eclipse中选择Window->Preference-> Java ->Debug，将“Suspend execution on uncaught exceptions”的勾去掉即可。
 
 LVS是Linux Virtual Server的简称，也就是Linux虚拟服务器。LVS提供的负载均衡技术
-springcloud:
-  Eureka: 服务注册发现
-    #指定服务名称
-	  spring:
-	    application:
-		  name: hello-service-provider
-  Ribbon: 负载均衡
-  Feign: 
-    使用接口方式调用服务，替代 restTemplate.exchage(...)
-	服务提供方:
-	  还是一样。@RequestMapping("/demo/getHost")
-    服务使用方：
-	  接口@FeignClient注解指定服务名来绑定服务
-      @FeignClient(value = "hello-service-provider")
-	  public interface HelloServiceFeign {
-	    // /demo/getHost就是服务提供方的实际uri
-	    @RequestMapping(value = "/demo/getHost", method = RequestMethod.GET)
-		public String getHost(String name);
-	  }
-	  @Autowired直接注入上面定义的HelloServiceFeign service实例
-	  service.getHost(name);
+
 
 Error running 'All in project-name': Command line is too long. Shorten command line for All in project-name or also for JUnit default configuration.
 .idea/workspace.xml
@@ -1247,9 +1295,12 @@ BEM 命名规范
 "".slice(start,end);
 The slice() method returns a new array from begin to end (end not included).
 
-Array.splice(start,deleteCount)
 删除数组对象中的某个元素
-Array.splice(itemIndex,1)
+Array.splice(start,deleteCount)
+const index = array.indexOf(5);
+if (index > -1) {
+  array.splice(index, 1); // 2nd parameter means remove one item only
+}
 
 jdbc.url=jdbc:mysql://10.39.149.200:33006/epg_app?useUnicode=true&characterEncoding=UTF-8
 jdbc.username=root
