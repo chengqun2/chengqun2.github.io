@@ -1538,3 +1538,63 @@ select *
 	npm start
 	新建一个react项目并使用typescript：
 	npx create-react-app my-app --template typescript
+307. spring-data-jpa
+	 @Transient
+     TLine line; // 临时存储用，不存入数据库	
+308.centos查询文件夹大小： du -sh /path
+	查看当前目录下各文件、文件夹的大小： du -h --max-depth=1
+309.less转换成css
+	npm install -g less
+	lessc style.less style.css	
+310.git增加ssh认证：
+	C:\Users\HP\.ssh\id_rsa.pub	
+311.nacos在windows下单机启动
+	./startup.cmd -m standalone	
+312.测试git地址：
+	git ls-remote https://github.com/chengqun2/chess.git	
+313.postgresql递归查询，查询parent_id = 3045 及所有子列表
+	WITH RECURSIVE subordinates AS (
+		SELECT
+			menu_id,
+			menu_name,
+			parent_id,
+			PATH,
+			order_num 
+		FROM
+			sys_menu 
+		WHERE
+			parent_id = 3045 UNION
+		SELECT
+			e.menu_id,
+			e.menu_name,
+			e.parent_id,
+			e.PATH,
+			e.order_num 
+		FROM
+			sys_menu e
+			INNER JOIN subordinates s ON s.menu_id = e.parent_id 
+		) SELECT
+		* 
+	FROM
+		subordinates 
+	ORDER BY
+		parent_id,
+		order_num	
+314.lambda获取列表的对象中最小的parentId
+	private int getParentId(List<SysMenu> menus) {
+		if (null!=menus && !menus.isEmpty() && menus.size()>0){
+			SysMenu min = menus.stream().min(Comparator.comparing(SysMenu::getParentId)).get();
+			return min.getParentId().intValue();
+		}else{
+			return 0;
+		}
+	}
+315.windows安装rocketmq
+    1).配置环境变量：ROCKETMQ_HOME： F:\soft\rocketmq-all-4.9.4-bin-release\bin
+	2).启动 NameServer   （启动%ROCKETMQ_HOME%/bin/mqnamesrv.cmd ;  修改%ROCKETMQ_HOME%/bin/runserver.cmd中的内存：set "JAVA_OPT=%JAVA_OPT% -server -Xms256m -Xmx512m"）
+	3).启动 Broker （在call之前增加 set "NAMESRV_ADDR=localhost:9876"，双击mqbroker.cmd脚本启动Broker）
+316.根据某个属性去掉对象数组中的某个对象
+	this.userOptions = this.userOptions.filter(function( obj ) {
+	  return obj.userId !== response.data.userId;
+	});	
+317.Windows环境RocketMQ broker启动失败闪退: 清空 C:\Users\HP\store ，再次启动。	

@@ -1,3 +1,336 @@
+shardingsphere(sharding-jdbc-spring-boot-starter) 实现数据库读写分离
+# 开启binlog
+log-bin=mysql-bin
+masterslave:
+      load-balance-algorithm-type: round_robin   或者 random
+主从复制的原理：
+1、当Master节点进行insert、update、delete操作时，会按顺序写入到binlog中。
+2、slave从库连接master主库，Master有多少个slave就会创建多少个binlog dump线程。
+3、当Master节点的binlog发生变化时，binlog dump 线程会通知所有的salve节点，并将相应的binlog内容推送给slave节点。
+4、I/O线程接收到 binlog 内容后，将内容写入到本地的 relay-log。
+5、SQL线程读取I/O线程写入的relay-log，并且根据 relay-log 的内容对从数据库做对应的操作。
+
+
+sass:
+Sass Live Compiler install to VsCode (Live Sass compiler)
+Create scss(sass) file
+Variables: $primaryColor: red;  header {background: $primaryColor;}
+Nesting: 
+	header {
+		background: $primaryColor; 
+		button{
+			color:blue;
+			&:hover{
+				background: black;
+			}
+		}
+	}
+@import './header' 可以引入其他.scss样式文件
+Mixins with custom parametres:
+@mixin flexCenter($direction){
+	background: blue; 
+	flex-direction: $direction;
+}
+header{
+	@include flexCenter(row);
+	color: red;
+}
+.contact{
+	@extend header;
+	background: yellow; 
+}
+Calculations(可以加减乘除+-*/):
+.contact{
+	width: 100vw - 20vw;
+}
+
+
+Redis 持久化机制
+1、快照（snapshotting）
+save 900 1      #在900秒(15分钟)之后，如果至少有1个key发生变化，Redis就会自动触发BGSAVE命令创建快照。
+save 300 10     #在300秒(5分钟)之后，如果至少有10个key发生变化，Redis就会自动触发BGSAVE命令创建快照。
+save 60 10000   #在60秒(1分钟)之后，如果至少有10000个key发生变化，Redis就会自动触发BGSAVE命令创建快照。
+2、AOF（append-only file）持久化；appendonly yes开启AOF
+# appendfsync always
+appendfsync everysec
+# appendfsync no
+
+
+
+Vault是用来安全的存储秘密信息的工具，
+提供了对Token，密码，证书，API key等的安全存储(key/value)和控制功能。
+它能处理key的续租、撤销、审计等功能。通过API访问可以获取到加密保存的密码、SSH key、证书等。
+
+Spring Cloud Sleuth
+请求一个微服务系统的API接口，这个API接口，
+需要调用多个微服务，调用每个微服务都会产生一个新的Span，
+所有由这个请求产生的Span组成了这个Trace。 
+Annotation：用来及时记录一个事件的，一些核心注解用来定义一个请求的开始和结束。
+
+进入docker容器：
+docker exec -it containerId /bin/sh
+ls
+cat xx.txt
+exit
+
+react,redux
+dispatch({
+  type: "expenses/deleteFinanceCost",
+  payload: {
+	ids: ids
+  },
+  callback: (response: ResponseType) => {
+  }
+});
+dispatch触发， type:"expenses/deleteFinanceCost"中
+expenses是model.ts中的namespace: 'expenses',
+deleteFinanceCost是serice.ts中的function,
+payload就是传参
+
+react hook：useState
+import React, { useState } from 'react';
+count: 变量名
+setCount：返回函数setCount
+0: 设置初始值为 0
+const [count, setCount] = useState(0);
+<button onClick={() => setCount(count + 1)}>Click me</button>
+
+react hook：useEffect
+useEffect(() => {
+	exhibitionInfo()
+}, [userData])
+当数组中的userData变化时就会调用 useEffect的中的方法：exhibitionInfo()
+当useEffect中的数组为空数组[]时，只会在页面加载完时执行一次这个useEffect
+
+ <el-select
+	v-model="scope.row.channel_sku"
+	filterable
+	clearable
+	placeholder="请选择"
+	class="p5_input"
+	allow-create
+	default-first-option
+  >
+	<el-option
+	  v-for="(item, key) in scope.row.sku_confusion"
+	  :key="key"
+	  :label="item"
+	  :value="String(item)"
+	/>
+  </el-select>
+
+
+
+CREATE SEQUENCE menu_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+CREATE TABLE "public"."sys_menu" (
+  "menu_id" int8 NOT NULL DEFAULT nextval('menu_id_seq'::regclass)
+)
+
+<el-select filterable allow-create v-model="ruleForm.usePeriod" placeholder="请选择使用期限" 
+	@change="changeUseTime">
+	<el-option v-for="dict in dict.type.yzt_use_time"  :key="dict.value" :label="dict.label"
+	  :value="dict.value"></el-option>
+	  :value="{ value: dict.value, label: dict.label}">
+	</el-option>
+</el-select>
+if (typeof data.roleId=='object'){
+	data.roleId = data.roleId.value
+}
+changeUseTime(e) {
+  switch (e.label) {
+	case '7天':
+	  this.applyForm.usePeriod= 7;
+	  break;
+	case '1个月':
+	  this.applyForm.usePeriod = 30;
+	  break;
+	case '3个月':
+	  this.applyForm.usePeriod = 90;
+	  break;
+	case '6个月':
+	  this.applyForm.usePeriod = 180;
+	  break;
+	case '1年':
+	  this.applyForm.usePeriod = 365;
+	  break;
+	case '2年':
+	  this.applyForm.usePeriod = 730;
+	  break;
+	case '3年':
+	  this.applyForm.usePeriod = 1095;
+	  break;
+  }
+},  
+
+
+vue父组件监听调用子组件的值：
+父vue(index.vue): 
+<Button btn-text="Hi from Parent" />
+<headerSort @updateValue="onChildUpdate" />
+onChildUpdate (newValue) {
+  this.descs = newValue;
+  console.log('descs======',this.descs);
+},
+子vue(matrix-lightning-web\src\views\portal\serve\statisticsmap
+\components\statisRight\components\headerSort.vue):
+this.$emit('updateValue', this.descs);
+
+子vue接收父组件的值
+<button>{{btnText}}</button>
+--驼峰命名对应父vue中的：btn-text
+props:['btnText']
+或者
+props:{
+	btnText{
+		type: String,
+		required: true,
+		default: "DEFAULT BUTTON"
+	}
+}
+
+
+this.$nextTick(function() {
+	// DOM 更新了
+	console.log('finished tick3 ' + new Date().toString(),document.querySelectorAll('.example').length)
+})
+
+
+
+将本地的冲突文件冲掉，不仅需要reset到MERGE-HEAD或者HEAD,还需要–hard。
+没有后面的hard，不会冲掉本地工作区。只会冲掉stage区。
+git reset --hard FETCH_HEAD   慎用！会冲掉本地修改的代码
+git pull
+
+Git 更新本地冲突：commit your changes or stash them before you can merge
+git stash
+git pull
+git stash pop
+
+
+Sentinel 对这个问题采取了两种手段:
+  1).通过并发线程数进行限制
+  2).通过响应时间对资源进行降级(当依赖的资源出现响应时间过长后，
+    所有对该资源的访问都会被直接拒绝，直到过了指定的时间窗口之后才重新恢复。)
+
+
+geometry构建示例：
+1、安装postgresql数据库之后，需要安装postgis扩展
+2、添加postgis扩展，使之成为支持空间类型的空间数据库
+   create extension postgis
+3、create table test_map(id int,wkb_geometry geometry)
+4、insert into test_map(id,wkb_geometry) values(1,point(121.36232442,31.02324535)::geometry)
+5、SELECT t.wkb_geometry,st_asgeojson(wkb_geometry) from test_map t limit 10
+
+
+--- 指定 srid 为 4326
+CREATE TABLE testgeomobj (id serial, geom geometry NOT NULL);
+
+--- Point 对象，如下图id=1
+insert into testgeomobj (geom) VALUES ('SRID=4326;POINT(-95.363151 29.763374)');
+
+--- MultiPoint 对象，如下图id=2
+insert into testgeomobj (geom) VALUES ('SRID=4326;MULTIPOINT(-95.4 29.8,-96 30)');
+
+--- LineString 对象，如下图id=3
+insert into testgeomobj (geom) values ('SRID=4326;LINESTRING(-71.1031880899493 42.3152774590236,-71.1031627617667 42.3152960829043,-71.102923838298 42.3149156848307,-71.1023097974109 42.3151969047397,-71.1019285062273 42.3147384934248)');
+
+--- MultiLineString 对象，如下图id=4
+insert into testgeomobj (geom) values ('SRID=4326;MultiLineString (
+(-71.1031880899493 42.3152774590236,-71.1031627617667 42.3152960829043,-71.102923838298 42.3149156848307,-71.1023097974109 42.3151969047397,-71.1019285062273 42.3147384934248),
+(-71.1766585052917 42.3912909739571, -71.1766820268866 42.391370174323896, -71.1766063012595 42.3913825660754, -71.17658265830809 42.391303365353096)
+)');
+
+--- Polygon 对象，如下图id=8
+insert into testgeomobj(geom) values ('SRID=4326;POLYGON (
+(-71.1776585052917 42.3902909739571, -71.1776820268866 42.3903701743239, -71.1776063012595 42.3903825660754, -71.1775826583081 42.3903033653531,-71.1776585052917 42.3902909739571)
+)');
+
+--- MultiPolygon 对象，如下图id=9
+insert into testgeomobj(geom) values ('SRID=4326; MultiPolygon (
+((-71.1776585052917 42.3902909739571, -71.1776820268866 42.3903701743239, -71.1776063012595 42.3903825660754, -71.1775826583081 42.3903033653531,-71.1776585052917 42.3902909739571)),
+((-71.1766585052917 42.3912909739571, -71.1766820268866 42.391370174323896, -71.1766063012595 42.3913825660754, -71.17658265830809 42.391303365353096, -71.1766585052917 42.3912909739571))
+)');
+
+
+
+坐标系：EPSG:4326(WGS84)
+投影：EPSG:3857
+
+
+
+nacos集群搭建：
+1、分别配置3个nacos服务，\nacos\conf\application.properties 配置端口、外部数据源
+2、3个nacos服务中的\nacos\conf\cluster.conf 中配置3个服务的ip:port
+3、nginx中配置
+   upstream nacoscluster{
+     server nacos服务1的ip:port
+	 server nacos服务2的ip:port
+	 server nacos服务3的ip:port
+   }
+   server{
+     listen  8847;
+	 server_name  localhost;
+	 location /nacos/{
+	   proxy_pass http://nacoscluster/nacos/;
+	 }
+   }
+4、浏览器访问：localhost:8847/nacos/
+
+
+浦东防疫项目小结：
+前端：
+node 版本 v14
+npm i 安装依赖
+yarn dev
+
+池州项目小结：
+前端：
+npm install -g yarn
+yarn install
+yarn dev
+后端：
+确保nacos改成自己的，具体代码在 LauncherConstant 文件中的 NACOS_DISCOVERY_NAME_SPACE_DEV
+
+
+
+target: `http://114.67.78.94:8882/yzt-cloud`,
+
+若依使用小结：
+1、配置F:\soft\nacos-server-2.0.2\nacos\conf\application.properties 中的mysql数据源
+2、启动nacos之后，在 http://127.0.0.1:8848/nacos  配置管理-配置列表 
+	导入nacos配置（新建命名空间）
+	编辑 ruoyi-gateway-dev.yml 等文件 修改 redis 等配置
+spring:
+  cloud:
+    nacos:
+	   config:
+	     namespace: public | dev
+		 ephemeral: false #永久实例，即使宕机也不会删除实例
+		 
+打开运行基础模块（启动没有先后顺序）
+RuoYiGatewayApplication （网关模块 必须）
+RuoYiAuthApplication （认证模块 必须）
+RuoYiSystemApplication （系统模块 必须）
+RuoYiMonitorApplication （监控中心 可选）
+RuoYiGenApplication （代码生成 可选）
+RuoYiJobApplication （定时任务 可选）
+RuoYFileApplication （文件服务 可选）
+若依微服务版打包部署：		 
+1、双击 idea->maven->ruoyi(root)->package 打包	 
+2、java -Dfile.encoding=utf-8 -jar ruoyi-gateway.jar
+   java -Dfile.encoding=utf-8 -jar ruoyi-auth.jar 	
+   java -Dfile.encoding=utf-8 -jar ruoyi-modules-system.jar   
+		 
+		 
+		 
+systemctl start mysql
+
+
 怎么查看MySQL语句有没有用到索引？
 EXPLAIN SELECT * FROM table;
 type：type 字段比较重要, 它提供了判断查询是否高效的重要依据依据. 
@@ -60,7 +393,9 @@ springcloud:
 		public String getHost(String name);
 	  }
 	  @Autowired直接注入上面定义的HelloServiceFeign service实例
-	  service.getHost(name);
+	  service.getHost(name); 
+	  然后就能调用到HelloServiceFeign中的getHost对应的value中的接口路径：/demo/getHost
+	  
 	  
 	sentinel：熔断、降级
 	seata:分布式事务(性能不太高，常用于支付场景)
@@ -815,7 +1150,7 @@ nodemon : 自动重启Nodejs项目
 
 vim:
 HJKL 左下上右
-tar zxvf linux解压缩
+tar -zxvf linux解压 .tgz 压缩文件
 
 css移动（第一个参数：左右，第二个参数：上下）：
 transform:translate(-25px,-25px);
@@ -1538,3 +1873,54 @@ springboot,spring cloud相关组件
 mysql: explain和profile
 ========================================================================
 
+什么时候要使用索引？
+​ 主键自动建立唯一索引；
+
+​ 经常作为查询条件在WHERE或者ORDER BY 语句中出现的列要建立索引；
+
+​ 作为排序的列要建立索引；(单纯的order by 不会用到索引，但如果在where中出现，就可以用索引了。)
+
+​ 查询中与其他表关联的字段，外键关系建立索引
+
+​ 高并发条件下倾向组合索引；
+
+​ 用于聚合函数的列可以建立索引，例如使用了max(column_1)或者count(column_1)时的column_1就需要建立索引
+
+什么时候不要使用索引？
+
+​ 经常增删改的列不要建立索引；
+
+​ 有大量重复的列不建立索引；
+
+​ 表记录太少不要建立索引。只有当 数据库里已经有了足够多的测试数据时，它的性能测试结果才有实际参考价值。如果在测试数据库里只有几百条数据记录，它们往往在执行完第一条查询命令之后就被全部加载到内存里，这将使后续的查询命令都执行得非常快--不管有没有使用索引。只有当数据库里的记录超过了1000条、数据总量也超过了MySQL服务器上的内存总量时，数据库的性能测试结果才有意义。
+
+SQL优化的一些部分：
+如何避免全表扫描？
+
+1、where字句别用or链接，可以union all.2、in和not in也慎用，可以between and. 3.避免对字段进行null值判断。4,where字句别用!=和<>操作符5、别用以通配符开头的like的查询。6、别在where子句对字段进行表达式操作和函数操作。 7任何地方都不要使用 select * from t。8、尽量使用数字型字段。9、复合索引尽量满足最左前缀原则。10,在查找唯一一条数据的时候，使用limit 1.10、类型不一致会导致失效，例如字符串不加单引号会导致索引失效。
+
+​ 索引优化：
+
+​ 1、根据最左前缀原则，我们一般把排序分组频率最高的列放在最左边
+
+​ 2、模糊查询以%为开始的查询，只能使用全文索引来进行优化。
+
+​ 3、使用短索引。对串列进行索引，如果可能应该指定一个前缀长度。
+
+in与exists的区别。使用上，in 后面的查询返回结果只能有一个字段。而exists没有限制。
+
+本质上： A exists B;exists相当于遍历外面A,看A中数据是否存在于B。而in,相当于将结果集B分解开，用or相连，相当于做多次的查询。
+
+exists相当于查询筛选，in则是多次查询;
+
+1、如果查询的两个表大小相当，那么用in和exists差别不大。
+
+2、如果两个表中一个表大，另一个是表小，那么IN适合于外表大而子查询表小的情况。
+
+3、如果两个表中一个表大，另一个是表小，EXISTS适合于外表小而子查询表大的情况。
+
+in不会使用索引搜索，会全表扫描。
+
+数据量过大：
+
+1、查询时限定数据范围。2、读写分离，主写从读。3、垂直分区4、水平分区.
