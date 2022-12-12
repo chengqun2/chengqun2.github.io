@@ -995,7 +995,7 @@ select *
 	3).然后再最底部文件夹里面 新建 DWORD（32）位的。
 	文件名 "AllowEncryptionOracle" ，值 : 2.
 187.linux查看系统版本: lsb_release -a
-188.nohup java -jar /root/abcd/jar/a.jar > /root/a/nohup.out 2>&1 &
+188.nohup java -jar a.jar > nohup.out 2>&1 &
 	2>&1的意思是将标准错误(2)也定向到标准输出(1)的输出文件中。
 	Linux 中三种标准输入输出，分别是STDIN，STDOUT，STDERR，对应的数字是0，1，2。
 189.pkill -f abcd (匹配jar所在文件夹，停止进程) 	
@@ -1598,3 +1598,45 @@ select *
 	  return obj.userId !== response.data.userId;
 	});	
 317.Windows环境RocketMQ broker启动失败闪退: 清空 C:\Users\HP\store ，再次启动。	
+318.Linux搜索历史命令history：
+	history | grep -w 'docker run'
+319.nacos本地安装：
+	1).配置application.properties中的mysql连接
+	2).mysql导入nacos_config数据库
+320.yarn install 报错; node-sass镜像源进行设置成国内的:
+	yarn config set sass-binary-site http://npm.taobao.org/mirrors/node-sass	
+321.Vue判断字符串A中是否包含某字符串B
+	<span v-if="scope.row.hjdxz.includes(scope.row.hjdxzqhhz)">
+		{{scope.row.hjdxz}}
+	</span>
+	<span v-else>
+		{{scope.row.hjdxzqhhz +scope.row.hjdjdhz + scope.row.hjdxz}}
+	</span>	
+322.Vuex存值：
+	存值：
+	1)、state: {
+			real_name: "",
+		},
+	2)、mutations: {
+		SET_REAL_NAME: (state, realName) => {
+		  state.realName = realName;
+		},
+	   },		
+	取值：vue文件中引入：	
+	1).import { mapState } from "vuex";
+	2).computed: {
+		  ...mapState({
+			 name: (state) => state.user.name,
+			 userId: (state) => state.user.userId,
+		  }),
+	   },
+	3).console.log(this.name, this.userId, ".......");
+323.vue添加自定义图标：
+	1).src下assets增加图片 ico_alert.png
+	2).vue中import ico_alert from "@/assets/icons/ico_alert.png";
+	3).data中添加 ico_alert,
+	4).<img :src="ico_alert" />
+324.maven install 
+	install the package into the local repository, for use as a dependency in other projects locally		
+325.java正则替换所有非数字为空：
+	"00a122c34d5eee6s7892as3".replaceAll("[^0-9]","");  返回00122345678923

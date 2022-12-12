@@ -96,6 +96,10 @@ by/through 通过
 
 C
 
+collapse 折叠
+
+expand 展开
+
 Calendrical Calculations 日期
 
 call 调用
@@ -396,6 +400,9 @@ dump file 转储文件
 
 
 E
+
+estimate  估算
+not exact 不精确的
 
 e-business 电子商务
 

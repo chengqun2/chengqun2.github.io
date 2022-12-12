@@ -1,3 +1,105 @@
+
+harbor 镜像管理
+Jenkins 服务启动
+portainer 日志监控
+
+
+Typora: markdown编辑器
+
+
+-- mysql字段拼接
+SELECT CONCAT_WS('-',xm,zjhm,mobile) xm ,xm,zjhm,mobile FROM pudong_cpac.cpac_person_gather;
+
+
+SELECT
+	table_rows 
+FROM
+	information_schema.TABLES 
+WHERE
+	TABLES.TABLE_NAME = 'cpac_person_gather'
+
+
+覆盖mybatis pagehelper分页插件：
+selectCpacPersonGatherList_COUNT
+
+List<CpacRoomGather> list = cpacRoomGatherMapper.getRoomListByBuildingId(roadNongCode,buildingCode);
+List<CpacPersonGather> personList = null;
+List<String> houseIds = new ArrayList<String>();
+list.stream().forEach(room -> houseIds.add(room.getHouseId()));
+personList = cpacPersonGatherService.getListByHouseIds(houseIds.toArray());
+Map<String, List<CpacPersonGather>> roomPersonListMap =
+personList.stream().collect(Collectors.groupingBy(person -> person.getJzfwid()));
+
+
+import org.apache.ibatis.annotations.Param;
+List<CpacRoomGather> getRoomListByBuildingId(@Param("roadNongCode")String roadNongCode, @Param("buildingCode")String buildingCode);
+
+	
+	
+接口返回时去掉空值的字段
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
+public class CpacPersonGather extends BaseEntity{}
+
+事务失效的场景：其实发生最多就是自身调用、异常被吃、异常抛出类型不对这三个了。
+
+ALTER table cpac_person_gather modify person_id VARCHAR(200) first
+
+ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "wayz-cpac.jar"]
+在启动应用时配置 -Djava.security.egd=file:/dev/./urandom 可以一定程度上加快应用启动。
+
+linux 查看文件
+cat filename	(适用于查看内容较少的文件)
+more filename  
+apt install less
+less filename
+Linux touch命令用于修改文件或者目录的时间属性，包括存取时间和更改时间。
+若文件不存在，系统会建立一个新的文件。
+Linux pwd（英文全拼：print work directory） 命令用于显示当前工作目录。
+
+Flyway is a version control application to evolve your Database schema easily 
+and reliably across all your instances.
+
+# 构建镜像
+docker-compose build 
+docker-compose build --no-cache
+# 创建并启动所有服务：
+docker-compose up -d
+docker-compose up --build
+# docker-compose down可以停止并删除容器、网络(镜像还在)
+docker-compose down
+# 停止工程中所有服务的容器
+docker-compose stop
+# 停止工程中指定服务的容器
+docker-compose stop nginx
+# 显示工程中所有服务的容器正在运行的进程
+docker-compose top
+# 显示工程中指定服务的容器正在运行的进程
+docker-compose top nginx
+
+# 关闭所有环境/模块
+./deploy.sh stop
+
+#根据镜像反查dockerfile
+docker history --format {{.CreatedBy}} --no-trunc=true 镜像id
+
+Volume 数据卷,冒号”:”前面的目录是宿主机目录(./mysql/conf)，后面的目录是容器内目录(/etc/mysql/conf.d)
+volumes:
+      - ./mysql/conf:/etc/mysql/conf.d
+	  - ./mysql/logs:/logs
+      - ./mysql/data:/var/lib/mysql
+目录挂载
+我们可以在创建容器的时候，将宿主机的目录与容器内的目录进行映射，
+这样我们就可以通过修改宿主机某个目录的文件从而去影响容器，
+而且这个操作是双向绑定的，也就是说容器内的操作也会影响到宿主机，实现备份功能。
+但是容器被删除的时候，宿主机的内容并不会被删除。
+如果多个容器挂载同一个目录，其中一个容器被删除，其他容器的内容也不会受到影响。	  
+
+进入容器: docker exec -it container_id sh
+	或 docker exec -it -u root container_id(输入容器id的前三位即可) sh
+进入容器/执行命令：docker exec -it mysql bash
+
+
+
 shardingsphere(sharding-jdbc-spring-boot-starter) 实现数据库读写分离
 # 开启binlog
 log-bin=mysql-bin
@@ -44,6 +146,23 @@ Calculations(可以加减乘除+-*/):
 	width: 100vw - 20vw;
 }
 
+.parent{
+	&.son{
+        color: yellow;
+    }
+    .kids{
+    }  
+}
+在jQuery或者css中，加不加这个空格是有明显的区别哦，两个类之间加空格和不加空格的区别
+&.son -> .parent.son
+1.当一个标签有两个类的时候，（也就是说这两个了类是同级的）则，在两个类之间不加空格。
+.kids -> .parent .kids
+2.当这两个类的标签是父子关系，（也可以说是上下级关系）则，在两个类之间必须加空格。
+
+Redis支持三种集群方案
+ 主从复制模式
+ Sentinel（哨兵）模式
+ Cluster模式
 
 Redis 持久化机制
 1、快照（snapshotting）
@@ -211,6 +330,14 @@ git stash
 git pull
 git stash pop
 
+warning: LF will be replaced by CRLF in ** 的原因及解决办法
+git config core.autocrlf false
+
+git切换分支
+git checkout branch-name
+
+git pull --rebase, 这里表示把你的本地当前分支里的每个提交(commit)取消掉，并且把它们临时 保存为补丁(patch)(这些补丁放到".git/rebase"目录中)
+git rebase 和 git merge 作用基本是相同的，二者的一个重要的区别是：历史提交本版的区别。git rebase可以使得你的分支看起来像是没有经历过合并一样。
 
 Sentinel 对这个问题采取了两种手段:
   1).通过并发线程数进行限制
@@ -322,11 +449,30 @@ RuoYiJobApplication （定时任务 可选）
 RuoYFileApplication （文件服务 可选）
 若依微服务版打包部署：		 
 1、双击 idea->maven->ruoyi(root)->package 打包	 
-2、java -Dfile.encoding=utf-8 -jar ruoyi-gateway.jar
+2、java -Dfile.encoding=utf-8 -jar ruoyi-gateway.jar   (cmd中运行)
    java -Dfile.encoding=utf-8 -jar ruoyi-auth.jar 	
    java -Dfile.encoding=utf-8 -jar ruoyi-modules-system.jar   
-		 
-		 
+3、前端打包部署(npm run build:prod)：
+	Nginx中配置：
+		location /stage-api/ {
+			proxy_set_header Host $http_host;
+			proxy_set_header X-Real-IP $remote_addr;
+			proxy_set_header REMOTE-HOST $remote_addr;
+			proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+			proxy_pass http://localhost:8080/;
+		}
+		
+		location /prod-api/ {
+			proxy_set_header Host $http_host;
+			proxy_set_header X-Real-IP $remote_addr;
+			proxy_set_header REMOTE-HOST $remote_addr;
+			proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+			proxy_pass http://localhost:8080/;
+		}		 
+	nginx -s reload	
+	nginx -s stop	
+	start nginx
+	tasklist /fi "imagename eq nginx.exe"
 		 
 systemctl start mysql
 
@@ -1075,6 +1221,7 @@ ApplicationRunner：继承 ApplicationRunner 接口的类的
     web application exploded：这个是以文件夹形式发布项目，发布项目时就会自动生成文件夹在指定的output directory；
 	web application archive：就是war包形式,将项目打成一个war包在指定位置
 	
+idea插件 Alibaba Java Coding Guidelines
 	
 lay-search：可搜索的下拉框，根据 lay-filter的值进行查询
 form.on('select(lay-filter的值)',function(data){
@@ -1240,6 +1387,13 @@ vuejs
   :class="{'left-content':item.type==0,'right-content':item.type==1}">
 	<div> {{item.id}}</div>
 </li>
+
+data() {
+    return {
+      todoCount: 0,
+	};
+}	
+<div v-show="todoCount > 0">
 
 挖矿原理
 
