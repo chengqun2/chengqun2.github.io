@@ -1046,9 +1046,11 @@ select *
 	1).修改tomcat/conf下的logging.properties  改为${catalina.base}/webapps/ROOT/logs
 	2).修改tomcat/bin/catalina.sh  	改为CATALINA_OUT="$CATALINA_BASE"/logs/catalina.out
 205.css中!important的优先级最高，高于内置的style，慎用!important。	
-206.windows cmd 端口号查询，kill：
+206.windows cmd 根据pid查询端口号，kill：
 	netstat -aon|findstr "10000"
 	taskkill /T /F /PID 9088
+	netstat -ano | findstr pid
+	pid可以在屏幕最下方任务栏右击->点击任务管理器->服务 查到
 207.freemarker ${(map.code)!""}  这种方式，能够处理map或者code为miss value的情况	
 208.navicat查看mysql版本: select version() from dual;
 209.linux停止某个tomcat.
@@ -1512,6 +1514,8 @@ select *
 	systemctl restart mysqld
 296.linux查看服务器 8000 端口的占用情况：
 	lsof -i:8000	
+	或者：
+	netstat -tunlp | grep 端口号
 297.windows安装telnet,在cmd中输入：
 	dism /Online /Enable-feature /FeatureName:TelnetClient
 298.退出telnet. 退出telnet的命令:ctrl+]，然后再输入q就可以退出了
@@ -1593,6 +1597,11 @@ select *
     1).配置环境变量：ROCKETMQ_HOME： F:\soft\rocketmq-all-4.9.4-bin-release\bin
 	2).启动 NameServer   （启动%ROCKETMQ_HOME%/bin/mqnamesrv.cmd ;  修改%ROCKETMQ_HOME%/bin/runserver.cmd中的内存：set "JAVA_OPT=%JAVA_OPT% -server -Xms256m -Xmx512m"）
 	3).启动 Broker （在call之前增加 set "NAMESRV_ADDR=localhost:9876"，双击mqbroker.cmd脚本启动Broker）
+	cd F:\soft\rocketmq-all-4.9.4-bin-release\bin
+	启动 NameServer:  F:\soft\rocketmq-all-4.9.4-bin-release\bin>start mqnamesrv.cmd
+	启动 Broker:  F:\soft\rocketmq-all-4.9.4-bin-release\bin>mqbroker.cmd -c ../conf/broker.conf
+	docker安装rocketmq-console：
+	docker run -e "JAVA_OPTS=-Drocketmq.namesrv.addr=127.0.0.1:9876 -Dcom.rocketmq.sendMessageWithVIPChannel=false" -p 8090:8090 -t styletang/rocketmq-console-ng
 316.根据某个属性去掉对象数组中的某个对象
 	this.userOptions = this.userOptions.filter(function( obj ) {
 	  return obj.userId !== response.data.userId;
@@ -1640,3 +1649,234 @@ select *
 	install the package into the local repository, for use as a dependency in other projects locally		
 325.java正则替换所有非数字为空：
 	"00a122c34d5eee6s7892as3".replaceAll("[^0-9]","");  返回00122345678923
+326.java8 Convert List<Map> to Comma-Separated String 
+	String mlphxxs = userBulidList.stream().map(x->x.get("mlphbm").toString())
+							.collect(Collectors.joining(","));	
+327.java8 分页查询
+	list = list.stream().skip(( pageNum - 1) * pageSize).limit(pageSize).collect(Collectors.toList());	
+328.pom文件打包：
+		<build> 
+			<plugins>
+				<!-- 打包 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<configuration>
+						<outputDirectory>${basedir}/../../app-run/${project.build.finalName}/${project.build.finalName}/</outputDirectory>
+					</configuration>	
+				</plugin>
+			</plugins>
+		</build>	
+329.COPY ./ruoyi-modules-system (source目录) /ruoyi-modules-system(目标目录)
+330.win10修改git用户名和邮箱  
+    //修改本目录下仓库的用户名
+    git config user.name "用户名"
+	git config user.email "邮箱"
+    //修改全局仓库下用户名和邮箱
+	git config --global user.email   "qun.cheng@wayz.ai"
+	git config --global user.name  "qun.cheng"
+	git config --global --list
+331.手机微信小程序怎么打开调试工具：
+	  进入小程序，点击右上角三个点的按钮，在页面底部看到【开发调试】按钮，点击此按钮
+	  可以看到【打开调试】按钮，点击此按钮，会退出小程序
+	  重新进小程序可以看到右下角多了个绿色按钮
+	  点击绿色按钮，就能看到请求信息、返回信息	
+332.maven项目置灰pom.xml文件，pom.xml中右击选择 maven->ignore projects 或者unignore projects	
+333.maven项目新建子模块，右击项目，new->module->next->parent
+334.若依使用小结：
+	1)、配置F:\soft\nacos-server-2.0.2\nacos\conf\application.properties 中的mysql数据源
+	2)、启动nacos之后，在 http://127.0.0.1:8848/nacos  配置管理-配置列表 
+		导入nacos配置（新建命名空间）
+		编辑 ruoyi-gateway-dev.yml 等文件 修改 redis 等配置
+	spring:
+	  cloud:
+		nacos:
+		   config:
+			 namespace: public | dev
+			 ephemeral: false #永久实例，即使宕机也不会删除实例
+			 
+	打开运行基础模块（启动没有先后顺序）
+	RuoYiGatewayApplication （网关模块 必须）
+	RuoYiAuthApplication （认证模块 必须）
+	RuoYiSystemApplication （系统模块 必须）
+	RuoYiMonitorApplication （监控中心 可选）
+	RuoYiGenApplication （代码生成 可选）
+	RuoYiJobApplication （定时任务 可选）
+	RuoYFileApplication （文件服务 可选）
+	若依微服务版打包部署：		 
+	1)、双击 idea->maven->ruoyi(root)->package 打包	 
+	2)、java -Dfile.encoding=utf-8 -jar ruoyi-gateway.jar   (cmd中运行,设置encoding修复启动报错malformed)
+	   java -Dfile.encoding=utf-8 -jar ruoyi-auth.jar 	
+	   java -Dfile.encoding=utf-8 -jar ruoyi-modules-system.jar   
+	   java -Dfile.encoding=utf-8 -jar wayz-beiwaitan.jar  
+	3)、前端打包部署(npm run build:prod)：
+		Nginx中配置：
+			location /stage-api/ {
+				proxy_set_header Host $http_host;
+				proxy_set_header X-Real-IP $remote_addr;
+				proxy_set_header REMOTE-HOST $remote_addr;
+				proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+				proxy_pass http://localhost:8080/;
+			}
+			
+			location /prod-api/ {
+				proxy_set_header Host $http_host;
+				proxy_set_header X-Real-IP $remote_addr;
+				proxy_set_header REMOTE-HOST $remote_addr;
+				proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+				proxy_pass http://localhost:8080/;
+			}		 
+		nginx -s reload	
+		nginx -s stop	
+		start nginx
+		tasklist /fi "imagename eq nginx.exe"
+335.ps -ef | grep nacos		
+336.Map<String, List<Map>> userMap = list.stream().collect(Collectors.groupingBy(pcs -> pcs.get("pcs").toString()));
+	for (Map.Entry<String, List<Map>> entry : userMap.entrySet())
+	{
+		int addCount=0, updateCount=0, deleteCount=0, totalCount=0;
+		String jzdpcshz = "", manageCreateBy = "";
+		for (Map map : entry.getValue()) {
+			if(CpacPersonGatherDataStateEnum.status2.getCode().equals(map.get("data_state"))){
+				addCount = Integer.valueOf(map.get("num").toString());
+			}
+			else if(CpacPersonGatherDataStateEnum.status0.getCode().equals(map.get("data_state"))){
+				updateCount = Integer.valueOf(map.get("num").toString());
+			}else{
+				deleteCount = Integer.valueOf(map.get("num").toString());
+			}
+			totalCount = addCount + updateCount + deleteCount;
+			jzdpcshz = map.get("jzdpcshz").toString();
+			manageCreateBy = map.get("manage_create_by").toString();
+		}
+		CpacUserGatherStatisticsDto cpacUserGatherStatisticsDto = new CpacUserGatherStatisticsDto(DateUtils.convertDateToStr(cpacPersonGatherPolice.getBeginUpdateTime())+"-"+DateUtils.convertDateToStr(cpacPersonGatherPolice.getEndUpdateTime()), jzdpcshz, manageCreateBy, addCount, updateCount, deleteCount, totalCount);
+		list2.add(cpacUserGatherStatisticsDto);
+	}
+337.Mybatis
+	<choose>
+		<when test="addressTypeStr != null and addressTypeStr != '' and addressTypeStr.contains('4'.toString())">
+			and (FIND_IN_SET(c.address_type,#{addressTypeStr}) or c.address_type is null)
+		</when>
+		<otherwise>
+			<if test="addressTypeStr != null and addressTypeStr != ''">
+				and FIND_IN_SET(c.address_type,#{addressTypeStr})
+			</if>
+		</otherwise>
+	</choose>	
+338.Mysql多表联合更新（通过关联表进行数据更新）
+	UPDATE cpac_person_gather_police_check1 t
+	INNER JOIN (
+	SELECT
+		rid,
+		create_date,
+		data_state,
+		operator_id,
+		operator 
+	FROM
+		cpac_person_gather_update a 
+	WHERE
+		1 = 1 
+	AND create_date IN ( SELECT min( create_date ) FROM cpac_person_gather_update b WHERE a.rid = b.rid )) t2 ON t.rid = t2.rid 
+	SET t.gather_create_by = t2.operator,
+	t.gather_create_by_id = t2.operator_id	
+339.com.baomidou.dynamic.datasource.exception.CannotFindDataSourceException: dynamic-datasource can not find primary datasource	
+	检查是否读取到了nacos配置文件，或者nacos配置文件格式有错误
+340.Mysql查询返回行号rownum
+	SELECT @rn:=@rn+1 AS rownum,rid,xm
+	FROM (
+	  SELECT rid,xm
+	  FROM cpac_person_gather_police_check6
+	) t1, (SELECT @rn:=0) t2;	
+341.docker run -d --restart=always -p 15003:15003 docker.newayz.com/shaoxing-shangyu/wayz-rf-shaoxing-shangyu:1.0.7	
+342.ElasticSearch 9200和9300端口的作用
+	9300是TCP协议端口号，ES集群之间通讯端口号
+	9200端口号，暴露ES RESTful接口端口号. uris: 127.0.0.1:9200
+343.访问swagger右上角服务列表没有展示新增服务，
+    确认是否在ruoyi-gateway-dev.yml配置了对应服务的路由。
+	spring:
+	  cloud:
+		gateway:
+		  routes:
+			# xxxx服务
+			- id: ruoyi-xxxx
+			  uri: lb://ruoyi-xxxx
+			  predicates:
+				- Path=/xxxx/**
+			  filters:
+				- StripPrefix=1
+344.获取本机外部ip地址： curl ifconfig.me
+345.portainer(默认9000端口)手动部署docker镜像：
+	1).images: pull the image
+	2).services: Change container image -> Apply changes
+346.Java多线程(CompletableFuture)：
+	supplyAsync 执行CompletableFuture任务，支持返回值
+	runAsync 执行CompletableFuture任务，没有返回值。
+	CompletableFuture<Void> f1 = CompletableFuture.runAsync((() -> {
+		//task1
+		getApply1(spatialDataList, spatialDataQuery.getBizType(),mht);
+	}));
+	CompletableFuture<Void> f2 = CompletableFuture.runAsync((() -> {
+		//task2
+		getApply2(spatialDataList, spatialDataQuery.getBizType(),mht);
+	}));
+	CompletableFuture<Void> f3 = CompletableFuture.runAsync((() -> {
+		//task3
+		getApply3(spatialDataList, spatialDataQuery.getBizType(),mht);
+	}));
+	CompletableFuture<Void> all = CompletableFuture.allOf(f1,f2,f3);
+	//阻塞，直到所有任务结束。
+	all.join();
+	log.info("任务结束");	
+347.idea补全等号左边：ctrl+alt+v	
+348.hutool工具类发送网络请求:
+	<dependency>
+		<groupId>cn.hutool</groupId>
+		<artifactId>hutool-all</artifactId>
+		<version>5.7.18</version>
+	</dependency>
+	String url = "https://xxx/xx";//指定URL
+	Map<String, Object> map = new HashMap<>();//存放参数
+	map.put("A", 100);
+	map.put("B", 200);
+	HashMap<String, String> headers = new HashMap<>();//存放请求头，可以存放多个请求头
+	headers.put("xxx", xxx);
+	//发送get请求并接收响应数据
+	String result= HttpUtil.createGet(url).addHeaders(headers).form(map).execute().body();
+	//发送post请求并接收响应数据
+	String result= HttpUtil.createPost(url).addHeaders(headers).form(map).execute().body();
+349.docker 进入容器，测试接口
+	docker exec -it 95c7dbb20239fafd bash
+	curl --location --request GET 'http://127.0.0.1:15005/lgi/point?oid=330681'	
+	docker logs 95c7dbb20239fafd
+	docker stop 95c7dbb20239fafd
+350.class not found ,先clean试下.	
+351.springboot配置数据源，需要验证查询(validation-query)
+	spring:
+	  datasource:
+		druid:
+		  validation-query: SELECT 1
+352.lombok日志添加  
+	@Slf4j
+	public class LogExample{}
+	will generate:
+	public class LogExample{
+		private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(LogExample.class);
+	}
+353.idea: Command line is too long. Shorten command line for:
+	Edit configurations ->Shorten command line: JAR manifest
+354.Type “cmd” into the box and then press Ctrl+Shift+Enter to run the command as an administrator.	
+355.安装chocolatey(Windows下的软件包管理器)
+	1. 点击“开始”菜单搜索找到 Windows PowerShell ISE并以管理员身份运行
+	2. Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+355.chocolatey安装rabbitmq:
+	RabbitMQ是一款使用Erlang语言开发的，所以安装rabbitmq之前需要先安装erlang(通用的面向并发的编程语言)
+	choco install rabbitmq -y
+	安装web管理界面插件：
+	C:\Program Files\RabbitMQ Server\rabbitmq_server-3.11.16\sbin>rabbitmq-plugins enable rabbitmq_management
+	http://localhost:15672/    guest  guest
+355.chocolatey安装make(a build automation tool):	
+	choco install make -y
+356.https://github.com/apitable 项目本地运行：
+	1).In the APITable directory, open the three command lines of git bash (在目录中右击选择 Git Bash Here)
+	2).first run make dataenv and make install to install the environment, 
+	3).after ensuring that these two commands are running normally, execute make run in the three command lines in turn, select 1, 2, 3.	
