@@ -1,31 +1,210 @@
-elasticsarch: 
-	String类型:
-		text: 会分词
-		keyword: 不会分词
+Trello 看板和卡片
+https://www.freecodecamp.org/news/create-full-stack-app-with-nextjs13-and-firebase/
+https://firebase.google.com/codelabs/firebase-emulator#0
 
-死信队列：没有被及时消费的消息存放的队列
-	a.消息被拒绝（basic.reject/ basic.nack）并且不再重新投递 requeue=false
-	b.TTL(time-to-live) 消息超时未消费
-	c.达到最大队列长度
+## Java多线程：
+### Java线程池七个参数详解：
+corePoolSize 线程池核心线程大小
+maximumPoolSize 线程池最大线程数量
+keepAliveTime 空闲线程存活时间
+unit 空闲线程存活时间单位
+workQueue 工作队列
+threadFactory 线程工厂
+handler 拒绝策略
+
+#### 线程池 线程队列满了，后续任务怎么处理?
+ThreadPoolExecutor(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit, BlockingQueue<Runnable> workQueue)
+当调用 execute() 方法添加一个任务时，线程池会做如下判断：
+a. 如果正在运行的线程数量小于 corePoolSize，那么马上创建线程运行这个任务；
+b. 如果正在运行的线程数量大于或等于 corePoolSize，那么将这个任务放入队列。
+c. 如果这时候队列满了，而且正在运行的线程数量小于 maximumPoolSize，那么还是要创建线程运行这个任务；
+d. 如果队列满了，而且正在运行的线程数量大于或等于 maximumPoolSize，那么线程池会抛出异常，告诉调用者“我不能再接受任务了”。
+
+
+### 在多线程环境下，要使用线程安全的集合，比如，
+ConcurrentHashMap是线程安全的HashMap，
+CopyOnWriteArrayList是线程安全的ArrayList.
+CopyOnWriteArraySet是线程安全的HashSet.
+
+### 线程按顺序执行的方法：
+线程 join();
+
+
+## 消息队列相关：
+### 消息队列（Kafka、ActiveMQ、RabbitMQ、RocketMQ ）常见的使用场景：解耦、异步、削峰
+解耦：发布端 只管生产数据，消费端 自己订阅或者取消订阅
+消息队列的缺点：系统复杂度上升、一致性问题。
+kafka高可用：replica（复制品） 副本机制。每个 partition 的数据都会同步到其它机器上，
+形成自己的多个 replica 副本。所有 replica 会选举一个 leader 出来，
+那么生产和消费都跟这个 leader 打交道，然后其他 replica 就是 follower
+防止重复消费：增加唯一性校验
+#### 如何解决消息丢失的问题：
+1. 生产端： 
+   1). producer.send(msg, callback)。带有回调通知的 send 方法可以针对发送失败的消息进行重试处理。
+   2). 设置 acks = all
+   3). 设置 retries = 3
+2. Broker端:
+   1).  unclean.leader.election.enable = false
+   2). replication.factor >= 3
+   3). 设置 min.insync.replicas > 1。这控制的是消息至少要被写入到多少个副本才算是“已提交”。设置成大于 1 可以提升消息持久性。
+3. 消费端:
+   Kafka关闭自动提交 offset，在处理完之后自己手动提交 offset， 再自己保证幂等性就好了。
+#### 如何保证消息的顺序性：一个 topic，有三个 partition。
+生产者在写的时候，其实可以指定一个 key，比如说我们指定了某个订单 id 作为 key，
+那么这个订单相关的数据，一定会被分发到同一个 partition 中去，
+而且这个 partition 中的数据一定是有顺序的。
+一个 topic，一个 partition，一个 consumer，内部单线程消费，单线程吞吐量太低，一般不会用这个。
+写 N 个内存 queue，具有相同 key 的数据都到同一个内存 queue；然后对于 N 个线程，
+每个线程分别消费一个内存 queue 即可，这样就能保证顺序性。
+
+### 死信队列：没有被及时消费的消息存放的队列
+a.消息被拒绝（basic.reject/ basic.nack）并且不再重新投递 requeue=false
+b.TTL(time-to-live) 消息超时未消费
+c.达到最大队列长度
 消息变成死信后，会被重新投递（publish）到另一个交换机上（Exchange）,
 这个交换机往往被称为DLX(dead-letter-exchange)“死信交换机”，
 然后交换机根据绑定规则转发到对应的队列上，监听该队列就可以被重新消费
 场景：
-	超时的订单 可以用死信队列来变通处理
-	
-Java线程池七个参数详解：
-	
+超时的订单 可以用死信队列来变通处理
+
+### 消息队列MQ实现过期订单关闭：
+RabbitMQ插件、kafka时间轮、RocketMQ延迟消息
+
+### Redission实现过期订单关闭：
+RDelayedQueue
+
+### kafka为什么依赖zookeeper?
+1、通过使用 ZooKeeper 协调服务，Kafka 就能将 Producer，Consumer，Broker 等结合在一起
+2、借助 ZooKeeper，Kafka 就能够将所有组件在无状态的条件下建立起生产者和消费者的订阅关系，实现负载均衡
+
+### kafka分区(partition)的原因：
+水平扩展：磁盘写入速度就是kafka处理速度的极限，处理不过来就要加机器。
+每台机器持有不同的partition。生产者爱发哪台发哪台，并行处理
+
+
+## 高并发下的限流：
+1、前端 random频闭掉一部分（过于粗暴）
+2、消息队列ActiveMQ/RabbitMQ/RocketMQ/kafka等流量削峰、异步处理
+3、Redis，库存数量存在redis中，使用String类型的decr(转化成int类型再 减1)、incr(加1)
+4、Tomcat 限流: conf/server.xml中的maxThreads
+	<Connector port="8080" protocol="HTTP/1.1"
+	connectionTimeout="20000"
+	maxThreads="150"
+	redirectPort="8443" />
+5、nginx 限流
+	location / {
+		limit_req zone=mylimit burst=20 nodelay;  //每秒可以处理20个请求，超出的请求全部返回503
+		proxy_pass http://real_server;
+	}
+limit_req和limit_conn两个模块都是为了来限流的：
+request是指请求，即http请求，（注意，tcp连接是有状态的，而构建在tcp之上的http却是无状态的协议
+connection是连接，即常说的tcp连接，通过三次握手而建立的一个完整状态机。建立一个连接，必须得要三次握手。
+
+limit_req_zone  $binary_remote_addr zone=req10k:30m rate=100000000r/s;
+limit_req  zone=req10k burst=100000000;
+rate：每秒可以处理的请求数。
+burst：等待处理的请求队列长度。
+delay：等待队列中，不需要等待，可以立刻处理的请求数目。
+nodelay：一旦设置，相当于delay设置为max int，rate+burst数量的请求全部可以瞬时处理。
+例如：rate=10，burst=10，nodelay，每秒可以处理20个请求，超出的请求全部返回503。
+rate=10，burst=10，delay=2，一秒钟，来20个请求，可以瞬时处理12个请求，后8个设置定时器，延时处理。
+
+
+
+6、Sentinel限流:
+	Sentinel 的限流原理主要是通过统计系统的 QPS （即每秒请求数量）和并发量来控制系统的流量，从而达到限流的目的。 
+	当并发请求数量超过预设的阈值时， Sentinel 会拒绝该请求，并返回一个 FlowException 的错误响应。 
+	限流过滤的实现主要在 FlowSlot 的 entry 方法进行
+
+## nginx负载均衡的5种策略
+1、轮询（默认）:每个请求按时间顺序逐一分配到不同的后端服务器，如果后端服务器down掉，能自动剔除。
+2、权重（weight）:指定轮询几率，weight和访问比率成正比，用于后端服务器性能不均的情况。
+3、IP绑定 ip_hash:每个请求按访问ip的hash结果分配，这样每个访客固定访问一个后端服务器，可以解决session的问题。
+4、fair（第三方）:按后端服务器的响应时间来分配请求，响应时间短的优先分配。
+5、url_hash（第三方）:按访问url的hash结果来分配请求，使每个url定向到同一个后端服务器，后端服务器为缓存时比较有效。
+
+
+
+## 分布式事务：
+一、消息队列MQ实现分布式事务，最简单的原理框架：
+借助消息队列MQ的消息可靠传递，实现业务间解耦、事务强一致
+1、>> 生产者发送消息做可靠性检查，确保消息真正投递出去；
+（例如生产者 发送消息时先把 1).业务数据入库、
+2).然后消息记录(messageId,message:序列化的业务数据,status=0)入库、
+3).最后再发送消息;
+confirmCallback收到ack之后，消息记录status改为1
+定时任务查询status=0的消息记录，再次进行发送，确保消费成功。
+）
+2、>> 消费者做幂等，确保业务没有重复执行；
+3、>> 消费者做异常重试，反复出错时需要捕捉异常并记录，以便手工干预；
+二、Seata如何实现分布式事务
+Seata针对不同的业务场景提供了四种不同的事务模式，具体如下
+AT模式： AT 模式的一阶段、二阶段提交和回滚（借助undo_log表来实现）均由 Seata 框架自动生成，用户只需编写“业务SQL”，便能轻松接入分布式事务，
+AT 模式是一种对业务无任何侵入的分布式事务解决方案。
+AT模式，分为两个阶段
+一阶段：业务数据和回滚日志记录在同一个本地事务中提交，释放本地锁和连接资源
+二阶段：提交异步化 （ 或者事务执行失败，回滚通过一阶段的回滚日志进行反向补偿）
+三、Redis键通知功能 notify-keyspace-events实现分布式事务
+
+## elasticsarch:
+1. es 7、8  一个大区别：8默认需要安全认证
+2. String类型:
+		text: 会分词
+		keyword: 不会分词
+3. 中文分词器：
+   ik_max_word：最细粒度的拆分;
+   ik_smart: 最粗粒度的拆分
+
+## Redis：
+### Redis支持三种集群方案
+1. 主从复制模式
+2. Sentinel（哨兵）模式:
+   每隔2秒，每个哨兵会通过它所监控的主节点、从节点向__sentinel__:hello通道发布一条hello消息。
+   每个哨兵会通过它所监控的主节点、从节点订阅__sentinel__:hello通道的消息，以此接收其他哨兵发布的信息。
+3. Cluster模式
+
+### Redis 持久化机制
+1、快照（snapshotting）
+save 900 1      #在900秒(15分钟)之后，如果至少有1个key发生变化，Redis就会自动触发BGSAVE命令创建快照。
+save 300 10     #在300秒(5分钟)之后，如果至少有10个key发生变化，Redis就会自动触发BGSAVE命令创建快照。
+save 60 10000   #在60秒(1分钟)之后，如果至少有10000个key发生变化，Redis就会自动触发BGSAVE命令创建快照。
+2、AOF（append-only file）持久化；appendonly yes开启AOF
+	appendfsync always
+	appendfsync everysec
+	appendfsync no
+
+## Mysql
+### shardingsphere JDBC分表：
+1、广播表（字典表），同时插入到多个数据表中，保证了字典表的一致性
+broadcast-tables:
+例：Actual SQL:  db1::: insert into t_dict
+Actual SQL:  db2::: insert into t_dict
+Logic SQL:  insert into t_dict
+2、绑定表：join时避免笛卡尔积：
+binding-tables:
+- cpac_room_gather_police,cpac_person_gather_police
+
+### Mysql主从复制：
+#### Mysql开启binlog
+log-bin=mysql-bin
+masterslave:
+load-balance-algorithm-type: round_robin   或者 random
+#### Mysql主从复制的原理：
+1、当Master节点进行insert、update、delete操作时，会按顺序写入到binlog中。
+2、slave从库连接master主库，Master有多少个slave就会创建多少个binlog dump线程。
+3、当Master节点的binlog发生变化时，binlog dump 线程会通知所有的salve节点，并将相应的binlog内容推送给slave节点。
+4、I/O线程接收到 binlog 内容后，将内容写入到本地的 relay-log。
+5、SQL线程读取I/O线程写入的relay-log，并且根据 relay-log 的内容对从数据库做对应的操作。
+
 
 spring boot 启动流程:
 1、@SpringBootApplication
 
 
 
-es 7、8  一个大区别：8默认需要安全认证
 
-kafka为什么依赖zookeeper?
-1、通过使用 ZooKeeper 协调服务，Kafka 就能将 Producer，Consumer，Broker 等结合在一起
-2、借助 ZooKeeper，Kafka 就能够将所有组件在无状态的条件下建立起生产者和消费者的订阅关系，实现负载均衡
+
+
 
 Java参数传递中，不管传递的是基本数据类型还是引用类型，都是值传递。
 
@@ -35,23 +214,7 @@ BaseController：
 	3、通用响应返回结果:成功、失败等
 	
 
-爱拍 高并发：
-1、前端 random频闭掉一部分（过于粗暴）
-2、消息队列ActiveMQ/RabbitMQ/RocketMQ/kafka等流量削峰、异步处理
-3、Redis，库存数量存在redis中，使用String类型的decr(转化成int类型再 减1)、incr(加1)
-4、Tomcat 限流: conf/server.xml中的maxThreads
-	<Connector port="8080" protocol="HTTP/1.1"
-          connectionTimeout="20000"
-          maxThreads="150"
-          redirectPort="8443" />
-5、nginx 限流
-	location / {
-        limit_req zone=mylimit burst=20 nodelay;
-        proxy_pass http://real_server;
-	}
-	limit_req和limit_conn两个模块都是为了来限流的：
-	request是指请求，即http请求，（注意，tcp连接是有状态的，而构建在tcp之上的http却是无状态的协议
-	connection是连接，即常说的tcp连接，通过三次握手而建立的一个完整状态机。建立一个连接，必须得要三次握手。
+
 	
 
 SOLR 、 ElasticSearch分词：
@@ -81,35 +244,12 @@ ElasticSearch	Java API:
 	boolQueryBuilder.filter(QueryBuilders.rangeQuery("create_time").lte(endTime));
 
 
-在多线程环境下，要使用线程安全的集合，比如，
-ConcurrentHashMap是线程安全的HashMap，
-CopyOnWriteArrayList是线程安全的ArrayList.
-CopyOnWriteArraySet是线程安全的HashSet.
 
 
 amqp: Advanced Message Queuing Protocol
 
 
-分布式事务：
-一、消息队列MQ实现分布式事务，最简单的原理框架：
-	借助消息队列MQ的消息可靠传递，实现业务间解耦、事务强一致
-	1、>> 生产者发送消息做可靠性检查，确保消息真正投递出去；
-		（例如生产者 发送消息时先把 1).业务数据入库、
-			2).然后消息记录(messageId,message:序列化的业务数据,status=0)入库、
-			3).最后再发送消息;
-			confirmCallback收到ack之后，消息记录status改为1
-			定时任务查询status=0的消息记录，再次进行发送，确保消费成功。
-		）
-	2、>> 消费者做幂等，确保业务没有重复执行；
-	3、>> 消费者做异常重试，反复出错时需要捕捉异常并记录，以便手工干预；
-二、Seata如何实现分布式事务
-Seata针对不同的业务场景提供了四种不同的事务模式，具体如下
-	AT模式： AT 模式的一阶段、二阶段提交和回滚（借助undo_log表来实现）均由 Seata 框架自动生成，用户只需编写“业务SQL”，便能轻松接入分布式事务，
-	AT 模式是一种对业务无任何侵入的分布式事务解决方案。
-	AT模式，分为两个阶段
-		一阶段：业务数据和回滚日志记录在同一个本地事务中提交，释放本地锁和连接资源
-		二阶段：提交异步化 （ 或者事务执行失败，回滚通过一阶段的回滚日志进行反向补偿）
-三、Redis键通知功能 notify-keyspace-events实现分布式事务		
+	
 		
 		
 消息队列MQ主要包含两种模型：点对点（队列）与发布订阅两种模型。		
@@ -124,11 +264,7 @@ Seata针对不同的业务场景提供了四种不同的事务模式，具体如
 		订阅者（Subscriber）
 		每个消息可以有多个消费者：和点对点方式不同，发布消息可以被所有订阅者消费
 
-消息队列MQ实现过期订单关闭：
-	RabbitMQ插件、kafka时间轮、RocketMQ延迟消息		
-	
-Redission实现过期订单关闭：
-	RDelayedQueue
+
 
 curl --location --request GET 'http://127.0.0.1:15002/lgi/icons' 
 curl --location --request GET 'http://127.0.0.1:15002/lgi/point?oid=330681'
@@ -266,22 +402,7 @@ Redis面试题：
 		key已经存着，则不会覆盖旧值，并返回0,
 		key之前没有，则可以设置成功，并返回1.
 	
-Redis支持三种集群方案
- 主从复制模式
- Sentinel（哨兵）模式:
-	每隔2秒，每个哨兵会通过它所监控的主节点、从节点向__sentinel__:hello通道发布一条hello消息。
-	每个哨兵会通过它所监控的主节点、从节点订阅__sentinel__:hello通道的消息，以此接收其他哨兵发布的信息。
- Cluster模式
 
-Redis 持久化机制
-1、快照（snapshotting）
-save 900 1      #在900秒(15分钟)之后，如果至少有1个key发生变化，Redis就会自动触发BGSAVE命令创建快照。
-save 300 10     #在300秒(5分钟)之后，如果至少有10个key发生变化，Redis就会自动触发BGSAVE命令创建快照。
-save 60 10000   #在60秒(1分钟)之后，如果至少有10000个key发生变化，Redis就会自动触发BGSAVE命令创建快照。
-2、AOF（append-only file）持久化；appendonly yes开启AOF
-# appendfsync always
-appendfsync everysec
-# appendfsync no
 
 MyBatis的mapper接口调用时有哪些要求？
 1.Mapper接口方法名和mapper.xml中定义的每个sql的id相同；
@@ -293,15 +414,7 @@ MyBatis的mapper接口调用时有哪些要求？
 vue 姓名改为不可编辑：
 <el-input :disabled="formPerson.rid != null" v-model="formPerson.xm" placeholder="请输入姓名" />
 
-shardingsphere JDBC分表：
-1、广播表（字典表），同时插入到多个数据表中，保证了字典表的一致性
-	broadcast-tables:
-	例：Actual SQL:  db1::: insert into t_dict
-	    Actual SQL:  db2::: insert into t_dict
-		Logic SQL:  insert into t_dict
-2、绑定表：join时避免笛卡尔积：
-	binding-tables:
-          - cpac_room_gather_police,cpac_person_gather_police
+
 
 
 
@@ -444,16 +557,7 @@ volumes:
 
 
 shardingsphere(sharding-jdbc-spring-boot-starter) 实现数据库读写分离
-# 开启binlog
-log-bin=mysql-bin
-masterslave:
-      load-balance-algorithm-type: round_robin   或者 random
-主从复制的原理：
-1、当Master节点进行insert、update、delete操作时，会按顺序写入到binlog中。
-2、slave从库连接master主库，Master有多少个slave就会创建多少个binlog dump线程。
-3、当Master节点的binlog发生变化时，binlog dump 线程会通知所有的salve节点，并将相应的binlog内容推送给slave节点。
-4、I/O线程接收到 binlog 内容后，将内容写入到本地的 relay-log。
-5、SQL线程读取I/O线程写入的relay-log，并且根据 relay-log 的内容对从数据库做对应的操作。
+
 
 
 sass:
@@ -868,7 +972,8 @@ springcloud:
 	  
 	sentinel：熔断、降级
 	seata:分布式事务(性能不太高，常用于支付场景)
-	
+
+
 
 typescript:
   interface Person{
@@ -1236,13 +1341,6 @@ public Map test(@PathVariable("id") Long id) {
 5. GitHub 返回令牌.
 6. A 网站使用令牌，向 GitHub 请求用户数据。
 
-nginx负载均衡的5种策略
-1、轮询（默认）:每个请求按时间顺序逐一分配到不同的后端服务器，如果后端服务器down掉，能自动剔除。
-2、权重（weight）:指定轮询几率，weight和访问比率成正比，用于后端服务器性能不均的情况。
-3、IP绑定 ip_hash:每个请求按访问ip的hash结果分配，这样每个访客固定访问一个后端服务器，可以解决session的问题。
-4、fair（第三方）:按后端服务器的响应时间来分配请求，响应时间短的优先分配。
-5、url_hash（第三方）:按访问url的hash结果来分配请求，使每个url定向到同一个后端服务器，后端服务器为缓存时比较有效。
-
 
 
 写SQL尽量先查询和过滤数据量小的表，再去join大的表
@@ -1255,9 +1353,7 @@ Using filesort：对结果使用一个外部索引排序，而不是按索引次
 
 单点登录的标准做法:单独部署一个认证中心 (Apereo CAS 是一个企业级单点登录系统)
 
-kafka分区(partition)的原因：
-	水平扩展：磁盘写入速度就是kafka处理速度的极限，处理不过来就要加机器。
-	每台机器持有不同的partition。生产者爱发哪台发哪台，并行处理
+
 
 JDK：Java Development Kit
 JRE：Java Runtime Environment
@@ -1971,22 +2067,7 @@ git克隆项目，创建分支，提交和同步修改，到合并分支请求�
 
 SimpleDateFormat线程不安全,可以使用ThreadLocal<SimpleDateFormat>，或者common-lang包：FastDateFormat.getInstance().format(new Date());
 
-消息队列（Kafka、ActiveMQ、RabbitMQ、RocketMQ ）常见的使用场景：解耦、异步、削峰
-解耦：发布端 只管生产数据，消费端 自己订阅或者取消订阅
-消息队列的缺点：系统复杂度上升、一致性问题。
-kafka高可用：replica（复制品） 副本机制。每个 partition 的数据都会同步到其它机器上，
-	形成自己的多个 replica 副本。所有 replica 会选举一个 leader 出来，
-	那么生产和消费都跟这个 leader 打交道，然后其他 replica 就是 follower
-防止重复消费：增加唯一性校验
-如何解决消息丢失的问题：Kafka关闭自动提交 offset，在处理完之后自己手动提交 offset，
-	再自己保证幂等性就好了。
-如何保证消息的顺序性：一个 topic，有三个 partition。
-	生产者在写的时候，其实可以指定一个 key，比如说我们指定了某个订单 id 作为 key，
-	那么这个订单相关的数据，一定会被分发到同一个 partition 中去，
-	而且这个 partition 中的数据一定是有顺序的。
-	一个 topic，一个 partition，一个 consumer，内部单线程消费，单线程吞吐量太低，一般不会用这个。
-	写 N 个内存 queue，具有相同 key 的数据都到同一个内存 queue；然后对于 N 个线程，
-	每个线程分别消费一个内存 queue 即可，这样就能保证顺序性。
+
 	
 mybatis-plus自动生成代码
 chrome去掉滚动条：
@@ -2280,13 +2361,6 @@ Q:JVM optimize?
 Mysql：	
 InnoDB 和 Myisam 都是用 B+Tree 来存储数据的。
 
-Q:线程池 消息队列满了，后续任务怎么处理?
-ThreadPoolExecutor(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit, BlockingQueue<Runnable> workQueue)
-当调用 execute() 方法添加一个任务时，线程池会做如下判断：
-a. 如果正在运行的线程数量小于 corePoolSize，那么马上创建线程运行这个任务；
-b. 如果正在运行的线程数量大于或等于 corePoolSize，那么将这个任务放入队列。
-c. 如果这时候队列满了，而且正在运行的线程数量小于 maximumPoolSize，那么还是要创建线程运行这个任务；
-d. 如果队列满了，而且正在运行的线程数量大于或等于 maximumPoolSize，那么线程池会抛出异常，告诉调用者“我不能再接受任务了”。
 
 Q:内置锁(synchronized)、显示锁(ReentrantLock) 区别?
 内置锁能够解决大部分需要同步的场景，只有在需要额外灵活性是才需要考虑显式锁，

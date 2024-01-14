@@ -1632,7 +1632,7 @@ list = list.stream().skip(( pageNum - 1) * pageSize).limit(pageSize).collect(Col
 git config user.name "用户名"
 git config user.email "邮箱"
 //修改全局仓库下用户名和邮箱
-git config --global user.email   "qun.cheng@wayz.ai"
+git config --global user.email   "391323163@qq.com"
 git config --global user.name  "qun.cheng"
 git config --global --list
 331.手机微信小程序怎么打开调试工具：
@@ -2043,6 +2043,10 @@ sudo du -hc --max-depth=0 /yd21
 location /duty {
 alias  F:\source\duty-vue3\dist;
 }
+388.github解决代码下载不了的问题：
+   1.git config --global --list
+   2.chrome://net-export/       (监控浏览器，拿到proxy)
+   3.git config --global http.proxy http://username:password@127.0.0.1:18080
 
 
 

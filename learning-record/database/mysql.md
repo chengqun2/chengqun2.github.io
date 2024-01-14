@@ -7,14 +7,14 @@
 	GROUP BY
 	t1.id
 ### mysql多表更新:
-    UPDATE crm_customer t11
-    INNER JOIN (
-    SELECT
-    sum(t2.order_amt) order_amt,
-    t2.customer_id customer_id
-    FROM
-    scm_order t2
-    GROUP BY
-    t2.customer_id
-    ) b ON t11.id = b.customer_id
-    SET t11.amt = b.order_amt    
+UPDATE crm_customer t11
+INNER JOIN (
+SELECT
+sum(t2.order_amt) order_amt,
+t2.customer_id customer_id
+FROM
+scm_order t2
+GROUP BY
+t2.customer_id
+) b ON t11.id = b.customer_id
+SET t11.amt = b.order_amt    
