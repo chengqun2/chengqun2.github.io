@@ -2043,7 +2043,7 @@ sudo du -hc --max-depth=0 /yd21
 location /duty {
 alias  F:\source\duty-vue3\dist;
 }
-388.github解决代码下载不了的问题：
+388.github解决代码下载及提交不了的问题(代理问题)：
    1.git config --global --list
    2.chrome://net-export/       (监控浏览器，拿到proxy)
    3.git config --global http.proxy http://username:password@127.0.0.1:18080
