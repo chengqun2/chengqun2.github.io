@@ -32,7 +32,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 13.eclipse安装svn插件地址：http://subclipse.tigris.org/update_1.8.x
 14安卓国内镜像地址：mirrors.neusoft.edu.cn
-15.http://localhost:8080/uinmeeting/mobile/mobileRequest.shtml?method=searchGroup&params={%22appId%22:%2200000000%22,%22key%22:%22%E7%9B%90%E5%9F%8E%22}
+15.http://localhost:8080/uinmeeting/mobile/mobileRequest.shtml?method=searchGroup&params={}
 16.$('#grid').datagrid('load', {
 username:$('#username').val(),
 end: $('#end').datetimebox('getValue')
