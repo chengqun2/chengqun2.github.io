@@ -1,3 +1,10 @@
+yarn add -D @types/react@17.0.2
+
+vscode格式化vue代码：Shift+Alt+F
+
+idea插件(sql打印时直接拼接好参数)： mybatis-log-plugin-free
+
+
 Trello 看板和卡片
 https://www.freecodecamp.org/news/create-full-stack-app-with-nextjs13-and-firebase/
 https://firebase.google.com/codelabs/firebase-emulator#0
@@ -159,16 +166,17 @@ AT模式，分为两个阶段
 ### Redis支持三种集群方案
 1. 主从复制模式：
    主要目的：读写分离、备份数据。主节点进行`读写`操作，从节点负责`读`操作(读写分离，分担master的读压力)
-   缺点： 不具备自动容错与恢复功能、Redis的容量受限于单机配置
+   缺点： 不具备自动容错与恢复功能、Redis的容量受限于单机配置。Master挂了，需要人工切到Slave
 2. Sentinel（哨兵）模式:
    每隔2秒，每个哨兵会通过它所监控的主节点、从节点向__sentinel__:hello通道发布一条hello消息。
    每个哨兵会通过它所监控的主节点、从节点订阅__sentinel__:hello通道的消息，以此接收其他哨兵发布的信息。
    主要目的：高可用、故障自动转移。哨兵模式下故障转移后，从节点会全量复制新的主节点数据。
-   缺点： 同样也继承了主从模式难以在线扩容的缺点，Redis的容量受限于单机配置
+   缺点： 同样也继承了主从模式难以在线扩容的缺点，Redis的容量受限于单机配置。
    		需要额外的资源来启动sentinel进程，实现相对复杂一点，同时slave节点作为备份节点不提供服务
 3. Cluster(集群)模式：
    主要目的：解决单机Redis容量有限的问题，将数据按一定的规则分配到多台机器，内存/QPS不受限于单机。
-   			无中心架构、集群中的每个节点都是平等的关系
+   			无中心架构、集群中的每个节点都是平等的关系。
+   			搭建Redis至少需要6台机器。分成3组，每组1台master、 1台slave。某个Master挂了，相应的slave接上。
    缺点：不支持多数据库空间，集群模式下只能使用一个，即db 0。数据通过异步复制，不保证数据的强一致性。
 
 ### Redis 持久化机制
