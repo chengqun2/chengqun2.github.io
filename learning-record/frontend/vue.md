@@ -64,3 +64,12 @@
         <hellochange :msgchange="hello"></hellochange>
     子Vue：
         props: ["msgchange"]    
+5. setup(){
+       const name = ref('Bob')
+       const age = ref(30)
+       return {
+           name,
+           age
+       }
+   }
+   

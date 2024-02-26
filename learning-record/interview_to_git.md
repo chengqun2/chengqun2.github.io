@@ -1,8 +1,4 @@
-yarn add -D @types/react@17.0.2
 
-vscode格式化vue代码：Shift+Alt+F
-
-idea插件(sql打印时直接拼接好参数)： mybatis-log-plugin-free
 
 
 Trello 看板和卡片
@@ -18,6 +14,9 @@ unit 空闲线程存活时间单位
 workQueue 工作队列
 threadFactory 线程工厂
 handler 拒绝策略
+
+ThreadPoolExecutor 提供了四个拒绝策略，分别是:
+	CallerRunsPolicy, AbortPolicy, DiscardPolicy, DiscardOldestPolicy
 
 #### 线程池 线程队列满了，后续任务怎么处理?
 ThreadPoolExecutor(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit, BlockingQueue<Runnable> workQueue)

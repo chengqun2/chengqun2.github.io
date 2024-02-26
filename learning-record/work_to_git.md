@@ -1527,45 +1527,45 @@ return null;
 307. spring-data-jpa
 	 @Transient
 	 TLine line; // 临时存储用，不存入数据库
-	 308.centos查询文件夹大小： du -sh /path
-	 查看当前目录下各文件、文件夹的大小： du -h --max-depth=1
-	 309.less转换成css
+308. centos查询文件夹大小： du -sh /path
+ 查看当前目录下各文件、文件夹的大小： du -h --max-depth=1
+309. less转换成css
 	 npm install -g less
 	 lessc style.less style.css
-	 310.git增加ssh认证：
-	 C:\Users\HP\.ssh\id_rsa.pub
-	 311.nacos在windows下单机启动
-	 ./startup.cmd -m standalone
-	 312.测试git地址：
-	 git ls-remote https://github.com/chengqun2/chess.git
-	 313.postgresql递归查询，查询parent_id = 3045 及所有子列表
-	 WITH RECURSIVE subordinates AS (
-	 SELECT
-	 menu_id,
-	 menu_name,
-	 parent_id,
-	 PATH,
-	 order_num
-	 FROM
-	 sys_menu
-	 WHERE
-	 parent_id = 3045 UNION
-	 SELECT
-	 e.menu_id,
-	 e.menu_name,
-	 e.parent_id,
-	 e.PATH,
-	 e.order_num
-	 FROM
-	 sys_menu e
-	 INNER JOIN subordinates s ON s.menu_id = e.parent_id
-	 ) SELECT
-	*
-	FROM
-		subordinates 
-	ORDER BY
-		parent_id,
-		order_num	
+310. git增加ssh认证：
+	C:\Users\HP\.ssh\id_rsa.pub
+311. nacos在windows下单机启动
+ ./startup.cmd -m standalone
+312. 测试git地址：
+ git ls-remote https://github.com/chengqun2/chess.git
+313. postgresql递归查询，查询parent_id = 3045 及所有子列表
+ WITH RECURSIVE subordinates AS (
+ SELECT
+ menu_id,
+ menu_name,
+ parent_id,
+ PATH,
+ order_num
+ FROM
+ sys_menu
+ WHERE
+ parent_id = 3045 UNION
+ SELECT
+ e.menu_id,
+ e.menu_name,
+ e.parent_id,
+ e.PATH,
+ e.order_num
+ FROM
+ sys_menu e
+ INNER JOIN subordinates s ON s.menu_id = e.parent_id
+ ) SELECT
+*
+FROM
+	subordinates 
+ORDER BY
+	parent_id,
+	order_num	
 314.lambda获取列表的对象中最小的parentId
 private int getParentId(List<SysMenu> menus) {
 if (null!=menus && !menus.isEmpty() && menus.size()>0){
@@ -2047,7 +2047,31 @@ alias  F:\source\duty-vue3\dist;
    1.git config --global --list
    2.chrome://net-export/       (监控浏览器，拿到proxy)
    3.git config --global http.proxy http://username:password@127.0.0.1:18080
-
-
-
+389.It looks like you're trying to use TypeScript but do not have the required package(s) installed.
+    Please install @types/react by running: npm install --save-dev @types/react
+	使用 `yarn add -D @types/react@17.0.2` 手动添加依赖。
+390.vscode格式化vue代码：Shift+Alt+F
+391.idea插件(sql打印时直接拼接好参数)： mybatis-log-plugin-free
+292. du -h --max-depth=1 /path/to/directory
+293. truncate -s 0 filename
+294. 数据库分区策略： 范围分区(Range Partitioning)
+	CREATE TABLE sales (
+    sale_id INT,
+    sale_date int
+	)
+	PARTITION BY RANGE (sale_date) (
+		PARTITION p0 VALUES LESS THAN (2020),
+		PARTITION p1 VALUES LESS THAN (2021),
+		PARTITION p2 VALUES LESS THAN (2022),
+		PARTITION p3 VALUES LESS THAN (2023),
+		PARTITION p4 VALUES LESS THAN MAXVALUE
+	);
+295. Vue3 setup(){
+		const name = ref('Bob')
+		const age = ref(30)
+		return {
+			name,
+			age
+		}
+	}
 		
