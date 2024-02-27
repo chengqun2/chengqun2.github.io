@@ -2074,4 +2074,6 @@ alias  F:\source\duty-vue3\dist;
 			age
 		}
 	}
+296. spring boot 获取某个类中的值：
+	@Value("#{T(com.example.YourClass).YOUR_STATIC_FIELD}")	
 		
