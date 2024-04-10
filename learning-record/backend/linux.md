@@ -23,5 +23,5 @@
 `sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" protocol="icmp" icmp-type="echo-request" reject'`
 
 ### 端口占用情况
-sudo netstat -tuln
-sudo netstat -tuln | grep 8080
+`sudo netstat -tuln`
+`sudo netstat -tuln | grep 8080`
