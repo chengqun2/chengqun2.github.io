@@ -18,3 +18,5 @@
 	export PATH=$JAVA_HOME/bin:$PATH
 	保存退出后，执行source /etc/profile使修改的环境变量生效
 	5).使用java -version命令测试是否成功     
+### Mybatis - Invalid bound statement (not found)
+Check if scanned the config of mapperLocations 
