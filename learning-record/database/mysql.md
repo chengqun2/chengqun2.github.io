@@ -18,3 +18,6 @@ GROUP BY
 t2.customer_id
 ) b ON t11.id = b.customer_id
 SET t11.amt = b.order_amt    
+### Mysql 行号rownum
+SELECT @rowno:=@rowno+1 AS rownum, id, score FROM table_name, (SELECT @rowno:=0) AS t
+ORDER BY score DESC;
