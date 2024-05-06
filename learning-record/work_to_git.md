@@ -1009,7 +1009,7 @@ tomcat/webapps的manager接口(/list、/reload、/start、/stop)：http://localh
 2).修改tomcat/bin/catalina.sh  	改为CATALINA_OUT="$CATALINA_BASE"/logs/catalina.out
 205.css中!important的优先级最高，高于内置的style，慎用!important。
 206.windows cmd 根据pid查询端口号，kill：
-netstat -aon|findstr "10000"
+netstat -aon|findstr "3306"
 taskkill /T /F /PID 9088
 netstat -ano | findstr pid
 pid可以在屏幕最下方任务栏右击->点击任务管理器->服务 查到
