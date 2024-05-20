@@ -2043,11 +2043,13 @@ sudo du -hc --max-depth=0 /yd21
 location /duty {
 alias  F:\source\duty-vue3\dist;
 }
-388.github解决代码下载及提交不了的问题(代理问题)：
+388.github解决代码下载及提交不了的问题(代理问题 
+   fatal: unable to access 'https://github.com/chengqun2/chengqun2.github.io.git/': 
+   Failed to connect to 127.0.0.1 port 18080 after 2087 ms: Couldn't connect to server)：
    1.git config --global --list
    2.chrome://net-export/       (监控浏览器，拿到proxy)
    3.git config --global http.proxy http://username:password@127.0.0.1:18080
-   git config --global http.proxy http://chengqun2:Ww88459526@127.0.0.1:7890
+     或者 git config --global http.proxy http://chengqun2:Ww88459526@127.0.0.1:7890
 389.It looks like you're trying to use TypeScript but do not have the required package(s) installed.
     Please install @types/react by running: npm install --save-dev @types/react@17.0.2
 	使用 `yarn add -D @types/react@17.0.2` 手动添加依赖。
