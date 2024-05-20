@@ -2047,14 +2047,15 @@ alias  F:\source\duty-vue3\dist;
    1.git config --global --list
    2.chrome://net-export/       (监控浏览器，拿到proxy)
    3.git config --global http.proxy http://username:password@127.0.0.1:18080
+   git config --global http.proxy http://chengqun2:Ww88459526@127.0.0.1:7890
 389.It looks like you're trying to use TypeScript but do not have the required package(s) installed.
     Please install @types/react by running: npm install --save-dev @types/react@17.0.2
 	使用 `yarn add -D @types/react@17.0.2` 手动添加依赖。
 390.vscode格式化vue代码：Shift+Alt+F
 391.idea插件(sql打印时直接拼接好参数)： mybatis-log-plugin-free
-292. du -h --max-depth=1 /path/to/directory
-293. truncate -s 0 filename
-294. 数据库分区策略： 范围分区(Range Partitioning)
+1.   du -h --max-depth=1 /path/to/directory
+2.   truncate -s 0 filename
+3.   数据库分区策略： 范围分区(Range Partitioning)
 	CREATE TABLE sales (
     sale_id INT,
     sale_date int
@@ -2066,7 +2067,7 @@ alias  F:\source\duty-vue3\dist;
 		PARTITION p3 VALUES LESS THAN (2023),
 		PARTITION p4 VALUES LESS THAN MAXVALUE
 	);
-295. Vue3 setup(){
+4.   Vue3 setup(){
 		const name = ref('Bob')
 		const age = ref(30)
 		return {
@@ -2074,6 +2075,6 @@ alias  F:\source\duty-vue3\dist;
 			age
 		}
 	}
-296. spring boot 获取某个类中的值：
+5.   spring boot 获取某个类中的值：
 	@Value("#{T(com.example.YourClass).YOUR_STATIC_FIELD}")	
 		

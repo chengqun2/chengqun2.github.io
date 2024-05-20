@@ -13,4 +13,6 @@ kubectl apply -f deploy.yml
 kubectl get pods
 kubectl logs example-6477c68b54-f6kg9
 kubectl apply -f service.yml
-kubectl get pod,service
+kubectl get deployments,services,pods
+kubectl delete -n default pod/example-6477c68b54-ckl4z
+kubectl delete -n default deployment.apps/example
