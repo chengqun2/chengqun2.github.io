@@ -1524,7 +1524,7 @@ How are the rest of the kids? 其他的孩子还好吗？
 
 
 
-Thank you for the opportunity, My Name is Cheng qun,I'm from Jiangsu provice Yancheng city.
+Thanks for the opportunity, My Name is James Cheng,I'm from Jiangsu provice Yancheng city.
 I graduated from Yangzhou University in 2011 with a major in computer science and technology. 
 After twelve years of software development experience, 
 I hope to bring my Java skills to the new job.
