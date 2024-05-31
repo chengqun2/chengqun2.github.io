@@ -57,5 +57,5 @@ var twoSum = function (nums, target) {
     return [];
 };
 
-var nums = [10, 20, 30];
-console.log(twoSum(nums, 30))
+var nums = [2,6,4];
+console.log(twoSum(nums, 6))

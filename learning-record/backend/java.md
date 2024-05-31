@@ -20,3 +20,6 @@
 	5).使用java -version命令测试是否成功     
 ### Mybatis - Invalid bound statement (not found)
 Check if scanned the config of mapperLocations 
+
+### Maven打包时将外部引入的jar包 打包到项目jar包中
+`<includeSystemScope>true</includeSystemScope>`

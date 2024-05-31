@@ -1875,7 +1875,7 @@ Virtual hard disk files must be uncompressed and unencrypted and must not be spa
 FROM jenkins/jenkins:2.401.2-jdk17
 USER root
 RUN apt-get update && apt-get install -y lsb-release
-RUN curl -fsSLo /usr/share/keyrings/docker-archive-keyring.asc \
+RUN curl -fsSLo /usr/share/keyrings/docker0.-archive-keyring.asc \
 https://download.docker.com/linux/debian/gpg
 RUN echo "deb [arch=$(dpkg --print-architecture) \
 signed-by=/usr/share/keyrings/docker-archive-keyring.asc] \
