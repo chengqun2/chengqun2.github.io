@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<script>
+    /**
+     * @param {string} s
+     * @return {boolean}
+     */
+    var isValid = function(s) {
+        debugger
+        var arr = [];
+        for(let i=0;i<s.length;i++){
+            if(s[i] === '(' || s[i] === '[' || s[i] === '{'){
+                arr.push(s[i]);
+            }else if(s[i] === ')' || s[i] === ']' || s[i] === '}'){
+                if(arr.length ==0 || !isEquals(arr.pop(),s[i])){
+                    return false;
+                }
+            }
+        }
+        return arr.length === 0;
+    };
+    function isEquals(left, right){
+        return (left === '(' && right ===')')||
+            (left === '[' && right ===']')||
+            (left === '{' && right ==='}')
+    }
+
+    // Example usage:
+    const input1 = "()";
+    // const input2 = "{[a + b] * (c - d)}";
+    // const input3 = "((a + b) * (c - d)";
+    // const input4 = "a + b) * (c - d)";
+    console.log(isValid(input1)); // true
+    // console.log(isRegular(input2)); // true
+    // console.log(isRegular(input3)); // false
+    // console.log(isRegular(input4)); // false
+
+    // const stack2 = [1,2,3,4,5,6,7]
+    // let lastElemetnt = stack2.pop();
+    // console.log(lastElemetnt)
+    // console.log(stack2)
+</script>
+</body>
+</html>
