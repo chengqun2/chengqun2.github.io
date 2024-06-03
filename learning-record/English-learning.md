@@ -1524,27 +1524,26 @@ How are the rest of the kids? 其他的孩子还好吗？
 
 
 
-Thanks for the opportunity, My Name is James Cheng,I'm from Jiangsu provice Yancheng city.
+Thanks for the opportunity, My Name is James Cheng, I'm from China.
 I graduated from Yangzhou University in 2011 with a major in computer science and technology. 
 After twelve years of software development experience, 
-I hope to bring my Java skills to the new job.
+I hope to bring my develop skills to the new job.
 The majority of my career has been spent maintaining web applications 
-and ensuring the smooth operations of the back end. 
+and ensuring the smooth operations of the backend. 
 I am proficient at understanding the requirements of the business 
 and putting the customer experience first while keeping an eye on deadlines.  
 My highest-profile project came when I designed, 
-developed, and implemented the architecture of 
-a big data platform that allowed customers 
+developed, and implemented the architecture of a big data platform that allowed customers 
 to query every single car running record onto our platform. 
 From initial requirement gathering to design, coding, 
 testing, and roll-out, I manage every aspect. 
 The application increased query efficiency by 10 times. 
-Before my HBase experience, I spent a decade in the software industry, 
+Before my Hadoop experience, I spent a decade in the software industry, 
 I am proficient in the Linux platform, as well as fluent in Java programming language. 
 My computer science degree from China formed the foundation of my career, 
 and I have taken every opportunity since to take over 50 online courses. 
-
 You could say that I am somewhat addicted to improving my software skills.
+
 I look forward to hearing about your development plans 
 and hope that an interview might allow me to expand on how my skills could contribute.
 Thanks.
