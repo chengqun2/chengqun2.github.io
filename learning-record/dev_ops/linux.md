@@ -25,3 +25,12 @@
 ### 端口占用情况
 `sudo netstat -tuln`
 `sudo netstat -tuln | grep 8080`
+
+### 带时间展示历史命令
+`HISTTIMEFORMAT='%F %T ' history | tail -10`
+
+### 查看某文件夹大小
+`sudo du -hc --max-depth=0 /yd21`
+
+### Clear Cache
+`sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'`

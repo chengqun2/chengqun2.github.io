@@ -23,3 +23,26 @@ Check if scanned the config of mapperLocations
 
 ### Maven打包时将外部引入的jar包 打包到项目jar包中
 `<includeSystemScope>true</includeSystemScope>`
+
+### Java connect Linux to get server info: ganymed-ssh2-262.jar
+<dependency>
+  <groupId>ch.ethz.ganymed</groupId>
+  <artifactId>ganymed-ssh2</artifactId>
+  <version>262</version>
+</dependency>
+	Connection connection = new Connection(hostname);
+	connection.connect();
+	boolean isAuthenticated = connection.authenticateWithPassword(username, password);
+	if (!isAuthenticated) {
+		throw new IOException("Authentication failed.");
+	}
+	Session session = connection.openSession();
+	session.execCommand(command);
+	BufferedReader reader = new BufferedReader(new InputStreamReader(session.getStdout()));
+	String line;
+	while ((line = reader.readLine()) != null) {
+		System.out.println(line);
+	}
+	session.close();
+	connection.close();
+
