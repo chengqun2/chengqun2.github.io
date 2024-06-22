@@ -1,3 +1,8 @@
+
+
+
+
+
 Two different strings sometimes could generate the same hash codes.
 
 
