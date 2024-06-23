@@ -1,5 +1,5 @@
 ### My react learning record
-F:\react\chengqun-app
+F:\react\my-vite-project
 
 ### useState
 const [count, setCount] = useState(0);

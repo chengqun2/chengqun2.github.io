@@ -1,5 +1,13 @@
+Pug template:
+Pug is a clean, whitespace sensitive syntax for writing HTML.
 
 
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/chengqun2/node-connect-linux.git
+git push -u origin main
 
 
 
