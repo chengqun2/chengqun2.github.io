@@ -2055,9 +2055,9 @@ alias  F:\source\duty-vue3\dist;
 	使用 `yarn add -D @types/react@17.0.2` 手动添加依赖。
 390.vscode格式化vue代码：Shift+Alt+F
 391.idea插件(sql打印时直接拼接好参数)： mybatis-log-plugin-free
-1.   du -h --max-depth=1 /path/to/directory
-2.   truncate -s 0 filename
-3.   数据库分区策略： 范围分区(Range Partitioning)
+392. du -h --max-depth=1 /path/to/directory
+393. truncate -s 0 filename
+394. 数据库分区策略： 范围分区(Range Partitioning)
 	CREATE TABLE sales (
     sale_id INT,
     sale_date int
@@ -2069,7 +2069,7 @@ alias  F:\source\duty-vue3\dist;
 		PARTITION p3 VALUES LESS THAN (2023),
 		PARTITION p4 VALUES LESS THAN MAXVALUE
 	);
-4.   Vue3 setup(){
+395. Vue3 setup(){
 		const name = ref('Bob')
 		const age = ref(30)
 		return {
@@ -2077,6 +2077,17 @@ alias  F:\source\duty-vue3\dist;
 			age
 		}
 	}
-5.   spring boot 获取某个类中的值：
+396. spring boot 获取某个类中的值：
 	@Value("#{T(com.example.YourClass).YOUR_STATIC_FIELD}")	
+397.pki generate trust-store-file
+	1、我电脑生成 jks:
+	keytool -genkeypair -alias your_alias -keyalg RSA -keysize 2048 -keystore your_keystore.jks -validity 365
+	2、根据jks生成 csr:
+	keytool -import -alias your_alias -keystore your_keystore.jks -file your_signed_certificate.crt
+	3、csr发送请求，得到一个签名证书 
+	4、将步骤3得到的签名证书导入步骤1生成的key中：
+	   keytool -import -keystore your_keystore.jks -file your_signed_certificate.cer -alias cq	
+	5、使用key进行https数字证书登录  
+	6、查看key: keytool -list -v -keystore your_keystore.jks
+
 		
