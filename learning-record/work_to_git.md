@@ -2089,5 +2089,8 @@ alias  F:\source\duty-vue3\dist;
 	   keytool -import -keystore your_keystore.jks -file your_signed_certificate.cer -alias cq	
 	5、使用key进行https数字证书登录  
 	6、查看key: keytool -list -v -keystore your_keystore.jks
-
-		
+398. 非root用户配置环境变量： 
+    sudo vim /etc/profile
+	export JAVA_HOME=/home/user_name/java/jdk-18.0.1.1
+	export PATH=${JAVA_HOME}/bin:$PATH
+   
