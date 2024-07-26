@@ -21,3 +21,19 @@ npm install --save-dev chai
 registry=https://registry.npmmirror.com/
 electron_mirror=https://npmmirror.com/mirrors/electron/
 然后 npm install electron 即可
+
+### Use pkg to build a runnable package for Linux and Windows
+"scripts": {
+    "dev": "node server.js",
+    "build": "pkg ."
+},
+"pkg": {
+    "assets": [
+        "node_modules/*"
+    ],
+    "targets": [
+        "node12-win-x64",
+        "node12-linux-x64"
+    ],
+    "outputPath": "dist"
+}
