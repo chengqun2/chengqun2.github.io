@@ -34,3 +34,10 @@
 
 ### Clear Cache
 `sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'`
+
+### Find the application folder by specific port
+`lsof -i:8080` to show the pid of the port 8080
+`readlink -f /proc/PID/cwd`
+
+### Show the version of nginx 
+`/usr/local/nginx/sbin/nginx -v`
