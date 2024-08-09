@@ -1,3 +1,13 @@
+### 1. nextjs怎么设计路由
+
+
+2. 前端怎么缓存
+3. redis的经验
+4. 怎么处理高并发
+5. 架构
+
+
+
 Pug template:
 Pug is a clean, whitespace sensitive syntax for writing HTML.
 

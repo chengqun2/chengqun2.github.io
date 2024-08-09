@@ -41,3 +41,17 @@
 
 ### Show the version of nginx 
 `/usr/local/nginx/sbin/nginx -v`
+
+### mount a new disk
+1. `lsblk `
+2. `sudo mkfs /dev/sdd`
+3. `sudo mkdir /data01`
+4. `sudo mount /dev/sdd /data01`
+5. `df -h`
+6. `vim /etc/fstab`   
+   Add to /etc/fstab to ensure the disk mounts automatically after a reboot:
+   `UUID=1111-2222-3333-4444  /data01  ext4  defaults  0  0`
+
+
+
+
