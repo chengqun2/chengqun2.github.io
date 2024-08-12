@@ -1,8 +1,6 @@
 <script setup>
-import { ref, reactive } from 'vue'
-  
-const msg = ref('Hello')
-  
+import { reactive } from 'vue'
+
 const messager = reactive({
   message: 'Hello, this is a dynamic message!',
   count: 0
@@ -15,9 +13,6 @@ const increment = () => {
 </script>
 
 <template>
-  <h3>
-    ref: {{msg}}
-  </h3>
   <h1>{{messager.message}}</h1>
   <h2>
     {{messager.message.split('').reverse().join('')}}
