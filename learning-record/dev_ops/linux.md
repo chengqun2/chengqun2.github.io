@@ -52,6 +52,16 @@
    Add to /etc/fstab to ensure the disk mounts automatically after a reboot:
    `UUID=1111-2222-3333-4444  /data01  ext4  defaults  0  0`
 
+### Enable the firewall and allow necessary ports
+sudo firewall-cmd --state
+sudo systemctl start firewalld
+sudo systemctl enable firewalld
+sudo firewall-cmd --zone=public --add-port=22/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=80/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=443/tcp --permanent
+sudo firewall-cmd --reload
+sudo firewall-cmd --list-all
+
 
 
 
