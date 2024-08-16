@@ -2080,7 +2080,7 @@ alias  F:\source\duty-vue3\dist;
 	}
 396. spring boot 获取某个类中的值：
 	@Value("#{T(com.example.YourClass).YOUR_STATIC_FIELD}")	
-397.pki generate trust-store-file
+397. pki generate trust-store-file
 	1、我电脑生成 jks:
 	keytool -genkeypair -alias your_alias -keyalg RSA -keysize 2048 -keystore your_keystore.jks -validity 365
 	2、根据jks生成 csr:
@@ -2094,4 +2094,5 @@ alias  F:\source\duty-vue3\dist;
     sudo vim /etc/profile
 	export JAVA_HOME=/home/user_name/java/jdk-18.0.1.1
 	export PATH=${JAVA_HOME}/bin:$PATH
-   
+399. 普通车辆、新能源车辆、特殊车辆号牌正则表达式 https://regex101.com/
+     `^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领][A-Z]([a-zA-Z0-9]{5}|[a-zA-Z0-9]{6}|[a-zA-Z0-9]{4}[挂警港澳]|[a-zA-Z0-9]{5}[挂警港澳])$`

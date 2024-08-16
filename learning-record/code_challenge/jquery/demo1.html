@@ -7,15 +7,17 @@
 </head>
 <body>
     <div id="testId1"></div>
-    <div class="testClass2"></div>
-    <span></span>
+    <div id="testId2" class="testClass2"></div>
+    <span id="testId3"></span>
+    <img style="display: none;" id="imgId1" src="/img/test.png" />
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script>
         $("#testId1").text('testId1')
-        const title = $('title').text();
+        const title = $('title').text()
         $('.testClass2').text(`testClass2:${title}`)
         $('span').text('this is a span!')
         $('title').text('title changed!')
+        $('#testId3').text('this is src attr of imgId1:'+$("#imgId1").attr('src'))
     </script>
 </body>
 </html>
