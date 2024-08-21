@@ -1,3 +1,5 @@
 .idea/
 .vscode/
 out/
+.venv/
+learning-record/code_challenge/python/__pycache__/
