@@ -763,6 +763,7 @@ changeUseTime(e) {
 vue父组件监听调用子组件的值：
 父vue(index.vue): 
 <Button btn-text="Hi from Parent" />
+<!-- @updateValue 写在引用子组件的同一行才生效 -->
 <headerSort @updateValue="onChildUpdate" />
 onChildUpdate (newValue) {
   this.descs = newValue;

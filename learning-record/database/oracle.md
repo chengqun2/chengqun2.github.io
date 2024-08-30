@@ -96,3 +96,9 @@ MaxGauge主要用于数据库性能监测（支持 Oracle、DB2、MySQL、Postgr
 ### RAC
 Oracle Real Application Clusters (RAC) 支持您跨多个服务器运行单一 Oracle Database，访问共享存储，充分提高可用性和水平可扩展性。 连接至 Oracle RAC 实例后，您无需修改应用，用户会话即可执行故障切换，安全重播中断期间的变更请求，最终用户完全不会感知到中断。
 
+### 判断字符串中是否包含某个字符串，返回值大于0即存在
+`INSTR(string, substring [, start_position [, nth_appearance]])`
+string: The string to search within.
+substring: The substring to search for.
+start_position: Optional. This specifies the position in the string to start the search. If omitted, the default is 1 (beginning of the string).
+nth_appearance: Optional. This specifies which occurrence of the substring to find. If omitted, the default is 1 (first occurrence).
