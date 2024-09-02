@@ -24,3 +24,6 @@ $("div#container").on('click', 'button.alert', function() {
 $("#element").off("click.someNamespace");
 I would prefer `.on` over `.click` because the former can use less memory and work for dynamically added elements.
 And Can use `.off` to remove the event.
+
+### push() vs Array. unshift() 
+the push() method adds elements to the end of an array, and unshift() adds elements to the beginning
