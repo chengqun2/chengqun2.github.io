@@ -5,7 +5,9 @@ interface BinaryMatrix {
 }
 
 /**
- *  
+ * 
+ * Leftmost Column with at Least a One
+ * 
  * @param binaryMatrix [[0,1,1],
  *                      [1,1,1],
  *                      [0,0,1]]
