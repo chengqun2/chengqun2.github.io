@@ -62,6 +62,11 @@ sudo firewall-cmd --zone=public --add-port=443/tcp --permanent
 sudo firewall-cmd --reload
 sudo firewall-cmd --list-all
 
+### x86_64，则表示服务器是x86架构。 如果输出结果是aarch64，则表示服务器是ARM架构
+`uname -m`
 
+### Show version of the Linux 
+`cat /etc/os-release`
 
-
+### 
+`rsync -a -H /var/lib/clickhouse/ /mnt/sdc/clickhouse`
