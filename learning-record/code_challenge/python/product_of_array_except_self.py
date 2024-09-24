@@ -27,11 +27,12 @@ class Solution:
         postfix_product = 1
         result = [0]*n
         for i in range(n):
-            result[i] = prefix_product
             prefix_product *= nums[i]
+        print(f"prefix loop: {result} ")
         for i in range(n-1,-1,-1):
             result[i] *= postfix_product
             postfix_product *= nums[i]
+        print(f"postfix loop: {result} ")            
         return result   
 
 solution = Solution()

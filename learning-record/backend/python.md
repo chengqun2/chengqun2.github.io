@@ -52,3 +52,20 @@
     response = requests.get('https://search.gitee.com/', params=params, cookies=cookies, headers=headers)
 ### 4. python flask 蓝图(Blueprint) 注册路由：
     app.register_blueprint(admin,url_prefix='/admin')
+
+### List, Set, Dictionary, Tuple
+A List is an ordered, mutable, and indexed collection that allows duplicate elements.
+Lists are defined by square brackets [].
+`my_list = [1, 2, 3, 4, 5]`
+
+A Set is an unordered collection of unique elements. It does not allow duplicates.
+Sets are defined by curly brackets {}
+`my_set = {1, 2, 3, 4, 5}`
+
+A Dictionary is an unordered collection of key-value pairs. Keys are unique, but values can be duplicated.
+Dictionaries are defined by curly brackets {}, with key-value pairs separated by colons:
+`my_dict = {"name": "John", "age": 30}`        
+
+A Tuple is an ordered, immutable collection that allows duplicates.
+Tuples are defined by parentheses ().
+`my_tuple = (1, 2, 3, 4, 5)`
