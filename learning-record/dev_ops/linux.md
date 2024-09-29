@@ -70,3 +70,6 @@ sudo firewall-cmd --list-all
 
 ### 
 `rsync -a -H /var/lib/clickhouse/ /mnt/sdc/clickhouse`
+
+### 设置Linux服务器时间：
+`date -s "2007-08-03 14:15:00"`

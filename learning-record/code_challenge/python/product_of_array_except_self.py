@@ -21,22 +21,25 @@ from typing import List
 
 
 class Solution:
-    def productExceptSelf(self, nums: List[int]) -> List[int]:
-        n = len(nums)
+    def productExceptSelf(self, arr: List[int]) -> List[int]:
+        n = len(arr)
         prefix_product = 1
         postfix_product = 1
-        result = [0]*n
+        result = [1]*n
         for i in range(n):
-            prefix_product *= nums[i]
+            result[i] *= prefix_product
+            prefix_product *= arr[i]
+            print(f"prefix_product计数: {i}, {arr[i]}, {prefix_product},, {result}")
         print(f"prefix loop: {result} ")
         for i in range(n-1,-1,-1):
             result[i] *= postfix_product
-            postfix_product *= nums[i]
+            postfix_product *= arr[i]
+            print(f"postfix_product计数: {i}, {arr[i]}, {postfix_product},,{result[i]},,, {result}")
         print(f"postfix loop: {result} ")            
         return result   
-
+    
 solution = Solution()
-nums = [1,2,3,4]
-result = solution.productExceptSelf(nums)
+arr = [1,2,3,4]
+result = solution.productExceptSelf(arr)
 print(result)
      

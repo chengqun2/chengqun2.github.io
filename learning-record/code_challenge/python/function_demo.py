@@ -38,10 +38,13 @@ def generate_short_code(length=6):
 
 def operateArray(arr):
     n = len(arr)
-    result = [0]*n
-    print(result)
+    result = [1]*n
+    # print(result)
     for i in range(n):
-        result[i] = 10*i
+        print(i)
+        # result[i] = 10*i
+        # result[i] *= 10
+        result[i] = result[i]*10
     return result
 
 arr = [0,1,2,3]
