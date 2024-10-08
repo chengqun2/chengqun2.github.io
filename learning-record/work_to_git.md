@@ -748,7 +748,7 @@ return day + "天" + hour + "小时" + min + "分" + sec + "秒";
 </dependency>
 144.linux查找文件： find / -name '*aipai*'
 145.linux启动jar包命令：
-nohup java -Xms1024m -Xmx6144m -jar aipai-0.1.0.jar > 20180823.log &
+nohup java -jar -Xms1024m -Xmx6144m aipai-0.1.0.jar > 20180823.log &
 146.oracle number类型，不加长度，对应java，java.math.bigdecimal
 147.mysql decimal对应mybatis java.math.bigdecimal类型					 
 148.mysql获得一小时前的时间点：

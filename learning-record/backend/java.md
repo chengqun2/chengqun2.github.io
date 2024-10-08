@@ -46,3 +46,12 @@ Check if scanned the config of mapperLocations
 	session.close();
 	connection.close();
 
+### start a jar
+`nohup java -jar starfish.jar > nohup.out 2>&1  -Duser.timezone=Asia/Shanghai &`
+
+### convert timestamp to date
+`// 1727666666286`
+`long timestamp = System.currentTimeMillis();`
+`// Mon Sep 30 03:16:40 GMT+08:00 2024`
+`Date date = new Date(timestamp);`
+
