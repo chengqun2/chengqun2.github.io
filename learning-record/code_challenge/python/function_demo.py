@@ -35,7 +35,6 @@ def generate_short_code(length=6):
 # print(range_character())
 # print(generate_short_code())
 
-
 def operateArray(arr):
     n = len(arr)
     result = [1]*n
@@ -47,5 +46,14 @@ def operateArray(arr):
         result[i] = result[i]*10
     return result
 
-arr = [0,1,2,3]
-print(operateArray(arr))
+map_demo = {}
+def mapTest(key, value):
+    map_demo[key] = value
+    return map_demo
+
+# arr = [0,1,2,3]
+# print(operateArray(arr))
+
+result = mapTest('code', '001')
+print(result)
+print(result['code'])
