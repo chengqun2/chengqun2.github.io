@@ -40,7 +40,7 @@ def operateArray(arr):
     result = [1]*n
     # print(result)
     for i in range(n):
-        print(i)
+        print(result[i])
         # result[i] = 10*i
         # result[i] *= 10
         result[i] = result[i]*10
@@ -51,9 +51,9 @@ def mapTest(key, value):
     map_demo[key] = value
     return map_demo
 
-# arr = [0,1,2,3]
-# print(operateArray(arr))
+arr = [0,1,2,3]
+print(operateArray(arr))
 
-result = mapTest('code', '001')
-print(result)
-print(result['code'])
+# result = mapTest('code', '001')
+# print(result)
+# print(result['code'])
