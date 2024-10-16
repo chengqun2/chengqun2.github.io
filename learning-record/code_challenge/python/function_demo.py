@@ -51,9 +51,22 @@ def mapTest(key, value):
     map_demo[key] = value
     return map_demo
 
-arr = [0,1,2,3]
-print(operateArray(arr))
+def isInMap(map_demo):
+    if 'code' in map_demo:
+      return True  
+    return
 
-# result = mapTest('code', '001')
-# print(result)
+# arr = [0,1,2,3]
+# print(operateArray(arr))
+
+result = mapTest('code', '001')
+print(result)
 # print(result['code'])
+result2 = isInMap(map_demo)
+print(result2)
+
+
+def maxTest(num1: int, num2: int):
+    return max(num1, num2)
+
+print(maxTest(19,91))

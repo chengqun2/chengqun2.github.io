@@ -69,3 +69,6 @@ Dictionaries are defined by curly brackets {}, with key-value pairs separated by
 A Tuple is an ordered, immutable collection that allows duplicates.
 Tuples are defined by parentheses ().
 `my_tuple = (1, 2, 3, 4, 5)`
+
+### loop an array from index 1
+`for price in prices[1:]`
