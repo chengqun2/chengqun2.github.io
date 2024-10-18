@@ -55,3 +55,8 @@ Check if scanned the config of mapperLocations
 `// Mon Sep 30 03:16:40 GMT+08:00 2024`
 `Date date = new Date(timestamp);`
 
+
+### mybatis collection属性值就是传入的List或array对象在自己封装的map里面的key 
+<foreach item="id" collection="ids" open="and id in (" separator="," close=")">
+    #{id}
+</foreach>
