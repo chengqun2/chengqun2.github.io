@@ -74,7 +74,11 @@ print(maxTest(19,91))
 
 def divisionTest(num1: int, num2: int) -> string:
     quotient = num1 // num2
+    print(f"quotient: {num1} // {num2} = {quotient}")
+    float_quotient = num1 / num2
+    print(f"float_quotient: {num1} / {num2} =  {float_quotient}")
     remainder = num1 % num2
+    print(f"remainder: {num1} % {num2} =  {remainder}")
     return str(quotient) + "..." + str(remainder)
 print(divisionTest(31, 10))
 
