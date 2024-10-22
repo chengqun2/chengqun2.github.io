@@ -21,16 +21,21 @@ def generate_short_code(length=6):
     print(characters)
     return ''.join(random.choice(characters) for _ in range(length))
 
-# def product_of_array(arr):
-#     for i in arr:
-#         print(f"for i in arr: {i}")
-#     n = len(arr)    
-#     for i in range(n):
-#         print(f"for i in range(4): {arr[i]}")    
-
-# arr = [11, 22, 33, 44]
-# product_of_array(arr)   
-
+def sum_of_array(arr):
+    for i in arr:
+        print(f"for i in arr: {i}")
+    n = len(arr)    
+    for i in range(n):
+        print(f"for i in range(4): {arr[i]}")    
+    sum = 0    
+    if n > 0: 
+        for i in arr:
+            print(f"for i in arr: {i}")    
+            sum += i
+    return sum        
+arr = [1, 2, 3, 4]
+sum = sum_of_array(arr)   
+print(f"sum: {sum}")
 # print(calculate(2, 3))
 # print(substr('abcdefghijk'))
 # print(range_character())
@@ -96,3 +101,37 @@ def reverseTest(list: List):
     return list
 ll = [1,2,5,4,3,'s','a']
 print(reverseTest(ll))
+
+
+def compareTriplets(a, b):
+    # Write your code here
+    arr = [0, 0]
+    left = 0
+    right = 0
+    for i in range(len(a)):
+        if a[i] > b[i]:
+            left += 1
+        elif a[i] < b[i]:  
+            right +=1
+    arr[0] = left
+    arr[1] = right
+    return arr    
+a = [1,2,4]
+b = [2,1,3]
+print(compareTriplets(a, b))
+
+# The range() function defaults to increment the sequence by 1, 
+# however it is possible to specify the increment value by adding a third parameter
+def rangeDemo(n):
+    # Write your code here
+    result = 1
+    for i in range(n, 0, -1):
+        print(f"rangeDemo: {i}")
+rangeDemo(5)
+
+def extraLongFactorials(n):
+    print(f"extraLongFactorials: {n}")
+    if n == 1:
+        return 1
+    return n * extraLongFactorials(n-1)
+print(extraLongFactorials(5))
