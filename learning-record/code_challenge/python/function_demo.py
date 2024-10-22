@@ -90,3 +90,9 @@ def nodeTest(l1: List, l2: List):
 l1 = [1,2,3]
 l2 = [4,5]
 nodeTest(l1, l2)
+
+def reverseTest(list: List):
+    list.reverse()
+    return list
+ll = [1,2,5,4,3,'s','a']
+print(reverseTest(ll))
