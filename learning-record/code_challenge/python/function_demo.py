@@ -146,6 +146,10 @@ def list_map_demo():
     # print(f"list: {list}")
     for map in list:
         map['code'] = "newcode-" + map['code']
-        # print(f"map: {map}")
-        print(f"map['code']: {map['code']}")
+        print(f"map: {map}")
+        # print(f"map['code']: {map['code']}")
+    for _ in list:
+        print(f"_: {_}")
+    for _ in range(len(list)):
+        print(f"_: {list[_]['code']}")
 list_map_demo()
