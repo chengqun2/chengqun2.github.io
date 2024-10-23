@@ -135,3 +135,17 @@ def extraLongFactorials(n):
         return 1
     return n * extraLongFactorials(n-1)
 print(extraLongFactorials(5))
+
+
+def list_map_demo():
+    list = []
+    map1 = {"code":"code001","name":"name001"}
+    map2 = {"code":"code002","name":"name002"}
+    list.append(map1)
+    list.append(map2)
+    # print(f"list: {list}")
+    for map in list:
+        map['code'] = "newcode-" + map['code']
+        # print(f"map: {map}")
+        print(f"map['code']: {map['code']}")
+list_map_demo()
