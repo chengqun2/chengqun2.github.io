@@ -153,3 +153,29 @@ def list_map_demo():
     for _ in range(len(list)):
         print(f"_: {list[_]['code']}")
 list_map_demo()
+
+
+def fizzBuzz(n):
+    # Write your code here
+    for i in range(1, n+1):
+        # print(f"fizzBuzz->i: {i}")
+        if i%3==0 and i%5==0:
+            print("FizzBuzz")
+        elif i%3==0 and i%5!=0: 
+            print("Fizz")
+        elif i%3!=0 and i%5==0:     
+            print("Buzz")
+        else:
+            print(i)   
+fizzBuzz(15)
+
+def reverse_words_and_swap_cases(sentence: string):
+    # Step 1: Split the string into words
+    words_array = sentence.split()
+    # Step 2: Reverse the order of words
+    reversed_words_array = words_array[::-1]
+    reversed_words = " ".join(reversed_words_array)
+    # Step 3: Join the words back into a single string and swap the case
+    reversed_and_swapped = reversed_words.swapcase()
+    return reversed_and_swapped
+print(reverse_words_and_swap_cases("aWESOME is cODING"))
