@@ -32,3 +32,14 @@ if s.endswith("ome!"):
 # Split the string into three separate strings,
 # each containing only a word
 print("Split the words of the string: %s" % s.split(" "))
+
+import random
+import string
+
+characters = string.ascii_letters + string.digits
+new_str = ""
+for _ in range(8):
+    str = random.choice(characters) 
+    # print(str)
+    new_str += str
+print(f'new_random_str: {new_str}')
