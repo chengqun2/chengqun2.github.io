@@ -5,8 +5,13 @@ from typing import List
 def calculate(int1, int2):
     return int1 + int2
 
+def concatStrings():
+    return " ".join(["hello","my","friend"])
+print("concatStrings:", concatStrings())    
+
 def substr(str):
     return str[0:8]
+print('substr:', substr('abcdefghijklmn'))
 
 def range_character():
     str = ''
