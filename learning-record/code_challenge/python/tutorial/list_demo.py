@@ -15,3 +15,7 @@ for number in numbers:
      if number > 0 :
           newlist.append(number)
 print(newlist)
+
+arr = [0, 1, 2, 3]
+print(arr.pop())
+print(arr)
