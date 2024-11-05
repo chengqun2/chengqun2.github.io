@@ -3,7 +3,7 @@ import java.util.Base64;
 
 public class Base64Util {
     public static void main(String[] args){
-       System.out.println(Base64Util.setEncryptionBase64("320902199005220019"));
+       System.out.println(Base64Util.setEncryptionBase64("123456"));
     }
 
     public static String setEncryptionBase64(String str) {
