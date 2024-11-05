@@ -20,7 +20,7 @@ arr = [0, 1, 2, 3]
 print(arr.pop())
 print(arr)
 
-strs = ['apple','cat','bag','egg','dog']
+strs = ['aa','ac','ad','abe','ab']
 print(f'sorted strs: {sorted(strs)}')
 
 strs = ["flower","flow","flight"]
