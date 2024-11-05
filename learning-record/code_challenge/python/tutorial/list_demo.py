@@ -19,3 +19,11 @@ print(newlist)
 arr = [0, 1, 2, 3]
 print(arr.pop())
 print(arr)
+
+strs = ['apple','cat','bag','egg','dog']
+print(f'sorted strs: {sorted(strs)}')
+
+strs = ["flower","flow","flight"]
+first = strs[0]
+last = strs[-1]
+print(f"last: {strs[-1]}")

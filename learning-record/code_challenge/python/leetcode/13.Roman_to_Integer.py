@@ -40,7 +40,7 @@
 
 class Soultion:
     def roman_to_integer(self, strs: str) -> int:
-        result = ''
+        result = 0
         num_map = {
             'I': 1,
             'V': 5,
@@ -50,4 +50,14 @@ class Soultion:
             'D': 500,
             'M': 1000
         }
-        for num in [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]:
+        for x,y in zip(strs, strs[1:]):
+            if num_map[x] >= num_map[y]:
+                result += num_map[x]
+            else:
+                result -= num_map[x]
+            print(x, y, result)
+        return result + num_map[strs[-1]]
+soultion = Soultion()      
+print(soultion.roman_to_integer('MCMXCIV'))
+
+

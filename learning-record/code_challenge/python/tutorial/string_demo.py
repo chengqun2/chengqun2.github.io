@@ -44,5 +44,6 @@ for _ in range(8):
     new_str += str
 print(f'new_random_str: {new_str}')
 
-str = "hello"
-print(str[::-1])
+str = "Hello"
+print(f"Reverse: {str[::-1]}")
+print(f"Print the last letter from 'Hello': {str[-1]}")
