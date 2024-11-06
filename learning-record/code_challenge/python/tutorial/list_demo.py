@@ -27,3 +27,9 @@ strs = ["flower","flow","flight"]
 first = strs[0]
 last = strs[-1]
 print(f"last: {strs[-1]}")
+
+arr2 = [0, 1, 2, 3, 4]
+for x in range(len(arr2)):
+     if arr2[x] == 1:
+          continue
+     print(f"x: {x}")

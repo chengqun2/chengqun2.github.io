@@ -27,3 +27,8 @@ And Can use `.off` to remove the event.
 
 ### push() vs Array. unshift() 
 the push() method adds elements to the end of an array, and unshift() adds elements to the beginning
+
+### setInterval
+A function to be executed every delay milliseconds. The first execution happens after delay milliseconds.
+setInterval(fn(),1000)  加括号立即执行一次
+setInterval(fn,1000) 不加括号，1秒后执行，且循环执行
