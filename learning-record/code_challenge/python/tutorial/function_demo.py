@@ -184,3 +184,6 @@ def reverse_words_and_swap_cases(sentence: string):
     reversed_and_swapped = reversed_words.swapcase()
     return reversed_and_swapped
 print(reverse_words_and_swap_cases("aWESOME is cODING"))
+
+print(f"1==1: {1==1}")
+print(f"1&1: {1&1}")
