@@ -13,3 +13,9 @@ location /api/ {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_pass http://localhost:8080/;
 }
+
+### 负载均衡
+1、项目停止时，先注释掉nginx.conf的一个server，reload nginx
+2、kill 掉项目进程
+3、nohup 启动项目，curl 测试是否启动成功
+4、项目启动成功后，reload nginx
