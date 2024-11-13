@@ -33,3 +33,7 @@ for x in range(len(arr2)):
      if arr2[x] == 1:
           continue
      print(f"x: {x}")
+
+nums = [-1,0,1,2,-1,-4]
+print(f"nums.sort-->return None: {nums.sort}")
+print(f"sorted(nums): {sorted(nums)}")

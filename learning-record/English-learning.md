@@ -1,3 +1,7 @@
+顺时针： Clockwise
+逆时针： Counterclockwise
+
+
 STOMP.js 
 This library provides a STOMP over WebSocket client for Web browser and node.js applications.
 该库为 Web 浏览器和 node.js 应用程序提供了基于 WebSocket 的 STOMP 客户端。
