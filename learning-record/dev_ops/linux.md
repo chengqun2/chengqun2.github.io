@@ -71,10 +71,11 @@ sudo firewall-cmd --list-all
 ### 
 `rsync -a -H /var/lib/clickhouse/ /mnt/sdc/clickhouse`
 
-### 设置Linux服务器时间：
+### 设置Linux服务器时间:
 `date -s "2007-08-03 14:15:00"`
 
-### SSD（Solid State Drive，固态硬盘）和HDD（Hard Disk Drive，机械硬盘
+### SSD(Solid State Drive, 固态硬盘), HDD(Hard Disk Drive,机械硬盘)
 `lsblk -d -o name,rota`
 sda     0  # This is likely an SSD because rota = 0
 sdb     1  # This is likely an HDD because rota = 1
+
