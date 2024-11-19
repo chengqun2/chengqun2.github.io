@@ -14,3 +14,11 @@ print(min(len(first),len(last)))
 str = 'ABCDEFG'
 for i in range(len(str)):
     print(f"str: {str[i]}")
+
+start, end = 0, 5
+while start < end:
+    print(f"start: {start}")
+    start +=1
+
+for i in range(5, 0, -1):
+    print(f"range: {i}")
