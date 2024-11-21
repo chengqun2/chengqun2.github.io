@@ -74,8 +74,10 @@ sudo firewall-cmd --list-all
 ### 设置Linux服务器时间:
 `date -s "2007-08-03 14:15:00"`
 
-### SSD(Solid State Drive, 固态硬盘), HDD(Hard Disk Drive,机械硬盘)
+### SSD(Solid State Drive, 固态硬盘 0), HDD(Hard Disk Drive,机械硬盘 1) 
 `lsblk -d -o name,rota`
 sda     0  # This is likely an SSD because rota = 0
 sdb     1  # This is likely an HDD because rota = 1
 
+### Linux测试磁盘IO读写速度
+`dd if=/dev/zero of=output_file bs=8K count=10240 oflag=sync`

@@ -1,0 +1,14 @@
+## VSCode Extension: REST Client 
+### Shorten a url
+POST http://127.0.0.1:8000/api/books/
+content-type: application/json
+
+{
+    "title": "Time is Money",
+    "author": "James",
+    "publication_date": "2024-11-21"
+}
+
+
+###
+GET http://127.0.0.1:8000/api/books/getList/
