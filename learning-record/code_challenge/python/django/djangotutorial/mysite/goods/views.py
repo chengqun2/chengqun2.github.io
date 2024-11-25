@@ -19,9 +19,9 @@ class BookListView(APIView):
         return Response(serializer.data)
 
 class BookDetailView(APIView):
-    def get(self, request, pk):
+    def get(self, request, id):
         try:
-            book = Book.objects.get(pk=pk)
+            book = Book.objects.get(id=id)
             serializer = BookSerializer(book)
             return Response(serializer.data)
         except Book.DoesNotExist:

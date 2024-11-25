@@ -11,6 +11,7 @@
 `python manage.py createsuperuser`
 
 ### migrate database
+Create migrations directory and the __init__.py file within.
 `python manage.py makemigrations`
 `python manage.py migrate`
 
