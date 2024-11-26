@@ -24,39 +24,50 @@ Check if scanned the config of mapperLocations
 ### Maven打包时将外部引入的jar包 打包到项目jar包中
 `<includeSystemScope>true</includeSystemScope>`
 
-### Java connect Linux to get server info: ganymed-ssh2-262.jar
+### Java connect Linux to get server info: 
+ganymed-ssh2-262.jar
+```
 <dependency>
   <groupId>ch.ethz.ganymed</groupId>
   <artifactId>ganymed-ssh2</artifactId>
   <version>262</version>
 </dependency>
-	Connection connection = new Connection(hostname);
-	connection.connect();
-	boolean isAuthenticated = connection.authenticateWithPassword(username, password);
-	if (!isAuthenticated) {
-		throw new IOException("Authentication failed.");
-	}
-	Session session = connection.openSession();
-	session.execCommand(command);
-	BufferedReader reader = new BufferedReader(new InputStreamReader(session.getStdout()));
-	String line;
-	while ((line = reader.readLine()) != null) {
-		System.out.println(line);
-	}
-	session.close();
-	connection.close();
+```
+```
+Connection connection = new Connection(hostname);
+connection.connect();
+boolean isAuthenticated = connection.authenticateWithPassword(username, password);
+if (!isAuthenticated) {
+	throw new IOException("Authentication failed.");
+}
+Session session = connection.openSession();
+session.execCommand(command);
+BufferedReader reader = new BufferedReader(new InputStreamReader(session.getStdout()));
+String line;
+while ((line = reader.readLine()) != null) {
+	System.out.println(line);
+}
+session.close();
+connection.close();
+```
 
-### start a jar
-`nohup java -jar starfish.jar > nohup.out 2>&1  -Duser.timezone=Asia/Shanghai &`
+### start a jar`
+```
+nohup java -jar starfish.jar > nohup.out 2>&1  -Duser.timezone=Asia/Shanghai &
+```
 
 ### convert timestamp to date
-`// 1727666666286`
-`long timestamp = System.currentTimeMillis();`
-`// Mon Sep 30 03:16:40 GMT+08:00 2024`
-`Date date = new Date(timestamp);`
+```
+// 1727666666286
+long timestamp = System.currentTimeMillis();
+// Mon Sep 30 03:16:40 GMT+08:00 2024
+Date date = new Date(timestamp);
+```
 
 
 ### mybatis collection属性值就是传入的List或array对象在自己封装的map里面的key 
+```
 <foreach item="id" collection="ids" open="and id in (" separator="," close=")">
-    #{id}
+	#{id}
 </foreach>
+```

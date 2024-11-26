@@ -23,6 +23,7 @@ electron_mirror=https://npmmirror.com/mirrors/electron/
 然后 npm install electron 即可
 
 ### Use pkg to build a runnable package for Linux and Windows
+```
 "scripts": {
     "dev": "node server.js",
     "build": "pkg ."
@@ -37,3 +38,4 @@ electron_mirror=https://npmmirror.com/mirrors/electron/
     ],
     "outputPath": "dist"
 }
+```
