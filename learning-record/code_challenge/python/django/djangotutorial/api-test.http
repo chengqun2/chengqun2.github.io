@@ -15,4 +15,22 @@ content-type: application/json
 GET http://127.0.0.1:8000/api/books/getList/
 
 ### Detail
-GET http://127.0.0.1:8000/api/books/1/
+GET http://127.0.0.1:8000/api/books/8/
+
+### Update a book
+PUT http://127.0.0.1:8000/api/books/update/8/
+content-type: application/json
+
+{
+    "id": 8,
+    "title": "88",
+    "author": "88",
+    "remark": "88",
+    "publication_date": "2024-11-25"
+}
+
+
+### delete a book
+DELETE http://127.0.0.1:8000/api/books/delete/6/
+content-type: application/json
+

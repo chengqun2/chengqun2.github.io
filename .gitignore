@@ -5,3 +5,4 @@ out/
 learning-record/code_challenge/python/__pycache__/
 crawl_airport.xlsx
 learning-record/code_challenge/python/**/*/__pycache__/
+learning-record/code_challenge/python/django/djangotutorial/db.sqlite3

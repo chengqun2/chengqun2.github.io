@@ -26,3 +26,26 @@ class BookDetailView(APIView):
             return Response(serializer.data)
         except Book.DoesNotExist:
             return Response({"error": "Book not found"}, status=404)
+        
+class BookUpdateView(APIView):
+    def put(self, request, id):
+        try:
+            instance = Book.objects.get(id=id)
+        except Book.DoesNotExist:
+            return Response(instance.errors, status=status.HTTP_204_NO_CONTENT)
+        serializer = BookSerializer(instance, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        
+class BookDeleteView(APIView):
+    def delete(self, request, id):
+        try:
+            # Retrieve the object by its primary key
+            instance = Book.objects.get(id=id)
+        except Book.DoesNotExist:
+            return Response({"error": "Object not found"}, status=status.HTTP_204_NO_CONTENT)
+        # Delete the object
+        instance.delete()
+        return Response({"message": "Object deleted successfully"}, status=status.HTTP_200_OK)
