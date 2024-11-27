@@ -2,6 +2,7 @@
 ### Create a book
 POST http://127.0.0.1:8000/api/books/
 content-type: application/json
+# Authorization: Bearer <access_token>
 
 {
     "title": "Time is Money",
