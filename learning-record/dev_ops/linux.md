@@ -53,6 +53,7 @@
    `UUID=1111-2222-3333-4444  /data01  ext4  defaults  0  0`
 
 ### Enable the firewall and allow necessary ports
+```
 sudo firewall-cmd --state
 sudo systemctl start firewalld
 sudo systemctl enable firewalld
@@ -61,6 +62,7 @@ sudo firewall-cmd --zone=public --add-port=80/tcp --permanent
 sudo firewall-cmd --zone=public --add-port=443/tcp --permanent
 sudo firewall-cmd --reload
 sudo firewall-cmd --list-all
+```
 
 ### x86_64，则表示服务器是x86架构。 如果输出结果是aarch64，则表示服务器是ARM架构
 `uname -m`
@@ -81,3 +83,5 @@ sdb     1  # This is likely an HDD because rota = 1
 
 ### Linux测试磁盘IO读写速度
 `dd if=/dev/zero of=output_file bs=8K count=10240 oflag=sync`
+
+### MobaXterm 类似Xmanager管理工具

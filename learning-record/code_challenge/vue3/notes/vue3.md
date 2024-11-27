@@ -1,5 +1,8 @@
 ## Install Vue CLI globally
 `npm install -g @vue/cli`
 
-## Create a new Vue 3 project
-`vue create vue3-project`
+## Create a Vue 3 Project with Vite
+```
+npm create vite@latest my-vue3-app --template vue
+npm install
+```
