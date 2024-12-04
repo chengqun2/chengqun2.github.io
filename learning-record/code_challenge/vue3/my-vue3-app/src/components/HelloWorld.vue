@@ -6,34 +6,40 @@ defineProps({
 })
 
 const count = ref(0)
+console.log(`count: ${count.value}`)
+const increment = () => {
+  count.value++
+}
+import { reactive, toRefs } from 'vue'
+
+const state = reactive({
+  foo: 1,
+  bar: 2
+})
+
+const { foo, bar } = toRefs(state)
+
+// Both state.foo and foo.value will be synced
+foo.value++
+console.log(state.foo) // 2
+state.foo++
+console.log(foo.value) // 3
+
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
+  <div>
+    <h1>{{ msg }}</h1>
 
-  <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
+    <div class="card">
+      <button type="button" @click="increment">count is {{ count }}</button>
+      <p>
+        foo: {{ foo }}
+      </p>
+    </div>
+
   </div>
-
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Learn more about IDE Support for Vue in the
-    <a
-      href="https://vuejs.org/guide/scaling-up/tooling.html#ide-support"
-      target="_blank"
-      >Vue Docs Scaling up Guide</a
-    >.
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
+  
 </template>
 
 <style scoped>
