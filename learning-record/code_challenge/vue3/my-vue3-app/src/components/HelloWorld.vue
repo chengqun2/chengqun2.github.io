@@ -1,46 +1,28 @@
 <script setup>
 import { ref } from 'vue'
 
-defineProps({
-  msg: String,
-})
-
-const count = ref(0)
-console.log(`count: ${count.value}`)
-const increment = () => {
-  count.value++
-}
-import { reactive, toRefs } from 'vue'
-
-const state = reactive({
-  foo: 1,
-  bar: 2
-})
-
-const { foo, bar } = toRefs(state)
-
-// Both state.foo and foo.value will be synced
-foo.value++
-console.log(state.foo) // 2
-state.foo++
-console.log(foo.value) // 3
 
 </script>
-
 <template>
-  <div>
-    <h1>{{ msg }}</h1>
-
-    <div class="card">
-      <button type="button" @click="increment">count is {{ count }}</button>
-      <p>
-        foo: {{ foo }}
-      </p>
-    </div>
-
-  </div>
-  
+  <el-dropdown split-button type="primary">
+    Default
+  <template #dropdown>
+    <el-dropdown-menu>
+      <el-dropdown-item>Action 1</el-dropdown-item>
+      <el-dropdown-item>Action 2</el-dropdown-item>
+      <el-dropdown-item>Action 3</el-dropdown-item>
+      <el-dropdown-item>Action 4</el-dropdown-item>
+    </el-dropdown-menu>
+  </template>
+  </el-dropdown>
 </template>
+<style scoped>
+:deep(.el-dropdown-menu__item:hover:not(.is-disabled)) {
+  background-color: red; /* Replace with your desired color */
+  color: #ffffff; /* Optional: change text color on hover */
+}
+</style>
+
 
 <style scoped>
 .read-the-docs {

@@ -19,3 +19,17 @@ location /api/ {
 2、kill 掉项目进程
 3、nohup 启动项目，curl 测试是否启动成功
 4、项目启动成功后，reload nginx
+
+
+### 测试nginx.conf配置是否正确，并且reload nginx
+```
+nginx -t
+nginx -s reload	
+```
+
+### nginx 配置文件下载路径 vim nginx.conf
+```
+location /download/ {
+    alias /data/download/;
+}
+```
