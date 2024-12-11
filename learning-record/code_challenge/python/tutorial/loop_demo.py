@@ -22,3 +22,7 @@ while start < end:
 
 for i in range(5, 0, -1):
     print(f"range: {i}")
+
+s = 'abcabcbb'
+for right, c in enumerate(s):
+    print(f"enumerate-> right: {right}, c: {c}")
