@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Recognition Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        #result {
+            margin: 20px;
+            padding: 10px;
+            min-height: 100px;
+            width: 80%;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Voice Recognition Demo</h1>
+    <button id="startBtn">Start Recording</button>
+    <div id="result"></div>
+
+    <script>
+        const startBtn = document.getElementById('startBtn');
+        const resultDiv = document.getElementById('result');
+        
+        // Check if browser supports speech recognition
+        window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        
+        if (window.SpeechRecognition) {
+            const recognition = new SpeechRecognition();
+            recognition.continuous = true;
+            recognition.interimResults = true;
+            // Add this line for Mandarin Chinese
+            recognition.lang = 'zh-CN'; 
+            let isRecording = false;
+            
+            startBtn.addEventListener('click', () => {
+                if (!isRecording) {
+                    recognition.start();
+                    startBtn.textContent = 'Stop Recording';
+                } else {
+                    recognition.stop();
+                    startBtn.textContent = 'Start Recording';
+                }
+                isRecording = !isRecording;
+            });
+            
+            recognition.onresult = (event) => {
+                const transcript = Array.from(event.results)
+                    .map(result => result[0])
+                    .map(result => result.transcript)
+                    .join('');
+                
+                resultDiv.textContent = transcript;
+            };
+            
+            recognition.onerror = (event) => {
+                console.error('Speech recognition error:', event.error);
+                startBtn.textContent = 'Start Recording';
+                isRecording = false;
+            };
+            
+        } else {
+            startBtn.disabled = true;
+            resultDiv.textContent = 'Speech recognition is not supported in this browser.';
+        }
+    </script>
+</body>
+</html>
