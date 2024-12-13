@@ -1,3 +1,193 @@
+### Self introduction
+```
+Hi, I'm James Cheng, a full-stack software developer with 13 years of experience in building enterprise applications.
+
+Throughout my career, I've worked across the entire technology stack - from frontend development using modern JavaScript frameworks like React and Vue.js, to backend services with Java Spring Boot and Node.js, to database design and DevOps practices.
+
+I started my career as a Java backend developer in 2011, building high-performance web services and APIs. Over time, I expanded into frontend development, learning JavaScript deeply and keeping up with the rapidly evolving ecosystem of frameworks and tools. I'm equally comfortable writing clean, maintainable code on both sides of the stack.
+
+Some key achievements in my career include:
+- Architected and led development of a microservices-based e-commerce platform handling $50M+ in annual transactions
+- Built real-time analytics dashboards processing terabytes of data using Elasticsearch and Kibana
+- Implemented CI/CD pipelines that reduced deployment time from days to hours
+- Mentored junior developers and established coding standards and best practices
+
+I'm passionate about writing high-quality, scalable code and solving complex technical challenges. I stay current with the latest technologies through continuous learning and side projects. My broad technical expertise allows me to understand system architectures holistically and make informed decisions about technology choices.
+
+I'm looking forward to bringing my full-stack development skills and experience to help build innovative solutions for challenging problems.
+```
+
+### The movie named 'the flash'
+```
+The Flash (2023) is a superhero film based on the DC Comics character Barry Allen / The Flash. 
+The movie follows Barry Allen, a forensic scientist who gains the power of super-speed 
+after being struck by lightning. Using his newfound abilities, 
+he travels back in time to prevent his mother's murder, 
+but his actions have unintended consequences that create an alternate timeline 
+where General Zod threatens Earth's existence. 
+Barry must team up with an alternate version of himself, 
+a retired Batman (Michael Keaton), and a trapped Supergirl 
+to restore the timeline while learning valuable lessons about fate and acceptance.
+
+The film explores themes of grief, family, and the consequences of trying to change the past. 
+It features impressive visual effects to showcase The Flash's speed powers 
+and multiple universe-hopping sequences. Despite mixed reviews, 
+the movie was praised for its emotional depth and Ezra Miller's dual performance as Barry Allen.
+
+Key aspects of the film include:
+- Time travel and multiverse concepts
+- Complex character relationships
+- High-stakes action sequences
+- Visual effects showcasing super-speed
+- Emotional exploration of loss and acceptance
+```
+
+### Self introduction
+```
+Thanks for the opportunity, My Name is James Cheng, I'm from China.
+I graduated from Yangzhou University in 2011 with a major in computer science and technology. 
+After twelve years of software development experience, 
+I hope to bring my develop skills to the new job.
+The majority of my career has been spent maintaining web applications 
+and ensuring the smooth operations of the backend. 
+I am proficient at understanding the requirements of the business 
+and putting the customer experience first while keeping an eye on deadlines.  
+My highest-profile project came when I designed, 
+developed, and implemented the architecture of a big data platform that allowed customers 
+to query every single car running record onto our platform. 
+From initial requirement gathering to design, coding, 
+testing, and roll-out, I manage every aspect. 
+The application increased query efficiency by 10 times. 
+Before my Hadoop experience, I spent a decade in the software industry, 
+I am proficient in the Linux platform, as well as fluent in Java programming language. 
+My computer science degree from China formed the foundation of my career, 
+and I have taken every opportunity since to take over 50 online courses. 
+You could say that I am somewhat addicted to improving my software skills.
+
+I look forward to hearing about your development plans 
+and hope that an interview might allow me to expand on how my skills could contribute.
+Thanks.
+```
+
+### Project1 experience
+```
+The project I am working on is a web platform 
+for Supply Chain Management.
+It's mainly to provide cross-border cargo logistics services 
+for domestic and foreign customers, 
+but also to better manage cargo orders, financial, third-party 
+and other data, and to standardize business.
+Customers have their own cargo suppliers in China, 
+they will wholesale cargo from domestic suppliers, 
+and then export the cargo to foreign countries 
+for retail through the channels of the platform.
+The project includes several modules, such as Booking, pickups, shipments, inventory, 
+supplier, prep, labeling, products, financial, company settings, user settings, etc.
+we use GitLab and teambition to manage our codes, issues and tasks.
+```
+
+### AI Project Experience
+```
+Here's my experience implementing an AI project using Python:
+
+I developed a machine learning project for image classification using Python and popular AI libraries. The key components included:
+
+Data Processing:
+- Used pandas and numpy for data manipulation and preprocessing
+- Implemented data augmentation with OpenCV to expand the training dataset
+- Split data into training/validation/test sets using scikit-learn
+
+Model Development:
+- Built a convolutional neural network (CNN) using TensorFlow/Keras
+- Designed the architecture with multiple convolutional and pooling layers
+- Added dropout layers to prevent overfitting
+- Used Adam optimizer and categorical crossentropy loss
+
+Training:
+- Trained the model on GPU using CUDA acceleration
+- Implemented early stopping and model checkpointing
+- Monitored training metrics like accuracy and loss
+- Fine-tuned hyperparameters through experimentation
+
+Evaluation:
+- Evaluated model performance on test set
+- Generated confusion matrix and classification reports
+- Analyzed model predictions and failure cases
+- Achieved 95% accuracy on validation data
+
+Deployment:
+- Saved trained model weights and architecture
+- Built REST API using Flask to serve predictions
+- Containerized application using Docker
+- Deployed to cloud platform for production use
+
+The project helped me gain hands-on experience with:
+- Deep learning frameworks and best practices
+- Data preprocessing and augmentation techniques 
+- Model training and optimization strategies
+- MLOps and production deployment workflows
+
+Key Python libraries used:
+- TensorFlow/Keras for deep learning
+- NumPy/Pandas for data processing
+- Scikit-learn for data splitting and metrics
+- OpenCV for image processing
+- Flask for API development
+```
+
+### LLM Project Experience
+```
+Here's my experience implementing a Large Language Model (LLM) project using Python:
+
+I developed a chatbot application leveraging LLM technology. The key components included:
+
+Model Integration:
+- Integrated OpenAI's GPT models via API
+- Implemented prompt engineering and context management
+- Fine-tuned smaller open source models like LLaMA
+- Used Hugging Face Transformers library for model handling
+
+Data Processing:
+- Created custom training datasets from conversation logs
+- Cleaned and preprocessed text data using NLTK and spaCy
+- Implemented efficient tokenization and embedding generation
+- Built data pipelines for continuous model training
+
+System Architecture:
+- Developed streaming response capability for real-time chat
+- Implemented context window management for long conversations
+- Built caching system to improve response latency
+- Created rate limiting and cost optimization features
+
+Model Optimization:
+- Applied quantization to reduce model size and inference time
+- Implemented model pruning for improved efficiency
+- Used knowledge distillation for smaller deployment models
+- Optimized prompt templates for better responses
+
+Deployment:
+- Built scalable API service using FastAPI
+- Implemented authentication and usage monitoring
+- Deployed using Docker containers on cloud infrastructure
+- Set up monitoring and logging for production use
+
+The project provided experience with:
+- LLM architectures and capabilities
+- Prompt engineering techniques
+- Model optimization and deployment
+- Production-grade AI system development
+
+Key Python libraries used:
+- OpenAI API for model access
+- Hugging Face Transformers for model handling
+- LangChain for LLM application development
+- FastAPI for API development
+- Redis for caching and rate limiting
+```
+
+
+
+
 顺时针： Clockwise
 逆时针： Counterclockwise
 
@@ -1525,46 +1715,6 @@ from henceforth on  从今以后
 Well,have fun being happy at your dad.
 So,why not let them spoil us?  宠溺
 How are the rest of the kids? 其他的孩子还好吗？
-
-
-
-Thanks for the opportunity, My Name is James Cheng, I'm from China.
-I graduated from Yangzhou University in 2011 with a major in computer science and technology. 
-After twelve years of software development experience, 
-I hope to bring my develop skills to the new job.
-The majority of my career has been spent maintaining web applications 
-and ensuring the smooth operations of the backend. 
-I am proficient at understanding the requirements of the business 
-and putting the customer experience first while keeping an eye on deadlines.  
-My highest-profile project came when I designed, 
-developed, and implemented the architecture of a big data platform that allowed customers 
-to query every single car running record onto our platform. 
-From initial requirement gathering to design, coding, 
-testing, and roll-out, I manage every aspect. 
-The application increased query efficiency by 10 times. 
-Before my Hadoop experience, I spent a decade in the software industry, 
-I am proficient in the Linux platform, as well as fluent in Java programming language. 
-My computer science degree from China formed the foundation of my career, 
-and I have taken every opportunity since to take over 50 online courses. 
-You could say that I am somewhat addicted to improving my software skills.
-
-I look forward to hearing about your development plans 
-and hope that an interview might allow me to expand on how my skills could contribute.
-Thanks.
-
-The project I am working on is a web platform 
-for Supply Chain Management.
-It's mainly to provide cross-border cargo logistics services 
-for domestic and foreign customers, 
-but also to better manage cargo orders, financial, third-party 
-and other data, and to standardize business.
-Customers have their own cargo suppliers in China, 
-they will wholesale cargo from domestic suppliers, 
-and then export the cargo to foreign countries 
-for retail through the channels of the platform.
-The project includes several modules, such as Booking, pickups, shipments, inventory, 
-supplier, prep, labeling, products, financial, company settings, user settings, etc.
-we use GitLab and teambition to manage our codes, issues and tasks.
 
 
 
