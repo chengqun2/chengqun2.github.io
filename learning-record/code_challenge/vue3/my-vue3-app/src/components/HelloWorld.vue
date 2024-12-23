@@ -1,20 +1,26 @@
 <script setup>
-import { ref } from 'vue'
-
-
+defineProps({
+  msg: {
+    type: String
+  }
+}) 
 </script>
 <template>
-  <el-dropdown split-button type="primary">
+  <div>
+    <div>{{ msg }}</div>
+    <el-dropdown split-button type="primary">
     Default
-  <template #dropdown>
-    <el-dropdown-menu>
-      <el-dropdown-item>Action 1</el-dropdown-item>
-      <el-dropdown-item>Action 2</el-dropdown-item>
-      <el-dropdown-item>Action 3</el-dropdown-item>
-      <el-dropdown-item>Action 4</el-dropdown-item>
-    </el-dropdown-menu>
-  </template>
-  </el-dropdown>
+    <template #dropdown>
+      <el-dropdown-menu>
+        <el-dropdown-item>Action 1</el-dropdown-item>
+        <el-dropdown-item>Action 2</el-dropdown-item>
+        <el-dropdown-item>Action 3</el-dropdown-item>
+        <el-dropdown-item>Action 4</el-dropdown-item>
+      </el-dropdown-menu>
+    </template>
+    </el-dropdown>
+  </div>
+  
 </template>
 <style scoped>
 :deep(.el-dropdown-menu__item:hover:not(.is-disabled)) {

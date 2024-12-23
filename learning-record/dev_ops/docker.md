@@ -26,36 +26,17 @@ docker logs CONTAINER_NAME | tail -n 100
 `exit`
 
 
-### Configure Docker to use a mirror registry:
-```
-vim /etc/docker/daemon.json
-
-# Add the following content
-{
-  "registry-mirrors": [
-    "https://mirror.ccs.tencentyun.com",
-    "https://registry.docker-cn.com",
-    "https://docker.mirrors.ustc.edu.cn",
-    "https://hub-mirror.c.163.com"
-  ]
-}
-
-# Restart docker service
-sudo systemctl daemon-reload
-sudo systemctl restart docker
-```
-
 ### docker install mysql：
 ```
 docker images
 docker pull mysql:5.7.35
-docker run -d -p 3306:3306 -v mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7.35 --lower_case_table_names=1
+docker run -d -p 3306:3306 -v mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_ROOT_HOST=% -d mysql:5.7.35 --lower_case_table_names=1
 netstat -na|grep 3306
 sudo iptables -A INPUT -p tcp --dport 3306 -j ACCEPT
 docker ps
 ```
 
-### 设置docker镜像源, vim /etc/docker/daemon.json
+###  Configure Docker to use a mirror registry: vim /etc/docker/daemon.json
 ```
 {
   "registry-mirrors": [
