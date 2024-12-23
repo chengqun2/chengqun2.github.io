@@ -47,3 +47,18 @@ console.log(isRegular(input1)); // true
 // let lastElemetnt = stack2.pop();
 // console.log(lastElemetnt)
 // console.log(stack2)
+
+
+// Example of pop() with numbers
+const numbers = [1, 2, 3, 4, 5];
+console.log('Original array:', numbers);
+const lastNumber = numbers.pop();
+console.log('Popped value:', lastNumber); // 5
+console.log('Array after pop:', numbers); // [1, 2, 3, 4]
+
+// Example of pop() with strings
+const fruits = ['apple', 'banana', 'orange'];
+console.log('Original fruits:', fruits);
+const lastFruit = fruits.pop();
+console.log('Removed fruit:', lastFruit); // 'orange'
+console.log('Remaining fruits:', fruits); // ['apple', 'banana']

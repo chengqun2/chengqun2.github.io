@@ -24,3 +24,48 @@ docker logs CONTAINER_NAME | tail -n 100
 ### 进入容器: 
 `docker exec -it container_id sh`
 `exit`
+
+
+### Configure Docker to use a mirror registry:
+```
+vim /etc/docker/daemon.json
+
+# Add the following content
+{
+  "registry-mirrors": [
+    "https://mirror.ccs.tencentyun.com",
+    "https://registry.docker-cn.com",
+    "https://docker.mirrors.ustc.edu.cn",
+    "https://hub-mirror.c.163.com"
+  ]
+}
+
+# Restart docker service
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
+
+### docker install mysql：
+```
+docker images
+docker pull mysql:5.7.35
+docker run -d -p 3306:3306 -v mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7.35 --lower_case_table_names=1
+netstat -na|grep 3306
+sudo iptables -A INPUT -p tcp --dport 3306 -j ACCEPT
+docker ps
+```
+
+### 设置docker镜像源, vim /etc/docker/daemon.json
+```
+{
+  "registry-mirrors": [
+    "https://docker.m.daocloud.io"
+  ]
+}
+
+sudo systemctl restart docker
+sudo systemctl status docker
+docker info
+```
+
+
