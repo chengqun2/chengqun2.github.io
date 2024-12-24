@@ -7,3 +7,4 @@ crawl_airport.xlsx
 learning-record/code_challenge/python/**/*/__pycache__/
 learning-record/code_challenge/python/django/djangotutorial/db.sqlite3
 learning-record/code_challenge/react/my-react-app/node_modules/
+learning-record/code_challenge/docker/Airflow/logs/

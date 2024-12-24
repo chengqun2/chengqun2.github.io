@@ -15,7 +15,20 @@ const woman = reactive({
 })
 const { name, age } = toRefs(woman)
 
-
+const departureDate = ref(dateToString(new Date()))
+const returnDate = ref(departureDate.value)
+function dateToString(date) {
+  return (
+    date.getFullYear() +
+    '-' +
+    pad(date.getMonth() + 1) +
+    '-' +
+    pad(date.getDate())
+  )
+}
+function pad(n, s = String(n)) {
+  return s.length < 2 ? `0${s}` : s
+}
 </script>
 
 <template>
@@ -23,6 +36,10 @@ const { name, age } = toRefs(woman)
     <HelloWorld :msg='msgStr' />
     <div>Man: {{ man.name }}, {{man.age}}</div>
     <div>Woman: {{ name }}, {{age}}</div>
+    <div>
+      departureDate: <input type="date" v-model="departureDate" />
+      returnDate: <input type="date" v-model="returnDate" />
+    </div>
   </div>
 </template>
 
