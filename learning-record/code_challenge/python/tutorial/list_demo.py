@@ -37,3 +37,5 @@ for x in range(len(arr2)):
 nums = [-1,0,1,2,-1,-4]
 print(f"nums.sort-->return None: {nums.sort}")
 print(f"sorted(nums): {sorted(nums)}")
+nums.append(100)
+print(nums)
