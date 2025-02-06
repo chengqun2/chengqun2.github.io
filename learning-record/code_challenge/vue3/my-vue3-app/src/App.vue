@@ -1,5 +1,6 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
+import ElSelectDemo from './components/El-select-demo.vue'
 import { reactive, ref, toRefs } from 'vue'
 const msgStr = ref('')
 msgStr.value = 'Hello, this is a message from parent.'
@@ -40,6 +41,7 @@ function pad(n, s = String(n)) {
       departureDate: <input type="date" v-model="departureDate" />
       returnDate: <input type="date" v-model="returnDate" />
     </div>
+    <ElSelectDemo />
   </div>
 </template>
 

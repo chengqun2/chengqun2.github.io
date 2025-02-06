@@ -1,5 +1,6 @@
 sentence = "the quick brown fox jumps over the lazy dog"
 words = sentence.split()
+print(f"words: {words}")
 new_word_without_the = []
 new_word_without_the_lengths = []
 for word in words:
@@ -39,3 +40,6 @@ print(f"nums.sort-->return None: {nums.sort}")
 print(f"sorted(nums): {sorted(nums)}")
 nums.append(100)
 print(nums)
+
+str = 'I, love, python'
+print(f"str.split(','): {str.split(',')}")

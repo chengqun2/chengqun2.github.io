@@ -51,4 +51,24 @@ Use splice() when you need to modify the original array.
 Use slice() when you want to extract part of an array without altering the original.
 ```
 
+### btoa(string) 对字符串进行base64编码
+```
+const originalString = 'Hello world';
+const encoded = btoa(originalString);
+console.log(encoded); // 输出: SGVsbG8gd29ybGQ=
+```
+
+### atob(encodedBase64String) 对base64字符串进行解码
+```
+// 一个经过 Base64 编码的字符串
+const encoded = 'SGVsbG8gd29ybGQ=';
+// 使用 atob() 函数进行解码
+const decoded = atob(encoded);
+console.log(decoded); // 输出: Hello world
+```
+
+
+
+
+
 
