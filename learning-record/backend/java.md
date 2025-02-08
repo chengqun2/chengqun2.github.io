@@ -71,3 +71,103 @@ Date date = new Date(timestamp);
 	#{id}
 </foreach>
 ```
+
+
+### SSL 连接 MQTT 的代码示例
+```
+import org.eclipse.paho.client.mqttv3.*;
+import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
+
+import javax.net.ssl.*;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.security.*;
+import java.security.cert.CertificateException;
+
+public class MqttSslConnectionExample {
+    private static final String BROKER_URL = "ssl://your-mqtt-broker-url:8883";
+    private static final String CLIENT_ID = "JavaMqttClient";
+    private static final String TOPIC = "test/topic";
+    private static final String MESSAGE = "Hello, MQTT over SSL!";
+    private static final String KEY_STORE_FILE = "path/to/your/keystore.jks";
+    private static final String KEY_STORE_PASSWORD = "your-keystore-password";
+    private static final String TRUST_STORE_FILE = "path/to/your/truststore.jks";
+    private static final String TRUST_STORE_PASSWORD = "your-truststore-password";
+
+    public static void main(String[] args) {
+        try {
+            // 创建 SSLContext
+            SSLContext sslContext = createSSLContext();
+
+            // 创建 MQTT 客户端选项
+            MqttConnectOptions connOpts = new MqttConnectOptions();
+            connOpts.setSocketFactory(sslContext.getSocketFactory());
+            connOpts.setCleanSession(true);
+
+            // 创建 MQTT 客户端
+            MqttClient sampleClient = new MqttClient(BROKER_URL, CLIENT_ID, new MemoryPersistence());
+
+            // 设置回调
+            sampleClient.setCallback(new MqttCallback() {
+                @Override
+                public void connectionLost(Throwable cause) {
+                    System.out.println("Connection lost: " + cause.getMessage());
+                }
+
+                @Override
+                public void messageArrived(String topic, MqttMessage message) throws Exception {
+                    System.out.println("Received message on topic " + topic + ": " + new String(message.getPayload()));
+                }
+
+                @Override
+                public void deliveryComplete(IMqttDeliveryToken token) {
+                    System.out.println("Message delivered");
+                }
+            });
+
+            // 连接到 MQTT 代理
+            sampleClient.connect(connOpts);
+            System.out.println("Connected to MQTT broker via SSL");
+
+            // 订阅主题
+            sampleClient.subscribe(TOPIC);
+            System.out.println("Subscribed to topic: " + TOPIC);
+
+            // 发布消息
+            MqttMessage mqttMessage = new MqttMessage(MESSAGE.getBytes());
+            sampleClient.publish(TOPIC, mqttMessage);
+            System.out.println("Published message: " + MESSAGE + " to topic: " + TOPIC);
+
+            // 断开连接
+            sampleClient.disconnect();
+            System.out.println("Disconnected from MQTT broker");
+        } catch (MqttException | KeyManagementException | NoSuchAlgorithmException | KeyStoreException | CertificateException | IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static SSLContext createSSLContext() throws NoSuchAlgorithmException, KeyStoreException, IOException, CertificateException, KeyManagementException {
+        // 加载密钥库
+        KeyStore keyStore = KeyStore.getInstance(KeyStore.getDefaultType());
+        keyStore.load(new FileInputStream(KEY_STORE_FILE), KEY_STORE_PASSWORD.toCharArray());
+
+        // 加载信任库
+        KeyStore trustStore = KeyStore.getInstance(KeyStore.getDefaultType());
+        trustStore.load(new FileInputStream(TRUST_STORE_FILE), TRUST_STORE_PASSWORD.toCharArray());
+
+        // 创建 KeyManagerFactory
+        KeyManagerFactory kmf = KeyManagerFactory.getInstance(KeyManagerFactory.getDefaultAlgorithm());
+        kmf.init(keyStore, KEY_STORE_PASSWORD.toCharArray());
+
+        // 创建 TrustManagerFactory
+        TrustManagerFactory tmf = TrustManagerFactory.getInstance(TrustManagerFactory.getDefaultAlgorithm());
+        tmf.init(trustStore);
+
+        // 创建 SSLContext
+        SSLContext sslContext = SSLContext.getInstance("TLS");
+        sslContext.init(kmf.getKeyManagers(), tmf.getTrustManagers(), null);
+
+        return sslContext;
+    }
+}
+```

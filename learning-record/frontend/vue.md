@@ -74,3 +74,18 @@
    }
 6. ### Vue3 ref
    When you use ref in Vue 3, it returns a reactive object. This object contains a single property, value, which holds the actual value you passed to ref. Vue automatically tracks changes to this value property and updates the DOM accordingly.   
+
+### vite.config.mts、vite.config.js 和 vite.config.ts 都是用于配置 Vite 构建工具的文件, 解决@开头的文件（图片等）引用路径
+```
+// vite.config.js
+import { defineConfig } from 'vite';
+import path from 'path';
+
+export default defineConfig({
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    },
+  },
+});
+```
