@@ -6,7 +6,7 @@ API_URL = "http://localhost:11434/api/generate"
 # 定义请求的 JSON 数据
 data = {
     "model": "deepseek-r1:1.5b",  # 指定要使用的模型，可以根据需要更改
-    "prompt": "你好，介绍一下你自己",  # 输入的提示信息
+    "prompt": "deepseek vs chatgpt",  # 输入的提示信息
     "stream": False  # 是否启用流式响应，这里设置为 False
 }
 
