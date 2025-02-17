@@ -2099,3 +2099,5 @@ alias  F:\source\duty-vue3\dist;
 400. 检查中文图片等，Linux服务器的中文编码 utf-8 gbk等不一致，导致找不到文件
 	Failed to load module script: Expected a JavaScript module script but the server responded with a MIME type of "text/html". Strict MIME type
 401. settings.xml in your /.m2 directory (C:\Users\HP\.m2)
+402. To download dependencies specified in a pom.xml file using the command window (CMD):
+	`mvn dependency:resolve`
