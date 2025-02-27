@@ -1,0 +1,2 @@
+[console_scripts]
+dify_api = dify_api.app:app

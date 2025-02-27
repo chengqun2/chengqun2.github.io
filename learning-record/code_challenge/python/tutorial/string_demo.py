@@ -47,3 +47,5 @@ print(f'new_random_str: {new_str}')
 str = "Hello"
 print(f"Reverse: {str[::-1]}")
 print(f"Print the last letter from 'Hello': {str[-1]}")
+
+print('饼图' in '饼状图, 饼图')

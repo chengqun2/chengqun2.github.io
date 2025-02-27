@@ -1,0 +1,5 @@
+Metadata-Version: 2.2
+Name: dify_api
+Version: 1.0.0
+Requires-Dist: flask
+Dynamic: requires-dist

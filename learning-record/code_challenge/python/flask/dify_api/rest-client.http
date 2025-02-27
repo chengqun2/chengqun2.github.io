@@ -1,0 +1,16 @@
+## VSCode Extension: REST Client 
+### chat message (on local)
+POST http://localhost:5000/chat
+content-type: application/json
+
+{
+    "query": "好好学习，天天向上！"
+}
+
+### chat message (公司服务器)
+POST http://localhost:7081/chat
+content-type: application/json
+
+{
+    "query": "好好学习，天天向上！"
+}

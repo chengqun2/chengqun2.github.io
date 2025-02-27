@@ -4,7 +4,9 @@
 ollama pull deepseek-r1:1.5b
 3、运行 deepseek_r1模型
 ollama run deepseek-r1:1.5b
-4、编写代码调用（发送 HTTP 请求来调用模型）
+4、Base URL:
+  http://host.docker.internal:11434
+5、编写代码调用（发送 HTTP 请求来调用模型）
 
 ### 代码中直接调用deepseek api
 1、在deepseek官网申请API key
