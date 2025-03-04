@@ -2,7 +2,6 @@ import { useState, useRef } from 'react';
 import React from 'react';
 import './index.css';
 
-
 const Chat: React.FC = () => {
     const [chatResponse, setChatResponse] = useState<string>('')
     const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -42,10 +41,27 @@ const Chat: React.FC = () => {
                         defaultValue="">
                     </textarea>
                 </div>
-                <button onClick={handleSubmit}>Submit</button>
+                <div style={{ position: 'relative', width: '100%' }}>
+                    <button 
+                        onClick={handleSubmit} 
+                        style={{ 
+                            backgroundColor: 'black', 
+                            color: 'white', 
+                            padding: '10px 20px', 
+                            fontSize: '16px',
+                            border: 'none',
+                            borderRadius: '10px',
+                            cursor: 'pointer',
+                            position: 'absolute',
+                            top: '10px',
+                            right: '10px'
+                        }}>
+                        Send
+                    </button>
+                </div>
             </div>
             <div className='answer-box-contaner'>
-                <p>The answer: {chatResponse}</p>
+                <p>{chatResponse}</p>
             </div>
         </div>
         
