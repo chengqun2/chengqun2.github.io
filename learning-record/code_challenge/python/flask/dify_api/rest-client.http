@@ -1,16 +1,124 @@
 ## VSCode Extension: REST Client 
+
 ### chat message (on local)
 POST http://localhost:5000/chat
 content-type: application/json
 
 {
-    "query": "好好学习，天天向上！"
+    "query": "请扩写一段话，100字： 好好学习",
+    "conversation_id": "34c3b82a-6cb4-4cc8-9a93-69dbef187e0e"
 }
 
-### chat message (公司服务器)
-POST http://localhost:7081/chat
+### chatStream message (on local)
+POST http://localhost:5000/chatStream
 content-type: application/json
 
 {
-    "query": "好好学习，天天向上！"
+    "query": "好好学习，天天向上！",
+    "inputs": {
+        "optimizeStatement": "是",
+        "optimizePunctuation": "是",
+        "requirements": "口语化",
+        "rownumber": 10,
+        "score": 4
+    },
+    "conversation_id": ""
 }
+
+### getChatHistory (on local)
+GET  http://localhost:5000/getChatHistory?user=Ernest&conversation_id=&pageNo=1&pageSize=10
+
+
+### chatStream message (on local)
+POST http://localhost:5000/saveFlowProperties
+content-type: application/json
+
+{
+    "inputs": {
+        "files":[{"upload_file_id": "e87a7a89-b030-4b24-90df-2300a3122d4f"}],
+        "testKey1": "value1"
+    },
+    "user": "Ernest"
+}
+
+
+### chat message (公司服务器)
+POST http://127.0.0.1:7081/chat
+content-type: application/json
+
+{
+    "query": "好好学习，天天向上！",
+    "inputs": {
+        "optimizeStatement": "是",
+        "optimizePunctuation": "是",
+        "requirements": "口语化",
+        "rownumber": 10,
+        "score": 4
+    },
+    "conversation_id": "2ee56b12-37b8-4e15-a01a-0b83a7d62970"
+}
+
+### getChatHistory (公司服务器)
+GET  http://127.0.0.1:7081/getChatHistory?user=Ernest&conversation_id=&pageNo=1&pageSize=10
+
+### getChatHistory (公司服务器，走nginx)
+GET  http://127.0.0.1:7080/prod-api/getChatHistory?user=Ernest&conversation_id=&pageNo=1&pageSize=10
+
+
+### chatStream message (公司服务器)
+POST http://127.0.0.1:7081/chatStream
+content-type: application/json
+
+{
+    "query": "好好学习，天天向上！",
+    "inputs": {
+        "optimizeStatement": "是",
+        "optimizePunctuation": "是",
+        "requirements": "口语化",
+        "rownumber": 10,
+        "score": 4
+    },
+    "conversation_id": ""
+}
+
+### chatStream message (公司服务器，走nginx)
+POST http://127.0.0.1:7080/prod-api/chatStream
+content-type: application/json
+
+{
+    "query": "好好学习，天天向上！",
+    "inputs": {
+        "optimizeStatement": "是",
+        "optimizePunctuation": "是",
+        "requirements": "口语化",
+        "rownumber": 10,
+        "score": 4
+    },
+    "conversation_id": ""
+}
+
+
+
+### test file upload (local)
+POST http://localhost:5000/upload
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary
+
+------WebKitFormBoundary
+Content-Disposition: form-data; name="file"; filename="test.txt"
+Content-Type: text/plain
+
+< ./test.txt
+------WebKitFormBoundary--
+
+
+
+### getMacAddress (on local)
+GET http://localhost:5000/getMacAddress
+
+
+### getMacAddress (on server through nginx)
+GET http://127.0.0.1:7080/prod-api/getMacAddress
+
+
+### getMacAddress (on server)
+GET http://127.0.0.1:7081/getMacAddress

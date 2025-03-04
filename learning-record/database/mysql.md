@@ -38,3 +38,9 @@ t2 as
 (SELECT * from course)
 SELECT t1.*, t2.* from t1 join t2 on t1.id = t2.person_id;
 ```
+
+
+### docker install mysql
+```
+docker run --name mysql9 -p 8082:3306 --restart always -e TZ=Asia/Shanghai -e MYSQL_ROOT_PASSWORD=jsfr123456 -e MYSQL_ROOT_HOST=%   -v /etc/docker/test-mysql:/etc/mysql/conf.d -v final-mysql-data:/var/lib/mysql -d mysql:latest 
+```

@@ -2,4 +2,6 @@ Metadata-Version: 2.2
 Name: dify_api
 Version: 1.0.0
 Requires-Dist: flask
+Requires-Dist: flask_sqlalchemy
+Requires-Dist: mysql-connector-python
 Dynamic: requires-dist

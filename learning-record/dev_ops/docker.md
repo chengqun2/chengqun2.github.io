@@ -35,7 +35,7 @@ docker load -i /usr/local/software/chengqun-example-1.0.1.tar
 ```
 docker images
 docker pull mysql:5.7.35
-docker run -d -p 3306:3306 -v mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_ROOT_HOST=% -d mysql:5.7.35 --lower_case_table_names=1
+docker run -d -p 3306:3306 --restart always -e TZ=Asia/Shanghai -v mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_ROOT_HOST=% -d mysql:5.7.35 --lower_case_table_names=1
 netstat -na|grep 3306
 sudo iptables -A INPUT -p tcp --dport 3306 -j ACCEPT
 docker ps
