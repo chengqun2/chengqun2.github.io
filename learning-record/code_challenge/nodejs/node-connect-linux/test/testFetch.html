@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            font-size: 1.2rem;
+            background-color: bisque;
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div>Name: <span id="name"></span></div>
+        <div>Email: <span id="email"></span></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+
+        const fetchData = (url) => {
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    //do something
+                    console.log(data)
+                    $("#name").text(data.name)
+                    $("#email").text(data.email)
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        fetchData('https://jsonplaceholder.typicode.com/users/1');
+    </script>
+</body>
+
+</html>

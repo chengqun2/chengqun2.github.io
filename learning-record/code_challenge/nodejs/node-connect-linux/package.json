@@ -1,0 +1,32 @@
+{
+  "name": "node-connect-linux",
+  "version": "1.0.0",
+  "main": "server.js",
+  "bin": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "pkg ."
+  },
+  "pkg": {
+    "assets": [
+      "node_modules/*"
+    ],
+    "targets": [
+      "node12-win-x64",
+      "node12-linux-x64"
+    ],
+    "outputPath": "dist"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "body-parser": "^1.20.2",
+    "cheerio": "^1.0.0-rc.12",
+    "co": "^4.6.0",
+    "cron": "^3.1.7",
+    "express": "^4.19.2",
+    "mysql2": "^3.0.0",
+    "pretty": "^2.0.0",
+    "sequelize": "^6.37.3",
+    "ssh2": "^1.15.0"
+  }
+}
