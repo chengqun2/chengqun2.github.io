@@ -24,3 +24,18 @@ display: flex;
 flex: 1;
 ```
 
+### align-self 
+align-self 交叉轴上的对齐方式
+```
+.flex-container {
+    display: flex;
+}
+
+.flex-container .item-left {
+    align-self: flex-start;
+}
+
+.flex-container .item-right {
+    align-self: flex-end;
+}
+```

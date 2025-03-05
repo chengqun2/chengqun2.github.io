@@ -1,13 +1,10 @@
 import './App.css';
-import Chat from './pages/chat';
-
+import Chat from './pages/chat_complex';
 
 function App() {
   return (
-    <div className="App">
-      <header className='App-header'>
-        <Chat />
-      </header> 
+    <div>
+      <Chat />
     </div>
   );
 }

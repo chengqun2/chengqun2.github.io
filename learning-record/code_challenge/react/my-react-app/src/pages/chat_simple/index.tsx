@@ -46,9 +46,15 @@ const Chat: React.FC = () => {
     };
     return (
         <div>
-            <div className="input-box-container">
+            <div className="input-box-container"
+                onKeyDown={(e) => {
+                    if (e.key === 'Enter' && !e.shiftKey) {
+                        e.preventDefault();
+                        handleSubmit();
+                    }
+                }}>
                 <div className="input-box-container-input">
-                    <textarea 
+                    <textarea
                         ref={textareaRef}
                         placeholder="Ask something"
                         defaultValue="">
