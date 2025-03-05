@@ -8,9 +8,8 @@ const Chat: React.FC = () => {
     const handleSubmit = async () => {
         try {
             const inputText = textareaRef.current?.value || '';
-            console.log(inputText)
             const url = 'http://localhost:11434/api/generate'
-            fetch(url, {
+            const response = await fetch(url, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -18,15 +17,29 @@ const Chat: React.FC = () => {
                 body: JSON.stringify({
                     "model": "deepseek-r1:1.5b",  
                     "prompt": inputText,
-                    "stream": false
+                    "stream": true
                 }),
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log(data)
-                setChatResponse(data.response)
-            })
-            .catch(error => console.error('Error:', error));
+            });
+
+            const reader = response.body?.getReader();
+            let accumulatedResponse = '';
+
+            if (reader) {
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+
+                    // Convert the Uint8Array to text
+                    const chunk = new TextDecoder().decode(value);
+                    const lines = chunk.split('\n').filter(line => line.trim());
+                    
+                    for (const line of lines) {
+                        const data = JSON.parse(line);
+                        accumulatedResponse += data.response;
+                        setChatResponse(accumulatedResponse);
+                    }
+                }
+            }
         } catch (error) {
             console.error('Error:', error);
         }
@@ -41,27 +54,30 @@ const Chat: React.FC = () => {
                         defaultValue="">
                     </textarea>
                 </div>
-                <div style={{ position: 'relative', width: '100%' }}>
-                    <button 
-                        onClick={handleSubmit} 
-                        style={{ 
-                            backgroundColor: 'black', 
-                            color: 'white', 
-                            padding: '10px 20px', 
-                            fontSize: '16px',
-                            border: 'none',
-                            borderRadius: '10px',
-                            cursor: 'pointer',
-                            position: 'absolute',
-                            top: '10px',
-                            right: '10px'
-                        }}>
+                <div className='button-container'>
+                    <button className='button-send'
+                        onClick={handleSubmit}
+                    >
                         Send
                     </button>
                 </div>
             </div>
-            <div className='answer-box-contaner'>
-                <p>{chatResponse}</p>
+            <div className='answer-box-contaner' 
+                 ref={(el) => {
+                     if (el) {
+                         el.scrollTop = el.scrollHeight;
+                     }
+                 }}>
+                <div className="chat-response" 
+                     dangerouslySetInnerHTML={{ 
+                         __html: chatResponse
+                             .replace(/\n/g, '<br/>')
+                             .replace(/#{4,}/g, '')
+                             .replace(/###\s(.*?)\n/g, '<h3>$1</h3>')
+                             .replace(/##\s(.*?)\n/g, '<h2>$1</h2>')
+                             .replace(/#\s(.*?)\n/g, '<h1>$1</h1>')
+                     }} 
+                />
             </div>
         </div>
         

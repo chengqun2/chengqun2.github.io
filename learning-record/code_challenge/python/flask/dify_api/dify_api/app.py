@@ -112,16 +112,10 @@ def chatStream():
     user = request.json.get('user', 'Ernest')
     query = request.json.get('query', '')
     # inputs = request.json.get('inputs', '')
-    inputs = {
-        "optimizeStatement": "是",
-        "optimizePunctuation": "是",
-        "requirements": "公文",
-        "rownumber": "10",
-        "score":  "4"
-    }
+    inputs = {}
     conversation_id = request.json.get('conversation_id', '')
     # The api_key belongs to a workflow or a chatflow
-    api_key = 'app-oC46O0C4iyaKTCXsKkrXw1ic'
+    api_key = 'app-h5HAMxK3x0mIcqpNct8Lq2p8'
     # Get api_key and inputs from flow_properties table
     # try:
     #     result = db.session.execute(
@@ -145,7 +139,7 @@ def chatStream():
         "query": query,
         "response_mode": "streaming",
         "conversation_id": conversation_id,
-        "user": "Ernest710"
+        "user": user
     }
 
     def generate():

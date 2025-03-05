@@ -36,13 +36,40 @@
 	color: #dadade;
 }
 
+.input-box-container .button-container {
+	position: relative;
+	width: 100%;
+}
+
+.input-box-container .button-container .button-send {
+	background-color: black;
+	color: white;
+	padding: 10px 20px;
+	font-size: 16px;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
 .answer-box-contaner {
 	width: 800px;
-	height: 200px;
-	overflow-y: scroll;
+	height: 300px;
+	overflow-y: auto;
 	scrollbar-width: none;
 	font-size: 1rem;
 	&::-webkit-scrollbar {
 		display: none;
 	}
+}
+
+.answer-box-contaner .chat-response {
+	padding: 20px;
+	border-radius: 8px;
+	margin: 10px 0;
+	line-height: 1.5rem;
+	white-space: pre-wrap;
+	word-break: break-word;
 }
