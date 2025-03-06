@@ -1,0 +1,16 @@
+## VSCode Extension: REST Client 
+
+### chat
+POST http://localhost:8000/chat
+content-type: application/json
+
+{
+    "query": "hello",
+    "user": "James-fastapi"
+}
+
+
+### get_chat_history
+GET http://localhost:8000/chat-history?user=James-fastapi&conversation_id=e3f02d78-a5cb-4902-a27e-1d88df28b3fe
+
+

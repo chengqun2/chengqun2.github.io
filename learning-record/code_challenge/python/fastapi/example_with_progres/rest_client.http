@@ -1,0 +1,15 @@
+## VSCode Extension: REST Client 
+
+### create user
+POST http://localhost:8000/users/
+content-type: application/json
+
+{
+    "name": "john_doe",
+    "email": "john@example.com"
+}
+
+
+### get all users
+GET http://localhost:8000/users/
+

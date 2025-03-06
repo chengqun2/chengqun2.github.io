@@ -103,7 +103,14 @@ const Chat: React.FC = () => {
     return (
         <div className="chat-container">
             <header className="chat-header">Chat Robot</header>
-            <div className="chat-messages" ref={chatMessagesRef}>
+            <div className="chat-messages"
+            ref={(el) => {
+                if (el) {
+                    el.scrollTop = el.scrollHeight;
+                }
+            }}
+            
+            >
                 {messages.map((msg, index) => (
                     <div key={index} className={`message ${msg.user ? "user" : "bot"}`}>
                         {msg.user ? (
