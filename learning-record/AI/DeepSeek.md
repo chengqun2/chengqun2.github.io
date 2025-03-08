@@ -11,3 +11,8 @@ ollama run deepseek-r1:1.5b
 ### 代码中直接调用deepseek api
 1、在deepseek官网申请API key
 2、代码中配置申请好的api key，调用url: https://api.deepseek.com，返回结果
+
+### linux install ollama
+```
+curl -fsSL https://ollama.com/install.sh | sh
+```

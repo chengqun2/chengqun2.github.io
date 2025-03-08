@@ -28,3 +28,5 @@ The basic idea is we will come up with 68 specific points (called landmarks) tha
 ### 分词器: HanLP分词 VS 二元组分词
 二元组分词是一种简单快速的分词算法，适用于简单的分词任务和对实时性要求较高的场景；
 HanLP 提供了更为复杂和高级的分词算法，能够克服二元组分词的一些局限性，在准确度和应用范围上有一定的优势。具体选择哪种算法取决于具体的应用需求和场景特点。
+
+

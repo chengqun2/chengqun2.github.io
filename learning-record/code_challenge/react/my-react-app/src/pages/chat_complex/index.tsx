@@ -6,7 +6,6 @@ const Chat: React.FC = () => {
     const [messages, setMessages] = useState<{ text: string; user: boolean }[]>([]);
     const [input, setInput] = useState("");
     const [isLoading, setIsLoading] = useState(false);
-    const chatMessagesRef = useRef<HTMLDivElement>(null);
 
     const sendMessage = async () => {
         if (input.trim() === "" || isLoading) return;
@@ -102,7 +101,7 @@ const Chat: React.FC = () => {
 
     return (
         <div className="chat-container">
-            <header className="chat-header">Chat Robot</header>
+            <header className="chat-header">DeepSeek-V3 (程序员版本)</header>
             <div className="chat-messages"
             ref={(el) => {
                 if (el) {
