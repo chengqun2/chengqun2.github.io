@@ -72,3 +72,8 @@ Tuples are defined by parentheses ().
 
 ### loop an array from index 1
 `for price in prices[1:]`
+
+### ModuleNotFoundError: No module named 'ragflows', ragflows文件夹新建 __init__ ，还是显示No module named 'ragflows', 解决办法，在项目根目录执行命令：
+```
+python -m ragflows.main
+```

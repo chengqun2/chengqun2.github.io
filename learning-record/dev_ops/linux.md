@@ -85,3 +85,14 @@ sdb     1  # This is likely an HDD because rota = 1
 `dd if=/dev/zero of=output_file bs=8K count=10240 oflag=sync`
 
 ### MobaXterm 类似Xmanager管理工具
+
+
+### 这个命令的作用是在 INPUT 链的末尾添加一条规则，将所有源地址（0.0.0.0/0 表示任意源地址）发往 TCP 端口 11434 的数据包都丢弃。
+```
+sudo iptables -A INPUT -p tcp --dport 11434 -s 0.0.0.0/0 -j DROP
+```
+
+### 允许本地回环接口的流量，即允许 curl 127.0.0.1:11434, 这样 ollama list 就可以用了
+```
+sudo iptables -I INPUT 1 -i lo -p tcp --dport 11434 -j ACCEPT
+```
