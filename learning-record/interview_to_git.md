@@ -1,3 +1,12 @@
+### npm 和 npx 都是与 Node.js 生态系统紧密相关的工具
+npm
+包管理：npm（Node Package Manager）是 Node.js 的默认包管理器，核心功能是对 Node.js 包进行管理，包括安装、卸载、更新和查看依赖等操作。例如，使用 npm install lodash 可以将 lodash 包安装到项目中。
+脚本执行：npm 允许在 package.json 文件中定义脚本，通过 npm run 命令来执行这些脚本。比如，在 package.json 中定义 "start": "node app.js"，然后使用 npm run start 就可以启动应用。
+npx
+命令执行：npx 是一个 npm 附带的工具，主要用于执行 npm 包中的可执行文件。它可以直接运行某个包的命令，而不需要事先全局安装该包。例如，使用 npx create-react-app my-app 可以直接创建一个新的 React 应用，无需全局安装 create-react-app。
+
+
+
 ### 1. nextjs怎么设计路由
 
 

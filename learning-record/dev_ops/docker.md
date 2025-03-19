@@ -55,3 +55,9 @@ docker info
 ```
 
 
+### 启动容器，关闭后自动删除容器，测试容器启动过程中是否有报错
+#### -t（分配伪终端）
+#### --rm（自动删除容器）
+```
+docker run -it --rm --name n8n -p 8083:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
+```

@@ -77,3 +77,15 @@ Tuples are defined by parentheses ().
 ```
 python -m ragflows.main
 ```
+
+### use python to operate excel or csv:
+#### For pandas and Excel support
+```
+pip install pandas openpyxl  
+```
+#### csv module is built-in, no installation needed
+#### Choose based on your needs:
+Simple data: CSV with csv module
+Data analysis: pandas
+Complex Excel formatting: openpyxl
+Cross-format conversion: pandas

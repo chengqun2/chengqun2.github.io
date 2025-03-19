@@ -12,9 +12,9 @@ logger = logging.getLogger(__name__)
 app = FastAPI()
 
 # Configure Airtable credentials
-AIRTABLE_API_KEY = "patWVddS4zQU1OJZT.a5aeb69467ace82e44223fe42392dd3b63c209afec4979cdcad83cc5eeb7b31b"
+AIRTABLE_API_KEY = "patWVddS4zQU1OJZT.04d934780225a764f589e5afe34a5c9a08611f24748e12161dd51c4da6b8ece7"
 BASE_ID = "appldMc5FjQa1AOuG"
-TABLE_NAME = "Students"
+TABLE_NAME = "Attendance"
 
 # Airtable API base URL
 AIRTABLE_URL = f"https://api.airtable.com/v0/{BASE_ID}/{TABLE_NAME}"
