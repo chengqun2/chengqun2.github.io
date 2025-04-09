@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能机器人助手</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f4f8;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            position: relative;
+            text-align: center;
+        }
+        .robot {
+            width: 150px;
+            height: auto;
+        }
+        .speech-bubble {
+            position: absolute;
+            top: -80px;
+            left: 50%;
+            transform: translateX(-50%);
+            /* 使用径向渐变模拟图片中的背景效果 */
+            background: radial-gradient(circle at center, #e6e9ff 0%, #d9e1ff 70%, #c8d5ff 100%);
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 15px;
+            font-size: 16px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            text-align: center;
+        }
+        .speech-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 10px;
+            border-style: solid;
+            /* 箭头颜色与背景渐变的底部颜色匹配 */
+            border-color: #c8d5ff transparent transparent transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="speech-bubble">
+            你好，我是你的智能机器人助手，有什么问题欢迎来找我哦～
+        </div>
+        <img src="robot.png" alt="智能机器人" class="robot">
+    </div>
+</body>
+</html>

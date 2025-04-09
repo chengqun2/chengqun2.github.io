@@ -2101,3 +2101,15 @@ alias  F:\source\duty-vue3\dist;
 401. settings.xml in your /.m2 directory (C:\Users\HP\.m2)
 402. To download dependencies specified in a pom.xml file using the command window (CMD):
 	`mvn dependency:resolve`
+403. Use `a raw JSON body`: 
+	curl -X POST https://api.example.com/endpoint \
+     -H "Content-Type: application/json" \
+     -d '{"key1":"value1", "key2":"value2"}'
+404. Use `x-www-form-urlencoded`:
+	curl  https://{site}.chargebee.com/api/v2/customers \
+     -u {site_api_key}:\
+     -d first_name="John" \
+     -d last_name="Doe" \
+405. MCP配置文件路径： 
+	C:\Users\HP\AppData\Roaming\Code\User\globalStorage\saoudrizwan.claude-dev\settings\cline_mcp_settings.json
+406. in n8n http node -> pass body parameters -> `Body Parameters` there should be no blank space at the end of the `Name` field either.

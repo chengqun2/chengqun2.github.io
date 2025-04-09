@@ -1,3 +1,10 @@
+### https://www.notion.com/product/ai
+Notion AI 是一款集成于 Notion 工作空间的一体化人工智能工具，具备搜索、生成、分析、聊天等功能，能连接多种应用获取知识，支持多语言写作与内容编辑，安全性高且有免费试用，付费后可无限使用 。
+
+### Fathom - AI 会议记录工具
+Fathom - AI 会议记录工具：
+专为提升会议效率设计，能自动录制会议，实时生成精准转录和智能总结 。支持与 Zoom、Google Meet、Microsoft Teams 等主流会议平台无缝集成 ，还可与 CRM 系统同步。具备标注与高亮、搜索与回放、实时提醒与通知等功能 ，能帮助销售、客户成功、产品、市场等团队及个人提升会议相关工作效率。
+
 ### npm 和 npx 都是与 Node.js 生态系统紧密相关的工具
 npm
 包管理：npm（Node Package Manager）是 Node.js 的默认包管理器，核心功能是对 Node.js 包进行管理，包括安装、卸载、更新和查看依赖等操作。例如，使用 npm install lodash 可以将 lodash 包安装到项目中。
