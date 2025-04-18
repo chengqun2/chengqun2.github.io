@@ -7,7 +7,6 @@ mcp = FastMCP("Simple Calculator")
 @mcp.tool()
 def add(a: int, b: int) -> int:
     """Add two numbers."""
-    print("a:", a, "b:", b)
     return a + b
 
 # Define the subtraction tool
