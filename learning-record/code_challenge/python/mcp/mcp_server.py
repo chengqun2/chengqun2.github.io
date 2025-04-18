@@ -19,7 +19,7 @@ async def app_lifespan(server: FastMCP):
         user='postgres',
         password='jsfr123456',  # Replace with your PostgreSQL password
         database='postgres',
-        host='36.152.142.226',
+        host='localhost',
         port=7184
     )
     try:
