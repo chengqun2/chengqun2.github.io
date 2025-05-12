@@ -21,3 +21,8 @@ In a Unix or Linux shell, $? is a special variable that holds the exit status of
 ### Shell Basic Operators`
 `-eq`  Checks if the value of two operands are equal or not; if yes, then the condition becomes true.	
 `-ne`  Checks if the value of two operands are equal or not; if values are not equal, then the condition becomes true.
+
+### kill a progress by app-name on Linux
+```
+ps -ef|grep app-name|grep -v grep|awk '{print $2}'|xargs kill -9;
+```
