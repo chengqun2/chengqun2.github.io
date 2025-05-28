@@ -1,0 +1,15 @@
+question: 张三是哪家公司的?
+
+answer: 拼多多科技有限公司
+
+question: 李四是哪家公司的?
+
+answer: 华为科技有限公司
+
+question: 王五是哪家公司的?
+
+answer: 腾讯科技有限公司
+
+question: 李六是哪家公司的?
+
+answer: 拼多多科技有限公司
