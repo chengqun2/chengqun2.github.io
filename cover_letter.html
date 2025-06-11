@@ -1,0 +1,542 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+</head>
+
+<body>
+    <style>
+        html,
+        body,
+        div,
+        p {
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            font-size: 14px;
+            font-family: "microsoft yahei";
+            background-color: #ffffff
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            table-layout: fixed
+        }
+
+        th,
+        td {
+            font-size: 14px;
+            padding: 0
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        img {
+            border: 0 none
+        }
+
+        .blue {
+            text-decoration: none;
+            color: #3c3d5d
+        }
+
+        .chead {
+            width: 1002px
+        }
+
+        .chead .logo {
+            width: 698px;
+            height: 90px
+        }
+
+        .chead .txt {
+            width: 152px;
+            height: 90px
+        }
+
+        .column {
+            width: 1002px;
+            line-height: 28px;
+            border: 1px solid #dedede
+        }
+
+        .column .hbox {
+            width: 185px;
+            height: 154px
+        }
+
+        .column .head {
+            display: block;
+            background-color: #fafafa
+        }
+
+        .column .box {
+            width: 100%;
+            background-color: #ffffff;
+            border-top: 2px solid #f2f3f5
+        }
+
+        .column .box1 {
+            width: 100%;
+            word-wrap: break-word;
+            color: #ffffff;
+            background-color: #3f4160
+        }
+
+        .column .box2 {
+            width: 100%;
+            background-color: #f8f9fa
+        }
+
+        .column .tba {
+            width: 940px;
+            padding: 0 30px 15px
+        }
+
+        .column .tbb {
+            width: 940px;
+            padding: 0 30px
+        }
+
+        .column .tb1 {
+            width: 900px;
+            line-height: 28px;
+            color: #333333;
+            word-break: break-all;
+            padding: 0 20px
+        }
+
+        .column .tb2 {
+            width: 430px;
+            padding: 0 20px
+        }
+
+        .column .tb3 {
+            width: 900px;
+            padding: 15px 20px 15px 0
+        }
+
+        .column .gray,
+        .column .gray2 {
+            color: #999999;
+            word-break: break-all
+        }
+
+        .column .gray2 {
+            color: #666666
+        }
+
+        .column .plate1,
+        .column .plate2 {
+            width: 430px;
+            height: 54px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #818ba3
+        }
+
+        .column .plate1 {
+            width: 900px;
+            padding: 0 50px
+        }
+
+        .column .plate1 .f16 {
+            font-size: 14px;
+            font-weight: normal;
+            color: #333333
+        }
+
+        .column .plate1 .f12 {
+            font-size: 12px;
+            font-weight: normal;
+            color: #999999
+        }
+
+        .column .keys,
+        .column .keys2 {
+            width: 85px;
+            line-height: 28px;
+            color: #666666
+        }
+
+        .column .keys2 {
+            width: 110px
+        }
+
+        .column .txt1,
+        .column .txt2,
+        .column .txt3 {
+            width: 815px;
+            line-height: 28px;
+            color: #333333;
+            word-break: break-all
+        }
+
+        .column .txt2 {
+            width: 345px
+        }
+
+        .column .txt3 {
+            width: auto;
+            max-width: 815px;
+            font-size: 14px;
+            font-weight: bold
+        }
+
+        .column .txt4 {
+            width: 305px;
+            color: #ffffff;
+            word-break: break-all
+        }
+
+        .column .infr {
+            width: 767px;
+            color: #ffffff;
+            table-layout: auto
+        }
+
+        .column .vam,
+        .column .grcha {
+            vertical-align: middle;
+            margin-left: 5px
+        }
+
+        .column .box1 .vam {
+            margin-right: 5px;
+            margin-left: 0
+        }
+
+        .column .name {
+            font-size: 24px;
+            padding-bottom: 18px
+        }
+
+        .column .icard {
+            color: #a1a3ae;
+            padding-bottom: 18px
+        }
+
+        .column .con {
+            border-top: 1px dotted #ddd
+        }
+
+        .column .pr20 {
+            width: 225px;
+            padding-right: 20px
+        }
+
+        .column .time {
+            width: 120px;
+            line-height: 28px;
+            color: #666666;
+            padding-left: 20px
+        }
+
+        .column .rtbox {
+            width: 765px;
+            line-height: 28px;
+            color: #333333;
+            padding: 0 20px 0 15px;
+            word-break: break-all
+        }
+
+        .column .hai,
+        .column .guan {
+            line-height: 18px;
+            font-size: 12px;
+            color: #ffffff;
+            vertical-align: text-top;
+            margin-left: 5px;
+            padding: 1px 3px;
+            background-color: #3cbe7f;
+            border-radius: 2px
+        }
+
+        .column .guan {
+            background-color: #ff9f20
+        }
+
+        .column .tag {
+            display: inline-block;
+            word-break: break-all;
+        }
+
+        .column .all {
+            color: #666;
+            padding: 10px 20px;
+            background-color: #fafafa
+        }
+
+        .column .tit {
+            width: 900px;
+            height: 40px;
+            color: #666666;
+            padding: 0 20px;
+            background-color: #f5f5f5
+        }
+
+        .column .p15 {
+            padding: 15px 0
+        }
+
+        .column .p5 {
+            display: inline-block;
+            color: #666666;
+            padding: 0 5px;
+        }
+
+        .column .cell .skill {
+            width: 165px;
+            text-align: right;
+            padding-right: 15px
+        }
+
+        .column .cell .skbg,
+        .column .cell .skco {
+            display: inline-block;
+            width: 245px;
+            height: 18px;
+            line-height: 18px;
+            font-size: 12px;
+            color: #ffffff;
+            vertical-align: top;
+            margin-top: 6px;
+            background-color: #dddddd;
+            border-radius: 20px;
+        }
+
+        .column .cell .skco {
+            width: 235px;
+            font-style: normal;
+            margin-top: 0;
+            padding-left: 10px;
+            background-color: #ff9f20;
+            z-index: 3
+        }
+
+        .column .sl .skco {
+            width: 173px
+        }
+
+        .column .lh .skco {
+            width: 112px
+        }
+
+        .column .yb .skco {
+            width: 51px
+        }
+
+        .column .fbox strong {
+            font-size: 14px;
+            font-weight: bold
+        }
+
+        .column .cha {
+            font-size: 12px;
+            font-weight: normal;
+            color: #00457d;
+            margin-left: 5px
+        }
+
+        .column .cha1 {
+            font-size: 14px
+        }
+
+        .column .cha:hover {
+            color: #ff6000
+        }
+
+        .column .email {
+            width: 330px
+        }
+
+        .column .bbf {
+            border-bottom: 1px dotted #ddd;
+        }
+
+        .eng td,
+        .eng .txt3,
+        .eng .fbox strong {
+            font-size: 13px;
+            font-family: 'Arial'
+        }
+
+        .eng .txt1,
+        .eng .rtbox,
+        .eng .phd {
+            width: 775px;
+            font-size: 13px;
+            font-family: 'Arial';
+            line-height: 28px
+        }
+
+        .eng .txt2 {
+            width: 305px
+        }
+
+        .eng .txt4 {
+            width: 245px
+        }
+
+        .eng .cell .txt3 {
+            width: 120px
+        }
+
+        .eng .time,
+        .eng .keys {
+            width: 110px;
+            font-size: 13px;
+            text-align: right
+        }
+
+        .eng .cell .skill {
+            width: 130px
+        }
+
+        .eng .phd {
+            padding-left: 145px
+        }
+
+        .eng .keys {
+            padding-right: 15px
+        }
+
+        .eng .pr20 {
+            width: 205px
+        }
+
+        .eng .pr20 .keys {
+            width: 100px
+        }
+
+        .eng .email {
+            width: 270px
+        }
+
+        /* adjust */
+        .column .tba {
+            width: 900px;
+            padding: 0 50px 15px;
+        }
+
+        .column .tb1 {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .column .tb2 {
+            padding-left: 0;
+            width: 450px;
+        }
+
+        .column .pd_20 {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .h_16 {
+            height: 16px;
+        }
+
+        .schHead img {
+            display: block;
+        }
+
+        .column .schGood {
+            line-height: 18px;
+            font-size: 12px;
+            color: #F87203;
+            vertical-align: text-top;
+            margin-left: 4px;
+            padding: 1px 3px;
+            background-color: #FFEDE5;
+            border-radius: 2px;
+        }
+
+        .column .p_12 {
+            padding-left: 12px;
+        }
+
+        .column .time {
+            text-align: right;
+        }
+
+        .column .schTime {
+            width: 115px;
+        }
+
+        .companyLogo p {
+            width: 50px;
+            height: 50px;
+            background: #F0F0F0;
+            border-radius: 8px;
+            border: 1px solid #DDDDDD;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .companyLogo p img {
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .companyLogo p i {
+            display: inline-block;
+            height: 100%;
+            width: 0;
+            vertical-align: middle;
+        }
+    </style>
+    <table cellpadding="0" cellspacing="0" align="center" bgcolor="#fff" class="column">
+        <tbody class="eng">
+            <tr>
+                <td valign="top">
+                    <table cellspacing="0" cellpadding="0" border="0" class="box">
+                        <tbody>
+                            <tr>
+                                <td class="plate1">
+                                    Personal Background </td>
+                            </tr>
+                            <tr>
+                                <td class="tba">
+                                    <table cellspacing="0" cellpadding="0" border="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="tb1">
+                                                    1. Computer professional background, 13 years of software development
+                                                    experience, bachelor's degree.<br>
+                                                    2. Experience with J2EE, Spring Framework, Spring Boot, Spring Cloud,
+                                                    REST API, Json and XML parsers. <br>
+                                                    3. Skilled at Html, CSS, Javascript, jquery, Typescript, Vue  <br>
+                                                    4. Skilled at React (My React repository: https://github.com/chengqun2/resume)<br>
+                                                    5. Skilled at Node.js(My nodejs repository: https://github.com/chengqun2/node-connect-linux.git)<br>
+                                                    6. Skilled at BlockChain (My BlockChain repository: https://github.com/chengqun2/node-blockchain.git)<br>
+                                                    7. Familiar with Docker and Kubernetes (My repository: https://github.com/chengqun2/kubernetes-example.git)<br>
+                                                    8. Experience working in LINUX environment.<br>
+                                                    9. Experience with Python(Flask, Django framework) <br>
+                                                    10. Skilled at Mysql, Oracle, Postgresql, Redis, MongoDB, Elasticsearch <br>
+                                                    11. Skilled at message queues (kafka, RabbitMQ, ActiveMQ etc.) <br>
+                                                    12. Good English speaking and writing skills. <br>
+                                                    13. Github profile: <a href="https://github.com/chengqun2">https://github.com/chengqun2</a> <br>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
