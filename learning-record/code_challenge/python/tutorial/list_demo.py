@@ -43,3 +43,12 @@ print(nums)
 
 str = 'I, love, python'
 print(f"str.split(','): {str.split(',')}")
+
+# print(list)
+# print(list())
+# print(type(list))
+# print(type(list()))
+print(type(10))
+print(type('10'))
+print(type([]))
+print(type({}))
