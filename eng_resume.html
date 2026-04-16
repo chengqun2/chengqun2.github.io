@@ -1,1799 +1,357 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chengqun — Full Stack (Python / React) · Resume</title>
+  <meta name="description" content="Nearly 15 years of full-stack delivery with a focus on Python and React: APIs, automation, AI and LLM integration, SPAs and brand sites; government big data; independent delivery of Champ Code Academy; English remote collaboration with Singapore teams." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ink: { 950: '#0f172a', 800: '#1e293b', 600: '#475569', 500: '#64748b' },
+          },
+          keyframes: {
+            'fade-rise': {
+              '0%': { opacity: '0', transform: 'translateY(10px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+          },
+          animation: { 'fade-rise': 'fade-rise 0.55s ease-out forwards' },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    @media (prefers-reduced-motion: reduce) {
+      .animate-fade-rise { animation: none !important; opacity: 1 !important; }
+    }
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
-
-<body>
-    <style>
-        html,
-        body,
-        div,
-        p {
-            margin: 0;
-            padding: 0
-        }
-
-        body {
-            font-size: 14px;
-            font-family: "microsoft yahei";
-            background-color: #ffffff
-        }
-
-        table {
-            border-collapse: collapse;
-            border-spacing: 0;
-            table-layout: fixed
-        }
-
-        th,
-        td {
-            font-size: 14px;
-            padding: 0
-        }
-
-        a {
-            text-decoration: none
-        }
-
-        img {
-            border: 0 none
-        }
-
-        .blue {
-            text-decoration: none;
-            color: #3c3d5d
-        }
-
-        .chead {
-            width: 1002px
-        }
-
-        .chead .logo {
-            width: 698px;
-            height: 90px
-        }
-
-        .chead .txt {
-            width: 152px;
-            height: 90px
-        }
-
-        .column {
-            width: 1002px;
-            line-height: 28px;
-            border: 1px solid #dedede
-        }
-
-        .column .hbox {
-            width: 185px;
-            height: 154px
-        }
-
-        .column .head {
-            display: block;
-            background-color: #fafafa
-        }
-
-        .column .box {
-            width: 100%;
-            background-color: #ffffff;
-            border-top: 2px solid #f2f3f5
-        }
-
-        .column .box1 {
-            width: 100%;
-            word-wrap: break-word;
-            color: #ffffff;
-            background-color: #3f4160
-        }
-
-        .column .box2 {
-            width: 100%;
-            background-color: #f8f9fa
-        }
-
-        .column .tba {
-            width: 940px;
-            padding: 0 30px 15px
-        }
-
-        .column .tbb {
-            width: 940px;
-            padding: 0 30px
-        }
-
-        .column .tb1 {
-            width: 900px;
-            line-height: 28px;
-            color: #333333;
-            word-break: break-all;
-            padding: 0 20px
-        }
-
-        .column .tb2 {
-            width: 430px;
-            padding: 0 20px
-        }
-
-        .column .tb3 {
-            width: 900px;
-            padding: 15px 20px 15px 0
-        }
-
-        .column .gray,
-        .column .gray2 {
-            color: #999999;
-            word-break: break-all
-        }
-
-        .column .gray2 {
-            color: #666666
-        }
-
-        .column .plate1,
-        .column .plate2 {
-            width: 430px;
-            height: 54px;
-            font-size: 16px;
-            font-weight: bold;
-            color: #818ba3
-        }
-
-        .column .plate1 {
-            width: 900px;
-            padding: 0 50px
-        }
-
-        .column .plate1 .f16 {
-            font-size: 14px;
-            font-weight: normal;
-            color: #333333
-        }
-
-        .column .plate1 .f12 {
-            font-size: 12px;
-            font-weight: normal;
-            color: #999999
-        }
-
-        .column .keys,
-        .column .keys2 {
-            width: 85px;
-            line-height: 28px;
-            color: #666666
-        }
-
-        .column .keys2 {
-            width: 110px
-        }
-
-        .column .txt1,
-        .column .txt2,
-        .column .txt3 {
-            width: 815px;
-            line-height: 28px;
-            color: #333333;
-            word-break: break-all
-        }
-
-        .column .txt2 {
-            width: 345px
-        }
-
-        .column .txt3 {
-            width: auto;
-            max-width: 815px;
-            font-size: 14px;
-            font-weight: bold
-        }
-
-        .column .txt4 {
-            width: 305px;
-            color: #ffffff;
-            word-break: break-all
-        }
-
-        .column .infr {
-            width: 767px;
-            color: #ffffff;
-            table-layout: auto
-        }
-
-        .column .vam,
-        .column .grcha {
-            vertical-align: middle;
-            margin-left: 5px
-        }
-
-        .column .box1 .vam {
-            margin-right: 5px;
-            margin-left: 0
-        }
-
-        .column .name {
-            font-size: 24px;
-            padding-bottom: 18px
-        }
-
-        .column .icard {
-            color: #a1a3ae;
-            padding-bottom: 18px
-        }
-
-        .column .con {
-            border-top: 1px dotted #ddd
-        }
-
-        .column .pr20 {
-            width: 225px;
-            padding-right: 20px
-        }
-
-        .column .time {
-            width: 120px;
-            line-height: 28px;
-            color: #666666;
-            padding-left: 20px
-        }
-
-        .column .rtbox {
-            width: 765px;
-            line-height: 28px;
-            color: #333333;
-            padding: 0 20px 0 15px;
-            word-break: break-all
-        }
-
-        .column .hai,
-        .column .guan {
-            line-height: 18px;
-            font-size: 12px;
-            color: #ffffff;
-            vertical-align: text-top;
-            margin-left: 5px;
-            padding: 1px 3px;
-            background-color: #3cbe7f;
-            border-radius: 2px
-        }
-
-        .column .guan {
-            background-color: #ff9f20
-        }
-
-        .column .tag {
-            display: inline-block;
-            word-break: break-all;
-        }
-
-        .column .all {
-            color: #666;
-            padding: 10px 20px;
-            background-color: #fafafa
-        }
-
-        .column .tit {
-            width: 900px;
-            height: 40px;
-            color: #666666;
-            padding: 0 20px;
-            background-color: #f5f5f5
-        }
-
-        .column .p15 {
-            padding: 15px 0
-        }
-
-        .column .p5 {
-            display: inline-block;
-            color: #666666;
-            padding: 0 5px;
-        }
-
-        .column .cell .skill {
-            width: 165px;
-            text-align: right;
-            padding-right: 15px
-        }
-
-        .column .cell .skbg,
-        .column .cell .skco {
-            display: inline-block;
-            width: 245px;
-            height: 18px;
-            line-height: 18px;
-            font-size: 12px;
-            color: #ffffff;
-            vertical-align: top;
-            margin-top: 6px;
-            background-color: #dddddd;
-            border-radius: 20px;
-        }
-
-        .column .cell .skco {
-            width: 235px;
-            font-style: normal;
-            margin-top: 0;
-            padding-left: 10px;
-            background-color: #ff9f20;
-            z-index: 3
-        }
-
-        .column .sl .skco {
-            width: 173px
-        }
-
-        .column .lh .skco {
-            width: 112px
-        }
-
-        .column .yb .skco {
-            width: 51px
-        }
-
-        .column .fbox strong {
-            font-size: 14px;
-            font-weight: bold
-        }
-
-        .column .cha {
-            font-size: 12px;
-            font-weight: normal;
-            color: #00457d;
-            margin-left: 5px
-        }
-
-        .column .cha1 {
-            font-size: 14px
-        }
-
-        .column .cha:hover {
-            color: #ff6000
-        }
-
-        .column .email {
-            width: 330px
-        }
-
-        .column .bbf {
-            border-bottom: 1px dotted #ddd;
-        }
-
-        .eng td,
-        .eng .txt3,
-        .eng .fbox strong {
-            font-size: 13px;
-            font-family: 'Arial'
-        }
-
-        .eng .txt1,
-        .eng .rtbox,
-        .eng .phd {
-            width: 775px;
-            font-size: 13px;
-            font-family: 'Arial';
-            line-height: 28px
-        }
-
-        .eng .txt2 {
-            width: 305px
-        }
-
-        .eng .txt4 {
-            width: 245px
-        }
-
-        .eng .cell .txt3 {
-            width: 120px
-        }
-
-        .eng .time,
-        .eng .keys {
-            width: 110px;
-            font-size: 13px;
-            text-align: right
-        }
-
-        .eng .cell .skill {
-            width: 130px
-        }
-
-        .eng .phd {
-            padding-left: 145px
-        }
-
-        .eng .keys {
-            padding-right: 15px
-        }
-
-        .eng .pr20 {
-            width: 205px
-        }
-
-        .eng .pr20 .keys {
-            width: 100px
-        }
-
-        .eng .email {
-            width: 270px
-        }
-
-        /* adjust */
-        .column .tba {
-            width: 900px;
-            padding: 0 50px 15px;
-        }
-
-        .column .tb1 {
-            padding-left: 0;
-            padding-right: 0;
-        }
-
-        .column .tb2 {
-            padding-left: 0;
-            width: 450px;
-        }
-
-        .column .pd_20 {
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-
-        .h_16 {
-            height: 16px;
-        }
-
-        .schHead img {
-            display: block;
-        }
-
-        .column .schGood {
-            line-height: 18px;
-            font-size: 12px;
-            color: #F87203;
-            vertical-align: text-top;
-            margin-left: 4px;
-            padding: 1px 3px;
-            background-color: #FFEDE5;
-            border-radius: 2px;
-        }
-
-        .column .p_12 {
-            padding-left: 12px;
-        }
-
-        .column .time {
-            text-align: right;
-        }
-
-        .column .schTime {
-            width: 115px;
-        }
-
-        .companyLogo p {
-            width: 50px;
-            height: 50px;
-            background: #F0F0F0;
-            border-radius: 8px;
-            border: 1px solid #DDDDDD;
-            text-align: center;
-            overflow: hidden;
-        }
-
-        .companyLogo p img {
-            display: inline-block;
-            vertical-align: middle;
-            max-width: 100%;
-            max-height: 100%;
-        }
-
-        .companyLogo p i {
-            display: inline-block;
-            height: 100%;
-            width: 0;
-            vertical-align: middle;
-        }
-    </style>
-    <table cellpadding="0" cellspacing="0" align="center" bgcolor="#fff" class="column">
-        <tbody class="eng">
-            <tr>
-                <td valign="top">
-                
-                    <table cellspacing="0" cellpadding="0" border="0" class="box1">
-                        <tbody>
-                            <tr>
-                                <td class="hbox" align="middle">
-                                    <img src="https://avatars.githubusercontent.com/u/12636050"
-                                        width="100" height="100" class="head" alt="Head portrait">
-                                </td>
-                                <td>
-                                    <table cellspacing="0" cellpadding="0" border="0" class="infr">
-                                        <tbody>
-                                            <tr>
-                                                <td colspan="2" class="name">Chengqun &nbsp;&nbsp;
-                                                    <a style="color: wheat;" href="index.html">Chinese Resume Link</a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td valign="top" colspan="3">
-                                                    <p>
-                                                        <img class="vam"
-                                                            src="https://img01.51jobcdn.com/im/2016/resume/y4.png"
-                                                            width="20" height="20" />
-                                                        Male <span class="p5">|</span>
-                                                        36 Years old (1989/09) <span class="p5">|</span>
-                                                        14 Years of Work Experience <span class="p5">|</span>
-                                                        Currently Living in Yancheng, Jiangsu
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td valign="top">
-                                                    <img class="vam"
-                                                        src="https://img01.51jobcdn.com/im/2016/resume/y2.png"
-                                                        width="20" height="20" />18662062998
-                                                </td>
-                                                <td valign="top">
-                                                    <table cellspacing="0" cellpadding="0" border="0" class="email">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td valign="top" width="25">
-                                                                    <img class="vam"
-                                                                        src="https://img01.51jobcdn.com/im/2016/resume/y3.png"
-                                                                        width="20" height="20" />
-                                                                </td>
-                                                                <td valign="top" class="txt4">chengqun710@163.com</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-
-                                <td class="hbox" align="middle">
-                                    <video width="180" height="180" controls>
-                                        <source src="self_introduction.mp4" type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table cellspacing="0" cellpadding="0" border="0" class="box">
-                        <tbody>
-                            <tr>
-                                <td class="plate1">
-                                    Personal Advantage </td>
-                            </tr>
-                            <tr>
-                                <td class="tba">
-                                    <table cellspacing="0" cellpadding="0" border="0">
-                                        <tbody>
-                                            <tr>
-                                                <td class="tb1">
-                                                    1. Major in Computer Science and Technology, 13 years of software development experience.<br>
-                                                    2. Proficient in Node.js development (My Node.js open source project: https://github.com/chengqun2/node-connect-linux.git)<br>
-                                                    3. Proficient in TypeScript (My TypeScript open source project: https://github.com/chengqun2/node-blockchain.git)<br>
-                                                    4. Proficient in Java open source frameworks such as SpringBoot and SpringCloud.<br>
-                                                    5. Proficient in Python development (My Python open source project: https://github.com/chengqun2/python-flask.git)<br>
-                                                    6. Proficient in Docker and Kubernetes (My k8s open source project: https://github.com/chengqun2/kubernetes-example.git)<br>
-                                                    7. Proficient in blockchain development (My TypeScript open source project: https://github.com/chengqun2/node-blockchain.git)<br>
-                                                    8. Proficient in React (My React open source project: https://github.com/chengqun2/react-node-example)<br>
-                                                    9. Proficient in MySQL database, familiar with SQL syntax and query optimization, with deep understanding of database indexes, transactions, locks, and database/table sharding.<br>
-                                                    10. Proficient in Redis data structures, persistence mechanisms, transaction control, cluster mode, and sentinel mode.<br>
-                                                    11. Proficient in message middleware such as Kafka, RocketMQ, and RabbitMQ.<br>
-                                                    12. Proficient in common distributed transaction solutions with practical experience.<br>
-                                                    13. Proficient in ElasticSearch search framework, familiar with using DSL queries for conditional search and aggregation.<br>
-                                                    14. Proficient in Vue<br>
-                                                    15. Proficient in front-end foundational technologies such as HTML, CSS, JavaScript, jQuery, ElementUI, and TailwindCSS<br>
-                                                    16. Familiar with Linux environment and Docker containers, familiar with common Linux and Docker commands<br>
-                                                    17. Familiar with gitlab+docker+jenkins automated deployment tools<br>
-                                                    18. Familiar with Gatling performance testing framework<br>
-                                                    19. Familiar with database read-write separation and database/table sharding tools such as ShardingSphere<br>
-                                                    20. Familiar with big data technologies such as Hadoop, HBase, and Hive<br>
-                                                    21. Good English listening, speaking, reading, and writing skills (long-term work in pure English environment, remote communication with programmers in Singapore), online resume address: https://chengqun2.github.io/ There is my English video self-introduction in the upper right corner.<br>
-                                                    22. Familiar with Linux environment development setup: JDK, MySQL, Redis, ElasticSearch, ClickHouse, Maven private repository (Nexus3), Minio, etc.<br>
-                                                    23. Familiar with AI-machine learning, familiar with ChatGPT, proficient in using Copilot and Cursor for code writing<br>
-                                                    24. Familiar with private deployment and workflow orchestration of Dify platform and N8n platform<br>
-                                                    25. GitHub profile: <a href="https://github.com/chengqun2">https://github.com/chengqun2</a><br>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table cellspacing="0" cellpadding="0" border="0" class="box">
-                        <tbody>
-                            <tr>
-                                <td class="plate1">Job Preferences</td>
-                            </tr>
-                            <tr>
-                                <td class="tba">
-                                    <table cellspacing="0" cellpadding="0" border="0">
-                                        <tbody>
-                                            <tr>
-                                                <td class="p15 bbf">
-                                                    <table cellspacing="0" cellpadding="0" border="0">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td class="tb2" valign="top">
-                                                                    <table cellspacing="0" cellpadding="0" border="0">
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <td valign="top" class="keys">Position:
-                                                                                </td>
-                                                                                <td valign="top" class="txt2">
-                                                                                    <span
-                                                                                        class="tag">Full Stack Developer&nbsp;&nbsp;</span>
-                                                                                </td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </td>
-                                                                <td class="tb2" valign="top">
-                                                                    <table cellspacing="0" cellpadding="0" border="0">
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <td valign="top" class="keys">Location:</td>
-                                                                                <td valign="top" class="txt2">
-                                                                                    <span class="tag">Yancheng, Remote</span>
-                                                                                </td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </td>
-
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="tb2" valign="top">
-                                                                    <table cellspacing="0" cellpadding="0" border="0">
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <td valign="top" class="keys">Expected Salary:</td>
-                                                                                <td valign="top" class="txt2">Negotiable</td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </td>
-                                                                <td class="tb2" valign="top">&nbsp;</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="tb2" valign="top">
-                                                                    <table cellspacing="0" cellpadding="0" border="0">
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <td valign="top" class="keys">Job Type:
-                                                                                </td>
-                                                                                <td valign="top" class="txt2">Full-time
-                                                                                    </td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                            <td class="tba">
-                                <table cellspacing="0" cellpadding="0" border="0">
-                                    <tbody>
-                                        <tr>
-                                            <td class="tb2" valign="top">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td valign="top" class="keys">Job Status:</td>
-                                                            <td valign="top" class="txt2">Currently employed, seeking better opportunities</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td class="tb2" valign="top">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td valign="top" class="keys">Availability:</td>
-                                                            <td valign="top" class="txt2">Within 2 weeks</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tbody>
-                    </table>
-
-                    <table cellspacing="0" cellpadding="0" border="0" class="box">
-                        <tbody>
-                            <tr>
-                                <td class="plate1">Work Experience</td>
-                            </tr>
-                            <tr>
-                                <td class="tbb">
-                                    <table cellspacing="0" cellpadding="0" border="0">
-                                        <tr>
-                                            <td class="p15 pd_20">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td width="52" height="52" rowspan="2" class="companyLogo">
-                                                            <p><img src="https://img04.51jobcdn.com/im/mkt/app/51job_phone/app/homelogo/home_logo_default.png"
-                                                                    alt="" width="48" height="48"><i></i></p>
-                                                        </td>
-
-                                                        <td class="phd tb1 p_12">
-                                                            <strong>Jiangsu Fangruan Technology Co., Ltd.</strong><span class="gray"></span>
-                                                        </td>
-                                                        <td valign="top" class="time">2023/6-Present</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td valign="top" class="tb1 p_12" colspan="3">
-                                                            <span>Full Stack Developer (Front-end and Back-end Development)</span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="h_16" colspan="3"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="phd tb1 gray2" colspan="3">
-                                                            Computer Software<span class="p5">|</span>50-150 employees<span
-                                                                class="p5">|</span>Private Company</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="tb1" colspan="3">
-                                                            <table cellspacing="0" cellpadding="0" border="0">
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td valign="top" class="keys">Job Description:
-                                                                    </td>
-                                                                    <td valign="top" class="txt1">
-                                                                        1. Linux development environment setup: Docker, N8n, Ollama, DeepSeek-R1, Dify, ClickHouse, ElasticSearch, MySQL, Nginx <br>
-                                                                        2. React code development <br>
-                                                                        3. Vue code development <br>
-                                                                        4. Java code development<br>
-                                                                        5. Python code development <br>
-                                                                        6. Node.js code development <br>
-                                                                        7. TypeScript code development <br>
-                                                                        8. Electron code development <br>
-                                                                        9. N8n workflow development <br>
-                                                                    </td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15 pd_20">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="52" height="52" rowspan="2" class="companyLogo">
-                                                                <p><img src="https://img04.51jobcdn.com/im/mkt/app/51job_phone/app/homelogo/home_logo_default.png"
-                                                                        alt="" width="48" height="48"><i></i></p>
-                                                            </td>
-
-                                                            <td class="phd tb1 p_12">
-                                                                <strong>Shanghai Wayz Intelligence Information Technology Co., Ltd.</strong><span class="gray">&nbsp;(10 months)</span>
-                                                            </td>
-                                                            <td valign="top" class="time">2022/7-2023/5</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td valign="top" class="tb1 p_12" colspan="3">
-                                                                <span>Full Stack Developer (Front-end and Back-end Development)</span>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="h_16" colspan="3"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="phd tb1 gray2" colspan="3">
-                                                                Computer Software<span class="p5">|</span>150-500 employees<span
-                                                                    class="p5">|</span>Private Company</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="3">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">Job Description:
-                                                                            </td>
-                                                                            <td valign="top" class="txt1">
-                                                                                Singapore children's programming online education platform<br />
-                                                                                Pure English working environment, remote work<br />
-                                                                                Main technical points:<br />
-                                                                                Airtable <br />
-                                                                                Make.com <br />
-                                                                                n8n <br />
-                                                                                chargebee.com <br />
-                                                                                stripe.com/payments <br />
-                                                                                atlassian.net/jira <br />
-                                                                                Supabase <br />
-                                                                                wati.io <br />
-                                                                                manychat.com <br />
-                                                                                business.facebook.com <br />
-                                                                                web.miniextensions.com <br />
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15 con pd_20">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="52" height="52" rowspan="2" class="companyLogo">
-                                                                <p><img src="https://img04.51jobcdn.com/im/mkt/app/51job_phone/app/homelogo/home_logo_default.png"
-                                                                        alt="" width="48" height="48"><i></i></p>
-                                                            </td>
-
-                                                            <td class="phd tb1 p_12">
-                                                                <strong>Nanjing Weishu Software Co., Ltd.</strong><span
-                                                                    class="gray">&nbsp;(4 years 7 months)</span>
-                                                            </td>
-                                                            <td valign="top" class="time">2017/12-2022/7</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td valign="top" class="tb1 p_12" colspan="3">
-                                                                <span>Full Stack Developer (Front-end and Back-end Development)</span>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="h_16" colspan="3"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="phd tb1 gray2" colspan="3">
-                                                                Computer Software<span class="p5">|</span>150-500 employees<span
-                                                                    class="p5">|</span>Listed Company</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="3">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">Job Description:
-                                                                            </td>
-                                                                            <td valign="top" class="txt1">Yancheng Public Security Bureau Office OA System;<br>Yancheng Public Security Bureau Vehicle Big Data Platform;<br>Yancheng Public Security Bureau Yandu Branch Integrated Command Platform;<br>Yancheng Public Security Bureau Yandu Branch Perception Big Data Platform;<br>Mainly responsible for Java backend development, involving technologies such as Hadoop, HBase, Kafka, Solr<br>Department: R&D Department</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15 con pd_20">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="52" height="52" rowspan="2" class="companyLogo">
-                                                                <p><img src="https://img04.51jobcdn.com/im/mkt/app/51job_phone/app/homelogo/home_logo_default.png"
-                                                                        alt="" width="48" height="48"><i></i></p>
-                                                            </td>
-
-                                                            <td class="phd tb1 p_12">
-                                                                <strong>Yancheng Youyin Information Technology Co., Ltd.</strong><span class="gray">&nbsp;(2 years 5 months)</span>
-                                                            </td>
-                                                            <td valign="top" class="time">2015/7-2017/12</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td valign="top" class="tb1 p_12" colspan="3">
-                                                                <span>Full Stack Developer (Front-end and Back-end Development)</span>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="h_16" colspan="3"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="phd tb1 gray2" colspan="3">
-                                                                Computer Software<span class="p5">|</span>50-150 employees<span
-                                                                    class="p5">|</span>Private Company</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="3">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">Job Description:
-                                                                            </td>
-                                                                            <td valign="top" class="txt1">Requirements analysis, backend architecture design, database design, and server interface development. Project management.</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15 con pd_20">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="52" height="52" rowspan="2" class="companyLogo">
-                                                                <p><img src="https://img04.51jobcdn.com/im/mkt/app/51job_phone/app/homelogo/home_logo_default.png"
-                                                                        alt="" width="48" height="48"><i></i></p>
-                                                            </td>
-
-                                                            <td class="phd tb1 p_12">
-                                                                <strong>Jiangsu Huasheng Hengye Technology Co., Ltd.</strong><span class="gray">&nbsp;(3 years 10 months)</span>
-                                                            </td>
-                                                            <td valign="top" class="time">2011/9-2015/7</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td valign="top" class="tb1 p_12" colspan="3">
-                                                                <span>Full Stack Developer (Front-end and Back-end Development)</span>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="h_16" colspan="3"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="phd tb1 gray2" colspan="3">
-                                                                Computer Software<span class="p5">|</span>500-1000 employees<span
-                                                                    class="p5">|</span>Private Company</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="3">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">Job Description:
-                                                                            </td>
-                                                                            <td valign="top" class="txt1">Java-based B/S architecture development and bug fixes;<br>Main projects involved:<br>Development of Yancheng Talent Public Service Network,<br>Development of Taiwan Glass ERP,<br>Development, testing, and maintenance of State Grid OA management system,<br>Backend development of WeChat service account;
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!-- project experience -->
-                    <table cellspacing="0" cellpadding="0" border="0" class="box">
-                        <tbody>
-                            <tr>
-                                <td class="plate1">Project Experience</td>
-                            </tr>
-                            <tr>
-                                <td class="tba">
-                                    <table cellspacing="0" cellpadding="0" border="0">
-
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="phd tb1">
-                                                            <strong>AI Large Model Application</strong>
-                                                        </td>
-                                                        <td valign="top" class="time">2024/8-2025/12</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="tb1" colspan="2">
-                                                            <table cellspacing="0" cellpadding="0" border="0">
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td valign="top" class="keys">Project Description:</td>
-                                                                    <td valign="top" class="txt1">AI Large Model Application<br>
-                                                                        Main technical responsibilities: React code development, Python code development, N8n deployment and workflow development, MySQL database setup, Dify platform deployment, DeepSeek-R1:64B model deployment <br>
-                                                                        Develop conversation flows based on Dify platform, publish applications, expose APIs, call Dify interfaces with Python, and display on React frontend pages.<br>
-                                                                        Develop workflows based on N8n platform, combined with AI Agent and MCP for agent development<br>
-                                                                    </td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="phd tb1">
-                                                            <strong>React Personal Website</strong>
-                                                        </td>
-                                                        <td valign="top" class="time">2024/6-2024/7</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="tb1" colspan="2">
-                                                            <table cellspacing="0" cellpadding="0" border="0">
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td valign="top" class="keys">Project Description:</td>
-                                                                    <td valign="top" class="txt1">React Personal Website<br>
-                                                                        Tech Stack: React, React-Router, React-Snap for Static-Export, and GitHub Pages. <br>
-                                                                        GitHub Address: https://github.com/chengqun2/resume <br>
-                                                                        Online Access Address: <a href='https://chengqun2.github.io/resume/'>https://chengqun2.github.io/resume/</a> <br>
-                                                                    </td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="phd tb1">
-                                                            <strong>Node.js Backend Development</strong>
-                                                        </td>
-                                                        <td valign="top" class="time">2024/4-2024/5</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="tb1" colspan="2">
-                                                            <table cellspacing="0" cellpadding="0" border="0">
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td valign="top" class="keys">Project Description:</td>
-                                                                    <td valign="top" class="txt1">Node.js Backend Development<br>
-                                                                        Tech Stack: Node.js, Express, mysql2, sequelize, pkg packaging and publishing. <br>
-                                                                        Using Node.js to provide RESTful API interfaces, including scheduled tasks, MySQL CRUD operations, server status queries, web scraping, and other interfaces.
-                                                                    </td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="phd tb1">
-                                                            <strong>Electron Desktop Application Development</strong>
-                                                        </td>
-                                                        <td valign="top" class="time">2024/2-2024/3</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="tb1" colspan="2">
-                                                            <table cellspacing="0" cellpadding="0" border="0">
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td valign="top" class="keys">Project Description:</td>
-                                                                    <td valign="top" class="txt1">Electron Desktop Application Development<br>
-                                                                        Tech Stack: Electron, Node.js, HTML, CSS, axios API calls, electron-packager packaging<br>
-                                                                        Using Electron to develop desktop applications, mainly including background application main interface, message pop-ups, notification settings, application locking, etc.
-                                                                    </td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="phd tb1">
-                                                            <strong>Yancheng Sensing Big Data</strong>
-                                                        </td>
-                                                        <td valign="top" class="time">2023/6-Present</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="tb1" colspan="2">
-                                                            <table cellspacing="0" cellpadding="0" border="0">
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td valign="top" class="keys">Project Description:</td>
-                                                                    <td valign="top" class="txt1">Yancheng Public Security Perception Big Data<br>
-                                                                        Responsible for coding the PC-web backend management system (Vue3, element-plus);<br>
-                                                                        Responsible for writing the Web backend interface (SpringCloud, Springboot);<br>
-                                                                        Main technical responsibilities:
-                                                                        SpringCloud, SpringBoot, Oracle, Redis, Kafka, ElasticSearch, front-end Vue<br>
-                                                                        The project mainly captures portraits and vehicle data at all monitoring points in Yancheng City<br>
-                                                                        Kafka consumes 20 million data daily, Redis displays real-time traffic rankings of each checkpoint, data is stored in ElasticSearch for personnel trajectory queries<br>
-                                                                        MySQL (ShardingSphere-JDBC table sharding)
-                                                                    </td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="phd tb1">
-                                                            <strong>AI Face Recognition (Python)</strong>
-                                                        </td>
-                                                        <td valign="top" class="time">2023/6-2023/12</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="tb1" colspan="2">
-                                                            <table cellspacing="0" cellpadding="0" border="0">
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td valign="top" class="keys">Project Description:</td>
-                                                                    <td valign="top" class="txt1">AI Face Recognition<br>
-                                                                        The project was developed using Python. <br />
-                                                                        The main purpose of the project is to identify captured photos of personnel. The core API comes from the open source project https://github.com/ageitgey/face_recognition.git <br />
-                                                                        The main principle is: <br /> 1). First convert the photo to grayscale <br />
-                                                                        2). Then divide into 16px*16px blocks, with eyes and mouth as center points<br />
-                                                                        3). Then use OpenFace to divide the face into 128 measurement values and store them<br />
-                                                                        4). Compare newly captured images with database images, the closest match is the identified result.<br />
-                                                                    </td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="phd tb1">
-                                                            <strong>AI-Machine Learning</strong>
-                                                        </td>
-                                                        <td valign="top" class="time">2023/12-2024/1</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="tb1" colspan="2">
-                                                            <table cellspacing="0" cellpadding="0" border="0">
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td valign="top" class="keys">Project Description:</td>
-                                                                    <td valign="top" class="txt1">Yancheng Public Security Police Case Automatic Classification System<br>
-                                                                        Responsible for PC-web page code development (Vue3, element-plus);<br>
-                                                                        Responsible for Web backend interface development (Springboot);<br>
-                                                                        Main technical responsibilities:
-                                                                        SpringBoot, MySQL, front-end Vue<br>
-                                                                        The project mainly uses Naive Bayes algorithm and HanLP word segmenter to train 2 million police case contents and categories in the city, generating a data model.<br>
-                                                                        This model is mainly used for intelligent classification of newly generated police cases<br>
-                                                                    </td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="phd tb1">
-                                                            <strong>React-node-example</strong>
-                                                        </td>
-                                                        <td valign="top" class="time">2023/10-2023/12</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="tb1" colspan="2">
-                                                            <table cellspacing="0" cellpadding="0" border="0">
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td valign="top" class="keys">Project Description:</td>
-                                                                    <td valign="top" class="txt1">Responsible for the code writing of the PC-web backend management system (NodeJs + ReactJs);<br>
-                                                                        GitHub address: https://github.com/chengqun2/react-node-example<br>
-                                                                    </td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                    <tr>
-                                                            <td class="phd tb1">
-                                                                <strong>Singapore Children's Programming Online Education Platform-CRM System</strong>
-                                                            </td>
-                                                            <td valign="top" class="time">2022/8-2023/5</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">Project Description:</td>
-                                                                            <td valign="top" class="txt1">
-                                                                                Singapore children's programming online education platform<br />
-                                                                                Main technical points:<br />
-                                                                                Airtable <br />
-                                                                                Make.com <br />
-                                                                                n8n <br />
-                                                                                chargebee.com <br />
-                                                                                stripe.com/payments <br />
-                                                                                atlassian.net/jira <br />
-                                                                                Supabase <br />
-                                                                                wati.io <br />
-                                                                                manychat.com <br />
-                                                                                business.facebook.com <br />
-                                                                                web.miniextensions.com <br />
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="phd tb1">
-                                                            <strong>Duty Staff Dashboard</strong>
-                                                        </td>
-                                                        <td valign="top" class="time">2022/8-2022/9</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="tb1" colspan="2">
-                                                            <table cellspacing="0" cellpadding="0" border="0">
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td valign="top" class="keys">Project Description:</td>
-                                                                    <td valign="top" class="txt1">Duty Staff Dashboard<br>
-                                                                        Built with Vue3 framework, data dashboard display<br>
-                                                                    </td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="phd tb1">
-                                                                <strong>FBABEE Supply Chain Management System</strong>
-                                                            </td>
-                                                            <td valign="top" class="time">2022/1-2022/6</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">Project Description:</td>
-                                                                            <td valign="top" class="txt1">
-                                                                                1. Supply Chain Management System Introduction:<br>The project is a PC-end Web backend management system. Main modules include: inquiry orders, pickup, labeling, stock preparation, shipping orders, warehouse, finance, customer management, supplier management, product management, address management, carrier management.<br>
-                                                                                2. Core Technical Points:<br>The project uses SpringBoot+React+Ant-Design and other frameworks for development<br>
-                                                                                3. Backend Tech Stack<br>SpringBoot, MyBatis, MySQL, Swagger, Docker deployment<br>
-                                                                                Frontend Tech Stack<br>React, Ant-Design, axios, TypeScript, mock<br>
-                                                                                4. I am mainly responsible for backend interfaces + PC management backend code development<br>
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="phd tb1">
-                                                                <strong>Gobang Backend API</strong>
-                                                            </td>
-                                                            <td valign="top" class="time">2021/12-2022/1</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">Project Description:</td>
-                                                                            <td valign="top" class="txt1">Gobang backend API introduction<br> 1. The board size is 20x20<br>
-                                                                                2. User moves first (machine moves second)<br>
-                                                                                3. Move position is represented as `{x:number,y:number}`, with the lower-left corner as the origin, starting from `0`<br>
-                                                                                4. The first to form 5 pieces in a row horizontally, vertically, or diagonally wins<br>Main responsibilities: Backend framework setup, API development. Does not involve any company confidential information, purely for technical exchange, code is open source:
-                                                                                <br>https://github.com/chengqun2/chess<br>Technical points:<br>
-                                                                                1. Spring Cloud, Spring Boot, Spring Security, Mybatis-plus<br>
-                                                                                2. HTTPS, cross-origin requests, token verification<br>
-                                                                                3. H2 database (installation-free)<br> 4. Swagger-ui
-                                                                                Access address: http://localhost:8066/swagger-ui/<br>
-                                                                                5. OpenFeign<br>
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="phd tb1">
-                                                                <strong>The comprehensive command platform of Yandu
-                                                                    Public</strong>
-                                                            </td>
-                                                            <td valign="top" class="time">2020/1-Present</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">Related
-                                                                                Company:</td>
-                                                                            <td valign="top" class="txt1">nanjing weishu
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">Description:
-                                                                            </td>
-                                                                            <td valign="top" class="txt1">Including 7
-                                                                                modules:<br>police situation monitoring,
-                                                                                <br>public security community linkage,
-                                                                                <br>community policing, <br>law
-                                                                                enforcement supervision, <br>worklist
-                                                                                management, <br>service quality,
-                                                                                <br>public security command and dispatch
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="phd tb1">
-                                                                <strong>Office Automation System</strong>
-                                                            </td>
-                                                            <td valign="top" class="time">2018/1-2019/6</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">Related
-                                                                                Company:</td>
-                                                                            <td valign="top" class="txt1">nanjing weishu
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">Description:
-                                                                            </td>
-                                                                            <td valign="top" class="txt1">Yancheng
-                                                                                Municipal Public Security Bureau.<br>The
-                                                                                release documents.<br>Activiti workflow.
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="phd tb1">
-                                                                <strong>Vehicle big data</strong>
-                                                            </td>
-                                                            <td valign="top" class="time">2018/1-Present</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">Description:
-                                                                            </td>
-                                                                            <td valign="top" class="txt1">HBase
-                                                                                search<br>use Java(spring springMVC
-                                                                                mybatis)+oracle+hbase.<br>Yancheng
-                                                                                Municipal Security Bureau .<br>The
-                                                                                vehicle has a big data query, and the
-                                                                                daily data is increased by 2 million.
-                                                                                Use HBase storage, query. Pgis map
-                                                                                display.<br>The data is stored in
-                                                                                Oracle, the data is extracted by kettle
-                                                                                (timed extraction) and then put into the
-                                                                                kafka production end, and the kafka
-                                                                                consumer consumes data into HBase.</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="phd tb1">
-                                                                <strong>Artwork auction</strong>
-                                                            </td>
-                                                            <td valign="top" class="time">2017/1-2017/12</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">Description:
-                                                                            </td>
-                                                                            <td valign="top" class="txt1">WeChat public
-                                                                                number Art auction.<br>Technical
-                                                                                point:<br>Alibaba Cloud: Server ECS,
-                                                                                load balancing, mysql, redis<br>Seven
-                                                                                cattle object
-                                                                                storage<br>Idea<br>Git<br>Springboot(ssm)<br>H+
-                                                                                background UI framework<br>Qr QR
-                                                                                code<br>Shande Payment (butt
-                                                                                UnionPay)<br>Https<br>WeChat public
-                                                                                number Auction process (rush to shoot
-                                                                                -&gt; generate order -&gt; payment -&gt;
-                                                                                delivery -&gt; receipt, etc.)<br>Cloud
-                                                                                News SMS Platform<br>Concurrent
-                                                                                processing, the maximum concurrency is
-                                                                                1000</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="phd tb1">
-                                                                <strong>UMeeting</strong>
-                                                            </td>
-                                                            <td valign="top" class="time">2015/7-2017/12</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">Description:
-                                                                            </td>
-                                                                            <td valign="top" class="txt1">The project is
-                                                                                a business service app. <br>Background
-                                                                                frame: spring springmvc mybatis.<br>Use
-                                                                                to user token (stored in redis, jedis,
-                                                                                spring-data-redis), Baidu map api, Baidu
-                                                                                weather api, Alipay payment API,Ali
-                                                                                business card scanning, Tencent IM
-                                                                                (first used ring letter IM, after the
-                                                                                ring to charge , migrate to Tencent IM),
-                                                                                WeChat payment API, schedule timer
-                                                                                tasks, triggers, custom annotations
-                                                                                (mainly for login verification, token
-                                                                                verification, custom annotations used in
-                                                                                interceptors.), android apk version
-                                                                                detection, gps point distance
-                                                                                Calculation, ring message push,
-                                                                                registration SMS sending, execl import
-                                                                                and export, approval process control,
-                                                                                transaction control, partial query using
-                                                                                cache cache, common field query added
-                                                                                index.<br>Database: mysql,200
-                                                                                tables.<br>The project is deployed on
-                                                                                the Alibaba Cloud Linux server</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="phd tb1">
-                                                                <strong>ERP</strong>
-                                                            </td>
-                                                            <td valign="top" class="time">2011/9-2015/7</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">Description:
-                                                                            </td>
-                                                                            <td valign="top" class="txt1">Java web</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="phd tb1">
-                                                                <strong>Customer Relationship Management</strong>
-                                                            </td>
-                                                            <td valign="top" class="time">2011/9-2015/7</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">Description:
-                                                                            </td>
-                                                                            <td valign="top" class="txt1">Customer
-                                                                                relationship management
-                                                                                system<br>Background: jfinal (Java-based
-                                                                                speed WEB + ORM framework)<br>Frontend:
-                                                                                avalonjs, bootstrap, jqGrid<br>Database:
-                                                                                mysql<br>The project is divided into:
-                                                                                customer information, customer pool,
-                                                                                leads, business opportunities,
-                                                                                contracts, commodity modules</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="box">
-                        <tbody>
-                            <tr>
-                                <td class="plate1">Education</td>
-                            </tr>
-                            <tr>
-                                <td class="tba">
-                                    <table cellspacing="0" cellpadding="0" border="0">
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td rowspan="2" class="schHead">
-                                                                <img src="https://img01.51jobcdn.com/im/school/%25E6%2589%25AC%25E5%25B7%259E%25E5%25A4%25A7%25E5%25AD%25A6%25E5%25B9%25BF%25E9%2599%25B5%25E5%25AD%25A6%25E9%2599%25A2.jpg"
-                                                                    alt="" width="52" height="52">
-                                                            </td>
-                                                            <td valign="top" class="rtbox p_12">
-                                                                <strong>Yangzhou University Guangling College</strong>
-                                                            </td>
-                                                            <td valign="top" class="time schTime">2007/9-2011/7</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="rtbox p_12" colspan="2">
-                                                                Bachelor <span class="p5">|</span>
-                                                                Computer Science and Technology </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table cellspacing="0" cellpadding="0" border="0" class="box">
-                        <tbody>
-                            <tr>
-                                <td class="plate1">
-                                    Skills & Speciality <span class="f12">(Including IT skills��languages��certifications
-                                        and trainings)</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tbb">
-                                    <table cellspacing="0" cellpadding="0" border="0">
-                                        <tbody>
-                                            <tr>
-                                                <td class="tit">Skills/Languages</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p15">
-                                                    <table cellspacing="0" cellpadding="0" border="0">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td class="tb2 cell sl" valign="top">
-                                                                    <table cellspacing="0" cellpadding="0" border="0">
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <td class="skill">
-                                                                                    <strong class="txt3">Java</strong>
-                                                                                </td>
-                                                                                <td valign="top">
-                                                                                    <span class="skbg">
-                                                                                        <span class="skco">Proficient</span>
-                                                                                    </span>
-                                                                                </td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </td>
-                                                                <td class="tb2 cell sl" valign="top">
-                                                                    <table cellspacing="0" cellpadding="0" border="0">
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <td class="skill">
-                                                                                    <strong class="txt3">JavaScript</strong>
-                                                                                </td>
-                                                                                <td valign="top">
-                                                                                    <span class="skbg">
-                                                                                        <span class="skco">Proficient</span>
-                                                                                    </span>
-                                                                                </td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="tb2 cell sl" valign="top">
-                                                                    <table cellspacing="0" cellpadding="0" border="0">
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <td class="skill">
-                                                                                    <strong class="txt3">English</strong>
-                                                                                </td>
-                                                                                <td valign="top">
-                                                                                    <span class="skbg">
-                                                                                        <span class="skco">Proficient</span>
-                                                                                    </span>
-                                                                                </td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </td>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <!--֤��-->
-                                    <!--��ѵ����-->
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!--������Ϣ-->
-
-                    <!--������Ʒ-->
-                    <!--������Ϣ-->
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<body class="min-h-screen bg-gradient-to-br from-slate-100 via-slate-50 to-indigo-50/40 font-sans text-slate-800 antialiased">
+  <div class="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(99,102,241,0.12),transparent)]"></div>
+
+  <header class="relative overflow-hidden border-b border-white/60 bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-slate-100 shadow-lg shadow-indigo-950/20">
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.04\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-80"></div>
+    <div class="relative mx-auto max-w-4xl px-4 py-10 sm:px-6 sm:py-14">
+      <div class="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+        <div class="flex flex-col items-center gap-6 sm:flex-row sm:items-start">
+          <img src="https://avatars.githubusercontent.com/u/12636050" width="120" height="120" alt="Chengqun" class="h-28 w-28 rounded-2xl border-4 border-white/10 object-cover shadow-xl ring-2 ring-white/10 transition duration-300 hover:ring-indigo-300/50" />
+          <div class="text-center sm:text-left">
+            <p class="mb-1 text-xs font-semibold uppercase tracking-[0.2em] text-indigo-200/90">Full Stack · Python / React</p>
+            <h1 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Chengqun</h1>
+            <div class="mt-4 flex flex-wrap justify-center gap-2 sm:justify-start">
+              <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/15 px-3 py-1 text-xs font-semibold text-emerald-200 ring-1 ring-emerald-400/30"><i class="fa-brands fa-python"></i> Python</span>
+              <span class="inline-flex items-center gap-1.5 rounded-full bg-sky-500/15 px-3 py-1 text-xs font-semibold text-sky-200 ring-1 ring-sky-400/30"><i class="fa-brands fa-react"></i> React</span>
+              <span class="inline-flex items-center gap-1.5 rounded-full bg-violet-500/15 px-3 py-1 text-xs font-semibold text-violet-200 ring-1 ring-violet-400/30"><i class="fa-solid fa-wand-magic-sparkles"></i> Vibe coding</span>
+            </div>
+            <div class="mt-5 flex flex-wrap justify-center gap-3 sm:justify-start">
+              <a href="index.html" class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white ring-1 ring-white/20 backdrop-blur transition hover:bg-white/20 hover:ring-white/40">
+                <i class="fa-solid fa-language"></i> 中文简历
+              </a>
+              <a href="https://www.champcodeacademy.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full bg-indigo-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-indigo-600/30 transition hover:bg-indigo-400 hover:shadow-indigo-500/40">
+                <i class="fa-solid fa-graduation-cap"></i> Champ Code Academy
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mx-auto w-full max-w-[220px] shrink-0 md:mx-0">
+          <video class="w-full rounded-xl border border-white/10 shadow-2xl ring-1 ring-white/10 transition hover:ring-indigo-400/30" controls preload="metadata">
+            <source src="self_introduction.mp4" type="video/mp4" />
+          </video>
+          <p class="mt-2 text-center text-[11px] text-slate-400">Self-intro video</p>
+        </div>
+      </div>
+      <ul class="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-3 border-t border-white/10 pt-6 text-sm text-slate-300 sm:justify-start">
+        <li class="flex items-center gap-2"><i class="fa-solid fa-mars text-slate-400"></i> Male · 1989/09</li>
+        <li class="flex items-center gap-2"><i class="fa-solid fa-briefcase text-indigo-300"></i> Nearly 15 years of experience</li>
+        <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-rose-300"></i> Yancheng, Jiangsu, China</li>
+        <li><a href="tel:18662062998" class="flex items-center gap-2 transition hover:text-white"><i class="fa-solid fa-phone text-emerald-300"></i> 18662062998</a></li>
+        <li><a href="mailto:chengqun710@163.com" class="flex items-center gap-2 transition hover:text-white"><i class="fa-solid fa-envelope text-amber-300"></i> chengqun710@163.com</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-4xl space-y-8 px-4 py-10 sm:px-6 sm:py-12">
+
+    <section class="animate-fade-rise rounded-2xl border border-slate-200/80 bg-white/90 p-6 opacity-0 shadow-sm backdrop-blur-sm transition-shadow duration-300 hover:shadow-md sm:p-8" style="animation-delay:0.04s">
+      <h2 class="mb-4 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-indigo-600">
+        <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600"><i class="fa-solid fa-user-tie"></i></span>
+        Professional Summary
+      </h2>
+      <div class="space-y-4 text-sm leading-relaxed text-slate-600 [&_strong]:font-semibold [&_strong]:text-slate-800">
+        <p>Bachelor's degree in Computer Science and Technology. <strong>Nearly 15 years</strong> of full-stack delivery experience. Recently <strong>centered on Python and React as dual primary tracks</strong>: Python for Web/APIs, automation, AI/data-side services, and tooling; React for admin consoles, dashboards, and marketing or product sites. Strong Java (Spring) and Node.js engineering as well. Comfortable owning the full lifecycle from requirements and architecture through coding, deployment, and operations. Representative domains: government big data, supply chain, international education SaaS, and LLM-powered applications.</p>
+<p><strong>Python &amp; backend</strong>: Web/APIs (e.g. Flask), integration with Dify, N8n, LLMs, and data pipelines; ML and image/NLP-style projects in production; scripting and ops automation. Java (Spring Boot / Spring Cloud), Node.js; MySQL (SQL tuning, transactions, locks, sharding), Redis, ElasticSearch, ClickHouse; Kafka / RocketMQ / RabbitMQ; distributed transactions; ShardingSphere read/write split and sharding.</p>
+<p><strong>React &amp; frontend</strong>: SPAs and admin systems (React, TypeScript, Ant Design, etc.), integration with REST APIs and automation workflows; Vue, Element Plus, Tailwind, etc.; Electron desktop apps.</p>
+<p><strong>Platform &amp; engineering</strong>: Linux, Docker, Kubernetes; GitLab + Docker + Jenkins style CI/CD; typical middleware and stacks (JDK, MySQL, Redis, ES, Nexus, MinIO, etc.).</p>
+<p><strong>Data &amp; performance</strong>: Hadoop / HBase / Hive in real projects; Gatling performance testing.</p>
+<p><strong>AI &amp; intelligence</strong>: Private Dify and N8n deployment and workflow design; Ollama and on-prem LLMs; agents with MCP; classical ML/NLP (e.g. classification, tokenization, model training). <strong>1+ years of vibe coding</strong>—pairing with AI (Cursor, Copilot, etc.) for rapid prototyping and refactors, with human review for maintainability.</p>
+<p><strong>Collaboration &amp; language</strong>: <strong>Fluent professional English</strong>, including fully English remote work with teams in Singapore; <strong>independently delivered from zero to production</strong> the brand site <a href="https://www.champcodeacademy.com/" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-medium border-b border-indigo-200 hover:border-indigo-500 transition-colors">Champ Code Academy</a> (Python + React stack). English self-introduction video: upper right on <a href="https://chengqun2.github.io/" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-medium border-b border-indigo-200 hover:border-indigo-500 transition-colors">https://chengqun2.github.io/</a></p>
+<p><strong>Open-source samples (personal learning / demos)</strong>:
+<a href="https://github.com/chengqun2/node-connect-linux" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-medium">Node on Linux</a>,
+<a href="https://github.com/chengqun2/node-blockchain" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-medium">TypeScript / blockchain demo</a>,
+<a href="https://github.com/chengqun2/python-flask" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-medium">Python Flask</a>,
+<a href="https://github.com/chengqun2/kubernetes-example" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-medium">Kubernetes example</a>,
+<a href="https://github.com/chengqun2/react-node-example" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-medium">React + Node</a>;
+GitHub: <a href="https://github.com/chengqun2" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-medium">https://github.com/chengqun2</a></p>
+
+      </div>
+    </section>
+
+    <section class="animate-fade-rise rounded-2xl border border-slate-200/80 bg-white/90 p-6 opacity-0 shadow-sm backdrop-blur-sm transition-shadow duration-300 hover:shadow-md sm:p-8" style="animation-delay:0.08s">
+      <h2 class="mb-4 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-indigo-600">
+        <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600"><i class="fa-solid fa-bullseye"></i></span>
+        Job Preferences
+      </h2>
+      <dl class="grid gap-4 sm:grid-cols-2">
+        <div class="rounded-xl bg-slate-50/80 p-4 ring-1 ring-slate-100 transition hover:bg-indigo-50/50 hover:ring-indigo-100"><dt class="text-xs font-semibold uppercase tracking-wide text-slate-400">Position</dt><dd class="mt-1 font-medium text-slate-800">Full Stack (Python / React)</dd></div><div class="rounded-xl bg-slate-50/80 p-4 ring-1 ring-slate-100 transition hover:bg-indigo-50/50 hover:ring-indigo-100"><dt class="text-xs font-semibold uppercase tracking-wide text-slate-400">Location</dt><dd class="mt-1 font-medium text-slate-800">Yancheng, Remote</dd></div><div class="rounded-xl bg-slate-50/80 p-4 ring-1 ring-slate-100 transition hover:bg-indigo-50/50 hover:ring-indigo-100"><dt class="text-xs font-semibold uppercase tracking-wide text-slate-400">Expected Salary</dt><dd class="mt-1 font-medium text-slate-800">Negotiable</dd></div><div class="rounded-xl bg-slate-50/80 p-4 ring-1 ring-slate-100 transition hover:bg-indigo-50/50 hover:ring-indigo-100"><dt class="text-xs font-semibold uppercase tracking-wide text-slate-400">Job Type</dt><dd class="mt-1 font-medium text-slate-800">Full-time</dd></div><div class="rounded-xl bg-slate-50/80 p-4 ring-1 ring-slate-100 transition hover:bg-indigo-50/50 hover:ring-indigo-100"><dt class="text-xs font-semibold uppercase tracking-wide text-slate-400">Status</dt><dd class="mt-1 font-medium text-slate-800">Employed, open to opportunities</dd></div><div class="rounded-xl bg-slate-50/80 p-4 ring-1 ring-slate-100 transition hover:bg-indigo-50/50 hover:ring-indigo-100"><dt class="text-xs font-semibold uppercase tracking-wide text-slate-400">Availability</dt><dd class="mt-1 font-medium text-slate-800">Within 2 weeks</dd></div>
+      </dl>
+    </section>
+
+    <section class="animate-fade-rise rounded-2xl border border-slate-200/80 bg-white/90 p-6 opacity-0 shadow-sm backdrop-blur-sm transition-shadow duration-300 hover:shadow-md sm:p-8" style="animation-delay:0.12s">
+      <h2 class="mb-6 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-indigo-600">
+        <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600"><i class="fa-solid fa-building"></i></span>
+        Work Experience
+      </h2>
+      <div class="space-y-5">
+        <article class="rounded-xl border border-slate-200/90 bg-gradient-to-br from-white to-slate-50/80 p-5 shadow-sm transition-all duration-300 hover:border-indigo-200 hover:shadow-md">
+  <div class="flex flex-wrap items-start justify-between gap-2">
+    <div>
+      <h3 class="text-lg font-semibold text-slate-900">Jiangsu Fangruan Technology Co., Ltd.</h3>
+      <p class="mt-0.5 text-sm text-indigo-600">Full Stack Developer</p>
+      <p class="mt-1 text-xs text-slate-500">50–150 employees · Private</p>
+    </div>
+    <time class="shrink-0 rounded-lg bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600 tabular-nums">2023/6 — Present</time>
+  </div>
+  <div class="mt-4 border-t border-slate-100 pt-4 text-sm leading-relaxed text-slate-600 [&_a]:text-indigo-600 [&_a:hover]:underline"><p>End-to-end AI products and internal systems: Dify, N8n, Ollama (DeepSeek-R1-class), ClickHouse, ElasticSearch, MySQL, Nginx, Docker.</p><p>Led by <strong>React</strong> and <strong>Python</strong> for admin UIs and intelligent services, with Vue, Java/Spring, Node/TS, Electron; N8n for LLM workflows.</p></div>
+</article>
+<article class="rounded-xl border border-slate-200/90 bg-gradient-to-br from-white to-slate-50/80 p-5 shadow-sm transition-all duration-300 hover:border-indigo-200 hover:shadow-md">
+  <div class="flex flex-wrap items-start justify-between gap-2">
+    <div>
+      <h3 class="text-lg font-semibold text-slate-900">Shanghai Wayz Intelligence Information Technology Co., Ltd.</h3>
+      <p class="mt-0.5 text-sm text-indigo-600">Full Stack Developer</p>
+      <p class="mt-1 text-xs text-slate-500">150–500 employees · Private</p>
+    </div>
+    <time class="shrink-0 rounded-lg bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600 tabular-nums">2022/7 — 2023/5 (10 mo)</time>
+  </div>
+  <div class="mt-4 border-t border-slate-100 pt-4 text-sm leading-relaxed text-slate-600 [&_a]:text-indigo-600 [&_a:hover]:underline"><p>Singapore edtech, <strong>English remote</strong>. <strong>Sole owner</strong> of <a class='text-indigo-600 font-medium hover:underline' href='https://www.champcodeacademy.com/' target='_blank' rel='noopener'>Champ Code Academy</a> (React + Python).</p><p>CRM, Chargebee/Stripe, automation (Airtable/Make/n8n), Supabase, Jira.</p></div>
+</article>
+<article class="rounded-xl border border-slate-200/90 bg-gradient-to-br from-white to-slate-50/80 p-5 shadow-sm transition-all duration-300 hover:border-indigo-200 hover:shadow-md">
+  <div class="flex flex-wrap items-start justify-between gap-2">
+    <div>
+      <h3 class="text-lg font-semibold text-slate-900">Nanjing Weishu Software Co., Ltd.</h3>
+      <p class="mt-0.5 text-sm text-indigo-600">Full Stack Developer</p>
+      <p class="mt-1 text-xs text-slate-500">Listed · 150–500 employees</p>
+    </div>
+    <time class="shrink-0 rounded-lg bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600 tabular-nums">2017/12 — 2022/7 (4y7m)</time>
+  </div>
+  <div class="mt-4 border-t border-slate-100 pt-4 text-sm leading-relaxed text-slate-600 [&_a]:text-indigo-600 [&_a:hover]:underline"><p>R&amp;D: municipal <strong>OA, vehicle big data, command, perception</strong> systems; Java backend, design, core modules.</p><p>Spring Cloud/Boot, Kafka, Hadoop/HBase, Solr.</p></div>
+</article>
+<article class="rounded-xl border border-slate-200/90 bg-gradient-to-br from-white to-slate-50/80 p-5 shadow-sm transition-all duration-300 hover:border-indigo-200 hover:shadow-md">
+  <div class="flex flex-wrap items-start justify-between gap-2">
+    <div>
+      <h3 class="text-lg font-semibold text-slate-900">Yancheng Youyin Information Technology Co., Ltd.</h3>
+      <p class="mt-0.5 text-sm text-indigo-600">Full Stack Developer</p>
+      <p class="mt-1 text-xs text-slate-500">50–150 employees · Private</p>
+    </div>
+    <time class="shrink-0 rounded-lg bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600 tabular-nums">2015/7 — 2017/12 (2y5m)</time>
+  </div>
+  <div class="mt-4 border-t border-slate-100 pt-4 text-sm leading-relaxed text-slate-600 [&_a]:text-indigo-600 [&_a:hover]:underline"><p>Requirements, architecture, database, APIs, <strong>project management</strong>.</p></div>
+</article>
+<article class="rounded-xl border border-slate-200/90 bg-gradient-to-br from-white to-slate-50/80 p-5 shadow-sm transition-all duration-300 hover:border-indigo-200 hover:shadow-md">
+  <div class="flex flex-wrap items-start justify-between gap-2">
+    <div>
+      <h3 class="text-lg font-semibold text-slate-900">Jiangsu Huasheng Hengye Technology Co., Ltd.</h3>
+      <p class="mt-0.5 text-sm text-indigo-600">Full Stack Developer</p>
+      <p class="mt-1 text-xs text-slate-500">500–1000 employees · Private</p>
+    </div>
+    <time class="shrink-0 rounded-lg bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600 tabular-nums">2011/9 — 2015/7 (3y10m)</time>
+  </div>
+  <div class="mt-4 border-t border-slate-100 pt-4 text-sm leading-relaxed text-slate-600 [&_a]:text-indigo-600 [&_a:hover]:underline"><p>Java B/S development; talent portal, ERP, State Grid OA, WeChat backend.</p></div>
+</article>
+      </div>
+    </section>
+
+    <section class="animate-fade-rise rounded-2xl border border-slate-200/80 bg-white/90 p-6 opacity-0 shadow-sm backdrop-blur-sm transition-shadow duration-300 hover:shadow-md sm:p-8" style="animation-delay:0.16s">
+      <h2 class="mb-6 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-indigo-600">
+        <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600"><i class="fa-solid fa-diagram-project"></i></span>
+        Project Experience
+      </h2>
+      <div class="grid gap-4 sm:grid-cols-2">
+        <article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.35s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">AI Large Model Application</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2024/8-Present</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">Enterprise LLM applications: React for conversational and configuration UIs; Python to orchestrate business logic and call Dify and other HTTP APIs. N8n for workflow automation, MySQL, Dify deployment, and on-prem DeepSeek-R1-class models. Dify for chat flows, published apps, and exposed APIs; Python integrates with Dify; React handles UI and state. N8n connects internal and external systems; agents extended with MCP where needed.</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.37s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">React Personal Website</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2024/6-2024/7</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">React Personal Website Tech Stack: React, React-Router, React-Snap for Static-Export, and GitHub Pages. GitHub Address: https://github.com/chengqun2/resume Online Access Address: https://chengqun2.github.io/resume/</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.38999999999999996s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">Node.js Backend Development</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2024/4-2024/5</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">Node.js Backend Development Tech Stack: Node.js, Express, mysql2, sequelize, pkg packaging and publishing. Using Node.js to provide RESTful API interfaces, including scheduled tasks, MySQL CRUD operations, server status queries, web scraping, and other interfaces.</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.41s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">Electron Desktop Application Development</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2024/2-2024/3</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">Electron Desktop Application Development Tech Stack: Electron, Node.js, HTML, CSS, axios API calls, electron-packager packaging Using Electron to develop desktop applications, mainly including background application main interface, message pop-ups, notification settings, application locking, etc.</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.43s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">Yancheng Sensing Big Data</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2023/6-Present</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">Yancheng Public Security Perception Big Data Responsible for coding the PC-web backend management system (Vue3, element-plus); Responsible for writing the Web backend interface (SpringCloud, Springboot); Main technical responsibilities: SpringCloud, SpringBoot, Oracle, Redis, Kafka, ElasticSearch, front-end Vue The project mainly captures portraits and vehicle data at all monitoring points in Yancheng City Kafka consumes 20 million data daily, Redis displays real-time traffic rankings of each checkpoint, data is stored in ElasticSearch for personnel trajectory queries MySQL (ShardingSphere-JDBC table sharding)</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.44999999999999996s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">AI Face Recognition (Python)</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2023/6-2023/12</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">AI Face Recognition The project was developed using Python. The main purpose of the project is to identify captured photos of personnel. The core API comes from the open source project https://github.com/ageitgey/face_recognition.git The main principle is: 1). First convert the photo to grayscale 2). Then divide into 16px*16px blocks, with eyes and mouth as center points 3). Then use OpenFace to divide the face into 128 measurement values and store them 4). Compare newly captured images with database images, the closest match is the identified result.</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.47s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">AI-Machine Learning</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2023/12-2024/1</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">Yancheng Public Security Police Case Automatic Classification System Responsible for PC-web page code development (Vue3, element-plus); Responsible for Web backend interface development (Springboot); Main technical responsibilities: SpringBoot, MySQL, front-end Vue The project mainly uses Naive Bayes algorithm and HanLP word segmenter to train 2 million police case contents and categories in the city, generating a data model. This model is mainly used for intelligent classification of newly generated police cases</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.49s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">React-node-example</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2023/10-2023/12</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">Responsible for the code writing of the PC-web backend management system (NodeJs + ReactJs); GitHub address: https://github.com/chengqun2/react-node-example</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.51s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">Champ Code Academy Site · Singapore EdTech &amp; CRM</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2022/8-2023/5</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">Brand website (sole delivery): https://www.champcodeacademy.com/ — Champ Code Academy, a programming brand for ages 7–15. Built mainly with React and Python for the public site, interactions, server-side/API work, deployment, and ongoing integration. Operations &amp;amp; CRM: online education CRM, subscriptions and payments (Chargebee, Stripe), automation (Airtable, Make.com, n8n), customer and marketing tooling (WATI, ManyChat, Meta, etc.), Supabase where appropriate; requirements and defects in Jira; fully English collaboration with overseas teams.</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.53s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">Duty Staff Dashboard</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2022/8-2022/9</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">Duty Staff Dashboard Built with Vue3 framework, data dashboard display</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.55s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">FBABEE Supply Chain Management System</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2022/1-2022/6</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">1. Supply Chain Management System Introduction: The project is a PC-end Web backend management system. Main modules include: inquiry orders, pickup, labeling, stock preparation, shipping orders, warehouse, finance, customer management, supplier management, product management, address management, carrier management. 2. Core Technical Points: The project uses SpringBoot+React+Ant-Design and other frameworks for development 3. Backend Tech Stack SpringBoot, MyBatis, MySQL, Swagger, Docker deployment Frontend Tech Stack React, Ant-Design, axios, TypeScript, mock 4. I am mainly responsible for backend interfaces + PC management backend code development</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.57s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">Gobang Backend API</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2021/12-2022/1</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">Gobang backend API introduction 1. The board size is 20x20 2. User moves first (machine moves second) 3. Move position is represented as `{x:number,y:number}`, with the lower-left corner as the origin, starting from `0` 4. The first to form 5 pieces in a row horizontally, vertically, or diagonally wins Main responsibilities: Backend framework setup, API development. Does not involve any company confidential information, purely for technical exchange, code is open source: https://github.com/chengqun2/chess Technical points: 1. Spring Cloud, Spring Boot, Spring Security, Mybatis-plus 2. HTTPS, cross-origin requests, token verification 3. H2 database (installation-free) 4. Swagger-ui Access address: http://localhost:8066/swagger-ui/ 5. OpenFeign</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.59s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">The comprehensive command platform of Yandu Public</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2020/1-Present</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">[Related Company:] nanjing weishu Including 7 modules: police situation monitoring, public security community linkage, community policing, law enforcement supervision, worklist management, service quality, public security command and dispatch</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.61s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">Office Automation System</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2018/1-2019/6</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">[Related Company:] nanjing weishu Yancheng Municipal Public Security Bureau. The release documents. Activiti workflow.</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.63s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">Vehicle big data</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2018/1-Present</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">HBase search use Java(spring springMVC mybatis)+oracle+hbase. Yancheng Municipal Security Bureau . The vehicle has a big data query, and the daily data is increased by 2 million. Use HBase storage, query. Pgis map display. The data is stored in Oracle, the data is extracted by kettle (timed extraction) and then put into the kafka production end, and the kafka consumer consumes data into HBase.</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.6499999999999999s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">Artwork auction</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2017/1-2017/12</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">WeChat public number Art auction. Technical point: Alibaba Cloud: Server ECS, load balancing, mysql, redis Seven cattle object storage Idea Git Springboot(ssm) H+ background UI framework Qr QR code Shande Payment (butt UnionPay) Https WeChat public number Auction process (rush to shoot -&amp;gt; generate order -&amp;gt; payment -&amp;gt; delivery -&amp;gt; receipt, etc.) Cloud News SMS Platform Concurrent processing, the maximum concurrency is 1000</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.6699999999999999s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">UMeeting</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2015/7-2017/12</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">The project is a business service app. Background frame: spring springmvc mybatis. Use to user token (stored in redis, jedis, spring-data-redis), Baidu map api, Baidu weather api, Alipay payment API,Ali business card scanning, Tencent IM (first used ring letter IM, after the ring to charge , migrate to Tencent IM), WeChat payment API, schedule timer tasks, triggers, custom annotations (mainly for login verification, token verification, custom annotations used in interceptors.), android apk version detection, gps point distance Calculation, ring message push, registration SMS sending, execl import and export, approval process control, transaction control, partial query using cache cache, common field query added index. Database: mysql,200 tables. The project is deployed on the Alibaba Cloud Linux server</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.69s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">ERP</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2011/9-2015/7</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">Java web</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.71s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">Customer Relationship Management</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2011/9-2015/7</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">Customer relationship management system Background: jfinal (Java-based speed WEB + ORM framework) Frontend: avalonjs, bootstrap, jqGrid Database: mysql The project is divided into: customer information, customer pool, leads, business opportunities, contracts, commodity modules</p>
+</article>
+      </div>
+    </section>
+
+    <section class="animate-fade-rise rounded-2xl border border-slate-200/80 bg-white/90 p-6 opacity-0 shadow-sm backdrop-blur-sm transition-shadow duration-300 hover:shadow-md sm:p-8" style="animation-delay:0.2s">
+      <h2 class="mb-4 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-indigo-600">
+        <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600"><i class="fa-solid fa-graduation-cap"></i></span>
+        Education
+      </h2>
+      <div class="flex flex-col gap-4 rounded-xl border border-slate-100 bg-slate-50/50 p-4 sm:flex-row sm:items-center">
+  <img src="https://img01.51jobcdn.com/im/school/%25E6%2589%25AC%25E5%25B7%259E%25E5%25A4%25A7%25E5%25AD%25A6%25E5%25B9%25BF%25E9%2599%25B5%25E5%25AD%25A6%25E9%2599%25A2.jpg" width="56" height="56" alt="" class="h-14 w-14 rounded-lg object-cover ring-1 ring-slate-200" />
+  <div>
+    <p class="font-semibold text-slate-900">扬州大学广陵学院</p>
+    <p class="text-sm text-slate-600">Bachelor · Computer Science and Technology</p>
+    <p class="mt-1 text-xs text-slate-500 tabular-nums">2007/9 — 2011/7</p>
+  </div>
+</div>
+    </section>
+
+    <section class="animate-fade-rise rounded-2xl border border-slate-200/80 bg-white/90 p-6 opacity-0 shadow-sm backdrop-blur-sm transition-shadow duration-300 hover:shadow-md sm:p-8" style="animation-delay:0.24s">
+      <h2 class="mb-4 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-indigo-600">
+        <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600"><i class="fa-solid fa-star"></i></span>
+        Skills
+      </h2>
+      <div class="flex flex-wrap gap-2">
+  <span class="rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-800 ring-1 ring-amber-100">Java · Proficient</span>
+  <span class="rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-800 ring-1 ring-amber-100">JavaScript · Proficient</span>
+  <span class="rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-800 ring-1 ring-amber-100">English · Proficient</span>
+</div>
+    </section>
+
+    <p class="pb-8 text-center text-xs text-slate-400">© Chengqun · Resume</p>
+  </main>
 </body>
-
 </html>

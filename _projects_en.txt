@@ -1,0 +1,75 @@
+AI Large Model Application
+2024/8-Present
+Enterprise LLM applications: React for conversational and configuration UIs; Python to orchestrate business logic and call Dify and other HTTP APIs. N8n for workflow automation, MySQL, Dify deployment, and on-prem DeepSeek-R1-class models. Dify for chat flows, published apps, and exposed APIs; Python integrates with Dify; React handles UI and state. N8n connects internal and external systems; agents extended with MCP where needed.
+---
+React Personal Website
+2024/6-2024/7
+React Personal Website Tech Stack: React, React-Router, React-Snap for Static-Export, and GitHub Pages. GitHub Address: https://github.com/chengqun2/resume Online Access Address: https://chengqun2.github.io/resume/
+---
+Node.js Backend Development
+2024/4-2024/5
+Node.js Backend Development Tech Stack: Node.js, Express, mysql2, sequelize, pkg packaging and publishing. Using Node.js to provide RESTful API interfaces, including scheduled tasks, MySQL CRUD operations, server status queries, web scraping, and other interfaces.
+---
+Electron Desktop Application Development
+2024/2-2024/3
+Electron Desktop Application Development Tech Stack: Electron, Node.js, HTML, CSS, axios API calls, electron-packager packaging Using Electron to develop desktop applications, mainly including background application main interface, message pop-ups, notification settings, application locking, etc.
+---
+Yancheng Sensing Big Data
+2023/6-Present
+Yancheng Public Security Perception Big Data Responsible for coding the PC-web backend management system (Vue3, element-plus); Responsible for writing the Web backend interface (SpringCloud, Springboot); Main technical responsibilities: SpringCloud, SpringBoot, Oracle, Redis, Kafka, ElasticSearch, front-end Vue The project mainly captures portraits and vehicle data at all monitoring points in Yancheng City Kafka consumes 20 million data daily, Redis displays real-time traffic rankings of each checkpoint, data is stored in ElasticSearch for personnel trajectory queries MySQL (ShardingSphere-JDBC table sharding)
+---
+AI Face Recognition (Python)
+2023/6-2023/12
+AI Face Recognition The project was developed using Python. The main purpose of the project is to identify captured photos of personnel. The core API comes from the open source project https://github.com/ageitgey/face_recognition.git The main principle is: 1). First convert the photo to grayscale 2). Then divide into 16px*16px blocks, with eyes and mouth as center points 3). Then use OpenFace to divide the face into 128 measurement values and store them 4). Compare newly captured images with database images, the closest match is the identified result.
+---
+AI-Machine Learning
+2023/12-2024/1
+Yancheng Public Security Police Case Automatic Classification System Responsible for PC-web page code development (Vue3, element-plus); Responsible for Web backend interface development (Springboot); Main technical responsibilities: SpringBoot, MySQL, front-end Vue The project mainly uses Naive Bayes algorithm and HanLP word segmenter to train 2 million police case contents and categories in the city, generating a data model. This model is mainly used for intelligent classification of newly generated police cases
+---
+React-node-example
+2023/10-2023/12
+Responsible for the code writing of the PC-web backend management system (NodeJs + ReactJs); GitHub address: https://github.com/chengqun2/react-node-example
+---
+Champ Code Academy Site · Singapore EdTech & CRM
+2022/8-2023/5
+Brand website (sole delivery): https://www.champcodeacademy.com/ — Champ Code Academy, a programming brand for ages 7–15. Built mainly with React and Python for the public site, interactions, server-side/API work, deployment, and ongoing integration. Operations &amp; CRM: online education CRM, subscriptions and payments (Chargebee, Stripe), automation (Airtable, Make.com, n8n), customer and marketing tooling (WATI, ManyChat, Meta, etc.), Supabase where appropriate; requirements and defects in Jira; fully English collaboration with overseas teams.
+---
+Duty Staff Dashboard
+2022/8-2022/9
+Duty Staff Dashboard Built with Vue3 framework, data dashboard display
+---
+FBABEE Supply Chain Management System
+2022/1-2022/6
+1. Supply Chain Management System Introduction: The project is a PC-end Web backend management system. Main modules include: inquiry orders, pickup, labeling, stock preparation, shipping orders, warehouse, finance, customer management, supplier management, product management, address management, carrier management. 2. Core Technical Points: The project uses SpringBoot+React+Ant-Design and other frameworks for development 3. Backend Tech Stack SpringBoot, MyBatis, MySQL, Swagger, Docker deployment Frontend Tech Stack React, Ant-Design, axios, TypeScript, mock 4. I am mainly responsible for backend interfaces + PC management backend code development
+---
+Gobang Backend API
+2021/12-2022/1
+Gobang backend API introduction 1. The board size is 20x20 2. User moves first (machine moves second) 3. Move position is represented as `{x:number,y:number}`, with the lower-left corner as the origin, starting from `0` 4. The first to form 5 pieces in a row horizontally, vertically, or diagonally wins Main responsibilities: Backend framework setup, API development. Does not involve any company confidential information, purely for technical exchange, code is open source: https://github.com/chengqun2/chess Technical points: 1. Spring Cloud, Spring Boot, Spring Security, Mybatis-plus 2. HTTPS, cross-origin requests, token verification 3. H2 database (installation-free) 4. Swagger-ui Access address: http://localhost:8066/swagger-ui/ 5. OpenFeign
+---
+The comprehensive command platform of Yandu Public
+2020/1-Present
+[Related Company:] nanjing weishu Including 7 modules: police situation monitoring, public security community linkage, community policing, law enforcement supervision, worklist management, service quality, public security command and dispatch
+---
+Office Automation System
+2018/1-2019/6
+[Related Company:] nanjing weishu Yancheng Municipal Public Security Bureau. The release documents. Activiti workflow.
+---
+Vehicle big data
+2018/1-Present
+HBase search use Java(spring springMVC mybatis)+oracle+hbase. Yancheng Municipal Security Bureau . The vehicle has a big data query, and the daily data is increased by 2 million. Use HBase storage, query. Pgis map display. The data is stored in Oracle, the data is extracted by kettle (timed extraction) and then put into the kafka production end, and the kafka consumer consumes data into HBase.
+---
+Artwork auction
+2017/1-2017/12
+WeChat public number Art auction. Technical point: Alibaba Cloud: Server ECS, load balancing, mysql, redis Seven cattle object storage Idea Git Springboot(ssm) H+ background UI framework Qr QR code Shande Payment (butt UnionPay) Https WeChat public number Auction process (rush to shoot -&gt; generate order -&gt; payment -&gt; delivery -&gt; receipt, etc.) Cloud News SMS Platform Concurrent processing, the maximum concurrency is 1000
+---
+UMeeting
+2015/7-2017/12
+The project is a business service app. Background frame: spring springmvc mybatis. Use to user token (stored in redis, jedis, spring-data-redis), Baidu map api, Baidu weather api, Alipay payment API,Ali business card scanning, Tencent IM (first used ring letter IM, after the ring to charge , migrate to Tencent IM), WeChat payment API, schedule timer tasks, triggers, custom annotations (mainly for login verification, token verification, custom annotations used in interceptors.), android apk version detection, gps point distance Calculation, ring message push, registration SMS sending, execl import and export, approval process control, transaction control, partial query using cache cache, common field query added index. Database: mysql,200 tables. The project is deployed on the Alibaba Cloud Linux server
+---
+ERP
+2011/9-2015/7
+Java web
+---
+Customer Relationship Management
+2011/9-2015/7
+Customer relationship management system Background: jfinal (Java-based speed WEB + ORM framework) Frontend: avalonjs, bootstrap, jqGrid Database: mysql The project is divided into: customer information, customer pool, leads, business opportunities, contracts, commodity modules

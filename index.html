@@ -1,2114 +1,413 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>成群 — 全栈开发 · 在线简历</title>
+  <meta name="description" content="近15年全栈开发，Python 与 React 双主线；政务大数据、AI 与大模型、新加坡远程与 Champ Code Academy 独立交付。" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ink: { 950: '#0f172a', 800: '#1e293b', 600: '#475569', 500: '#64748b' },
+          },
+          keyframes: {
+            'fade-rise': {
+              '0%': { opacity: '0', transform: 'translateY(10px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+          },
+          animation: { 'fade-rise': 'fade-rise 0.55s ease-out forwards' },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    @media (prefers-reduced-motion: reduce) {
+      .animate-fade-rise { animation: none !important; opacity: 1 !important; }
+    }
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
-
-<body>
-    <style>
-        html,
-        body,
-        div,
-        p {
-            margin: 0;
-            padding: 0
-        }
-
-        body {
-            font-size: 14px;
-            font-family: "microsoft yahei";
-            background-color: #ffffff
-        }
-
-        table {
-            border-collapse: collapse;
-            border-spacing: 0;
-            table-layout: fixed
-        }
-
-        th,
-        td {
-            font-size: 14px;
-            padding: 0
-        }
-
-        a {
-            text-decoration: none
-        }
-
-        img {
-            border: 0 none
-        }
-
-        .blue {
-            text-decoration: none;
-            color: #3c3d5d
-        }
-
-        .chead {
-            width: 1002px
-        }
-
-        .chead .logo {
-            width: 698px;
-            height: 90px
-        }
-
-        .chead .txt {
-            width: 152px;
-            height: 90px
-        }
-
-        .column {
-            width: 1002px;
-            line-height: 28px;
-            border: 1px solid #dedede
-        }
-
-        .column .hbox {
-            width: 185px;
-            height: 154px
-        }
-
-        .column .head {
-            display: block;
-            background-color: #fafafa
-        }
-
-        .column .box {
-            width: 100%;
-            background-color: #ffffff;
-            border-top: 2px solid #f2f3f5
-        }
-
-        .column .box1 {
-            width: 100%;
-            word-wrap: break-word;
-            color: #ffffff;
-            background-color: #3f4160
-        }
-
-        .column .box2 {
-            width: 100%;
-            background-color: #f8f9fa
-        }
-
-        .column .tba {
-            width: 940px;
-            padding: 0 30px 15px
-        }
-
-        .column .tbb {
-            width: 940px;
-            padding: 0 30px
-        }
-
-        .column .tb1 {
-            width: 900px;
-            line-height: 28px;
-            color: #333333;
-            word-break: break-all;
-            padding: 0 20px
-        }
-
-        .column .tb2 {
-            width: 430px;
-            padding: 0 20px
-        }
-
-        .column .tb3 {
-            width: 900px;
-            padding: 15px 20px 15px 0
-        }
-
-        .column .gray,
-        .column .gray2 {
-            color: #999999;
-            word-break: break-all
-        }
-
-        .column .gray2 {
-            color: #666666
-        }
-
-        .column .plate1,
-        .column .plate2 {
-            width: 430px;
-            height: 54px;
-            font-size: 16px;
-            font-weight: bold;
-            color: #818ba3
-        }
-
-        .column .plate1 {
-            width: 900px;
-            padding: 0 50px
-        }
-
-        .column .plate1 .f16 {
-            font-size: 14px;
-            font-weight: normal;
-            color: #333333
-        }
-
-        .column .plate1 .f12 {
-            font-size: 12px;
-            font-weight: normal;
-            color: #999999
-        }
-
-        .column .keys,
-        .column .keys2 {
-            width: 85px;
-            line-height: 28px;
-            color: #666666
-        }
-
-        .column .keys2 {
-            width: 110px
-        }
-
-        .column .txt1,
-        .column .txt2,
-        .column .txt3 {
-            width: 815px;
-            line-height: 28px;
-            color: #333333;
-            word-break: break-all
-        }
-
-        .column .txt2 {
-            width: 345px
-        }
-
-        .column .txt3 {
-            width: auto;
-            max-width: 815px;
-            font-size: 14px;
-            font-weight: bold
-        }
-
-        .column .txt4 {
-            width: 305px;
-            color: #ffffff;
-            word-break: break-all
-        }
-
-        .column .infr {
-            width: 767px;
-            color: #ffffff;
-            table-layout: auto
-        }
-
-        .column .vam,
-        .column .grcha {
-            vertical-align: middle;
-            margin-left: 5px
-        }
-
-        .column .box1 .vam {
-            margin-right: 5px;
-            margin-left: 0
-        }
-
-        .column .name {
-            font-size: 24px;
-            padding-bottom: 18px
-        }
-
-        .column .icard {
-            color: #a1a3ae;
-            padding-bottom: 18px
-        }
-
-        .column .con {
-            border-top: 1px dotted #ddd
-        }
-
-        .column .pr20 {
-            width: 225px;
-            padding-right: 20px
-        }
-
-        .column .time {
-            width: 125px;
-            line-height: 28px;
-            color: #666666;
-            padding-left: 20px
-        }
-
-        .column .rtbox {
-            width: 765px;
-            line-height: 28px;
-            color: #333333;
-            padding: 0 20px 0 15px;
-            word-break: break-all
-        }
-
-        .column .hai,
-        .column .guan {
-            line-height: 18px;
-            font-size: 12px;
-            color: #ffffff;
-            vertical-align: text-top;
-            margin-left: 5px;
-            padding: 1px 3px;
-            background-color: #3cbe7f;
-            border-radius: 2px
-        }
-
-        .column .guan {
-            background-color: #ff9f20
-        }
-
-        .column .tag {
-            display: inline-block;
-            word-break: break-all;
-        }
-
-        .column .all {
-            color: #666;
-            padding: 10px 20px;
-            background-color: #fafafa
-        }
-
-        .column .tit {
-            width: 900px;
-            height: 40px;
-            color: #666666;
-            padding: 0 20px;
-            background-color: #f5f5f5
-        }
-
-        .column .p15 {
-            padding: 15px 0
-        }
-
-        .column .p5 {
-            display: inline-block;
-            color: #666666;
-            padding: 0 5px;
-        }
-
-        .column .cell .skill {
-            width: 165px;
-            text-align: right;
-            padding-right: 15px
-        }
-
-        .column .cell .skbg,
-        .column .cell .skco {
-            display: inline-block;
-            width: 245px;
-            height: 18px;
-            line-height: 18px;
-            font-size: 12px;
-            color: #ffffff;
-            vertical-align: top;
-            margin-top: 6px;
-            background-color: #dddddd;
-            border-radius: 20px;
-        }
-
-        .column .cell .skco {
-            width: 235px;
-            font-style: normal;
-            margin-top: 0;
-            padding-left: 10px;
-            background-color: #ff9f20;
-            z-index: 3
-        }
-
-        .column .sl .skco {
-            width: 173px
-        }
-
-        .column .lh .skco {
-            width: 112px
-        }
-
-        .column .yb .skco {
-            width: 51px
-        }
-
-        .column .fbox strong {
-            font-size: 14px;
-            font-weight: bold
-        }
-
-        .column .cha {
-            font-size: 12px;
-            font-weight: normal;
-            color: #00457d;
-            margin-left: 5px
-        }
-
-        .column .cha1 {
-            font-size: 14px
-        }
-
-        .column .cha:hover {
-            color: #ff6000
-        }
-
-        .column .email {
-            width: 330px
-        }
-
-        .column .bbf {
-            border-bottom: 1px dotted #ddd;
-        }
-
-        .eng td,
-        .eng .txt3,
-        .eng .fbox strong {
-            font-size: 13px;
-            font-family: 'Arial'
-        }
-
-        .eng .txt1,
-        .eng .rtbox,
-        .eng .phd {
-            width: 775px;
-            font-size: 13px;
-            font-family: 'Arial';
-            line-height: 28px
-        }
-
-        .eng .txt2 {
-            width: 305px
-        }
-
-        .eng .txt4 {
-            width: 245px
-        }
-
-        .eng .cell .txt3 {
-            width: 120px
-        }
-
-        .eng .time,
-        .eng .keys {
-            width: 110px;
-            font-size: 13px;
-            text-align: right
-        }
-
-        .eng .cell .skill {
-            width: 130px
-        }
-
-        .eng .phd {
-            padding-left: 145px
-        }
-
-        .eng .keys {
-            padding-right: 15px
-        }
-
-        .eng .pr20 {
-            width: 205px
-        }
-
-        .eng .pr20 .keys {
-            width: 100px
-        }
-
-        .eng .email {
-            width: 270px
-        }
-
-        /* adjust */
-        .column .tba {
-            width: 900px;
-            padding: 0 50px 15px;
-        }
-
-        .column .tb1 {
-            padding-left: 0;
-            padding-right: 0;
-        }
-
-        .column .tb2 {
-            padding-left: 0;
-            width: 450px;
-        }
-
-        .column .pd_20 {
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-
-        .h_16 {
-            height: 16px;
-        }
-
-        .schHead img {
-            display: block;
-        }
-
-        .column .schGood {
-            line-height: 18px;
-            font-size: 12px;
-            color: #F87203;
-            vertical-align: text-top;
-            margin-left: 4px;
-            padding: 1px 3px;
-            background-color: #FFEDE5;
-            border-radius: 2px;
-        }
-
-        .column .p_12 {
-            padding-left: 12px;
-        }
-
-        .column .time {
-            text-align: right;
-        }
-
-        .column .schTime {
-            width: 115px;
-        }
-
-        .companyLogo p {
-            width: 50px;
-            height: 50px;
-            background: #F0F0F0;
-            border-radius: 8px;
-            border: 1px solid #DDDDDD;
-            text-align: center;
-            overflow: hidden;
-        }
-
-        .companyLogo p img {
-            display: inline-block;
-            vertical-align: middle;
-            max-width: 100%;
-            max-height: 100%;
-        }
-
-        .companyLogo p i {
-            display: inline-block;
-            height: 100%;
-            width: 0;
-            vertical-align: middle;
-        }
-    </style>
-    <table cellpadding="0" cellspacing="0" align="center" bgcolor="#fff" class="column">
-        <tbody>
-            <tr>
-                <td valign="top">
-                    <!--基本信息-->
-                    <table cellspacing="0" cellpadding="0" border="0" class="box1">
-                        <tbody>
-                            <tr>
-                                <td class="hbox" align="middle">
-                                    <img src="https://avatars.githubusercontent.com/u/12636050"
-                                        width="100" height="100" class="head" alt="头像">
-                                </td>
-                                <td>
-                                    <table cellspacing="0" cellpadding="0" border="0" class="infr">
-                                        <tbody>
-                                            <tr>
-                                                <td colspan="2" class="name">
-                                                    成群 &nbsp;&nbsp;
-                                                    <a style="color: wheat;" href="eng_resume.html">English Resume Link</a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td valign="top" colspan="3">
-                                                    <p>
-                                                        <img class="vam"
-                                                            src="https://img01.51jobcdn.com/im/2016/resume/y4.png"
-                                                            width="20" height="20" />
-                                                        男 <span class="p5">|</span>
-                                                        36 岁 (1989/09) <span class="p5">|</span>
-                                                        14年工作经验 <span class="p5">|</span>
-                                                        现居住江苏盐城
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td valign="top">
-                                                    <img class="vam"
-                                                        src="https://img01.51jobcdn.com/im/2016/resume/y2.png"
-                                                        width="20" height="20" />18662062998
-                                                </td>
-                                                <td valign="top">
-                                                    <table cellspacing="0" cellpadding="0" border="0" class="email">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td valign="top" width="25">
-                                                                    <img class="vam"
-                                                                        src="https://img01.51jobcdn.com/im/2016/resume/y3.png"
-                                                                        width="20" height="20" />
-                                                                </td>
-                                                                <td valign="top" class="txt4">chengqun710@163.com</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                                <td class="hbox" align="middle">
-                                    <video width="180" height="180" controls>
-                                        <source src="self_introduction.mp4" type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!--自我评价-->
-                    <table cellspacing="0" cellpadding="0" border="0" class="box">
-                        <tbody>
-                            <tr>
-                                <td class="plate1">
-                                    个人优势 </td>
-                            </tr>
-                            <tr>
-                                <td class="tba">
-                                    <table cellspacing="0" cellpadding="0" border="0">
-                                        <tbody>
-                                            <tr>
-                                                <td class="tb1">
-                                                    1、计算机科学与技术专业，13年软件开发经验.<br>
-                                                    2、熟练掌握 Node.js开发 (我的NodeJs开源项目地址：https://github.com/chengqun2/node-connect-linux.git)<br>
-                                                    3、熟练掌握 TypeScript (我的Typescript开源项目地址：https://github.com/chengqun2/node-blockchain.git)<br>
-                                                    4、熟练掌握 SpringBoot和SpringCloud 等Java开源框架.<br>
-                                                    5、熟练掌握 Python开发(我的Python开源项目地址： https://github.com/chengqun2/python-flask.git)<br>
-                                                    6、熟练掌握 Docker、Kubernetes的使用 （我的k8s开源项目地址：https://github.com/chengqun2/kubernetes-example.git）<br>
-                                                    7、熟练掌握 区块链开发(我的Typescript开源项目地址：https://github.com/chengqun2/node-blockchain.git)<br>
-                                                    8、熟练掌握 React (我的React开源项目地址：https://github.com/chengqun2/react-node-example)<br>
-                                                    9、熟练掌握 MySQL 数据库，掌握 sql语法和语句调优，对数据库的索引、事务、锁、分库分表有深入理解.<br>
-                                                    10、熟练掌握 Redis 数据结构及Redis 的持久化机制、事务控制、集群模式哨兵模式. <br>
-                                                    11、熟练掌握 Kafka、RocketMQ、RabbitMQ等消息中间件的使用.<br>
-                                                    12、熟练掌握 常见分布式事务解决方案，并有实际处理经验.<br>
-                                                    13、熟练掌握 ElasticSearch 检索框架，熟悉使用DSL语句进行条件检索以及聚合<br>
-                                                    14、熟练掌握 Vue <br>
-                                                    15、熟练掌握 Html, css, javascript, Jquery, ElementUI, tailwindCss 等前端基础技术 <br>
-                                                    16、熟悉Linux环境和Docker 容器，熟悉Linux、Docker的常用指令<br>
-                                                    17、熟悉gitlab+docker+jenkins自动化部署工具的使用<br>
-                                                    18、熟悉gatling性能测试框架<br>
-                                                    19、熟悉ShardingSphere 等数据库读写分离、分库分表工具的使用<br>
-                                                    20、熟悉Hadoop、hbase、hive 等大数据技术<br>
-                                                    21、良好的英文听说读写（长期在纯英文环境下工作，远程与新加坡的程序员进行沟通），在线简历地址： https://chengqun2.github.io/    右上角有我的英文视频自我介绍。<br>
-                                                    22、熟悉Linux环境的开发环境搭建：JDK、Mysql、Redis、ElasticSearch、ClickHouse、Maven私服(Nexus3)、Minio等... <br>
-                                                    23、熟悉AI-机器学习、熟悉ChatGPT、熟练使用Copilot, Cursor进行代码编写 <br>
-                                                    24、熟悉Dify平台、N8n平台的私有化部署及工作流编排 <br>
-                                                    25、github profile: <a href="https://github.com/chengqun2">https://github.com/chengqun2</a> <br>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!--求职意向-->
-                    <table cellspacing="0" cellpadding="0" border="0" class="box">
-                        <tbody>
-                            <tr>
-                                <td class="plate1">求职意向</td>
-                            </tr>
-                            <tr>
-                                <td class="tba">
-                                    <table cellspacing="0" cellpadding="0" border="0">
-                                        <tbody>
-                                            <tr>
-                                                <td class="p15 bbf">
-                                                    <table cellspacing="0" cellpadding="0" border="0">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td class="tb2" valign="top">
-                                                                    <table cellspacing="0" cellpadding="0" border="0">
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <td valign="top" class="keys">期望职位：</td>
-                                                                                <td valign="top" class="txt2">
-                                                                                    <span
-                                                                                        class="tag">全栈开发&nbsp;&nbsp;</span>
-                                                                                </td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </td>
-                                                                <td class="tb2" valign="top">
-                                                                    <table cellspacing="0" cellpadding="0" border="0">
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <td valign="top" class="keys">期望城市：</td>
-                                                                                <td valign="top" class="txt2">
-                                                                                    <span class="tag">盐城、远程(Remote)</span>
-                                                                                </td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </td>
-
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="tb2" valign="top">
-                                                                    <table cellspacing="0" cellpadding="0" border="0">
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <td valign="top" class="keys">期望月薪：</td>
-                                                                                <td valign="top" class="txt2">
-                                                                                    面议 </td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </td>
-                                                                <td class="tb2" valign="top">&nbsp;</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="tb2" valign="top">
-                                                                    <table cellspacing="0" cellpadding="0" border="0">
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <td valign="top" class="keys">工作类型：</td>
-                                                                                <td valign="top" class="txt2">全职</td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                            <td class="tba">
-                                <table cellspacing="0" cellpadding="0" border="0">
-                                    <tbody>
-                                        <tr>
-                                            <td class="tb2" valign="top">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td valign="top" class="keys">求职状态：</td>
-                                                            <td valign="top" class="txt2">在职，寻求好的机会</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td class="tb2" valign="top">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td valign="top" class="keys">到岗时间：</td>
-                                                            <td valign="top" class="txt2">2周内</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tbody>
-                    </table>
-                    <!--工作经验-->
-                    <table cellspacing="0" cellpadding="0" border="0" class="box">
-                        <tbody>
-                            <tr>
-                                <td class="plate1">工作经验</td>
-                            </tr>
-                            <tr>
-                                <td class="tbb">
-                                    <table cellspacing="0" cellpadding="0" border="0">
-                                        <tr>
-                                            <td class="p15 pd_20">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="52" height="52" rowspan="2" class="companyLogo">
-                                                                <p><img src="https://img04.51jobcdn.com/im/mkt/app/51job_phone/app/homelogo/home_logo_default.png"
-                                                                        alt="" width="48" height="48"><i></i></p>
-                                                            </td>
-
-                                                            <td class="phd tb1 p_12">
-                                                                <strong>江苏方软科技有限公司</strong><span
-                                                                    class="gray"></span>
-                                                            </td>
-                                                            <td valign="top" class="time">2023/6-至今</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td valign="top" class="tb1 p_12" colspan="3">
-                                                                <span>全栈开发(前后端开发)</span>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="h_16" colspan="3"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="phd tb1 gray2" colspan="3">50-150人<span
-                                                                    class="p5">|</span>民营</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="3">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">工作描述：</td>
-                                                                            <td valign="top" class="txt1">
-                                                                                1、Linux开发环境搭建：Docker, N8n, Ollama, DeepSeek-R1, Dify, Clickhouse, ElasticSearch, Mysql, Nginx <br>
-                                                                                2、React 代码编写 <br>
-                                                                                3、Vue 代码编写 <br>
-                                                                                4、Java 代码编写<br>
-                                                                                5、Python 代码编写 <br>
-                                                                                6、NodeJs 代码编写 <br>
-                                                                                7、Typescript 代码编写 <br>
-                                                                                8、Electron 代码编写 <br>
-                                                                                9、n8n工作流编写 <br>
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15 pd_20">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="52" height="52" rowspan="2" class="companyLogo">
-                                                                <p><img src="https://img04.51jobcdn.com/im/mkt/app/51job_phone/app/homelogo/home_logo_default.png"
-                                                                        alt="" width="48" height="48"><i></i></p>
-                                                            </td>
-
-                                                            <td class="phd tb1 p_12">
-                                                                <strong>上海维智卓新信息科技有限公司</strong><span
-                                                                    class="gray">&nbsp;（10个月）</span>
-                                                            </td>
-                                                            <td valign="top" class="time">2022/7-2023/5</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td valign="top" class="tb1 p_12" colspan="3">
-                                                                <span>全栈开发(前后端开发)</span>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="h_16" colspan="3"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="phd tb1 gray2" colspan="3">150-500人<span
-                                                                    class="p5">|</span>民营</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="3">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">工作描述：</td>
-                                                                            <td valign="top" class="txt1">
-                                                                                新加坡少儿编程在线教育平台<br />
-                                                                                纯英文办公环境，远程办公<br />
-                                                                                主要技术点：<br />
-                                                                                Airtable <br />
-                                                                                Make.com <br />
-                                                                                n8n <br />
-                                                                                chargebee.com <br />
-                                                                                stripe.com/payments <br />
-                                                                                atlassian.net/jira <br />
-                                                                                Supabase <br />
-                                                                                wati.io <br />
-                                                                                manychat.com <br />
-                                                                                business.facebook.com <br />
-                                                                                web.miniextensions.com <br />
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15 con pd_20">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="52" height="52" rowspan="2" class="companyLogo">
-                                                                <p><img src="https://img04.51jobcdn.com/im/mkt/app/51job_phone/app/homelogo/home_logo_default.png"
-                                                                        alt="" width="48" height="48"><i></i></p>
-                                                            </td>
-
-                                                            <td class="phd tb1 p_12">
-                                                                <strong>南京维数软件股份有限公司</strong><span
-                                                                    class="gray">&nbsp;（4年7个月）</span>
-                                                            </td>
-                                                            <td valign="top" class="time">2017/12-2022/7</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td valign="top" class="tb1 p_12" colspan="3">
-                                                                <span>全栈开发(前后端开发)</span>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="h_16" colspan="3"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="phd tb1 gray2" colspan="3">计算机软件<span
-                                                                    class="p5">|</span>150-500人<span
-                                                                    class="p5">|</span>已上市</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="3">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">工作描述：</td>
-                                                                            <td valign="top" class="txt1">盐城市公安局
-                                                                                办公OA系统；<br>盐城市公安局 车辆大数据平台；<br>盐城市公安局盐都分局
-                                                                                综合指挥平台；<br>盐城市公安局盐都分局
-                                                                                感知大数据平台；<br>主要负责java后台开发，涉及Hadoop Hbase
-                                                                                Kafka Solr等技术<br>部门：研发部</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15 con pd_20">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="52" height="52" rowspan="2" class="companyLogo">
-                                                                <p><img src="https://img04.51jobcdn.com/im/mkt/app/51job_phone/app/homelogo/home_logo_default.png"
-                                                                        alt="" width="48" height="48"><i></i></p>
-                                                            </td>
-
-                                                            <td class="phd tb1 p_12">
-                                                                <strong>优因信息科技有限公司</strong><span
-                                                                    class="gray">&nbsp;（2年5个月）</span>
-                                                            </td>
-                                                            <td valign="top" class="time">2015/7-2017/12</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td valign="top" class="tb1 p_12" colspan="3">
-                                                                <span>全栈开发(前后端开发)</span>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="h_16" colspan="3"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="phd tb1 gray2" colspan="3">计算机软件<span
-                                                                    class="p5">|</span>50-150人<span
-                                                                    class="p5">|</span>民营</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="3">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">工作描述：</td>
-                                                                            <td valign="top" class="txt1">
-                                                                                需求对接，后台架构设计，数据库设计，及服务端接口。项目管理。</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15 con pd_20">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="52" height="52" rowspan="2" class="companyLogo">
-                                                                <p><img src="https://img04.51jobcdn.com/im/mkt/app/51job_phone/app/homelogo/home_logo_default.png"
-                                                                        alt="" width="48" height="48"><i></i></p>
-                                                            </td>
-
-                                                            <td class="phd tb1 p_12">
-                                                                <strong>江苏华生恒业科技股份有限公司</strong><span
-                                                                    class="gray">&nbsp;（3年10个月）</span>
-                                                            </td>
-                                                            <td valign="top" class="time">2011/9-2015/7</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td valign="top" class="tb1 p_12" colspan="3">
-                                                                <span>全栈开发(前后端开发)</span>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="h_16" colspan="3"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="phd tb1 gray2" colspan="3">计算机软件<span
-                                                                    class="p5">|</span>500-1000人<span
-                                                                    class="p5">|</span>民营</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="3">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">工作描述：</td>
-                                                                            <td valign="top" class="txt1">基于java的b/s架构开发
-                                                                                及 bug修改；<br>参与的项目主要有：<br>
-                                                                                盐城人才公共服务网的开发，<br> 台玻ERP的开发， <br>
-                                                                                国家电网的oa管理系统的开发，测试，维护，<br> 微信服务号的 后台开发；
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!-- 项目经验 -->
-                    <table cellspacing="0" cellpadding="0" border="0" class="box">
-                        <tbody>
-                            <tr>
-                                <td class="plate1">项目经验</td>
-                            </tr>
-                            <tr>
-                                <td class="tba">
-                                    <table cellspacing="0" cellpadding="0" border="0">
-
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="phd tb1">
-                                                            <strong>AI大模型应用</strong>
-                                                        </td>
-                                                        <td valign="top" class="time">2024/8-2025/12</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="tb1" colspan="2">
-                                                            <table cellspacing="0" cellpadding="0" border="0">
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td valign="top" class="keys">项目描述：</td>
-                                                                    <td valign="top" class="txt1">AI大模型应用<br>
-                                                                        主要负责技术点： React代码编写, Python代码编写, N8n部署及工作流编写， Mysql数据库搭建, Dify平台部署, DeepSeek-R1:64B模型部署 <br>
-                                                                        基于Dify平台编写对话流，发布应用，暴露API，python调用dify接口，React前端页面展示。<br>
-                                                                        基于N8n平台编写工作流，结合AI Agent, MCP进行智能体开发<br>
-                                                                    </td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="phd tb1">
-                                                            <strong>React个人网站</strong>
-                                                        </td>
-                                                        <td valign="top" class="time">2024/6-2024/7</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="tb1" colspan="2">
-                                                            <table cellspacing="0" cellpadding="0" border="0">
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td valign="top" class="keys">项目描述：</td>
-                                                                    <td valign="top" class="txt1">React个人网站<br>
-                                                                        技术栈： React, React-Router, React-Snap for Static-Export, and GitHub Pages. <br>
-                                                                        GitHub地址：https://github.com/chengqun2/resume <br>
-                                                                        在线访问地址：<a href='https://chengqun2.github.io/resume/'>https://chengqun2.github.io/resume/</a> <br>
-                                                                    </td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="phd tb1">
-                                                            <strong>NodeJs后台开发</strong>
-                                                        </td>
-                                                        <td valign="top" class="time">2024/4-2024/5</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="tb1" colspan="2">
-                                                            <table cellspacing="0" cellpadding="0" border="0">
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td valign="top" class="keys">项目描述：</td>
-                                                                    <td valign="top" class="txt1">NodeJs后台开发<br>
-                                                                        技术栈：Nodejs, Express, mysql2, sequelize, pkg打包发布。 <br>
-                                                                        使用Nodejs提供Restful Api接口，包括定时任务、MySql增删改查、服务器状态查询、网页爬取等接口。
-                                                                    </td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="phd tb1">
-                                                            <strong>Electron桌面应用开发</strong>
-                                                        </td>
-                                                        <td valign="top" class="time">2024/2-2024/3</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="tb1" colspan="2">
-                                                            <table cellspacing="0" cellpadding="0" border="0">
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td valign="top" class="keys">项目描述：</td>
-                                                                    <td valign="top" class="txt1">Electron桌面应用开发<br>
-                                                                        技术栈：Electron, Nodejs, Html, css, axios接口调用, electron-packager打包<br>
-                                                                        使用Electron开发桌面应用，主要包括后台应用主界面，消息弹框、通知设置、锁定应用等。
-                                                                    </td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="phd tb1">
-                                                            <strong>AI-机器学习</strong>
-                                                        </td>
-                                                        <td valign="top" class="time">2023/12-2024/1</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="tb1" colspan="2">
-                                                            <table cellspacing="0" cellpadding="0" border="0">
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td valign="top" class="keys">项目描述：</td>
-                                                                    <td valign="top" class="txt1">盐城公安警情自动分类系统<br>
-                                                                        负责PC-web端页面代码编写(Vue3、element-plus);<br>
-                                                                        负责Web后端接口编写(Springboot);<br>
-                                                                        主要负责技术点：
-                                                                        SpringBoot、Mysql、前端Vue<br>
-                                                                        项目主要采用 朴素贝叶斯算法、HanLP分词器对全市200万条警情内容、警情类别进行训练，生成数据模型。<br>
-                                                                        该模型主要用于对新产生的警情进行智能分类<br>
-                                                                    </td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="phd tb1">
-                                                            <strong>盐城公安感知大数据</strong>
-                                                        </td>
-                                                        <td valign="top" class="time">2023/6-至今</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="tb1" colspan="2">
-                                                            <table cellspacing="0" cellpadding="0" border="0">
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td valign="top" class="keys">项目描述：</td>
-                                                                    <td valign="top" class="txt1">盐城公安感知大数据<br>
-                                                                        负责PC-web端后台管理系统的代码编写(Vue3、element-plus);<br>
-                                                                        负责Web后端接口编写(SpringCloud、Springboot);<br>
-                                                                        主要负责技术点：
-                                                                        SpringCloud、SpringBoot、Oracle、Redis、Kafka、ElasticSearch、前端Vue<br>
-                                                                        项目主要为盐城市所有监控点位人像、车辆数据抓拍<br>
-                                                                        Kafka每日消费2000万数据，Redis展示各卡口实时流量排行，数据存入ElasticSearch, 做人员轨迹查询<br>
-                                                                        Mysql（ShardingSphere-JDBC分表）
-                                                                    </td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="phd tb1">
-                                                            <strong>AI人脸识别(Python)</strong>
-                                                        </td>
-                                                        <td valign="top" class="time">2023/6-2023/12</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="tb1" colspan="2">
-                                                            <table cellspacing="0" cellpadding="0" border="0">
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td valign="top" class="keys">项目描述：</td>
-                                                                    <td valign="top" class="txt1">AI人脸识别<br>
-                                                                        项目采用Python语言开发。    <br /> 
-                                                                        项目主要目的是对人员抓拍照片进行识别。核心API来自于开源项目 https://github.com/ageitgey/face_recognition.git 
-                                                                        <br /> 主要原理是：<br />  1).首先将照片进行黑白处理 <br /> 
-                                                                        2).然后以16px*16px分块，以眼睛、嘴巴为中心点<br /> 
-                                                                        3).然后使用OpenFace将人脸分为128个测量值，进行存储<br /> 
-                                                                        4).新抓拍的图片比对数据库中图片，最接近的就是比中的。<br /> 
-                                                                                                                 
-                                                                    </td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="phd tb1">
-                                                                <strong>新加坡少儿编程在线教育平台-CRM系统</strong>
-                                                            </td>
-                                                            <td valign="top" class="time">2022/8-2023/5</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">项目描述：</td>
-                                                                            <td valign="top" class="txt1">
-                                                                                新加坡少儿编程在线教育平台<br />
-                                                                                主要技术点：<br />
-                                                                                Airtable <br />
-                                                                                Make.com <br />
-                                                                                n8n <br />
-                                                                                chargebee.com <br />
-                                                                                stripe.com/payments <br />
-                                                                                atlassian.net/jira <br />
-                                                                                Supabase <br />
-                                                                                wati.io <br />
-                                                                                manychat.com <br />
-                                                                                business.facebook.com <br />
-                                                                                web.miniextensions.com <br />
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="phd tb1">
-                                                            <strong>值班人员大屏展示</strong>
-                                                        </td>
-                                                        <td valign="top" class="time">2022/8-2022/9</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="tb1" colspan="2">
-                                                            <table cellspacing="0" cellpadding="0" border="0">
-                                                                <tbody>
-                                                                <tr>
-                                                                    <td valign="top" class="keys">项目描述：</td>
-                                                                    <td valign="top" class="txt1">值班人员大屏展示<br>
-                                                                        Vue3框架搭建，数据大屏展示<br>
-                                                                    </td>
-                                                                </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="phd tb1">
-                                                                <strong>FBABEE供应链管理系统</strong>
-                                                            </td>
-                                                            <td valign="top" class="time">2022/1-2022/6</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">项目描述：</td>
-                                                                            <td valign="top" class="txt1">
-                                                                                1、供应链管理系统介绍：<br>项目为PC端Web后台管理系统。主要分为：询价单、提货、贴标、备货、运单、仓库、财务、客户管理、供应商管理、产品管理、地址管理、承运商管理。<br>
-                                                                                2、核心技术点：<br>项目采用SpringBoot+React+Ant-Design等框架开发<br>
-                                                                                3、后端技术栈<br>SpringBoot、MyBatis、MySQL、Swagger、Docker部署<br>
-                                                                                前端技术栈<br>React、Ant-Design、axios、TypeScript、mock<br>
-                                                                                4、本人主要负责后端接口+PC端管理后台代码开发<br>
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="phd tb1">
-                                                                <strong>五子棋后台API</strong>
-                                                            </td>
-                                                            <td valign="top" class="time">2021/12-2022/1</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">项目描述：</td>
-                                                                            <td valign="top" class="txt1">###
-                                                                                五子棋后台api介绍<br> 1、棋盘大小为 20x20<br>
-                                                                                2、用户先落子（机器后下）<br>
-                                                                                3、落子位置表示为`{x:number,y:number}`，以左下角为原点，从`0`开始算起<br>
-                                                                                4、先在横线、直线或斜对角线上形成5子连线者获胜<br>主要职责：后台框架搭建,API编写.不涉及任何公司机密,纯属技术交流,代码已开源:
-                                                                                <br>https://github.com/chengqun2/chess<br>技术点：<br>
-                                                                                1、Spring Cloud、Spring Boot、Spring
-                                                                                Security、Mybatis-plus<br>
-                                                                                2、Https、跨域请求、token验证<br>
-                                                                                3、h2数据库（免安装）<br> 4、swagger-ui
-                                                                                访问地址：http://localhost:8066/swagger-ui/<br>
-                                                                                5、openfeign<br>
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="phd tb1">
-                                                                <strong>盐都公安感知大数据平台</strong>
-                                                            </td>
-                                                            <td valign="top" class="time">2021/9-2022/7</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">所属公司：</td>
-                                                                            <td valign="top" class="txt1">南京维数软件股份有限公司
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">项目描述：</td>
-                                                                            <td valign="top" class="txt1">
-                                                                                盐城市公安局盐都分局治安防控体系建设。<br>负责需求对接，数据库设计、前后端代码编写。
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="phd tb1">
-                                                                <strong>盐都区公安局综合指挥平台</strong>
-                                                            </td>
-                                                            <td valign="top" class="time">2020/10-2022/6</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">所属公司：</td>
-                                                                            <td valign="top" class="txt1">南京维数软件股份有限公司
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">项目描述：</td>
-                                                                            <td valign="top" class="txt1">
-                                                                                盐渎派出所综合指挥平台升级版。</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="phd tb1">
-                                                                <strong>盐城巡特警智慧一体化应用系统</strong>
-                                                            </td>
-                                                            <td valign="top" class="time">2020/3-2020/10</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">所属公司：</td>
-                                                                            <td valign="top" class="txt1">南京维数软件股份有限公司
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">项目描述：</td>
-                                                                            <td valign="top" class="txt1">盐城市公安局巡特警
-                                                                                智慧巡防。<br>Java web 管理系统</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="phd tb1">
-                                                                <strong>盐渎派出所综合指挥平台</strong>
-                                                            </td>
-                                                            <td valign="top" class="time">2019/7-2020/7</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">所属公司：</td>
-                                                                            <td valign="top" class="txt1">南京维数软件股份有限公司
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">项目描述：</td>
-                                                                            <td valign="top" class="txt1">
-                                                                                盐渎派出所综合指挥平台<br>1、清单管理<br>2、内务考核+绩效考核<br>3、专项行动
-                                                                                （类似19大安保、两会安保）<br>4、指挥调度<br>5、警情监测<br>6、社区警务<br>7、执法监督<br>8、情报研判
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="phd tb1">
-                                                                <strong>盐城市公安局大数据情报指挥平台</strong>
-                                                            </td>
-                                                            <td valign="top" class="time">2019/4-2020/10</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">所属公司：</td>
-                                                                            <td valign="top" class="txt1">南京维数软件股份有限公司
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">项目描述：</td>
-                                                                            <td valign="top" class="txt1">Spring
-                                                                                cloud、springboot、前端freemarker模板、kafka消息队列、oracle数据库<br>项目模块分为：重点管控、情报处理、应急指挥
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="phd tb1">
-                                                                <strong>自动化部署平台</strong>
-                                                            </td>
-                                                            <td valign="top" class="time">2019/3-2019/4</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">所属公司：</td>
-                                                                            <td valign="top" class="txt1">南京维数软件股份有限公司
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">项目描述：</td>
-                                                                            <td valign="top" class="txt1">Java + Shell +
-                                                                                Ant实现的自动化、可视化的项目部署平台，能部署Java服务、Java
-                                                                                Web项目，可以简化项目部署操作，只需要提供SVN/GIT地址即可部署项目。<br>可以一键拉取SVN/GIT代码进行更新部署、实时监控项目运行状态、控制项目停止、启动、及查看日志。
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="phd tb1">
-                                                                <strong>办公oa</strong>
-                                                            </td>
-                                                            <td valign="top" class="time">2018/7-2020/1</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">所属公司：</td>
-                                                                            <td valign="top" class="txt1">南京维数软件股份有限公司
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">项目描述：</td>
-                                                                            <td valign="top" class="txt1">盐城市公安局
-                                                                                发文流程：发文拟稿-&gt;一级部门核稿-&gt;办公室核稿-&gt;秘书科核稿-&gt;收文单位收文
-                                                                                等。<br>Activiti工作流（实现了撤回功能）。<br>邮箱功能（基于Postfix
-                                                                                +Dovecot 搭建）</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="phd tb1">
-                                                                <strong>人员关系分析</strong>
-                                                            </td>
-                                                            <td valign="top" class="time">2018/3-2018/6</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">所属公司：</td>
-                                                                            <td valign="top" class="txt1">南京维数软件股份有限公司
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">项目描述：</td>
-                                                                            <td valign="top" class="txt1">盐城公安局
-                                                                                对常住人口进行关系分析。<br>oracle+neo4j(图数据库) +
-                                                                                solr</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="phd tb1">
-                                                                <strong>车辆大数据</strong>
-                                                            </td>
-                                                            <td valign="top" class="time">2018/1-2020/6</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">所属公司：</td>
-                                                                            <td valign="top" class="txt1">南京维数软件股份有限公司
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">项目描述：</td>
-                                                                            <td valign="top" class="txt1">盐城公安局
-                                                                                车辆过车大数据查询，目前数据总量30亿，每日数据增量800万。使用HBase存储，查询。Pgis地图展示。<br>数据：oracle
-                                                                                -&gt; kafka -&gt; hbase</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="phd tb1">
-                                                                <strong>爱拍</strong>
-                                                            </td>
-                                                            <td valign="top" class="time">2017/1-2017/12</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">项目描述：</td>
-                                                                            <td valign="top" class="txt1">微信公众号
-                                                                                艺术品拍卖。<br>技术点：<br>阿里云：服务器ECS、负载均衡、mysql、redis<br>七牛
-                                                                                对象存储<br>idea<br>git<br>springboot(ssm)<br>H+后台UI框架<br>Qr二维码<br>杉德支付（对接银联）<br>https<br>微信公众号
-                                                                                拍卖流程（抢拍-&gt;生成订单-&gt;付款-&gt;发货-&gt;收货
-                                                                                等.）<br>云之讯 短信平台<br>并发处理，最高并发量1000</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="phd tb1">
-                                                                <strong>CRM管理系统</strong>
-                                                            </td>
-                                                            <td valign="top" class="time">2016/7-2016/12</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">所属公司：</td>
-                                                                            <td valign="top" class="txt1">盐城优因信息科技有限公司
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">项目描述：</td>
-                                                                            <td valign="top" class="txt1">
-                                                                                客户关系管理系统<br>后台：jfinal（基于 Java 语言的极速 WEB
-                                                                                + ORM
-                                                                                框架）<br>前端：avalon、bootstrap、jqGrid<br>数据库：mysql<br>项目分为：客户信息、客户池、线索、商机、合同、商品模块
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="phd tb1">
-                                                                <strong>U会(手机APP)</strong>
-                                                            </td>
-                                                            <td valign="top" class="time">2015/7-2017/12</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">项目描述：</td>
-                                                                            <td valign="top" class="txt1">U会app。<br>项目为
-                                                                                企业服务app(类似钉钉)。<br>后台框架: spring springmvc
-                                                                                mybatis 。<br>使用到
-                                                                                用户token(存放到redis中，jedis、spring-data-redis)、百度地图api、百度天气api、支付宝支付API、阿里名片扫描、腾讯IM(先用的环信IM，后因环信收费，迁移到腾讯IM)、微信支付API、schedule定时任务、触发器、自定义注解(主要为登录验证、token验证，自定义注解在
-                                                                                拦截器中使用。)、android
-                                                                                apk版本检测、gps点位距离计算、环信消息推送、注册短信发送、execl导入导出、审批流程控制、事务控制、部分查询采用cache缓存，常用字段的查询加入了索引。<br>数据库:mysql、目前200张表。<br>项目部署在
-                                                                                阿里云linux服务器上(数据库每日凌晨定时备份)。</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="phd tb1">
-                                                                <strong>智慧管家</strong>
-                                                            </td>
-                                                            <td valign="top" class="time">2015/7-2015/12</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">项目描述：</td>
-                                                                            <td valign="top" class="txt1">
-                                                                                eclipse(开发工具)小区物业服务性软件。包括app和管理后台。后台采用spring
-                                                                                springMVC mybatis
-                                                                                框架，前端采用easyui框架，数据库使用mysql 。主要包括
-                                                                                小区通知，维修管理，住户管理，缴费管理等模块。</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="phd tb1">
-                                                                <strong>国家电网物资管理系统</strong>
-                                                            </td>
-                                                            <td valign="top" class="time">2013/6-2015/1</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">项目描述：</td>
-                                                                            <td valign="top" class="txt1">项目简介：<br>
-                                                                                扬州市供电公司 物资管理系统；<br>项目中涉及到
-                                                                                人员角色管理，权限管理，物资类别管理、流程管理。<br>流程：计划 - 采购 -
-                                                                                入库 - 出库 - 财务稽核 - 退料 - 盘亏盘盈 <br>项目 后台采用
-                                                                                java语言编写，采用spring+struts2+hibernate框架，<br>
-                                                                                前台页面主要使用extjs；<br> 数据库采用 oracle （PL/SQL
-                                                                                Developer）</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="phd tb1">
-                                                                <strong>盐城人才公共服务网</strong>
-                                                            </td>
-                                                            <td valign="top" class="time">2011/9-2012/6</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">所属公司：</td>
-                                                                            <td valign="top" class="txt1">江苏华生恒业科技股份有限公司
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">项目描述：</td>
-                                                                            <td valign="top" class="txt1">盐城人才公共服务网</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="phd tb1">
-                                                                <strong>ERP系统</strong>
-                                                            </td>
-                                                            <td valign="top" class="time">2011/9-2013/7</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">所属公司：</td>
-                                                                            <td valign="top" class="txt1">江苏华生恒业科技股份有限公司
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="tb1" colspan="2">
-                                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td valign="top" class="keys">项目描述：</td>
-                                                                            <td valign="top" class="txt1">
-                                                                                生产管理、仓储管理<br>spring struts2 hibernate
-                                                                                mysql</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!--教育经历-->
-                    <table class="box">
-                        <tbody>
-                            <tr>
-                                <td class="plate1">教育经历</td>
-                            </tr>
-                            <tr>
-                                <td class="tba">
-                                    <table cellspacing="0" cellpadding="0" border="0">
-                                        <tr>
-                                            <td class="p15">
-                                                <table cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td rowspan="2" class="schHead">
-                                                                <img src="https://img01.51jobcdn.com/im/school/%25E6%2589%25AC%25E5%25B7%259E%25E5%25A4%25A7%25E5%25AD%25A6%25E5%25B9%25BF%25E9%2599%25B5%25E5%25AD%25A6%25E9%2599%25A2.jpg"
-                                                                    alt="" width="52" height="52">
-                                                            </td>
-                                                            <td valign="top" class="rtbox p_12">
-                                                                <strong>扬州大学广陵学院</strong>
-                                                            </td>
-                                                            <td valign="top" class="time schTime">2007/9-2011/7</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="rtbox p_12" colspan="2">
-                                                                本科 <span class="p5">|</span>
-                                                                计算机科学与技术 </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!--在校情况-->
-                    <!--技能特长-->
-                    <table cellspacing="0" cellpadding="0" border="0" class="box">
-                        <tbody>
-                            <tr>
-                                <td class="plate1">
-                                    技能特长 <span class="f12">（包含IT技能、语言能力、证书、成绩、培训经历）</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tbb">
-                                    <!--技能/语言-->
-                                    <table cellspacing="0" cellpadding="0" border="0">
-                                        <tbody>
-                                            <tr>
-                                                <td class="tit">技能/语言</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p15">
-                                                    <table cellspacing="0" cellpadding="0" border="0">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td class="tb2 cell sl" valign="top">
-                                                                    <table cellspacing="0" cellpadding="0" border="0">
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <td class="skill">
-                                                                                    <strong class="txt3">Java</strong>
-                                                                                </td>
-                                                                                <td valign="top">
-                                                                                    <span class="skbg">
-                                                                                        <span class="skco">熟练</span>
-                                                                                    </span>
-                                                                                </td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </td>
-                                                                <td class="tb2 cell sl" valign="top">
-                                                                    <table cellspacing="0" cellpadding="0" border="0">
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <td class="skill">
-                                                                                    <strong
-                                                                                        class="txt3">JavaScript</strong>
-                                                                                </td>
-                                                                                <td valign="top">
-                                                                                    <span class="skbg">
-                                                                                        <span class="skco">熟练</span>
-                                                                                    </span>
-                                                                                </td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="tb2 cell sl" valign="top">
-                                                                    <table cellspacing="0" cellpadding="0" border="0">
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <td class="skill">
-                                                                                    <strong class="txt3">英语</strong>
-                                                                                </td>
-                                                                                <td valign="top">
-                                                                                    <span class="skbg">
-                                                                                        <span class="skco">熟练</span>
-                                                                                    </span>
-                                                                                </td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </td>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <!--证书-->
-                                    <!--培训经历-->
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!--附加信息-->
-
-                    <!--个人作品-->
-                    <!--附加信息-->
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<body class="min-h-screen bg-gradient-to-br from-slate-100 via-slate-50 to-indigo-50/40 font-sans text-slate-800 antialiased">
+  <div class="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(99,102,241,0.12),transparent)]"></div>
+
+  <header class="relative overflow-hidden border-b border-white/60 bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-slate-100 shadow-lg shadow-indigo-950/20">
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.04\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-80"></div>
+    <div class="relative mx-auto max-w-4xl px-4 py-10 sm:px-6 sm:py-14">
+      <div class="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+        <div class="flex flex-col items-center gap-6 sm:flex-row sm:items-start">
+          <img src="https://avatars.githubusercontent.com/u/12636050" width="120" height="120" alt="成群" class="h-28 w-28 rounded-2xl border-4 border-white/10 object-cover shadow-xl ring-2 ring-white/10 transition duration-300 hover:ring-indigo-300/50" />
+          <div class="text-center sm:text-left">
+            <p class="mb-1 text-xs font-semibold uppercase tracking-[0.2em] text-indigo-200/90">Full Stack · Python / React</p>
+            <h1 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">成群</h1>
+            <div class="mt-4 flex flex-wrap justify-center gap-2 sm:justify-start">
+              <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/15 px-3 py-1 text-xs font-semibold text-emerald-200 ring-1 ring-emerald-400/30"><i class="fa-brands fa-python"></i> Python</span>
+              <span class="inline-flex items-center gap-1.5 rounded-full bg-sky-500/15 px-3 py-1 text-xs font-semibold text-sky-200 ring-1 ring-sky-400/30"><i class="fa-brands fa-react"></i> React</span>
+              <span class="inline-flex items-center gap-1.5 rounded-full bg-violet-500/15 px-3 py-1 text-xs font-semibold text-violet-200 ring-1 ring-violet-400/30"><i class="fa-solid fa-wand-magic-sparkles"></i> Vibe coding</span>
+            </div>
+            <div class="mt-5 flex flex-wrap justify-center gap-3 sm:justify-start">
+              <a href="eng_resume.html" class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white ring-1 ring-white/20 backdrop-blur transition hover:bg-white/20 hover:ring-white/40">
+                <i class="fa-solid fa-language"></i> English resume
+              </a>
+              <a href="https://www.champcodeacademy.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full bg-indigo-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-indigo-600/30 transition hover:bg-indigo-400 hover:shadow-indigo-500/40">
+                <i class="fa-solid fa-graduation-cap"></i> Champ Code Academy
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mx-auto w-full max-w-[220px] shrink-0 md:mx-0">
+          <video class="w-full rounded-xl border border-white/10 shadow-2xl ring-1 ring-white/10 transition hover:ring-indigo-400/30" controls preload="metadata">
+            <source src="self_introduction.mp4" type="video/mp4" />
+          </video>
+          <p class="mt-2 text-center text-[11px] text-slate-400">自我介绍视频</p>
+        </div>
+      </div>
+      <ul class="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-3 border-t border-white/10 pt-6 text-sm text-slate-300 sm:justify-start">
+        <li class="flex items-center gap-2"><i class="fa-solid fa-mars text-slate-400"></i> 男 · 1989/09</li>
+        <li class="flex items-center gap-2"><i class="fa-solid fa-briefcase text-indigo-300"></i> 近15年工作经验</li>
+        <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-rose-300"></i> 江苏盐城</li>
+        <li><a href="tel:18662062998" class="flex items-center gap-2 transition hover:text-white"><i class="fa-solid fa-phone text-emerald-300"></i> 18662062998</a></li>
+        <li><a href="mailto:chengqun710@163.com" class="flex items-center gap-2 transition hover:text-white"><i class="fa-solid fa-envelope text-amber-300"></i> chengqun710@163.com</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-4xl space-y-8 px-4 py-10 sm:px-6 sm:py-12">
+
+    <section class="animate-fade-rise rounded-2xl border border-slate-200/80 bg-white/90 p-6 opacity-0 shadow-sm backdrop-blur-sm transition-shadow duration-300 hover:shadow-md sm:p-8" style="animation-delay:0.04s">
+      <h2 class="mb-4 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-indigo-600">
+        <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600"><i class="fa-solid fa-user-tie"></i></span>
+        职业概要
+      </h2>
+      <div class="space-y-4 text-sm leading-relaxed text-slate-600 [&_strong]:font-semibold [&_strong]:text-slate-800">
+        <p>计算机科学与技术本科，<strong>近15年</strong>全栈交付经验；近年<strong>以 Python 与 React 为双主线</strong>——Python 承担 Web/API、自动化脚本、AI/数据与中间件侧能力，React 承担中后台、数据可视化与品牌官网；同时具备 Java（Spring）与 Node 等工程栈，熟悉从需求、架构、编码到部署运维的完整链路。典型场景：政务大数据、供应链、国际教育 SaaS、大模型应用。</p>
+<p><strong>Python 与后端</strong>：Web/API（Flask 等）、与 Dify/N8n/大模型及数据管道集成；机器学习与图像/NLP 类项目实践；脚本与运维自动化。Java（Spring Boot / Spring Cloud）、Node.js；MySQL（SQL 调优、事务与锁、分库分表）、Redis、ElasticSearch、ClickHouse；Kafka / RocketMQ / RabbitMQ；分布式事务；ShardingSphere 读写分离与分片。</p>
+<p><strong>React 与前端</strong>：SPA/中后台（React、TypeScript、Ant Design 等）、与 REST/GraphQL 及自动化工作流对接；Vue、Element Plus、Tailwind 等；Electron 桌面应用。</p>
+<p><strong>平台与工程化</strong>：Linux 与 Docker、Kubernetes；GitLab + Docker + Jenkins 等 CI/CD；常见中间件与 JDK/MySQL/Redis/ES 等环境搭建（含 Nexus、Minio 等）。</p>
+<p><strong>数据与性能</strong>：Hadoop/HBase/Hive 等大数据技术栈有项目实践；Gatling 性能测试。</p>
+<p><strong>AI 与智能化</strong>：Dify、N8n 私有化与工作流编排；Ollama / 本地大模型部署；结合 Agent、MCP 的智能体集成；传统 ML/NLP（如分类、分词与模型训练）项目经验；<strong>1 年多 vibe coding</strong> 实践——以自然语言与 AI 结对（Cursor、Copilot 等）做快速原型、功能迭代与重构，并配合人工审查保障可读性与可维护性。</p>
+<p><strong>协作与语言</strong>：可<strong>全英文沟通</strong>，有纯英文远程环境经验（与新加坡团队协作）；任职期间曾<strong>独立从 0 到 1 交付</strong>品牌官网 <a href="https://www.champcodeacademy.com/" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-medium border-b border-indigo-200 hover:border-indigo-500 transition-colors">Champ Code Academy</a>（Python + React 技术栈）。本页右上角为英文视频自我介绍：<a href="https://chengqun2.github.io/" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-medium border-b border-indigo-200 hover:border-indigo-500 transition-colors">https://chengqun2.github.io/</a></p>
+<p><strong>开源示例（个人学习/演示仓库）</strong>：
+<a href="https://github.com/chengqun2/node-connect-linux" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-medium">Node 连接 Linux</a>、
+<a href="https://github.com/chengqun2/node-blockchain" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-medium">TypeScript / 区块链示例</a>、
+<a href="https://github.com/chengqun2/python-flask" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-medium">Python Flask</a>、
+<a href="https://github.com/chengqun2/kubernetes-example" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-medium">K8s 示例</a>、
+<a href="https://github.com/chengqun2/react-node-example" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-medium">React + Node</a>；
+GitHub 主页：<a href="https://github.com/chengqun2" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-medium">https://github.com/chengqun2</a></p>
+
+      </div>
+    </section>
+
+    <section class="animate-fade-rise rounded-2xl border border-slate-200/80 bg-white/90 p-6 opacity-0 shadow-sm backdrop-blur-sm transition-shadow duration-300 hover:shadow-md sm:p-8" style="animation-delay:0.08s">
+      <h2 class="mb-4 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-indigo-600">
+        <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600"><i class="fa-solid fa-bullseye"></i></span>
+        求职意向
+      </h2>
+      <dl class="grid gap-4 sm:grid-cols-2">
+        <div class="rounded-xl bg-slate-50/80 p-4 ring-1 ring-slate-100 transition hover:bg-indigo-50/50 hover:ring-indigo-100"><dt class="text-xs font-semibold uppercase tracking-wide text-slate-400">期望职位</dt><dd class="mt-1 font-medium text-slate-800">全栈（Python / React）</dd></div><div class="rounded-xl bg-slate-50/80 p-4 ring-1 ring-slate-100 transition hover:bg-indigo-50/50 hover:ring-indigo-100"><dt class="text-xs font-semibold uppercase tracking-wide text-slate-400">期望城市</dt><dd class="mt-1 font-medium text-slate-800">远程 (Remote)</dd></div><div class="rounded-xl bg-slate-50/80 p-4 ring-1 ring-slate-100 transition hover:bg-indigo-50/50 hover:ring-indigo-100"><dt class="text-xs font-semibold uppercase tracking-wide text-slate-400">期望月薪</dt><dd class="mt-1 font-medium text-slate-800">面议</dd></div><div class="rounded-xl bg-slate-50/80 p-4 ring-1 ring-slate-100 transition hover:bg-indigo-50/50 hover:ring-indigo-100"><dt class="text-xs font-semibold uppercase tracking-wide text-slate-400">工作类型</dt><dd class="mt-1 font-medium text-slate-800">全职</dd></div><div class="rounded-xl bg-slate-50/80 p-4 ring-1 ring-slate-100 transition hover:bg-indigo-50/50 hover:ring-indigo-100"><dt class="text-xs font-semibold uppercase tracking-wide text-slate-400">求职状态</dt><dd class="mt-1 font-medium text-slate-800">在职，寻求好的机会</dd></div><div class="rounded-xl bg-slate-50/80 p-4 ring-1 ring-slate-100 transition hover:bg-indigo-50/50 hover:ring-indigo-100"><dt class="text-xs font-semibold uppercase tracking-wide text-slate-400">到岗时间</dt><dd class="mt-1 font-medium text-slate-800">2 周内</dd></div>
+      </dl>
+    </section>
+
+    <section class="animate-fade-rise rounded-2xl border border-slate-200/80 bg-white/90 p-6 opacity-0 shadow-sm backdrop-blur-sm transition-shadow duration-300 hover:shadow-md sm:p-8" style="animation-delay:0.12s">
+      <h2 class="mb-6 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-indigo-600">
+        <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600"><i class="fa-solid fa-building"></i></span>
+        工作经验
+      </h2>
+      <div class="space-y-5">
+        <article class="rounded-xl border border-slate-200/90 bg-gradient-to-br from-white to-slate-50/80 p-5 shadow-sm transition-all duration-300 hover:border-indigo-200 hover:shadow-md">
+  <div class="flex flex-wrap items-start justify-between gap-2">
+    <div>
+      <h3 class="text-lg font-semibold text-slate-900">江苏方软科技有限公司</h3>
+      <p class="mt-0.5 text-sm text-indigo-600">全栈开发（前后端）</p>
+      <p class="mt-1 text-xs text-slate-500">50–150 人 · 民营</p>
+    </div>
+    <time class="shrink-0 rounded-lg bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600 tabular-nums">2023/6 — 至今</time>
+  </div>
+  <div class="mt-4 border-t border-slate-100 pt-4 text-sm leading-relaxed text-slate-600 [&_a]:text-indigo-600 [&_a:hover]:underline"><p>担任全栈开发，负责 AI 应用与内部系统的端到端交付：私有化部署 Dify、N8n、Ollama（含 DeepSeek-R1 等模型）、ClickHouse、ElasticSearch、MySQL、Nginx 等，并用 Docker 编排与维护。</p><p>业务侧以 <strong>React</strong> 与 <strong>Python</strong> 为主迭代管理端与智能化服务，并配合 Vue、Java/Spring、Node.js/TypeScript 及 Electron；N8n 串联大模型与内外系统。</p></div>
+</article>
+<article class="rounded-xl border border-slate-200/90 bg-gradient-to-br from-white to-slate-50/80 p-5 shadow-sm transition-all duration-300 hover:border-indigo-200 hover:shadow-md">
+  <div class="flex flex-wrap items-start justify-between gap-2">
+    <div>
+      <h3 class="text-lg font-semibold text-slate-900">上海维智卓新信息科技有限公司</h3>
+      <p class="mt-0.5 text-sm text-indigo-600">全栈开发（前后端）</p>
+      <p class="mt-1 text-xs text-slate-500">150–500 人 · 民营</p>
+    </div>
+    <time class="shrink-0 rounded-lg bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600 tabular-nums">2022/7 — 2023/5（10 个月）</time>
+  </div>
+  <div class="mt-4 border-t border-slate-100 pt-4 text-sm leading-relaxed text-slate-600 [&_a]:text-indigo-600 [&_a:hover]:underline"><p>新加坡少儿编程在线教育，<strong>全英文远程</strong>。<strong>独立负责</strong> <a class='text-indigo-600 font-medium hover:underline' href='https://www.champcodeacademy.com/' target='_blank' rel='noopener'>Champ Code Academy</a> 官网（React + Python）。</p><p>CRM、计费（Chargebee/Stripe）、自动化（Airtable/Make/n8n）、营销与 Supabase、Jira 协作。</p></div>
+</article>
+<article class="rounded-xl border border-slate-200/90 bg-gradient-to-br from-white to-slate-50/80 p-5 shadow-sm transition-all duration-300 hover:border-indigo-200 hover:shadow-md">
+  <div class="flex flex-wrap items-start justify-between gap-2">
+    <div>
+      <h3 class="text-lg font-semibold text-slate-900">南京维数软件股份有限公司</h3>
+      <p class="mt-0.5 text-sm text-indigo-600">全栈开发（前后端）</p>
+      <p class="mt-1 text-xs text-slate-500">上市 · 150–500 人</p>
+    </div>
+    <time class="shrink-0 rounded-lg bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600 tabular-nums">2017/12 — 2022/7（4 年 7 个月）</time>
+  </div>
+  <div class="mt-4 border-t border-slate-100 pt-4 text-sm leading-relaxed text-slate-600 [&_a]:text-indigo-600 [&_a:hover]:underline"><p>研发部：市公安局及分局 <strong>办公 OA、车辆大数据、综合指挥、感知大数据</strong> 等；Java 后台为主，需求与库表设计与核心模块。</p><p>Spring Cloud/Boot、Kafka、Hadoop/HBase、Solr 等高数据量场景。</p></div>
+</article>
+<article class="rounded-xl border border-slate-200/90 bg-gradient-to-br from-white to-slate-50/80 p-5 shadow-sm transition-all duration-300 hover:border-indigo-200 hover:shadow-md">
+  <div class="flex flex-wrap items-start justify-between gap-2">
+    <div>
+      <h3 class="text-lg font-semibold text-slate-900">优因信息科技有限公司</h3>
+      <p class="mt-0.5 text-sm text-indigo-600">全栈开发（前后端）</p>
+      <p class="mt-1 text-xs text-slate-500">50–150 人 · 民营</p>
+    </div>
+    <time class="shrink-0 rounded-lg bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600 tabular-nums">2015/7 — 2017/12（2 年 5 个月）</time>
+  </div>
+  <div class="mt-4 border-t border-slate-100 pt-4 text-sm leading-relaxed text-slate-600 [&_a]:text-indigo-600 [&_a:hover]:underline"><p>需求对接、后台架构与数据库设计、接口开发，<strong>项目管理</strong>。</p></div>
+</article>
+<article class="rounded-xl border border-slate-200/90 bg-gradient-to-br from-white to-slate-50/80 p-5 shadow-sm transition-all duration-300 hover:border-indigo-200 hover:shadow-md">
+  <div class="flex flex-wrap items-start justify-between gap-2">
+    <div>
+      <h3 class="text-lg font-semibold text-slate-900">江苏华生恒业科技股份有限公司</h3>
+      <p class="mt-0.5 text-sm text-indigo-600">全栈开发（前后端）</p>
+      <p class="mt-1 text-xs text-slate-500">500–1000 人 · 民营</p>
+    </div>
+    <time class="shrink-0 rounded-lg bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600 tabular-nums">2011/9 — 2015/7（3 年 10 个月）</time>
+  </div>
+  <div class="mt-4 border-t border-slate-100 pt-4 text-sm leading-relaxed text-slate-600 [&_a]:text-indigo-600 [&_a:hover]:underline"><p>Java B/S 开发与维护；人才公共服务网、台玻 ERP、国家电网 OA、微信服务号后台等。</p></div>
+</article>
+      </div>
+    </section>
+
+    <section class="animate-fade-rise rounded-2xl border border-slate-200/80 bg-white/90 p-6 opacity-0 shadow-sm backdrop-blur-sm transition-shadow duration-300 hover:shadow-md sm:p-8" style="animation-delay:0.16s">
+      <h2 class="mb-6 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-indigo-600">
+        <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600"><i class="fa-solid fa-diagram-project"></i></span>
+        项目经验
+      </h2>
+      <div class="grid gap-4 sm:grid-cols-2">
+        <article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.35s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">AI大模型应用</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2024/8-至今</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">企业内 AI 大模型应用落地，React 做对话与配置端、Python 调用 Dify 等开放 API；N8n 工作流编排，MySQL 与 Dify 部署，DeepSeek-R1 等本地模型环境。 基于 Dify 编排对话流并发布应用、暴露 API；Python 聚合业务逻辑与 Dify 交互，React 负责页面与状态展示。 基于 N8n 串联内外系统，结合 AI Agent、MCP 做智能体扩展。</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.37s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">React个人网站</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2024/6-2024/7</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">React个人网站 技术栈： React, React-Router, React-Snap for Static-Export, and GitHub Pages. GitHub地址：https://github.com/chengqun2/resume 在线访问地址：https://chengqun2.github.io/resume/</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.38999999999999996s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">NodeJs后台开发</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2024/4-2024/5</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">NodeJs后台开发 技术栈：Nodejs, Express, mysql2, sequelize, pkg打包发布。 使用Nodejs提供Restful Api接口，包括定时任务、MySql增删改查、服务器状态查询、网页爬取等接口。</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.41s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">Electron桌面应用开发</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2024/2-2024/3</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">Electron桌面应用开发 技术栈：Electron, Nodejs, Html, css, axios接口调用, electron-packager打包 使用Electron开发桌面应用，主要包括后台应用主界面，消息弹框、通知设置、锁定应用等。</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.43s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">AI-机器学习</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2023/12-2024/1</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">盐城公安警情自动分类系统 负责PC-web端页面代码编写(Vue3、element-plus); 负责Web后端接口编写(Springboot); 主要负责技术点： SpringBoot、Mysql、前端Vue 项目主要采用 朴素贝叶斯算法、HanLP分词器对全市200万条警情内容、警情类别进行训练，生成数据模型。 该模型主要用于对新产生的警情进行智能分类</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.44999999999999996s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">盐城公安感知大数据</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2023/6-至今</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">盐城公安感知大数据 负责PC-web端后台管理系统的代码编写(Vue3、element-plus); 负责Web后端接口编写(SpringCloud、Springboot); 主要负责技术点： SpringCloud、SpringBoot、Oracle、Redis、Kafka、ElasticSearch、前端Vue 项目主要为盐城市所有监控点位人像、车辆数据抓拍 Kafka每日消费2000万数据，Redis展示各卡口实时流量排行，数据存入ElasticSearch, 做人员轨迹查询 Mysql（ShardingSphere-JDBC分表）</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.47s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">AI人脸识别(Python)</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2023/6-2023/12</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">AI人脸识别 项目采用Python语言开发。 项目主要目的是对人员抓拍照片进行识别。核心API来自于开源项目 https://github.com/ageitgey/face_recognition.git 主要原理是： 1).首先将照片进行黑白处理 2).然后以16px*16px分块，以眼睛、嘴巴为中心点 3).然后使用OpenFace将人脸分为128个测量值，进行存储 4).新抓拍的图片比对数据库中图片，最接近的就是比中的。</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.49s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">Champ Code Academy 官网 · 新加坡少儿编程业务与 CRM</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2022/8-2023/5</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">品牌官网（本人独立交付）：https://www.champcodeacademy.com/ — Champ Code Academy 少儿编程品牌站点，采用 React 与 Python 为主完成前端展示、交互及部分服务端/接口能力，并负责部署与后续迭代对接。 业务与运营系统：少儿编程在线教育 CRM、订阅与支付（Chargebee、Stripe）、流程自动化（Airtable、Make.com、n8n）、客服与营销（WATI、ManyChat、Meta 等）、数据侧 Supabase、需求与缺陷在 Jira 管理；与海外团队全英文协作。</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.51s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">值班人员大屏展示</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2022/8-2022/9</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">值班人员大屏展示 Vue3框架搭建，数据大屏展示</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.53s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">FBABEE供应链管理系统</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2022/1-2022/6</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">1、供应链管理系统介绍： 项目为PC端Web后台管理系统。主要分为：询价单、提货、贴标、备货、运单、仓库、财务、客户管理、供应商管理、产品管理、地址管理、承运商管理。 2、核心技术点： 项目采用SpringBoot+React+Ant-Design等框架开发 3、后端技术栈 SpringBoot、MyBatis、MySQL、Swagger、Docker部署 前端技术栈 React、Ant-Design、axios、TypeScript、mock 4、本人主要负责后端接口+PC端管理后台代码开发</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.55s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">五子棋后台API</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2021/12-2022/1</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">### 五子棋后台api介绍 1、棋盘大小为 20x20 2、用户先落子（机器后下） 3、落子位置表示为`{x:number,y:number}`，以左下角为原点，从`0`开始算起 4、先在横线、直线或斜对角线上形成5子连线者获胜 主要职责：后台框架搭建,API编写.不涉及任何公司机密,纯属技术交流,代码已开源: https://github.com/chengqun2/chess 技术点： 1、Spring Cloud、Spring Boot、Spring Security、Mybatis-plus 2、Https、跨域请求、token验证 3、h2数据库（免安装） 4、swagger-ui 访问地址：http://localhost:8066/swagger-ui/ 5、openfeign</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.57s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">盐都公安感知大数据平台</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2021/9-2022/7</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">盐城市公安局盐都分局治安防控体系建设。 负责需求对接，数据库设计、前后端代码编写。</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.59s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">盐都区公安局综合指挥平台</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2020/10-2022/6</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">盐渎派出所综合指挥平台升级版。</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.61s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">盐城巡特警智慧一体化应用系统</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2020/3-2020/10</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">盐城市公安局巡特警 智慧巡防。 Java web 管理系统</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.63s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">盐渎派出所综合指挥平台</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2019/7-2020/7</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">盐渎派出所综合指挥平台 1、清单管理 2、内务考核+绩效考核 3、专项行动 （类似19大安保、两会安保） 4、指挥调度 5、警情监测 6、社区警务 7、执法监督 8、情报研判</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.6499999999999999s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">盐城市公安局大数据情报指挥平台</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2019/4-2020/10</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">Spring cloud、springboot、前端freemarker模板、kafka消息队列、oracle数据库 项目模块分为：重点管控、情报处理、应急指挥</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.6699999999999999s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">自动化部署平台</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2019/3-2019/4</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">Java + Shell + Ant实现的自动化、可视化的项目部署平台，能部署Java服务、Java Web项目，可以简化项目部署操作，只需要提供SVN/GIT地址即可部署项目。 可以一键拉取SVN/GIT代码进行更新部署、实时监控项目运行状态、控制项目停止、启动、及查看日志。</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.69s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">办公oa</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2018/7-2020/1</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">盐城市公安局 发文流程：发文拟稿-&amp;gt;一级部门核稿-&amp;gt;办公室核稿-&amp;gt;秘书科核稿-&amp;gt;收文单位收文 等。 Activiti工作流（实现了撤回功能）。 邮箱功能（基于Postfix +Dovecot 搭建）</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.71s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">人员关系分析</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2018/3-2018/6</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">盐城公安局 对常住人口进行关系分析。 oracle+neo4j(图数据库) + solr</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.73s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">车辆大数据</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2018/1-2020/6</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">盐城公安局 车辆过车大数据查询，目前数据总量30亿，每日数据增量800万。使用HBase存储，查询。Pgis地图展示。 数据：oracle -&amp;gt; kafka -&amp;gt; hbase</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.75s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">爱拍</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2017/1-2017/12</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">微信公众号 艺术品拍卖。 技术点： 阿里云：服务器ECS、负载均衡、mysql、redis 七牛 对象存储 idea git springboot(ssm) H+后台UI框架 Qr二维码 杉德支付（对接银联） https 微信公众号 拍卖流程（抢拍-&amp;gt;生成订单-&amp;gt;付款-&amp;gt;发货-&amp;gt;收货 等.） 云之讯 短信平台 并发处理，最高并发量1000</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.77s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">CRM管理系统</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2016/7-2016/12</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">客户关系管理系统 后台：jfinal（基于 Java 语言的极速 WEB + ORM 框架） 前端：avalon、bootstrap、jqGrid 数据库：mysql 项目分为：客户信息、客户池、线索、商机、合同、商品模块</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.79s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">U会(手机APP)</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2015/7-2017/12</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">U会app。 项目为 企业服务app(类似钉钉)。 后台框架: spring springmvc mybatis 。 使用到 用户token(存放到redis中，jedis、spring-data-redis)、百度地图api、百度天气api、支付宝支付API、阿里名片扫描、腾讯IM(先用的环信IM，后因环信收费，迁移到腾讯IM)、微信支付API、schedule定时任务、触发器、自定义注解(主要为登录验证、token验证，自定义注解在 拦截器中使用。)、android apk版本检测、gps点位距离计算、环信消息推送、注册短信发送、execl导入导出、审批流程控制、事务控制、部分查询采用cache缓存，常用字段的查询加入了索引。 数据库:mysql、目前200张表。 项目部署在 阿里云linux服务器上(数据库每日凌晨定时备份)。</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.81s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">智慧管家</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2015/7-2015/12</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">eclipse(开发工具)小区物业服务性软件。包括app和管理后台。后台采用spring springMVC mybatis 框架，前端采用easyui框架，数据库使用mysql 。主要包括 小区通知，维修管理，住户管理，缴费管理等模块。</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.83s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">国家电网物资管理系统</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2013/6-2015/1</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">项目简介： 扬州市供电公司 物资管理系统； 项目中涉及到 人员角色管理，权限管理，物资类别管理、流程管理。 流程：计划 - 采购 - 入库 - 出库 - 财务稽核 - 退料 - 盘亏盘盈 项目 后台采用 java语言编写，采用spring+struts2+hibernate框架， 前台页面主要使用extjs； 数据库采用 oracle （PL/SQL Developer）</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.85s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">盐城人才公共服务网</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2011/9-2012/6</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">盐城人才公共服务网</p>
+</article>
+<article class="group rounded-xl border border-slate-200/90 bg-white/80 p-4 shadow-sm opacity-0 transition-all duration-300 animate-fade-rise hover:-translate-y-0.5 hover:border-indigo-200/80 hover:shadow-md" style="animation-delay:0.87s">
+  <div class="flex flex-wrap items-start justify-between gap-2 border-b border-slate-100 pb-2">
+    <h3 class="text-base font-semibold text-slate-800 group-hover:text-indigo-700 transition-colors">ERP系统</h3>
+    <time class="shrink-0 rounded-full bg-slate-100 px-3 py-0.5 text-xs font-medium text-slate-500 tabular-nums">2011/9-2013/7</time>
+  </div>
+  <p class="mt-3 text-sm leading-relaxed text-slate-600">生产管理、仓储管理 spring struts2 hibernate mysql</p>
+</article>
+      </div>
+    </section>
+
+    <section class="animate-fade-rise rounded-2xl border border-slate-200/80 bg-white/90 p-6 opacity-0 shadow-sm backdrop-blur-sm transition-shadow duration-300 hover:shadow-md sm:p-8" style="animation-delay:0.2s">
+      <h2 class="mb-4 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-indigo-600">
+        <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600"><i class="fa-solid fa-graduation-cap"></i></span>
+        教育经历
+      </h2>
+      <div class="flex flex-col gap-4 rounded-xl border border-slate-100 bg-slate-50/50 p-4 sm:flex-row sm:items-center">
+  <img src="https://img01.51jobcdn.com/im/school/%25E6%2589%25AC%25E5%25B7%259E%25E5%25A4%25A7%25E5%25AD%25A6%25E5%25B9%25BF%25E9%2599%25B5%25E5%25AD%25A6%25E9%2599%25A2.jpg" width="56" height="56" alt="" class="h-14 w-14 rounded-lg object-cover ring-1 ring-slate-200" />
+  <div>
+    <p class="font-semibold text-slate-900">扬州大学广陵学院</p>
+    <p class="text-sm text-slate-600">本科 · 计算机科学与技术</p>
+    <p class="mt-1 text-xs text-slate-500 tabular-nums">2007/9 — 2011/7</p>
+  </div>
+</div>
+    </section>
+
+    <section class="animate-fade-rise rounded-2xl border border-slate-200/80 bg-white/90 p-6 opacity-0 shadow-sm backdrop-blur-sm transition-shadow duration-300 hover:shadow-md sm:p-8" style="animation-delay:0.24s">
+      <h2 class="mb-4 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-indigo-600">
+        <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600"><i class="fa-solid fa-star"></i></span>
+        技能特长
+      </h2>
+      <div class="flex flex-wrap gap-2">
+  <span class="rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-800 ring-1 ring-amber-100">Java · 熟练</span>
+  <span class="rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-800 ring-1 ring-amber-100">JavaScript · 熟练</span>
+  <span class="rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-800 ring-1 ring-amber-100">英语 · 熟练</span>
+</div>
+    </section>
+
+    <p class="pb-8 text-center text-xs text-slate-400">© 成群 · Resume</p>
+  </main>
 </body>
-
 </html>
