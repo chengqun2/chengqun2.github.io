@@ -352,7 +352,7 @@ def main() -> None:
   <span class="inline-flex items-center gap-1.5 rounded-full bg-lime-50 px-3 py-1.5 text-xs font-bold text-lime-900 ring-2 ring-lime-300/70"><i class="fa-brands fa-node-js"></i> Node.js · 熟练</span>
   <span class="inline-flex items-center gap-1.5 rounded-full bg-sky-50 px-3 py-1.5 text-xs font-bold text-sky-900 ring-2 ring-sky-300/70"><i class="fa-brands fa-react"></i> React · 熟练</span>
   <span class="inline-flex items-center gap-1.5 rounded-full bg-teal-50 px-3 py-1.5 text-xs font-bold text-teal-900 ring-2 ring-teal-300/70"><i class="fa-brands fa-vuejs"></i> Vue · 熟练</span>
-  <span class="rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-800 ring-1 ring-amber-100">英语 · 熟练</span>
+  <span class="inline-flex items-center gap-1.5 rounded-full bg-amber-50 px-3 py-1.5 text-xs font-bold text-amber-900 ring-2 ring-amber-300/70"><i class="fa-solid fa-language"></i> 英语 · 熟练</span>
 </div>"""
     skills_en = """<div class="flex flex-wrap gap-2">
   <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-bold text-emerald-900 ring-2 ring-emerald-300/70"><i class="fa-brands fa-python"></i> Python · Proficient</span>
@@ -360,7 +360,7 @@ def main() -> None:
   <span class="inline-flex items-center gap-1.5 rounded-full bg-lime-50 px-3 py-1.5 text-xs font-bold text-lime-900 ring-2 ring-lime-300/70"><i class="fa-brands fa-node-js"></i> Node.js · Proficient</span>
   <span class="inline-flex items-center gap-1.5 rounded-full bg-sky-50 px-3 py-1.5 text-xs font-bold text-sky-900 ring-2 ring-sky-300/70"><i class="fa-brands fa-react"></i> React · Proficient</span>
   <span class="inline-flex items-center gap-1.5 rounded-full bg-teal-50 px-3 py-1.5 text-xs font-bold text-teal-900 ring-2 ring-teal-300/70"><i class="fa-brands fa-vuejs"></i> Vue · Proficient</span>
-  <span class="rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-800 ring-1 ring-amber-100">English · Proficient</span>
+  <span class="inline-flex items-center gap-1.5 rounded-full bg-amber-50 px-3 py-1.5 text-xs font-bold text-amber-900 ring-2 ring-amber-300/70"><i class="fa-solid fa-language"></i> English · Proficient</span>
 </div>"""
 
     hero_zh = """<li class="flex items-center gap-2"><i class="fa-solid fa-mars text-slate-400"></i> 男 · 1989/09</li>
