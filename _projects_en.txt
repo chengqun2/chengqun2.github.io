@@ -1,6 +1,6 @@
 AI Large Model Application
 2024/8-Present
-Enterprise LLM applications: React for conversational and configuration UIs; Python to orchestrate business logic and call Dify and other HTTP APIs. N8n for workflow automation, MySQL, Dify deployment, and on-prem DeepSeek-R1-class models. Dify for chat flows, published apps, and exposed APIs; Python integrates with Dify; React handles UI and state. N8n connects internal and external systems; agents extended with MCP where needed.
+Enterprise LLM applications: React for conversational and configuration UIs; Python to orchestrate business logic and call Dify and other HTTP APIs. N8n for workflow automation, MySQL, Dify deployment, and on-prem DeepSeek-R1-class models. RAG knowledge base: document chunking, embedding vectorization, semantic retrieval and reranking for retrieval-augmented generation (RAG) Q&A. Dify for chat flows, published apps, and exposed APIs; Python integrates with Dify; React handles UI and state. N8n connects internal and external systems; agents extended with MCP where needed.
 ---
 React Personal Website
 2024/6-2024/7

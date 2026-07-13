@@ -130,13 +130,13 @@ def build_html(
               <a href="{html.escape(other_link, quote=True)}" class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white ring-1 ring-white/20 backdrop-blur transition hover:bg-white/20 hover:ring-white/40">
                 <i class="fa-solid fa-language"></i> {html.escape(other_label)}
               </a>
-              <a href="https://www.champcodeacademy.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full bg-indigo-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-indigo-600/30 transition hover:bg-indigo-400 hover:shadow-indigo-500/40">
+              <a href="https://www.champcodeacademy.com/" target="_blank" rel="noopener noreferrer" class="print:hidden inline-flex items-center gap-2 rounded-full bg-indigo-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-indigo-600/30 transition hover:bg-indigo-400 hover:shadow-indigo-500/40">
                 <i class="fa-solid fa-graduation-cap"></i> Champ Code Academy
               </a>
             </div>
           </div>
         </div>
-        <div class="mx-auto w-full max-w-[220px] shrink-0 md:mx-0">
+        <div class="print:hidden mx-auto w-full max-w-[220px] shrink-0 md:mx-0">
           <video class="w-full rounded-xl border border-white/10 shadow-2xl ring-1 ring-white/10 transition hover:ring-indigo-400/30" controls preload="metadata">
             <source src="self_introduction.mp4" type="video/mp4" />
           </video>
@@ -347,13 +347,19 @@ def main() -> None:
     edu_en = edu_zh.replace("本科 · 计算机科学与技术", "Bachelor · Computer Science and Technology")
 
     skills_zh = """<div class="flex flex-wrap gap-2">
-  <span class="rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-800 ring-1 ring-amber-100">Java · 熟练</span>
-  <span class="rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-800 ring-1 ring-amber-100">JavaScript · 熟练</span>
+  <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-bold text-emerald-900 ring-2 ring-emerald-300/70"><i class="fa-brands fa-python"></i> Python · 熟练</span>
+  <span class="inline-flex items-center gap-1.5 rounded-full bg-orange-50 px-3 py-1.5 text-xs font-bold text-orange-900 ring-2 ring-orange-300/70"><i class="fa-brands fa-java"></i> Java · 熟练</span>
+  <span class="inline-flex items-center gap-1.5 rounded-full bg-lime-50 px-3 py-1.5 text-xs font-bold text-lime-900 ring-2 ring-lime-300/70"><i class="fa-brands fa-node-js"></i> Node.js · 熟练</span>
+  <span class="inline-flex items-center gap-1.5 rounded-full bg-sky-50 px-3 py-1.5 text-xs font-bold text-sky-900 ring-2 ring-sky-300/70"><i class="fa-brands fa-react"></i> React · 熟练</span>
+  <span class="inline-flex items-center gap-1.5 rounded-full bg-teal-50 px-3 py-1.5 text-xs font-bold text-teal-900 ring-2 ring-teal-300/70"><i class="fa-brands fa-vuejs"></i> Vue · 熟练</span>
   <span class="rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-800 ring-1 ring-amber-100">英语 · 熟练</span>
 </div>"""
     skills_en = """<div class="flex flex-wrap gap-2">
-  <span class="rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-800 ring-1 ring-amber-100">Java · Proficient</span>
-  <span class="rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-800 ring-1 ring-amber-100">JavaScript · Proficient</span>
+  <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-bold text-emerald-900 ring-2 ring-emerald-300/70"><i class="fa-brands fa-python"></i> Python · Proficient</span>
+  <span class="inline-flex items-center gap-1.5 rounded-full bg-orange-50 px-3 py-1.5 text-xs font-bold text-orange-900 ring-2 ring-orange-300/70"><i class="fa-brands fa-java"></i> Java · Proficient</span>
+  <span class="inline-flex items-center gap-1.5 rounded-full bg-lime-50 px-3 py-1.5 text-xs font-bold text-lime-900 ring-2 ring-lime-300/70"><i class="fa-brands fa-node-js"></i> Node.js · Proficient</span>
+  <span class="inline-flex items-center gap-1.5 rounded-full bg-sky-50 px-3 py-1.5 text-xs font-bold text-sky-900 ring-2 ring-sky-300/70"><i class="fa-brands fa-react"></i> React · Proficient</span>
+  <span class="inline-flex items-center gap-1.5 rounded-full bg-teal-50 px-3 py-1.5 text-xs font-bold text-teal-900 ring-2 ring-teal-300/70"><i class="fa-brands fa-vuejs"></i> Vue · Proficient</span>
   <span class="rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-800 ring-1 ring-amber-100">English · Proficient</span>
 </div>"""
 

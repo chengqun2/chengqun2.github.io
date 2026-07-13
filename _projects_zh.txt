@@ -1,6 +1,6 @@
 AI大模型应用
 2024/8-至今
-企业内 AI 大模型应用落地，React 做对话与配置端、Python 调用 Dify 等开放 API；N8n 工作流编排，MySQL 与 Dify 部署，DeepSeek-R1 等本地模型环境。 基于 Dify 编排对话流并发布应用、暴露 API；Python 聚合业务逻辑与 Dify 交互，React 负责页面与状态展示。 基于 N8n 串联内外系统，结合 AI Agent、MCP 做智能体扩展。
+企业内 AI 大模型应用落地，React 做对话与配置端、Python 调用 Dify 等开放 API；N8n 工作流编排，MySQL 与 Dify 部署，DeepSeek-R1 等本地模型环境。建设 RAG 知识库：文档切片、embedding 向量化入库、语义检索与重排序，支撑检索增强生成（RAG）问答。基于 Dify 编排对话流并发布应用、暴露 API；Python 聚合业务逻辑与 Dify 交互，React 负责页面与状态展示。基于 N8n 串联内外系统，结合 AI Agent、MCP 做智能体扩展。
 ---
 React个人网站
 2024/6-2024/7
