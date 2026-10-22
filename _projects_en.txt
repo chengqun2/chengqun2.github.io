@@ -1,6 +1,6 @@
 Enterprise LLM Applications
 2024/8-Present
-Delivered enterprise LLM applications with React conversation and configuration interfaces and Python business logic integrating Dify APIs. Built RAG knowledge bases with document chunking, embedding generation and storage, semantic retrieval, and reranking for knowledge-base Q&A. Configured Dify conversation flows, published applications and APIs, and deployed MySQL, Dify, and local models such as DeepSeek-R1. Used n8n to connect internal and external systems, with AI agents and MCP for extensions.
+Built Python / Flask AI services from scratch: analyzed Q&A and business integration requirements, initialized projects, organized routing, business logic, and data access modules, configured dependencies and runtime environments, and designed REST APIs. Integrated the React conversation and configuration interfaces and deployed through Docker / Nginx. Used Python to integrate Dify APIs and business logic. Built RAG knowledge bases with document chunking, embedding generation and storage, semantic retrieval, and reranking. Configured Dify conversation flows, published applications and APIs, and deployed MySQL, Dify, and local models such as DeepSeek-R1. Connected internal and external systems through n8n, extended functionality with AI agents and MCP, and handled log troubleshooting and ongoing iterations.
 ---
 React Personal Website
 2024/6-2024/7
@@ -28,7 +28,7 @@ Developed a Python application to identify people in captured photographs using 
 ---
 Champ Code Academy Website / Singapore EdTech & CRM
 2022/8-2023/5
-Independently delivered the Champ Code Academy website: https://www.champcodeacademy.com/ . Used React and Python for frontend pages, interactions, and backend/API functionality, including deployment and subsequent iterations. Supported the coding education CRM, Chargebee / Stripe subscriptions and payments, Airtable / Make.com / n8n automation, and customer service and marketing tools including WATI, ManyChat, and Meta. Worked with Supabase data services and Jira requirements and issue tracking, collaborating with overseas teams entirely in English.
+Independently delivered the Champ Code Academy website from scratch to production: https://www.champcodeacademy.com/ . Analyzed business requirements, initialized the Python / Flask project, organized modules and routes, configured environments, and designed REST APIs. Implemented backend endpoints, React pages and interactions, frontend/backend integration, deployment, and subsequent iterations. Supported the coding education CRM, Chargebee / Stripe subscriptions and payments, Airtable / Make.com / n8n automation, and customer service and marketing tools including WATI, ManyChat, and Meta. Worked with Supabase data services and Jira requirements and issue tracking, collaborating with overseas teams entirely in English.
 ---
 Duty Staff Dashboard
 2022/8-2022/9

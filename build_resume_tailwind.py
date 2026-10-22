@@ -248,6 +248,7 @@ def main() -> None:
             "全栈开发（Python 后端 / React 前端）",
             "50–150 人 · 民营",
             "<div class='space-y-3'>"
+            "<p><strong>Python 服务从 0 到 1 搭建：</strong>负责需求梳理与技术选型，基于 Python / Flask 初始化工程，划分路由、业务逻辑与数据访问模块，管理依赖和环境配置；完成数据结构与 REST API 设计、接口开发及 React 联调，再通过 Docker + Nginx 部署上线，持续进行日志排查与功能迭代。</p>"
             "<p><strong>Python 后端与 AI 应用：</strong>以 Python 为主要后端语言，负责内部系统接口、业务逻辑及智能化服务开发；对接 Dify、Ollama 与 DeepSeek-R1 等模型 API，支撑 RAG 知识库问答，并通过 n8n 串联大模型与内外业务系统。</p>"
             "<p><strong>数据处理与自动化：</strong>使用 Python 编写数据处理、接口集成和运维脚本，结合 MySQL、ClickHouse、ElasticSearch 完成数据读写与检索；配合 React 管理端交付完整业务功能。</p>"
             "<p><strong>云平台与部署运维：</strong>熟悉华为云、阿里云环境下的应用部署与维护，结合 Linux、Docker、Nginx 部署 Python 服务及相关中间件，开展环境配置、日志排查和日常运维；负责 Dify、n8n、Ollama 等服务的私有化部署与维护。</p>"
@@ -260,8 +261,8 @@ def main() -> None:
             "全栈开发（Python 后端 / React 前端）",
             "150–500 人 · 民营",
             "<div class='space-y-3'>"
-            "<p>面向新加坡少儿编程在线教育业务，<strong>全英文远程协作</strong>；<strong>独立负责</strong> <a class='text-indigo-600 font-medium hover:underline' href='https://www.champcodeacademy.com/' target='_blank' rel='noopener'>Champ Code Academy</a> 官网，以 <strong>Python + React</strong> 完成服务端接口、前端展示、部署及后续迭代。</p>"
-            "<p><strong>Python 接口开发与业务集成：</strong>围绕官网及 CRM 业务开发服务端接口，使用 Python 对接 Chargebee / Stripe 订阅计费与支付服务，处理业务数据及第三方 API 交互，支撑教育业务与运营流程。</p>"
+            "<p>面向新加坡少儿编程在线教育业务，<strong>全英文远程协作</strong>；<strong>独立从 0 到 1 交付</strong> <a class='text-indigo-600 font-medium hover:underline' href='https://www.champcodeacademy.com/' target='_blank' rel='noopener'>Champ Code Academy</a> 官网，以 <strong>Python + React</strong> 完成服务端接口、前端展示、部署及后续迭代。</p>"
+            "<p><strong>Python 后端从 0 到 1 建设：</strong>从官网与 CRM 的业务需求出发，初始化 Flask 项目，搭建模块结构、路由与环境配置，设计数据交互和 REST API；编写业务接口并对接 Chargebee / Stripe 订阅计费与支付服务，完成 React 前后端联调、部署上线及上线后的问题跟进，形成从工程搭建到业务落地的完整交付流程。</p>"
             "<p><strong>Python 自动化与系统协作：</strong>编写数据同步及流程处理脚本，结合 Airtable、Make、n8n 衔接 CRM、计费和营销系统；配合 Supabase 数据服务与 Jira 完成需求交付和问题跟进。</p>"
             "<p class='rounded-lg bg-emerald-50/70 px-3 py-2 text-emerald-900'><strong>Python 技术栈：</strong>Python · Flask · Requests · REST API / JSON · Chargebee / Stripe API · Airtable API；前端 React</p>"
             "</div>",
@@ -295,6 +296,7 @@ def main() -> None:
             "Full Stack Developer (Python Backend / React Frontend)",
             "50–150 employees · Private",
             "<div class='space-y-3'>"
+            "<p><strong>Python services built from scratch:</strong> Own the process from requirements analysis and technology selection to production. Initialize Python / Flask projects, organize routing, business logic, and data access modules, and manage dependencies and environment configuration. Design data structures and REST APIs, implement endpoints, integrate with React, and deploy through Docker + Nginx, followed by log troubleshooting and ongoing iterations.</p>"
             "<p><strong>Python backend &amp; AI applications:</strong> Use Python as the primary backend language to develop internal APIs, business logic, and AI services. Integrate Dify, Ollama, and model APIs such as DeepSeek-R1 to support RAG knowledge-base Q&amp;A, with n8n connecting LLMs to internal and external business systems.</p>"
             "<p><strong>Data processing &amp; automation:</strong> Write Python scripts for data processing, API integration, and operational tasks. Work with MySQL, ClickHouse, and Elasticsearch for data access and retrieval, and deliver complete business features alongside React admin interfaces.</p>"
             "<p><strong>Cloud deployment &amp; operations:</strong> Familiar with deploying and maintaining applications on Huawei Cloud and Alibaba Cloud. Use Linux, Docker, and Nginx to deploy Python services and middleware, configure environments, troubleshoot logs, and handle routine operations. Deploy and maintain self-hosted Dify, n8n, and Ollama services.</p>"
@@ -307,8 +309,8 @@ def main() -> None:
             "Full Stack Developer (Python Backend / React Frontend)",
             "150–500 employees · Private",
             "<div class='space-y-3'>"
-            "<p>Supported a Singapore-based children's coding education business through <strong>fully remote collaboration in English</strong>. <strong>Independently delivered</strong> the <a class='text-indigo-600 font-medium hover:underline' href='https://www.champcodeacademy.com/' target='_blank' rel='noopener'>Champ Code Academy</a> website using <strong>Python + React</strong>, covering backend APIs, frontend pages, deployment, and subsequent iterations.</p>"
-            "<p><strong>Python APIs &amp; business integrations:</strong> Developed backend APIs for the website and CRM workflows. Used Python to integrate Chargebee / Stripe subscription billing and payments, process business data, and connect third-party APIs to support education and operational workflows.</p>"
+            "<p>Supported a Singapore-based children's coding education business through <strong>fully remote collaboration in English</strong>. <strong>Independently delivered from scratch to production</strong> the <a class='text-indigo-600 font-medium hover:underline' href='https://www.champcodeacademy.com/' target='_blank' rel='noopener'>Champ Code Academy</a> website using <strong>Python + React</strong>, covering backend APIs, frontend pages, deployment, and subsequent iterations.</p>"
+            "<p><strong>Python backend built from scratch:</strong> Translated website and CRM requirements into a Flask project, setting up the module structure, routing, and environment configuration, then designing data interactions and REST APIs. Implemented business endpoints and Chargebee / Stripe subscription billing and payment integrations, completed integration with the React frontend, deployed the application, and resolved post-launch issues, covering the full process from project setup to business delivery.</p>"
             "<p><strong>Python automation &amp; system integration:</strong> Wrote data synchronization and workflow-processing scripts, connecting CRM, billing, and marketing systems through Airtable, Make, and n8n. Worked with Supabase data services and used Jira for delivery and issue tracking.</p>"
             "<p class='rounded-lg bg-emerald-50/70 px-3 py-2 text-emerald-900'><strong>Python stack:</strong> Python · Flask · Requests · REST APIs / JSON · Chargebee / Stripe APIs · Airtable API; React frontend</p>"
             "</div>",

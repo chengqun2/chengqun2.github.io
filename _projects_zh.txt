@@ -1,6 +1,6 @@
 AI大模型应用
 2024/8-至今
-企业内 AI 大模型应用落地，React 做对话与配置端、Python 调用 Dify 等开放 API；N8n 工作流编排，MySQL 与 Dify 部署，DeepSeek-R1 等本地模型环境。建设 RAG 知识库：文档切片、embedding 向量化入库、语义检索与重排序，支撑检索增强生成（RAG）问答。基于 Dify 编排对话流并发布应用、暴露 API；Python 聚合业务逻辑与 Dify 交互，React 负责页面与状态展示。基于 N8n 串联内外系统，结合 AI Agent、MCP 做智能体扩展。
+从 0 到 1 搭建 Python / Flask AI 应用服务：梳理问答与业务集成需求，初始化项目并划分路由、业务逻辑和数据访问模块，配置依赖与运行环境，设计 REST API，完成 React 对话与配置端联调，并通过 Docker / Nginx 部署上线。Python 调用 Dify 等开放 API，聚合业务逻辑；N8n 工作流编排，MySQL 与 Dify 部署，DeepSeek-R1 等本地模型环境。建设 RAG 知识库：文档切片、embedding 向量化入库、语义检索与重排序，支撑检索增强生成（RAG）问答。基于 Dify 编排对话流并发布应用、暴露 API；基于 N8n 串联内外系统，结合 AI Agent、MCP 做智能体扩展，持续进行日志排查与功能迭代。
 ---
 React个人网站
 2024/6-2024/7
@@ -28,7 +28,7 @@ AI人脸识别 项目采用Python语言开发。 项目主要目的是对人员�
 ---
 Champ Code Academy 官网 · 新加坡少儿编程业务与 CRM
 2022/8-2023/5
-品牌官网（本人独立交付）：https://www.champcodeacademy.com/ — Champ Code Academy 少儿编程品牌站点，采用 React 与 Python 为主完成前端展示、交互及部分服务端/接口能力，并负责部署与后续迭代对接。 业务与运营系统：少儿编程在线教育 CRM、订阅与支付（Chargebee、Stripe）、流程自动化（Airtable、Make.com、n8n）、客服与营销（WATI、ManyChat、Meta 等）、数据侧 Supabase、需求与缺陷在 Jira 管理；与海外团队全英文协作。
+品牌官网（本人独立从 0 到 1 交付）：https://www.champcodeacademy.com/ — 从业务需求梳理、Python / Flask 工程初始化、模块与路由组织、环境配置及 REST API 设计开始，完成服务端接口开发、React 页面与交互、前后端联调、部署上线及后续迭代。业务与运营系统：少儿编程在线教育 CRM、订阅与支付（Chargebee、Stripe）、流程自动化（Airtable、Make.com、n8n）、客服与营销（WATI、ManyChat、Meta 等）、数据侧 Supabase、需求与缺陷在 Jira 管理；与海外团队全英文协作。
 ---
 值班人员大屏展示
 2022/8-2022/9
