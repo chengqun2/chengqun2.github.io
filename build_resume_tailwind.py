@@ -292,37 +292,47 @@ def main() -> None:
         (
             "Jiangsu Fangruan Technology Co., Ltd.",
             "2023/6 — Present",
-            "Full Stack Developer",
+            "Full Stack Developer (Python Backend / React Frontend)",
             "50–150 employees · Private",
-            "<p>End-to-end AI products and internal systems: Dify, N8n, Ollama (DeepSeek-R1-class), ClickHouse, ElasticSearch, MySQL, Nginx, Docker.</p><p>Led by <strong>React</strong> and <strong>Python</strong> for admin UIs and intelligent services, with Vue, Java/Spring, Node/TS, Electron; N8n for LLM workflows.</p>",
+            "<div class='space-y-3'>"
+            "<p><strong>Python backend &amp; AI applications:</strong> Use Python as the primary backend language to develop internal APIs, business logic, and AI services. Integrate Dify, Ollama, and model APIs such as DeepSeek-R1 to support RAG knowledge-base Q&amp;A, with n8n connecting LLMs to internal and external business systems.</p>"
+            "<p><strong>Data processing &amp; automation:</strong> Write Python scripts for data processing, API integration, and operational tasks. Work with MySQL, ClickHouse, and Elasticsearch for data access and retrieval, and deliver complete business features alongside React admin interfaces.</p>"
+            "<p><strong>Cloud deployment &amp; operations:</strong> Familiar with deploying and maintaining applications on Huawei Cloud and Alibaba Cloud. Use Linux, Docker, and Nginx to deploy Python services and middleware, configure environments, troubleshoot logs, and handle routine operations. Deploy and maintain self-hosted Dify, n8n, and Ollama services.</p>"
+            "<p class='rounded-lg bg-emerald-50/70 px-3 py-2 text-emerald-900'><strong>Python stack:</strong> Python · Flask · Requests · REST APIs / JSON · pandas · MySQL · Dify / Ollama APIs · Docker / Linux</p>"
+            "</div>",
         ),
         (
             "Shanghai Wayz Intelligence Information Technology Co., Ltd.",
             "2022/7 — 2023/5 (10 mo)",
-            "Full Stack Developer",
+            "Full Stack Developer (Python Backend / React Frontend)",
             "150–500 employees · Private",
-            "<p>Singapore edtech, <strong>English remote</strong>. <strong>Sole owner</strong> of <a class='text-indigo-600 font-medium hover:underline' href='https://www.champcodeacademy.com/' target='_blank' rel='noopener'>Champ Code Academy</a> (React + Python).</p><p>CRM, Chargebee/Stripe, automation (Airtable/Make/n8n), Supabase, Jira.</p>",
+            "<div class='space-y-3'>"
+            "<p>Supported a Singapore-based children's coding education business through <strong>fully remote collaboration in English</strong>. <strong>Independently delivered</strong> the <a class='text-indigo-600 font-medium hover:underline' href='https://www.champcodeacademy.com/' target='_blank' rel='noopener'>Champ Code Academy</a> website using <strong>Python + React</strong>, covering backend APIs, frontend pages, deployment, and subsequent iterations.</p>"
+            "<p><strong>Python APIs &amp; business integrations:</strong> Developed backend APIs for the website and CRM workflows. Used Python to integrate Chargebee / Stripe subscription billing and payments, process business data, and connect third-party APIs to support education and operational workflows.</p>"
+            "<p><strong>Python automation &amp; system integration:</strong> Wrote data synchronization and workflow-processing scripts, connecting CRM, billing, and marketing systems through Airtable, Make, and n8n. Worked with Supabase data services and used Jira for delivery and issue tracking.</p>"
+            "<p class='rounded-lg bg-emerald-50/70 px-3 py-2 text-emerald-900'><strong>Python stack:</strong> Python · Flask · Requests · REST APIs / JSON · Chargebee / Stripe APIs · Airtable API; React frontend</p>"
+            "</div>",
         ),
         (
             "Nanjing Weishu Software Co., Ltd.",
             "2017/12 — 2022/7 (4y7m)",
             "Full Stack Developer",
             "Listed · 150–500 employees",
-            "<p>R&amp;D: municipal <strong>OA, vehicle big data, command, perception</strong> systems; Java backend, design, core modules.</p><p>Spring Cloud/Boot, Kafka, Hadoop/HBase, Solr.</p>",
+            "<p>Developed <strong>office automation, vehicle big data, integrated command, and sensor data platforms</strong> for municipal and district public security bureaus. Focused on Java backend development, requirements analysis, database design, and core modules.</p><p>Worked with Spring Cloud / Spring Boot, Kafka, Hadoop / HBase, and Solr in high-volume data systems.</p>",
         ),
         (
-            "Yancheng Youyin Information Technology Co., Ltd.",
+            "Youyin Information Technology Co., Ltd.",
             "2015/7 — 2017/12 (2y5m)",
             "Full Stack Developer",
             "50–150 employees · Private",
-            "<p>Requirements, architecture, database, APIs, <strong>project management</strong>.</p>",
+            "<p>Handled requirements coordination, backend architecture, database design, API development, and <strong>project management</strong>.</p>",
         ),
         (
             "Jiangsu Huasheng Hengye Technology Co., Ltd.",
             "2011/9 — 2015/7 (3y10m)",
             "Full Stack Developer",
             "500–1000 employees · Private",
-            "<p>Java B/S development; talent portal, ERP, State Grid OA, WeChat backend.</p>",
+            "<p>Developed and maintained Java web applications, including a public talent services portal, Taiwan Glass ERP, State Grid office automation, and WeChat service-account backends.</p>",
         ),
     ]
 
@@ -339,7 +349,7 @@ def main() -> None:
     ]
     en_prefs = [
         ("Position", "Full Stack (Python / React)"),
-        ("Location", "Yancheng, Remote"),
+        ("Location", "Remote"),
         ("Expected Salary", "Negotiable"),
         ("Job Type", "Full-time"),
         ("Status", "Employed, open to opportunities"),
@@ -354,7 +364,9 @@ def main() -> None:
     <p class="mt-1 text-xs text-slate-500 tabular-nums">2007/9 — 2011/7</p>
   </div>
 </div>"""
-    edu_en = edu_zh.replace("本科 · 计算机科学与技术", "Bachelor · Computer Science and Technology")
+    edu_en = edu_zh.replace("扬州大学广陵学院", "Guangling College, Yangzhou University").replace(
+        "本科 · 计算机科学与技术", "Bachelor's degree · Computer Science and Technology"
+    )
 
     skills_zh = """<div class="flex flex-wrap gap-2">
   <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-bold text-emerald-900 ring-2 ring-emerald-300/70"><i class="fa-brands fa-python"></i> Python · 熟练</span>
@@ -369,6 +381,9 @@ def main() -> None:
 </div>"""
     skills_en = """<div class="flex flex-wrap gap-2">
   <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-bold text-emerald-900 ring-2 ring-emerald-300/70"><i class="fa-brands fa-python"></i> Python · Proficient</span>
+  <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-bold text-emerald-900 ring-2 ring-emerald-300/70">Flask / Requests / pandas</span>
+  <span class="inline-flex items-center gap-1.5 rounded-full bg-indigo-50 px-3 py-1.5 text-xs font-bold text-indigo-900 ring-2 ring-indigo-300/70"><i class="fa-solid fa-cloud"></i> Huawei Cloud · Familiar</span>
+  <span class="inline-flex items-center gap-1.5 rounded-full bg-indigo-50 px-3 py-1.5 text-xs font-bold text-indigo-900 ring-2 ring-indigo-300/70"><i class="fa-solid fa-cloud"></i> Alibaba Cloud · Familiar</span>
   <span class="inline-flex items-center gap-1.5 rounded-full bg-orange-50 px-3 py-1.5 text-xs font-bold text-orange-900 ring-2 ring-orange-300/70"><i class="fa-brands fa-java"></i> Java · Proficient</span>
   <span class="inline-flex items-center gap-1.5 rounded-full bg-lime-50 px-3 py-1.5 text-xs font-bold text-lime-900 ring-2 ring-lime-300/70"><i class="fa-brands fa-node-js"></i> Node.js · Proficient</span>
   <span class="inline-flex items-center gap-1.5 rounded-full bg-sky-50 px-3 py-1.5 text-xs font-bold text-sky-900 ring-2 ring-sky-300/70"><i class="fa-brands fa-react"></i> React · Proficient</span>
@@ -411,7 +426,7 @@ def main() -> None:
         title="Chengqun — Full Stack (Python / React) · Resume",
         name="Chengqun",
         role_line="Full Stack · Python / React",
-        meta_desc="Nearly 15 years of full-stack delivery with a focus on Python and React: APIs, automation, AI and LLM integration, SPAs and brand sites; government big data; independent delivery of Champ Code Academy; English remote collaboration with Singapore teams.",
+        meta_desc="Nearly 15 years of full-stack development, focused on Python backends, Flask, API integrations, and automation. React delivery; familiar with Huawei Cloud and Alibaba Cloud deployment and operations; AI/LLM applications and English-speaking remote collaboration with Singapore teams.",
         other_link="index.html",
         other_label="中文简历",
         hero_demographics=hero_en + """
