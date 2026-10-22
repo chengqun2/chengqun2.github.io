@@ -149,7 +149,7 @@ def build_html(
     </div>
   </header>
 
-  <main class="mx-auto max-w-4xl space-y-8 px-4 py-10 sm:px-6 sm:py-12">
+  <main class="mx-auto max-w-4xl space-y-8 px-4 py-10 [overflow-wrap:anywhere] sm:px-6 sm:py-12">
 
     <section class="animate-fade-rise rounded-2xl border border-slate-200/80 bg-white/90 p-6 opacity-0 shadow-sm backdrop-blur-sm transition-shadow duration-300 hover:shadow-md sm:p-8" style="animation-delay:0.04s">
       <h2 class="mb-4 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-indigo-600">
@@ -245,16 +245,26 @@ def main() -> None:
         (
             "江苏方软科技有限公司",
             "2023/6 — 至今",
-            "全栈开发（前后端）",
+            "全栈开发（Python 后端 / React 前端）",
             "50–150 人 · 民营",
-            "<p>担任全栈开发，负责 AI 应用与内部系统的端到端交付：私有化部署 Dify、N8n、Ollama（含 DeepSeek-R1 等模型）、ClickHouse、ElasticSearch、MySQL、Nginx 等，并用 Docker 编排与维护。</p><p>业务侧以 <strong>React</strong> 与 <strong>Python</strong> 为主迭代管理端与智能化服务，并配合 Vue、Java/Spring、Node.js/TypeScript 及 Electron；N8n 串联大模型与内外系统。</p>",
+            "<div class='space-y-3'>"
+            "<p><strong>Python 后端与 AI 应用：</strong>以 Python 为主要后端语言，负责内部系统接口、业务逻辑及智能化服务开发；对接 Dify、Ollama 与 DeepSeek-R1 等模型 API，支撑 RAG 知识库问答，并通过 n8n 串联大模型与内外业务系统。</p>"
+            "<p><strong>数据处理与自动化：</strong>使用 Python 编写数据处理、接口集成和运维脚本，结合 MySQL、ClickHouse、ElasticSearch 完成数据读写与检索；配合 React 管理端交付完整业务功能。</p>"
+            "<p><strong>云平台与部署运维：</strong>熟悉华为云、阿里云环境下的应用部署与维护，结合 Linux、Docker、Nginx 部署 Python 服务及相关中间件，开展环境配置、日志排查和日常运维；负责 Dify、n8n、Ollama 等服务的私有化部署与维护。</p>"
+            "<p class='rounded-lg bg-emerald-50/70 px-3 py-2 text-emerald-900'><strong>Python 技术栈：</strong>Python · Flask · Requests · REST API / JSON · pandas · MySQL · Dify / Ollama API · Docker / Linux</p>"
+            "</div>",
         ),
         (
             "上海维智卓新信息科技有限公司",
             "2022/7 — 2023/5（10 个月）",
-            "全栈开发（前后端）",
+            "全栈开发（Python 后端 / React 前端）",
             "150–500 人 · 民营",
-            "<p>新加坡少儿编程在线教育，<strong>全英文远程</strong>。<strong>独立负责</strong> <a class='text-indigo-600 font-medium hover:underline' href='https://www.champcodeacademy.com/' target='_blank' rel='noopener'>Champ Code Academy</a> 官网（React + Python）。</p><p>CRM、计费（Chargebee/Stripe）、自动化（Airtable/Make/n8n）、营销与 Supabase、Jira 协作。</p>",
+            "<div class='space-y-3'>"
+            "<p>面向新加坡少儿编程在线教育业务，<strong>全英文远程协作</strong>；<strong>独立负责</strong> <a class='text-indigo-600 font-medium hover:underline' href='https://www.champcodeacademy.com/' target='_blank' rel='noopener'>Champ Code Academy</a> 官网，以 <strong>Python + React</strong> 完成服务端接口、前端展示、部署及后续迭代。</p>"
+            "<p><strong>Python 接口开发与业务集成：</strong>围绕官网及 CRM 业务开发服务端接口，使用 Python 对接 Chargebee / Stripe 订阅计费与支付服务，处理业务数据及第三方 API 交互，支撑教育业务与运营流程。</p>"
+            "<p><strong>Python 自动化与系统协作：</strong>编写数据同步及流程处理脚本，结合 Airtable、Make、n8n 衔接 CRM、计费和营销系统；配合 Supabase 数据服务与 Jira 完成需求交付和问题跟进。</p>"
+            "<p class='rounded-lg bg-emerald-50/70 px-3 py-2 text-emerald-900'><strong>Python 技术栈：</strong>Python · Flask · Requests · REST API / JSON · Chargebee / Stripe API · Airtable API；前端 React</p>"
+            "</div>",
         ),
         (
             "南京维数软件股份有限公司",
@@ -348,6 +358,9 @@ def main() -> None:
 
     skills_zh = """<div class="flex flex-wrap gap-2">
   <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-bold text-emerald-900 ring-2 ring-emerald-300/70"><i class="fa-brands fa-python"></i> Python · 熟练</span>
+  <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-bold text-emerald-900 ring-2 ring-emerald-300/70">Flask / Requests / pandas</span>
+  <span class="inline-flex items-center gap-1.5 rounded-full bg-indigo-50 px-3 py-1.5 text-xs font-bold text-indigo-900 ring-2 ring-indigo-300/70"><i class="fa-solid fa-cloud"></i> 华为云 · 熟悉</span>
+  <span class="inline-flex items-center gap-1.5 rounded-full bg-indigo-50 px-3 py-1.5 text-xs font-bold text-indigo-900 ring-2 ring-indigo-300/70"><i class="fa-solid fa-cloud"></i> 阿里云 · 熟悉</span>
   <span class="inline-flex items-center gap-1.5 rounded-full bg-orange-50 px-3 py-1.5 text-xs font-bold text-orange-900 ring-2 ring-orange-300/70"><i class="fa-brands fa-java"></i> Java · 熟练</span>
   <span class="inline-flex items-center gap-1.5 rounded-full bg-lime-50 px-3 py-1.5 text-xs font-bold text-lime-900 ring-2 ring-lime-300/70"><i class="fa-brands fa-node-js"></i> Node.js · 熟练</span>
   <span class="inline-flex items-center gap-1.5 rounded-full bg-sky-50 px-3 py-1.5 text-xs font-bold text-sky-900 ring-2 ring-sky-300/70"><i class="fa-brands fa-react"></i> React · 熟练</span>
@@ -375,7 +388,7 @@ def main() -> None:
         title="成群 — 全栈开发 · 在线简历",
         name="成群",
         role_line="Full Stack · Python / React",
-        meta_desc="近15年全栈开发，Python 与 React 双主线；政务大数据、AI 与大模型、新加坡远程与 Champ Code Academy 独立交付。",
+        meta_desc="近15年全栈开发，重点 Python 后端、Flask、API 集成与自动化；React 全栈交付，熟悉华为云、阿里云部署运维，具备 AI 大模型应用及新加坡全英文远程经验。",
         other_link="eng_resume.html",
         other_label="English resume",
         hero_demographics=hero_zh + """
